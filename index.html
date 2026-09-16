@@ -21,6 +21,7 @@
   --d:"Inter Tight",system-ui,sans-serif;--s:"Inter",system-ui,sans-serif;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:hidden}
 body{font:400 1.0625rem/1.65 var(--s);color:var(--body);background:#fff;-webkit-font-smoothing:antialiased}
 [hidden]{display:none!important}
 h1,h2,h3,h4{font-family:var(--d);color:var(--ink);line-height:1.08;letter-spacing:-.022em;font-weight:700}
@@ -60,7 +61,7 @@ h1:focus,main:focus{outline:none}
   .bar{gap:10px}
   .burger{display:grid}
   #nav{display:none;position:absolute;left:0;right:0;top:70px;background:#fff;flex-direction:column;gap:0;padding:8px 20px 18px;border-bottom:1px solid var(--line)}
-  #nav.open{display:flex}
+  #nav.open{display:flex;box-shadow:0 18px 30px -18px rgba(18,50,88,.25)}
   #nav a{padding:14px 12px}
 }
 
@@ -352,32 +353,52 @@ footer .fsmall{color:#93AEBA;font-size:.9rem;line-height:1.6}
 @media (max-width:760px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.fgrid{grid-template-columns:1fr}}
 
+
+/* ============ COMPASS ROSE ============ */
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.why{grid-template-columns:1fr;border-top:0}
+.why>div{padding:22px 0;border-bottom:1px solid var(--line)}
+.why>div:first-child{border-top:1px solid var(--line)}
+.why>div+div{padding-left:0;border-left:0}
+.why .n{font-size:1rem;margin-bottom:6px;letter-spacing:.06em}
+@media (max-width:860px){.why-grid{grid-template-columns:1fr;gap:34px}}
+.rose{width:min(420px,100%);margin:0 auto;display:block}
+.rose svg{width:100%;height:auto;display:block;overflow:visible}
+.rose .card-g{transform-origin:200px 200px;transform:rotate(-28deg);opacity:0}
+.rose.in .card-g{animation:settle 1.8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes settle{0%{transform:rotate(-28deg);opacity:0}60%{transform:rotate(3deg);opacity:1}80%{transform:rotate(-1deg)}100%{transform:rotate(0);opacity:1}}
+.rose .wind{cursor:pointer;outline:none}
+.rose .wind:focus-visible text{fill:var(--sea-d);text-decoration:underline}
+.rose .hub{pointer-events:none}
+.rose .wind text{font:600 11px var(--s);letter-spacing:.12em;fill:var(--muted);transition:fill .2s}
+.rose .wind .pt{transition:fill .2s}
+.rose .wind:hover text,.rose .wind.on text{fill:var(--sea-d)}
+.rose .wind:hover .pt-d,.rose .wind.on .pt-d{fill:var(--sea)}
+.rose .tick{stroke:var(--line)}
+.rose .tick.major{stroke:var(--muted)}
+.rose .deg{font:500 9px var(--s);fill:var(--muted)}
+.rose-cap{text-align:center;font-size:.86rem;color:var(--muted);margin-top:14px}
+.rose-cap b{color:var(--ink);font-weight:600}
+.m-rose{opacity:.9}
+
 /* ============ MOTION & INTERACTION ============ */
 :root{--ease:cubic-bezier(.2,.7,.2,1)}
 
 /* reveal on scroll */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv{opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
 .rv.in{opacity:1;transform:none}
-.rv-l{transform:translateX(-26px)}
-.rv-r{transform:translateX(26px)}
-.rv-s{transform:scale(.96)}
+.rv-s{transform:none}
 
 /* hero words */
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
-.hero h1 .w>span{display:inline-block;transform:translateY(110%);animation:wup .8s var(--ease) forwards}
-@keyframes wup{to{transform:none}}
-.hero .lead,.hero .cta-row,.hero .trust,.hero .eyebrow{opacity:0;animation:fadeup .8s var(--ease) forwards}
-.hero .eyebrow{animation-delay:.05s}.hero .lead{animation-delay:.45s}.hero .cta-row{animation-delay:.6s}.hero .trust{animation-delay:.75s}
-@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.hero-photo{perspective:1200px}
-.hero-photo img{transform-origin:center;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
-.hero-photo .tilt{transition:transform .25s ease;transform-style:preserve-3d;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(18,50,88,.45)}
+.hero>div:first-child,.hero-photo{opacity:0;animation:fadeup .7s var(--ease) forwards}
+.hero-photo{animation-delay:.15s}
+@keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero-photo img{box-shadow:0 24px 60px -28px rgba(18,50,88,.4)}
 
 /* header */
 .hdr{transition:box-shadow .3s,background .3s}
 .hdr.scrolled{box-shadow:0 8px 30px -12px rgba(18,50,88,.18)}
-#nav{position:relative}
+@media (min-width:981px){#nav{position:relative}}
 .nav-pill{position:absolute;top:0;height:100%;background:var(--ink);border-radius:7px;z-index:0;transition:left .38s var(--ease),width .38s var(--ease),opacity .2s;opacity:0;pointer-events:none}
 .nav-pill.on{opacity:1}
 #nav a{position:relative;z-index:1;transition:color .25s}
@@ -389,34 +410,23 @@ main{transition:opacity .2s ease}
 main.fade{opacity:0}
 
 /* buttons */
-.btn{position:relative;overflow:hidden;transition:transform .18s var(--ease),background .2s,border-color .2s,box-shadow .2s}
-.btn::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.28),transparent 45%);opacity:0;transition:opacity .25s}
-.btn:hover::after{opacity:1}
-.btn:hover{box-shadow:0 10px 24px -10px rgba(18,50,88,.5)}
-.btn:active{transform:translateY(1px) scale(.99)}
+.btn{transition:background .2s,border-color .2s,box-shadow .2s}
+.btn:hover{box-shadow:0 8px 20px -10px rgba(18,50,88,.45);transform:none}
+.btn:active{transform:translateY(1px)}
 
 /* cards */
 .card{transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .3s}
-.card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -24px rgba(18,50,88,.35);border-color:#BFD5DE}
-.card-img{transition:transform 1.2s var(--ease)}
-.card:hover .card-img{transform:scale(1.045)}
-.blk{transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
-.blk:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(18,50,88,.3)}
-.feat .ic{transition:transform .3s var(--ease),background .3s}
-.feat>div:hover .ic{transform:rotate(-6deg) scale(1.08);background:#DDF1F4}
+.card:hover{transform:translateY(-2px);box-shadow:0 18px 40px -26px rgba(18,50,88,.3);border-color:#BFD5DE}
+.blk{transition:box-shadow .3s var(--ease)}
+.blk:hover{box-shadow:0 14px 34px -24px rgba(18,50,88,.28)}
 
 /* maps */
 .m-port{transition:r .25s var(--ease),stroke-width .25s;cursor:pointer}
 .m-port.hot{r:9;stroke-width:3}
-.m-ring{fill:none;stroke:var(--sea);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
-.in .m-ring{animation:ping 2.4s ease-out infinite}
-@keyframes ping{0%{transform:scale(.6);opacity:.9}70%{transform:scale(2.6);opacity:0}100%{opacity:0}}
 .m-route{stroke-dashoffset:1;animation:none;transition:stroke-width .25s,opacity .25s}
 .in .m-route{animation:draw 2.2s var(--ease) forwards}
 .m-route.dim{opacity:.25}
 .m-route.hot{stroke-width:4}
-.m-boat{fill:#fff;stroke:var(--sea);stroke-width:2;opacity:0}
-.in .m-boat{opacity:1;transition:opacity .4s 2.2s}
 .checks li{transition:background .2s,padding-left .2s;border-radius:6px}
 .checks li.hot,#clean-ports li:hover{background:var(--mist);padding-left:34px}
 .routes li{transition:background .2s,padding-left .2s;border-radius:6px;cursor:default}
@@ -430,7 +440,6 @@ main.fade{opacity:0}
 .steps li:not(:last-child)::after{content:"";position:absolute;top:19px;left:48px;right:-8px;height:2px;background:linear-gradient(90deg,var(--sea),var(--line));transform:scaleX(var(--p));transform-origin:left;transition:transform .9s var(--ease)}
 .steps li.in{--p:1}
 .steps li::before{transition:transform .5s var(--ease),box-shadow .5s}
-.steps li.in::before{box-shadow:0 8px 18px -8px rgba(27,163,183,.7)}
 @media (max-width:860px){.steps li::after{display:none}}
 
 /* faq */
@@ -442,8 +451,7 @@ main.fade{opacity:0}
 .wave::before{content:"";position:absolute;left:0;right:0;top:-1px;height:44px;background:var(--wave-fill,#fff);
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 44' preserveAspectRatio='none'%3E%3Cpath d='M0 20c150 24 300-24 450 0s300 24 450 0 200-20 300 0V0H0z'/%3E%3C/svg%3E") repeat-x;
           mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 44' preserveAspectRatio='none'%3E%3Cpath d='M0 20c150 24 300-24 450 0s300 24 450 0 200-20 300 0V0H0z'/%3E%3C/svg%3E") repeat-x;
-  -webkit-mask-size:1200px 44px;mask-size:1200px 44px;animation:wave 14s linear infinite}
-@keyframes wave{to{-webkit-mask-position:1200px 0;mask-position:1200px 0}}
+  -webkit-mask-size:1200px 44px;mask-size:1200px 44px}
 .band-ink.wave{padding-top:110px}
 .band-ink.wave{--wave-fill:#fff}
 
@@ -491,12 +499,10 @@ main.fade{opacity:0}
 
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
-  .hero h1 .w>span,.hero .lead,.hero .cta-row,.hero .trust,.hero .eyebrow,.hero-photo img,.page,.wave::before{animation:none;opacity:1;transform:none}
-  .in .m-ring{animation:none}
+  .hero>div:first-child,.hero-photo,.rose .card-g,.rose{animation:none;opacity:1;transform:none}
   .in .m-route{animation:none;stroke-dashoffset:0}
-  .in .m-boat{transition:none}
   .steps li{--p:1}
-  .card:hover,.blk:hover,.card:hover .card-img{transform:none}
+  .card:hover{transform:none}
   .nav-pill{transition:none}
 }
 
@@ -584,7 +590,13 @@ main.fade{opacity:0}
   <section class="band">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="home.whyTitle"></h2></div>
-      <div class="why" id="home-why"></div>
+      <div class="why-grid">
+        <figure class="rose" id="rose">
+          <div id="rose-svg"></div>
+          <figcaption class="rose-cap"><span data-t="home.roseCap"></span> <b id="rose-wind"></b></figcaption>
+        </figure>
+        <div class="why" id="home-why"></div>
+      </div>
     </div>
   </section>
 
@@ -917,9 +929,9 @@ const CONFIG = {
   email: "sailandclean@gmail.com",
   instagram: "sailandclean_",        // CHECK: Instagram handles cannot contain "&"
   vat: "",                            // add the P. IVA when available
-  base: "Porto Torres (SS), Sardegna",
-  mapEmbed: "https://maps.google.com/maps?q=Porto%20Torres%20Sardegna&z=11&output=embed",
-  mapLink: "https://www.google.com/maps/search/?api=1&query=Porto%20Torres%20Sardegna"
+  base: "Sassari (SS), Sardegna",
+  mapEmbed: "https://maps.google.com/maps?q=Sassari%20Sardegna&z=10&output=embed",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=Sassari%20Sardegna"
 };
 </script>
 <script>
@@ -931,14 +943,14 @@ const T={
 it:{
  img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca"},
  ui:{top:"Torna su",preview:"Anteprima del messaggio",quote:"Preventivo",skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
- calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
+ calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta, calcolate da Sassari. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti"},
  map:{capHome:"Nord della Sardegna.",capClean:"I porti dove lavoriamo abitualmente.",capRoutes:"Alcune rotte già percorse."},
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"pulita e pronta a partire.",
   lead:"Puliamo barche fino a 30 metri nel nord della Sardegna e trasferiamo imbarcazioni fino a 20 metri in tutto il Mediterraneo.",
   cta1:"Servizi di pulizia",cta2:"Trasferimenti",
   t1:"lunghezza massima, pulizie",t2:"lunghezza massima, trasferimenti",t3:"al miglio, trasferimenti",
-  svcTitle:"Due servizi",svcSub:"Lavoriamo per armatori privati, porti turistici e cantieri.",
+  svcTitle:"Servizi",svcSub:"Lavoriamo per armatori privati, porti turistici e cantieri.",
   c1h:"Pulizia e cura",c1p:"Interni, esterni e piccola manutenzione, in acqua o a secco. Scegli tu cosa serve.",
   c1:["Interni: cabine, dinette, bagni","Esterni: coperta, gel coat, vetroresina, oblò","Lavaggio gommoni, decapaggio, ceratura","Prodotti ecosostenibili, linea classica o nanotecnologia","Rimessaggio vele"],
   c1meta:["Fino a 30 m","Nord della Sardegna","In acqua o a secco"],c2meta:["Fino a 20 m","7 € al miglio","Anche all'estero"],
@@ -946,6 +958,7 @@ it:{
   c2h:"Trasferimenti e skipperaggio",c2p:"Portiamo la tua barca da un porto all'altro, oltre le 12 miglia e all'estero.",
   c2:["Barche di qualsiasi tipo fino a 20 metri","7 € al miglio","Controllo della barca di persona prima di partire","Ritiro da cantiere o broker dopo l'acquisto","Skipper per porti turistici, cantieri e agenzie"],
   c2btn:"Come funziona un trasferimento",
+  roseCap:"Rosa dei venti del Mediterraneo.",winds:["Tramontana, da nord", "Grecale, da nord-est", "Levante, da est", "Scirocco, da sud-est", "Ostro, da sud", "Libeccio, da sud-ovest", "Ponente, da ovest", "Maestrale, da nord-ovest"],
   whyTitle:"Perché sail&clean",
   why:[{t:"Prodotti ecosostenibili",d:"Linea classica oppure nanotecnologia, che costa di più e protegge più a lungo. Scegli tu."},
        {t:"Parli con chi sale a bordo",d:"Rispondiamo noi al telefono e siamo noi a lavorare sulla tua barca. Nessun intermediario."},
@@ -974,7 +987,7 @@ it:{
   lBoat:"Barca",lPort:"Porto",lServices:"Servizi",lReach:"Recapito"},
  deliv:{eyebrow:"Servizio 02",h1:"Trasferimenti e skipperaggio",
   intro:"Portiamo la tua barca dove serve, anche oltre le 12 miglia e fuori dall'Italia. Barche di qualsiasi tipo fino a 20 metri.",
-  priceText:"al miglio. Il prezzo del trasferimento si calcola sulle miglia della rotta. Le altre spese sono a carico dell'armatore.",
+  priceText:"al miglio. Il prezzo si calcola sulle miglia della rotta, a partire da Sassari. Le altre spese sono a carico dell'armatore.",
   priceBtn:"Chiedi un preventivo",
   routesTitle:"Rotte già percorse",routesSub:"Qualche esempio di trasferimenti portati a termine.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -988,7 +1001,7 @@ it:{
    {t:"Sopralluogo",d:"Il controllo prima della partenza si paga anche se poi non si parte: è una giornata di lavoro."},
    {t:"Giorni di attesa",d:"Se la barca non è pronta, ogni giorno passato a terra ad aspettare si paga a giornata."},
    {t:"Documenti",d:"Non ci occupiamo di documenti e pratiche portuali: restano a carico dell'armatore."}],
-  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
+  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta, a partire da Sassari."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
   faqTitle:"Domande frequenti",
   faq:[{q:"Fin dove arrivate?",a:"Ovunque, anche fuori dall'Italia. Le rotte più lunghe si organizzano con qualche giorno di anticipo."},
    {q:"Navigate da soli?",a:"Di norma sì, il trasferimento è in solitario. Quando la rotta o la barca lo richiedono, cerchiamo equipaggio aggiuntivo."},
@@ -1007,7 +1020,7 @@ it:{
   hoursV:"Tutti i giorni, 9:00–18:00. Su WhatsApp rispondiamo anche più tardi.",base:"Base",langs:"Lingue",
   langsV:"Italiano, inglese, francese, tedesco, spagnolo",
   pro:"Gestisci un porto turistico, un cantiere o un'agenzia? Possiamo occuparci direttamente dei tuoi clienti.",
-  photoAlt:"Andrea Pani a bordo",photoCap:"Andrea Pani, fondatore di sail&clean.",mapTitle:"Mappa del nord della Sardegna"},
+  photoAlt:"Andrea Pani a bordo",photoCap:"Andrea Pani, fondatore di sail&clean.",mapTitle:"Mappa di Sassari e del nord della Sardegna"},
  cookie:{label:"Cookie",text:"Questo sito non usa cookie di profilazione. La mappa nella pagina Contatti usa Google Maps, che imposta cookie di terze parti: la carichiamo solo se accetti.",
   accept:"Accetta",reject:"Rifiuta",privacy:"Informativa privacy",prefs:"Preferenze cookie",
   mapOff:"La mappa usa Google Maps, che imposta cookie di terze parti. Si carica solo con il tuo consenso.",mapLoad:"Carica la mappa",mapOpen:"Apri in Google Maps"},
@@ -1023,14 +1036,14 @@ it:{
 en:{
  img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat"},
  ui:{top:"Back to top",preview:"Message preview",quote:"Get a quote",skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
- calc:{title:"Work out an estimate",sub:"Enter the miles of the route. If you do not know them, send us the two ports and we will work it out.",miles:"Miles of the route",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are separate. The final quote follows the inspection.",btn:"Request a quote for this route",msg:"Hello, I would like a quote for a delivery of about {n} miles."},
+ calc:{title:"Work out an estimate",sub:"Enter the miles of the route, counted from Sassari. If you do not know them, send us the two ports and we will work it out.",miles:"Miles of the route",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are separate. The final quote follows the inspection.",btn:"Request a quote for this route",msg:"Hello, I would like a quote for a delivery of about {n} miles."},
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"clean and ready to sail.",
   lead:"We clean boats up to 30 metres across north Sardinia and deliver boats up to 20 metres anywhere in the Mediterranean.",
   cta1:"Cleaning services",cta2:"Deliveries",
   t1:"maximum length, cleaning",t2:"maximum length, delivery",t3:"per mile, delivery",
-  svcTitle:"Two services",svcSub:"We work for private owners, marinas and boatyards.",
+  svcTitle:"Services",svcSub:"We work for private owners, marinas and boatyards.",
   c1h:"Cleaning and care",c1p:"Interiors, exteriors and light maintenance, afloat or ashore. You decide what you need.",
   c1:["Interiors: cabins, saloon, heads","Exteriors: deck, gel coat, fibreglass, portholes","Tender washing, acid wash, waxing","Eco-friendly products, classic or nanotech line","Sail storage"],
   c1meta:["Up to 30 m","North Sardinia","Afloat or ashore"],c2meta:["Up to 20 m","€7 per mile","Abroad too"],
@@ -1038,6 +1051,7 @@ en:{
   c2h:"Delivery and skippering",c2p:"We take your boat from one port to another, beyond 12 miles and abroad.",
   c2:["Any type of boat up to 20 metres","€7 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
   c2btn:"How a delivery works",
+  roseCap:"The Mediterranean wind rose.",winds:["Tramontana, from the north", "Grecale, from the north-east", "Levante, from the east", "Scirocco, from the south-east", "Ostro, from the south", "Libeccio, from the south-west", "Ponente, from the west", "Maestrale, from the north-west"],
   whyTitle:"Why sail&clean",
   why:[{t:"Eco-friendly products",d:"A classic line or nanotech, which costs more and protects for longer. You choose."},
        {t:"You speak to the person on board",d:"We answer the phone and we do the work on your boat. No middleman."},
@@ -1066,7 +1080,7 @@ en:{
   lBoat:"Boat",lPort:"Port",lServices:"Services",lReach:"Contact"},
  deliv:{eyebrow:"Service 02",h1:"Delivery and skippering",
   intro:"We take your boat where it needs to go, including beyond 12 miles and outside Italy. Any type of boat up to 20 metres.",
-  priceText:"per mile. The delivery price is calculated on the miles of the route. Other costs are paid by the owner.",
+  priceText:"per mile. The price is calculated on the miles of the route, starting from Sassari. Other costs are paid by the owner.",
   priceBtn:"Request a quote",
   routesTitle:"Routes already sailed",routesSub:"A few examples of deliveries completed.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -1080,7 +1094,7 @@ en:{
    {t:"Inspection",d:"The pre-departure check is paid for even if the boat then does not leave: it is a working day."},
    {t:"Waiting days",d:"If the boat is not ready, every day spent waiting ashore is charged as a day rate."},
    {t:"Paperwork",d:"We do not handle documents or port formalities: those stay with the owner."}],
-  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 for every mile of the route."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"One working day, even if the boat then does not leave."},{b:"Waiting days",s:"If the boat is not ready, charged per day."},{b:"Documents and formalities",s:"Stay with the owner."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, also outside working hours.",
+  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 for every mile of the route, starting from Sassari."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"One working day, even if the boat then does not leave."},{b:"Waiting days",s:"If the boat is not ready, charged per day."},{b:"Documents and formalities",s:"Stay with the owner."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, also outside working hours.",
   faqTitle:"Frequently asked questions",
   faq:[{q:"How far do you go?",a:"Anywhere, including outside Italy. Longer routes are arranged a few days ahead."},
    {q:"Do you sail alone?",a:"As a rule yes, the delivery is single-handed. When the route or the boat calls for it, we find extra crew."},
@@ -1115,14 +1129,14 @@ en:{
 fr:{
  img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau"},
  ui:{top:"Haut de page",preview:"Aperçu du message",quote:"Devis",skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
- calc:{title:"Calculer une estimation",sub:"Indiquez les milles de la route. Si vous ne les connaissez pas, envoyez-nous les deux ports et nous les calculons.",miles:"Milles de la route",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour cette route",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
+ calc:{title:"Calculer une estimation",sub:"Indiquez les milles de la route, comptés depuis Sassari. Si vous ne les connaissez pas, envoyez-nous les deux ports et nous les calculons.",miles:"Milles de la route",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour cette route",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact"},
  map:{capHome:"Nord de la Sardaigne.",capClean:"Les ports et marinas où nous intervenons régulièrement.",capRoutes:"Quelques routes déjà effectuées."},
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"propre et prêt à partir.",
   lead:"Nous nettoyons des bateaux jusqu'à 30 mètres dans le nord de la Sardaigne et convoyons des bateaux jusqu'à 20 mètres dans toute la Méditerranée.",
   cta1:"Services de nettoyage",cta2:"Convoyages",
   t1:"longueur maximale, nettoyage",t2:"longueur maximale, convoyage",t3:"par mille, convoyage",
-  svcTitle:"Deux services",svcSub:"Nous travaillons pour des propriétaires, des marinas et des chantiers.",
+  svcTitle:"Services",svcSub:"Nous travaillons pour des propriétaires, des marinas et des chantiers.",
   c1h:"Nettoyage et entretien",c1p:"Intérieur, extérieur et petit entretien, à flot ou à sec. Vous choisissez ce dont vous avez besoin.",
   c1:["Intérieur" + NB + ": cabines, carré, sanitaires","Extérieur" + NB + ": pont, gel coat, fibre de verre, hublots","Lavage d'annexes, décapage, lustrage","Produits écologiques, gamme classique ou nanotechnologie","Hivernage des voiles"],
   c1meta:["Jusqu'à 30 m","Nord de la Sardaigne","À flot ou à sec"],c2meta:["Jusqu'à 20 m","7 € par mille","Aussi à l'étranger"],
@@ -1130,6 +1144,7 @@ fr:{
   c2h:"Convoyage et skipper",c2p:"Nous amenons votre bateau d'un port à l'autre, au-delà de 12 milles et à l'étranger.",
   c2:["Tout type de bateau jusqu'à 20 mètres","7 € par mille","Contrôle du bateau sur place avant le départ","Récupération au chantier ou chez le courtier après l'achat","Skipper pour marinas, chantiers et agences"],
   c2btn:"Comment se passe un convoyage",
+  roseCap:"La rose des vents de la Méditerranée.",winds:["Tramontane, du nord", "Grec, du nord-est", "Levant, de l'est", "Sirocco, du sud-est", "Ostro, du sud", "Libeccio, du sud-ouest", "Ponant, de l'ouest", "Mistral, du nord-ouest"],
   whyTitle:"Pourquoi sail&clean",
   why:[{t:"Produits écologiques",d:"Gamme classique ou nanotechnologie, plus chère et plus protectrice dans la durée. À vous de choisir."},
        {t:"Vous parlez à celui qui monte à bord",d:"Nous répondons au téléphone et nous travaillons nous-mêmes sur votre bateau. Sans intermédiaire."},
@@ -1158,7 +1173,7 @@ fr:{
   lBoat:"Bateau",lPort:"Port",lServices:"Services",lReach:"Contact"},
  deliv:{eyebrow:"Service 02",h1:"Convoyage et skipper",
   intro:"Nous amenons votre bateau où il doit aller, y compris au-delà de 12 milles et hors d'Italie. Tout type de bateau jusqu'à 20 mètres.",
-  priceText:"par mille. Le prix du convoyage se calcule sur les milles de la route. Les autres frais sont à la charge du propriétaire.",
+  priceText:"par mille. Le prix se calcule sur les milles de la route, au départ de Sassari. Les autres frais sont à la charge du propriétaire.",
   priceBtn:"Demander un devis",
   routesTitle:"Routes déjà effectuées",routesSub:"Quelques exemples de convoyages menés à terme.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -1172,7 +1187,7 @@ fr:{
    {t:"Visite préalable",d:"Le contrôle avant départ est facturé même si le bateau ne part pas" + NB + ": c'est une journée de travail."},
    {t:"Jours d'attente",d:"Si le bateau n'est pas prêt, chaque jour d'attente à terre est facturé à la journée."},
    {t:"Documents",d:"Nous ne gérons ni les documents ni les formalités portuaires" + NB + ": ils restent au propriétaire."}],
-  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille de la route."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
+  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille de la route, au départ de Sassari."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
   faqTitle:"Questions fréquentes",
   faq:[{q:"Jusqu'où allez-vous" + NB + "?",a:"Partout, y compris hors d'Italie. Les routes les plus longues se préparent quelques jours à l'avance."},
    {q:"Naviguez-vous seul" + NB + "?",a:"En règle générale oui, le convoyage se fait en solitaire. Si la route ou le bateau l'exigent, nous cherchons un équipier."},
@@ -1207,14 +1222,14 @@ fr:{
 de:{
  img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot"},
  ui:{top:"Nach oben",preview:"Vorschau der Nachricht",quote:"Angebot",skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
- calc:{title:"Schätzung berechnen",sub:"Geben Sie die Seemeilen der Route ein. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen und wir rechnen sie aus.",miles:"Seemeilen der Route",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
+ calc:{title:"Schätzung berechnen",sub:"Geben Sie die Seemeilen der Route ein, gerechnet ab Sassari. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen und wir rechnen sie aus.",miles:"Seemeilen der Route",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"sauber und bereit zum Ablegen.",
   lead:"Wir reinigen Boote bis 30 Meter im Norden Sardiniens und überführen Boote bis 20 Meter im gesamten Mittelmeer.",
   cta1:"Reinigungsleistungen",cta2:"Überführungen",
   t1:"maximale Länge, Reinigung",t2:"maximale Länge, Überführung",t3:"pro Seemeile, Überführung",
-  svcTitle:"Zwei Leistungen",svcSub:"Wir arbeiten für private Eigner, Marinas und Werften.",
+  svcTitle:"Leistungen",svcSub:"Wir arbeiten für private Eigner, Marinas und Werften.",
   c1h:"Reinigung und Pflege",c1p:"Innen, außen und kleine Instandhaltung, im Wasser oder an Land. Sie entscheiden, was nötig ist.",
   c1:["Innen: Kajüten, Salon, Nasszellen","Außen: Deck, Gelcoat, GFK, Bullaugen","Beiboot-Wäsche, Entfernung von Ablagerungen, Wachsen","Umweltfreundliche Mittel, klassische Linie oder Nanotechnologie","Segeleinlagerung"],
   c1meta:["Bis 30 m","Norden Sardiniens","Im Wasser oder an Land"],c2meta:["Bis 20 m","7 € pro Seemeile","Auch ins Ausland"],
@@ -1222,6 +1237,7 @@ de:{
   c2h:"Überführung und Skipper",c2p:"Wir bringen Ihr Boot von Hafen zu Hafen, auch über 12 Seemeilen hinaus und ins Ausland.",
   c2:["Jede Bootsart bis 20 Meter","7 € pro Seemeile","Kontrolle des Bootes vor Ort vor der Abfahrt","Abholung von Werft oder Makler nach dem Kauf","Skipper für Marinas, Werften und Agenturen"],
   c2btn:"So läuft eine Überführung ab",
+  roseCap:"Die Windrose des Mittelmeers.",winds:["Tramontana, aus Norden", "Grecale, aus Nordosten", "Levante, aus Osten", "Schirokko, aus Südosten", "Ostro, aus Süden", "Libeccio, aus Südwesten", "Ponente, aus Westen", "Mistral, aus Nordwesten"],
   whyTitle:"Warum sail&clean",
   why:[{t:"Umweltfreundliche Mittel",d:"Klassische Linie oder Nanotechnologie, die mehr kostet und länger schützt. Sie wählen."},
        {t:"Sie sprechen mit dem, der an Bord kommt",d:"Wir gehen selbst ans Telefon und arbeiten selbst an Ihrem Boot. Ohne Zwischenhändler."},
@@ -1250,7 +1266,7 @@ de:{
   lBoat:"Boot",lPort:"Hafen",lServices:"Leistungen",lReach:"Kontakt"},
  deliv:{eyebrow:"Leistung 02",h1:"Überführung und Skipper",
   intro:"Wir bringen Ihr Boot dorthin, wo es hin soll, auch über 12 Seemeilen hinaus und außerhalb Italiens. Jede Bootsart bis 20 Meter.",
-  priceText:"pro Seemeile. Der Preis der Überführung richtet sich nach den Seemeilen der Route. Die übrigen Kosten trägt der Eigner.",
+  priceText:"pro Seemeile. Der Preis richtet sich nach den Seemeilen der Route, ab Sassari. Die übrigen Kosten trägt der Eigner.",
   priceBtn:"Angebot anfragen",
   routesTitle:"Bereits gefahrene Routen",routesSub:"Einige Beispiele abgeschlossener Überführungen.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -1264,7 +1280,7 @@ de:{
    {t:"Vorabkontrolle",d:"Die Kontrolle vor der Abfahrt wird auch dann berechnet, wenn das Boot nicht ausläuft: Es ist ein Arbeitstag."},
    {t:"Wartetage",d:"Ist das Boot nicht bereit, wird jeder Wartetag an Land als Tagessatz berechnet."},
    {t:"Dokumente",d:"Dokumente und Hafenformalitäten übernehmen wir nicht: Sie bleiben beim Eigner."}],
-  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € für jede Seemeile der Route."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Zeiten.",
+  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € für jede Seemeile der Route, ab Sassari."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Zeiten.",
   faqTitle:"Häufige Fragen",
   faq:[{q:"Wie weit fahren Sie?",a:"Überallhin, auch außerhalb Italiens. Längere Routen werden einige Tage im Voraus geplant."},
    {q:"Fahren Sie allein?",a:"In der Regel ja, die Überführung erfolgt einhand. Wenn Route oder Boot es erfordern, suchen wir zusätzliche Crew."},
@@ -1299,14 +1315,14 @@ de:{
 es:{
  img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco"},
  ui:{top:"Volver arriba",preview:"Vista previa del mensaje",quote:"Presupuesto",skip:"Ir al contenido",menu:"Abrir el menú",whatsapp:"Escríbenos por WhatsApp",contact:"Contacto"},
- calc:{title:"Calcula una estimación",sub:"Indica las millas de la ruta. Si no las conoces, envíanos los dos puertos y las calculamos nosotros.",miles:"Millas de la ruta",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
+ calc:{title:"Calcula una estimación",sub:"Indica las millas de la ruta, contadas desde Sassari. Si no las conoces, envíanos los dos puertos y las calculamos nosotros.",miles:"Millas de la ruta",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
  nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto"},
  map:{capHome:"Norte de Cerdeña.",capClean:"Los puertos deportivos donde trabajamos habitualmente.",capRoutes:"Algunas rutas ya realizadas."},
  home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"limpio y listo para zarpar.",
   lead:"Limpiamos barcos de hasta 30 metros en el norte de Cerdeña y trasladamos embarcaciones de hasta 20 metros por todo el Mediterráneo.",
   cta1:"Servicios de limpieza",cta2:"Traslados",
   t1:"eslora máxima, limpieza",t2:"eslora máxima, traslado",t3:"por milla, traslado",
-  svcTitle:"Dos servicios",svcSub:"Trabajamos para armadores particulares, puertos deportivos y astilleros.",
+  svcTitle:"Servicios",svcSub:"Trabajamos para armadores particulares, puertos deportivos y astilleros.",
   c1h:"Limpieza y cuidado",c1p:"Interiores, exteriores y pequeño mantenimiento, a flote o en seco. Tú eliges lo que necesitas.",
   c1:["Interiores: camarotes, salón, baños","Exteriores: cubierta, gel coat, fibra de vidrio, portillos","Lavado de neumáticas, decapado, encerado","Productos ecológicos, línea clásica o nanotecnología","Guardado de velas"],
   c1meta:["Hasta 30 m","Norte de Cerdeña","A flote o en seco"],c2meta:["Hasta 20 m","7 € por milla","También al extranjero"],
@@ -1314,6 +1330,7 @@ es:{
   c2h:"Traslados y patrón",c2p:"Llevamos tu barco de un puerto a otro, más allá de las 12 millas y al extranjero.",
   c2:["Cualquier tipo de barco hasta 20 metros","7 € por milla","Revisión del barco en persona antes de salir","Recogida en astillero o bróker tras la compra","Patrón para puertos deportivos, astilleros y agencias"],
   c2btn:"Cómo funciona un traslado",
+  roseCap:"La rosa de los vientos del Mediterráneo.",winds:["Tramontana, del norte", "Gregal, del nordeste", "Levante, del este", "Siroco, del sudeste", "Ostro, del sur", "Lebeche, del sudoeste", "Poniente, del oeste", "Mistral, del noroeste"],
   whyTitle:"Por qué sail&clean",
   why:[{t:"Productos ecológicos",d:"Línea clásica o nanotecnología, que cuesta más y protege durante más tiempo. Tú eliges."},
        {t:"Hablas con quien sube a bordo",d:"Cogemos nosotros el teléfono y trabajamos nosotros en tu barco. Sin intermediarios."},
@@ -1342,7 +1359,7 @@ es:{
   lBoat:"Barco",lPort:"Puerto",lServices:"Servicios",lReach:"Contacto"},
  deliv:{eyebrow:"Servicio 02",h1:"Traslados y patrón",
   intro:"Llevamos tu barco donde haga falta, también más allá de las 12 millas y fuera de Italia. Cualquier tipo de barco hasta 20 metros.",
-  priceText:"por milla. El precio del traslado se calcula sobre las millas de la ruta. Los demás gastos corren a cargo del armador.",
+  priceText:"por milla. El precio se calcula sobre las millas de la ruta, desde Sassari. Los demás gastos corren a cargo del armador.",
   priceBtn:"Pedir presupuesto",
   routesTitle:"Rutas ya realizadas",routesSub:"Algunos ejemplos de traslados completados.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -1356,7 +1373,7 @@ es:{
    {t:"Revisión previa",d:"La revisión antes de salir se paga aunque después no se zarpe: es una jornada de trabajo."},
    {t:"Días de espera",d:"Si el barco no está listo, cada día de espera en tierra se cobra por jornada."},
    {t:"Documentación",d:"No nos ocupamos de documentos ni trámites portuarios: quedan a cargo del armador."}],
-  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"7 € por cada milla de la ruta."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
+  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"7 € por cada milla de la ruta, desde Sassari."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
   faqTitle:"Preguntas frecuentes",
   faq:[{q:"¿Hasta dónde llegáis?",a:"A cualquier destino, también fuera de Italia. Las rutas más largas se organizan con unos días de antelación."},
    {q:"¿Navegáis solos?",a:"Por norma sí, el traslado es en solitario. Cuando la ruta o el barco lo requieren, buscamos tripulación adicional."},
@@ -1408,9 +1425,8 @@ function mapSVG(kind){
     const ports=[["portoTorres","Porto Torres",1,0],["alghero","Alghero e Fertilia",-1,0],["bosa","Bosa",-1,0],
       ["cannigione","Cannigione",-1,-6],["costaSmeralda","Costa Smeralda",1,-8],["portisco","Portisco",1,6],
       ["olbia","Olbia",1,2],["sanTeodoro","San Teodoro",1,0]];
-    ports.forEach(([k,label,side,dy],i)=>{
+    ports.forEach(([k,label,side,dy])=>{
       const [x,y]=P[k];
-      s += `<circle cx="${x}" cy="${y}" r="6" class="m-ring" style="animation-delay:${i*.3}s"/>`;
       s += `<circle cx="${x}" cy="${y}" r="5.5" fill="#1BA3B7" stroke="#fff" stroke-width="2" class="m-port" data-port="${k}"><title>${label}</title></circle>`;
       s += `<text x="${x+(side>0?12:-12)}" y="${y+4+dy}" class="m-label" text-anchor="${side>0?"start":"end"}">${label}</text>`;
     });
@@ -1421,7 +1437,6 @@ function mapSVG(kind){
       const mx=(a[0]+b[0])/2 + (i===2?-26:34), my=(a[1]+b[1])/2;
       s += `<path id="route${i}" d="M${a[0]},${a[1]} Q${mx},${my} ${b[0]},${b[1]}" class="m-route" pathLength="1" style="animation-delay:${0.3+i*0.35}s"/>`;
     });
-    if(!RM) s += `<circle class="m-boat" r="4.5"><animateMotion dur="10s" begin="2.4s" repeatCount="indefinite" keyPoints="0;1;1;0;0" keyTimes="0;.45;.5;.95;1" calcMode="linear"><mpath href="#route0"/></animateMotion></circle>`;
     const labels=[["alassio","Alassio · Andora",1],["portoVecchio","Porto Vecchio",1],["portoTorres","Porto Torres",-1],["fertilia","Fertilia",-1]];
     labels.forEach(([k,label,side])=>{
       const [x,y]=P[k];
@@ -1507,7 +1522,7 @@ function applyLang(){
   $("#lang-cur").textContent=lang.toUpperCase();
   lists();
   $("#f-err").textContent="";
-  splitHero(); wireMaps(); wireFaq(); wireCalc(); wirePreview();
+  wireMaps(); wireFaq(); wireCalc(); wirePreview(); wireRose();
   $("#mbar-q").textContent=t("ui.quote"); $("#mbar-wa").textContent="WhatsApp";
   $(".wa").setAttribute("data-tip",t("ui.whatsapp")); toTop.setAttribute("aria-label",t("ui.top"));
   $("#mbar-wa").href="https://wa.me/"+CONFIG.phoneIntl;
@@ -1590,13 +1605,6 @@ function primeReveal(){
   });
 }
 
-/* --- hero headline words --- */
-function splitHero(){
-  $$(".hero h1 [data-t]").forEach((el,li)=>{
-    const words=el.textContent.trim().split(/\s+/);
-    el.innerHTML=words.map((w,i)=>`<span class="w"><span style="animation-delay:${.1+li*.28+i*.07}s">${esc(w)}</span></span>`).join(" ");
-  });
-}
 
 /* --- count up --- */
 function countUp(el){
@@ -1633,20 +1641,58 @@ function onScroll(){
 }
 addEventListener("scroll",onScroll,{passive:true}); addEventListener("resize",onScroll);
 
-/* --- button light follows the pointer --- */
-document.addEventListener("pointermove",e=>{
-  const b=e.target.closest(".btn"); if(!b) return;
-  const r=b.getBoundingClientRect(); b.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%"); b.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%");
-});
 
-/* --- hero photo tilt (pointer devices only) --- */
-(function(){
-  const fig=$(".hero-photo"), img=$("#img-hero"); if(!fig||RM||!matchMedia("(hover:hover)").matches) return;
-  const wrap=document.createElement("div"); wrap.className="tilt"; img.replaceWith(wrap); wrap.append(img);
-  fig.addEventListener("pointermove",e=>{ const r=wrap.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-    wrap.style.transform=`rotateY(${x*6}deg) rotateX(${-y*6}deg)`; });
-  fig.addEventListener("pointerleave",()=>wrap.style.transform="");
-})();
+/* =======================================================
+   ROSA DEI VENTI
+   ======================================================= */
+const WIND_PTS=[["N",0],["NE",45],["E",90],["SE",135],["S",180],["SO",225],["O",270],["NO",315]];
+function roseSVG(){
+  const C=200, R=150;
+  const pt=(a,r)=>[C+r*Math.sin(a*Math.PI/180), C-r*Math.cos(a*Math.PI/180)];
+  const f=n=>n.toFixed(1);
+  let s=`<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rosa dei venti">`;
+  s+=`<g class="idle">`;
+  s+=`<circle cx="${C}" cy="${C}" r="${R}" fill="none" stroke="#D2E3EA"/>`;
+  s+=`<circle cx="${C}" cy="${C}" r="${R-16}" fill="none" stroke="#D2E3EA"/>`;
+  s+=`<circle cx="${C}" cy="${C}" r="${R-60}" fill="none" stroke="#D2E3EA" stroke-dasharray="2 5"/>`;
+  for(let a=0;a<360;a+=5){
+    const major=a%45===0, mid=a%15===0;
+    const [x1,y1]=pt(a,R), [x2,y2]=pt(a,R-(major?16:mid?10:5));
+    s+=`<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" class="tick${major?" major":""}" stroke-width="${major?1.6:1}"/>`;
+    if(a%45===0&&a%90!==0){ const [tx,ty]=pt(a,R-28); s+=`<text x="${f(tx)}" y="${f(ty+3)}" class="deg" text-anchor="middle">${a}\u00b0</text>`; }
+  }
+  s+=`</g><g class="card-g">`;
+  const star=(a,len,w,dark)=>{
+    const [tx,ty]=pt(a,len), [lx,ly]=pt(a-90,w), [rx,ry]=pt(a+90,w);
+    return `<path d="M${f(tx)},${f(ty)} L${f(lx)},${f(ly)} L${C},${C} Z" fill="${dark?"#123258":"#1BA3B7"}" class="pt pt-d"/>`+
+           `<path d="M${f(tx)},${f(ty)} L${f(rx)},${f(ry)} L${C},${C} Z" fill="${dark?"#2C5580":"#8FD3DD"}" class="pt"/>`;
+  };
+  WIND_PTS.forEach(([k,a],i)=>{
+    const card=a%90===0, len=card?R-34:R-74;
+    s+=`<g class="wind" data-i="${i}" tabindex="0" role="button">`;
+    s+=star(a,len,card?16:11,card);
+    const [lx,ly]=pt(a,R+22);
+    s+=`<text x="${f(lx)}" y="${f(ly+4)}" text-anchor="middle">${k}</text>`;
+    const [hx,hy]=pt(a,len-18);
+    s+=`<circle cx="${f(hx)}" cy="${f(hy)}" r="34" fill="transparent"/>`;
+    s+=`</g>`;
+  });
+  s+=`<circle cx="${C}" cy="${C}" r="13" fill="#fff" stroke="#123258" stroke-width="2" class="hub"/>`;
+  s+=`<circle cx="${C}" cy="${C}" r="4" fill="#123258" class="hub"/>`;
+  s+=`</g></svg>`;
+  return s;
+}
+function wireRose(){
+  const box=$("#rose"); if(!box) return;
+  if(!box.dataset.built){ $("#rose-svg").innerHTML=roseSVG(); box.dataset.built=1; box.classList.add("rv"); io.observe(box); }
+  const out=$("#rose-wind");
+  const show=i=>{ out.textContent=T[lang].home.winds[i]; $$("#rose .wind").forEach(g=>g.classList.toggle("on",+g.dataset.i===i)); };
+  show(7);
+  $$("#rose .wind").forEach(g=>{
+    const i=+g.dataset.i;
+    ["mouseenter","focus","click"].forEach(ev=>g.addEventListener(ev,()=>show(i)));
+  });
+}
 
 /* --- map interactions --- */
 const PORT_KEYS=["portoTorres","alghero","bosa","cannigione","costaSmeralda","portisco","olbia","sanTeodoro"];
@@ -1759,9 +1805,12 @@ $("#lang-menu").addEventListener("click",e=>{
   lang=b.dataset.lang; applyLang();
   $("#lang-menu").hidden=true; $("#lang-btn").setAttribute("aria-expanded","false"); $("#lang-btn").focus();
 });
+function closeNav(){ $("#nav").classList.remove("open"); $(".burger").setAttribute("aria-expanded","false"); }
 document.addEventListener("click",e=>{
   if(!e.target.closest(".lang")){ $("#lang-menu").hidden=true; $("#lang-btn").setAttribute("aria-expanded","false"); }
+  if(!e.target.closest("#nav") && !e.target.closest(".burger")) closeNav();
 });
+addEventListener("scroll",()=>{ if($("#nav").classList.contains("open")) closeNav(); },{passive:true});
 $(".burger").addEventListener("click",()=>{
   const o=$("#nav").classList.toggle("open");
   $(".burger").setAttribute("aria-expanded",String(o));
