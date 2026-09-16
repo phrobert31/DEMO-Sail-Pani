@@ -255,7 +255,159 @@ dialog::backdrop{background:rgba(11,29,40,.55)}
 dialog h2{margin-bottom:16px}
 dialog p{margin-bottom:12px;font-size:.98rem}
 
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.m-route{animation:none;stroke-dashoffset:0}.btn:hover{transform:none}}
+
+/* ============ MOTION & INTERACTION ============ */
+:root{--ease:cubic-bezier(.2,.7,.2,1)}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-l{transform:translateX(-26px)}
+.rv-r{transform:translateX(26px)}
+.rv-s{transform:scale(.96)}
+
+/* hero words */
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%);animation:wup .8s var(--ease) forwards}
+@keyframes wup{to{transform:none}}
+.hero .lead,.hero .cta-row,.hero .trust,.hero .eyebrow{opacity:0;animation:fadeup .8s var(--ease) forwards}
+.hero .eyebrow{animation-delay:.05s}.hero .lead{animation-delay:.45s}.hero .cta-row{animation-delay:.6s}.hero .trust{animation-delay:.75s}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero-photo{perspective:1200px}
+.hero-photo img{transform-origin:center;animation:kb 18s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero-photo .tilt{transition:transform .25s ease;transform-style:preserve-3d;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(18,50,88,.45)}
+
+/* header */
+.hdr{transition:box-shadow .3s,background .3s}
+.hdr.scrolled{box-shadow:0 8px 30px -12px rgba(18,50,88,.18)}
+#nav{position:relative}
+.nav-pill{position:absolute;top:0;height:100%;background:var(--ink);border-radius:7px;z-index:0;transition:left .38s var(--ease),width .38s var(--ease),opacity .2s;opacity:0;pointer-events:none}
+.nav-pill.on{opacity:1}
+#nav a{position:relative;z-index:1;transition:color .25s}
+#nav a[aria-current=page]{background:transparent;color:#fff}
+@media (max-width:980px){#nav a[aria-current=page]{background:var(--ink)}.nav-pill{display:none}}
+
+/* page transitions */
+.page{animation:pagein .55s var(--ease)}
+@keyframes pagein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+::view-transition-old(root){animation:vt-out .22s ease-in forwards}
+::view-transition-new(root){animation:vt-in .4s var(--ease)}
+@keyframes vt-out{to{opacity:0;transform:translateY(-8px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(12px)}}
+
+/* buttons */
+.btn{position:relative;overflow:hidden;transition:transform .18s var(--ease),background .2s,border-color .2s,box-shadow .2s}
+.btn::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.28),transparent 45%);opacity:0;transition:opacity .25s}
+.btn:hover::after{opacity:1}
+.btn:hover{box-shadow:0 10px 24px -10px rgba(18,50,88,.5)}
+.btn:active{transform:translateY(1px) scale(.99)}
+
+/* cards */
+.card{transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -24px rgba(18,50,88,.35);border-color:#BFD5DE}
+.card-img{transition:transform 1.2s var(--ease)}
+.card:hover .card-img{transform:scale(1.045)}
+.blk{transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.blk:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(18,50,88,.3)}
+.feat .ic{transition:transform .3s var(--ease),background .3s}
+.feat>div:hover .ic{transform:rotate(-6deg) scale(1.08);background:#DDF1F4}
+
+/* maps */
+.m-port{transition:r .25s var(--ease),stroke-width .25s;cursor:pointer}
+.m-port.hot{r:9;stroke-width:3}
+.m-ring{fill:none;stroke:var(--sea);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+.in .m-ring{animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}70%{transform:scale(2.6);opacity:0}100%{opacity:0}}
+.m-route{stroke-dashoffset:1;animation:none;transition:stroke-width .25s,opacity .25s}
+.in .m-route{animation:draw 2.2s var(--ease) forwards}
+.m-route.dim{opacity:.25}
+.m-route.hot{stroke-width:4}
+.m-boat{fill:#fff;stroke:var(--sea);stroke-width:2;opacity:0}
+.in .m-boat{opacity:1;transition:opacity .4s 2.2s}
+.checks li{transition:background .2s,padding-left .2s;border-radius:6px}
+.checks li.hot,#clean-ports li:hover{background:var(--mist);padding-left:34px}
+.routes li{transition:background .2s,padding-left .2s;border-radius:6px;cursor:default}
+.routes li:hover{background:var(--mist);padding-left:10px}
+
+/* count up */
+.trust b{font-variant-numeric:tabular-nums}
+
+/* steps connecting line */
+.steps li{--p:0}
+.steps li:not(:last-child)::after{content:"";position:absolute;top:19px;left:48px;right:-8px;height:2px;background:linear-gradient(90deg,var(--sea),var(--line));transform:scaleX(var(--p));transform-origin:left;transition:transform .9s var(--ease)}
+.steps li.in{--p:1}
+.steps li::before{transition:transform .5s var(--ease),box-shadow .5s}
+.steps li.in::before{box-shadow:0 8px 18px -8px rgba(27,163,183,.7)}
+@media (max-width:860px){.steps li::after{display:none}}
+
+/* faq */
+.faq .fq-body{overflow:hidden;height:0;transition:height .38s var(--ease)}
+.faq details[open] summary{color:var(--sea)}
+
+/* wave divider */
+.wave{position:relative}
+.wave::before{content:"";position:absolute;left:0;right:0;top:-1px;height:44px;background:var(--wave-fill,#fff);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 44' preserveAspectRatio='none'%3E%3Cpath d='M0 20c150 24 300-24 450 0s300 24 450 0 200-20 300 0V0H0z'/%3E%3C/svg%3E") repeat-x;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 44' preserveAspectRatio='none'%3E%3Cpath d='M0 20c150 24 300-24 450 0s300 24 450 0 200-20 300 0V0H0z'/%3E%3C/svg%3E") repeat-x;
+  -webkit-mask-size:1200px 44px;mask-size:1200px 44px;animation:wave 14s linear infinite}
+@keyframes wave{to{-webkit-mask-position:1200px 0;mask-position:1200px 0}}
+.band-ink.wave{padding-top:110px}
+.band-ink.wave{--wave-fill:#fff}
+
+/* price calculator */
+.calc{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 30px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.calc h3{margin-bottom:6px}
+.calc .sub{font-size:.95rem;color:var(--muted);margin-bottom:16px}
+.calc input[type=range]{width:100%;accent-color:var(--sea);margin:6px 0 10px}
+.calc .row{display:flex;gap:12px;align-items:center}
+.calc .row input[type=number]{width:120px}
+.calc .row span{color:var(--muted)}
+.calc .out{background:var(--mist);border-radius:12px;padding:20px 22px}
+.calc .out small{display:block;font-size:.82rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.calc .out b{display:block;font:700 2.6rem/1.1 var(--d);color:var(--ink);letter-spacing:-.03em;margin:6px 0 10px;font-variant-numeric:tabular-nums}
+.calc .out p{font-size:.86rem;color:var(--muted);max-width:none}
+.calc .out .btn{margin-top:14px;width:100%;justify-content:center;padding:11px 16px;font-size:.95rem}
+@media (max-width:760px){.calc{grid-template-columns:1fr}}
+
+/* form preview + chips */
+.chip span{transition:background .2s,border-color .2s,color .2s,transform .15s}
+.chip input:checked+span{transform:scale(1.04)}
+.preview{margin-top:20px;background:var(--mist);border-radius:12px;padding:16px 18px}
+.preview small{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:8px}
+.preview pre{font:400 .93rem/1.55 var(--s);white-space:pre-wrap;color:var(--ink);margin:0}
+.preview pre:empty::before{content:"…";color:var(--muted)}
+
+/* floating helpers */
+.wa{transform:scale(0);transition:transform .45s var(--ease),background .2s;opacity:0}
+.wa.show{transform:none;opacity:1}
+.wa::before{content:attr(data-tip);position:absolute;right:66px;top:50%;transform:translate(8px,-50%);background:var(--ink);color:#fff;font:600 .85rem var(--s);padding:7px 11px;border-radius:7px;white-space:nowrap;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none}
+.wa:hover::before{opacity:1;transform:translate(0,-50%)}
+.totop{position:fixed;right:18px;bottom:86px;width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;z-index:60;cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s,box-shadow .2s;box-shadow:0 8px 20px -10px rgba(18,50,88,.3)}
+.totop.show{opacity:1;transform:none}
+.totop svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:65;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .4s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar .btn{flex:1;justify-content:center;padding:12px 10px;font-size:.95rem}
+  body.mbar-on .wa,body.mbar-on .totop{display:none}
+  body.mbar-on{padding-bottom:74px}
+}
+.lang ul{transform-origin:top right;animation:pop .18s var(--ease)}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(-4px)}}
+
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero h1 .w>span,.hero .lead,.hero .cta-row,.hero .trust,.hero .eyebrow,.hero-photo img,.page,.wave::before{animation:none;opacity:1;transform:none}
+  .in .m-ring{animation:none}
+  .in .m-route{animation:none;stroke-dashoffset:0}
+  .in .m-boat{transition:none}
+  .steps li{--p:1}
+  .card:hover,.blk:hover,.card:hover .card-img{transform:none}
+  .nav-pill{transition:none}
+}
+
 </style>
 </head>
 <body>
@@ -342,7 +494,7 @@ dialog p{margin-bottom:12px;font-size:.98rem}
     </div>
   </section>
 
-  <section class="band band-ink">
+  <section class="band band-ink wave">
     <div class="wrap">
       <div class="two" style="align-items:center">
         <div class="cta-face">
@@ -451,6 +603,7 @@ dialog p{margin-bottom:12px;font-size:.98rem}
           </div>
           <p class="f-err" id="f-err" role="alert"></p>
           <p class="f-note" data-t="form.photos"></p>
+          <div class="preview" id="preview" aria-live="polite"><small data-t="ui.preview"></small><pre></pre></div>
         </div>
       </div>
     </div>
@@ -473,6 +626,21 @@ dialog p{margin-bottom:12px;font-size:.98rem}
         <b>7 €</b>
         <span class="t" data-t="deliv.priceText"></span>
         <a class="btn btn-l" href="#contatti" data-t="deliv.priceBtn"></a>
+      </div>
+      <div class="calc" id="calc" data-miles="150">
+        <div>
+          <h3 data-t="calc.title"></h3>
+          <p class="sub" data-t="calc.sub"></p>
+          <label for="calc-num" data-t="calc.miles"></label>
+          <input type="range" id="calc-range" min="0" max="1000" step="5" aria-hidden="true" tabindex="-1">
+          <div class="row"><input type="number" id="calc-num" min="0" max="2000" step="1" inputmode="numeric"><span>NM</span></div>
+        </div>
+        <div class="out">
+          <small data-t="calc.total"></small>
+          <b id="calc-out">€ 0</b>
+          <p data-t="calc.note"></p>
+          <button type="button" class="btn" id="calc-btn" data-t="calc.btn"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -654,7 +822,8 @@ const NB="\u00a0";
 const T={
 it:{
  img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca"},
- ui:{skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
+ ui:{top:"Torna su",preview:"Anteprima del messaggio",quote:"Preventivo",skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
+ calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti"},
  map:{capHome:"Nord della Sardegna.",capClean:"I porti dove lavoriamo abitualmente.",capRoutes:"Alcune rotte già percorse."},
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"pulita e pronta a partire.",
@@ -741,7 +910,8 @@ it:{
 
 en:{
  img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat"},
- ui:{skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
+ ui:{top:"Back to top",preview:"Message preview",quote:"Get a quote",skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
+ calc:{title:"Work out an estimate",sub:"Enter the miles of the route. If you do not know them, send us the two ports and we will work it out.",miles:"Miles of the route",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are separate. The final quote follows the inspection.",btn:"Request a quote for this route",msg:"Hello, I would like a quote for a delivery of about {n} miles."},
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"clean and ready to sail.",
@@ -828,7 +998,8 @@ en:{
 
 fr:{
  img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau"},
- ui:{skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
+ ui:{top:"Haut de page",preview:"Aperçu du message",quote:"Devis",skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
+ calc:{title:"Calculer une estimation",sub:"Indiquez les milles de la route. Si vous ne les connaissez pas, envoyez-nous les deux ports et nous les calculons.",miles:"Milles de la route",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour cette route",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact"},
  map:{capHome:"Nord de la Sardaigne.",capClean:"Les ports et marinas où nous intervenons régulièrement.",capRoutes:"Quelques routes déjà effectuées."},
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"propre et prêt à partir.",
@@ -915,7 +1086,8 @@ fr:{
 
 de:{
  img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot"},
- ui:{skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
+ ui:{top:"Nach oben",preview:"Vorschau der Nachricht",quote:"Angebot",skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
+ calc:{title:"Schätzung berechnen",sub:"Geben Sie die Seemeilen der Route ein. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen und wir rechnen sie aus.",miles:"Seemeilen der Route",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"sauber und bereit zum Ablegen.",
@@ -1002,7 +1174,8 @@ de:{
 
 es:{
  img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco"},
- ui:{skip:"Ir al contenido",menu:"Abrir el menú",whatsapp:"Escríbenos por WhatsApp",contact:"Contacto"},
+ ui:{top:"Volver arriba",preview:"Vista previa del mensaje",quote:"Presupuesto",skip:"Ir al contenido",menu:"Abrir el menú",whatsapp:"Escríbenos por WhatsApp",contact:"Contacto"},
+ calc:{title:"Calcula una estimación",sub:"Indica las millas de la ruta. Si no las conoces, envíanos los dos puertos y las calculamos nosotros.",miles:"Millas de la ruta",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
  nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto"},
  map:{capHome:"Norte de Cerdeña.",capClean:"Los puertos deportivos donde trabajamos habitualmente.",capRoutes:"Algunas rutas ya realizadas."},
  home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"limpio y listo para zarpar.",
@@ -1107,9 +1280,10 @@ function mapSVG(kind){
     const ports=[["portoTorres","Porto Torres",1,0],["alghero","Alghero e Fertilia",-1,0],["bosa","Bosa",-1,0],
       ["cannigione","Cannigione",-1,-6],["costaSmeralda","Costa Smeralda",1,-8],["portisco","Portisco",1,6],
       ["olbia","Olbia",1,2],["sanTeodoro","San Teodoro",1,0]];
-    ports.forEach(([k,label,side,dy])=>{
+    ports.forEach(([k,label,side,dy],i)=>{
       const [x,y]=P[k];
-      s += `<circle cx="${x}" cy="${y}" r="5.5" fill="#0E7C8B" stroke="#fff" stroke-width="2"/>`;
+      s += `<circle cx="${x}" cy="${y}" r="6" class="m-ring" style="animation-delay:${i*.3}s"/>`;
+      s += `<circle cx="${x}" cy="${y}" r="5.5" fill="#1BA3B7" stroke="#fff" stroke-width="2" class="m-port" data-port="${k}"><title>${label}</title></circle>`;
       s += `<text x="${x+(side>0?12:-12)}" y="${y+4+dy}" class="m-label" text-anchor="${side>0?"start":"end"}">${label}</text>`;
     });
   } else {
@@ -1117,8 +1291,9 @@ function mapSVG(kind){
     const routes=[[P.portoTorres,P.andora],[P.alassio,P.portoTorres],[P.fertilia,P.portoVecchio]];
     routes.forEach(([a,b],i)=>{
       const mx=(a[0]+b[0])/2 + (i===2?-26:34), my=(a[1]+b[1])/2;
-      s += `<path d="M${a[0]},${a[1]} Q${mx},${my} ${b[0]},${b[1]}" class="m-route" pathLength="1" style="animation-delay:${0.3+i*0.35}s"/>`;
+      s += `<path id="route${i}" d="M${a[0]},${a[1]} Q${mx},${my} ${b[0]},${b[1]}" class="m-route" pathLength="1" style="animation-delay:${0.3+i*0.35}s"/>`;
     });
+    if(!RM) s += `<circle class="m-boat" r="4.5"><animateMotion dur="10s" begin="2.4s" repeatCount="indefinite" keyPoints="0;1;1;0;0" keyTimes="0;.45;.5;.95;1" calcMode="linear"><mpath href="#route0"/></animateMotion></circle>`;
     const labels=[["alassio","Alassio · Andora",1],["portoVecchio","Porto Vecchio",1],["portoTorres","Porto Torres",-1],["fertilia","Fertilia",-1]];
     labels.forEach(([k,label,side])=>{
       const [x,y]=P[k];
@@ -1201,6 +1376,11 @@ function applyLang(){
   $("#lang-cur").textContent=lang.toUpperCase();
   lists();
   $("#f-err").textContent="";
+  splitHero(); wireMaps(); wireFaq(); wireCalc(); wirePreview();
+  $("#mbar-q").textContent=t("ui.quote"); $("#mbar-wa").textContent="WhatsApp";
+  $(".wa").setAttribute("data-tip",t("ui.whatsapp")); toTop.setAttribute("aria-label",t("ui.top"));
+  $("#mbar-wa").href="https://wa.me/"+CONFIG.phoneIntl;
+  primeReveal(); movePill();
   title();
   history.replaceState(null,"","?lang="+lang+location.hash);
 }
@@ -1214,14 +1394,17 @@ function route(first){
   const id=location.hash.slice(1);
   if(!PAGES.includes(id)&&!first) return;
   page=PAGES.includes(id)?id:"home";
-  $$(".page").forEach(p=>p.hidden=p.dataset.p!==page);
+  const swap=()=>{ $$(".page").forEach(p=>p.hidden=p.dataset.p!==page); if(!first) window.scrollTo(0,0); };
+  if(!first && document.startViewTransition && !RM) document.startViewTransition(swap); else swap();
   $$("#nav a, footer nav a").forEach(a=>{
     a.getAttribute("href")==="#"+page?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current");
   });
   $("#nav").classList.remove("open");
   $(".burger").setAttribute("aria-expanded","false");
   title();
-  if(!first){ window.scrollTo(0,0); const h=$(`.page[data-p="${page}"] h1`); if(h) h.focus({preventScroll:true}); }
+  movePill(); primeReveal(); onScroll();
+  if(page==="home") $$(".trust b").forEach(countUp);
+  if(!first){ const h=$(`.page[data-p="${page}"] h1`); if(h) h.focus({preventScroll:true}); }
 }
 
 function consent(v){
@@ -1248,6 +1431,157 @@ function compose(){
   return lines.join("\n")+"\n\n"+msg;
 }
 
+
+/* =======================================================
+   MOTION & INTERACTION
+   ======================================================= */
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* --- reveal on scroll --- */
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+},{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+function primeReveal(){
+  const sel=[".sec-head",".card",".blk",".feat>div",".steps li",".checks li",".routes li",".faq details",".formcard",".photo:not(.hero-photo)",".mapfig",".price",".note",".calc",".bio>*",".info",".two>.bio ~ div>*"];
+  $$(sel.join(",")).forEach(el=>{
+    if(el.classList.contains("rv")||el.closest(".hero")) return;
+    el.classList.add("rv");
+    if(el.matches(".photo,.mapfig")) el.classList.add("rv-s");
+    const sib=[...el.parentElement.children].filter(c=>c.classList.contains("rv"));
+    el.style.transitionDelay=Math.min(sib.indexOf(el),8)*70+"ms";
+    io.observe(el);
+  });
+}
+
+/* --- hero headline words --- */
+function splitHero(){
+  $$(".hero h1 [data-t]").forEach((el,li)=>{
+    const words=el.textContent.trim().split(/\s+/);
+    el.innerHTML=words.map((w,i)=>`<span class="w"><span style="animation-delay:${.1+li*.28+i*.07}s">${esc(w)}</span></span>`).join(" ");
+  });
+}
+
+/* --- count up --- */
+function countUp(el){
+  const raw=el.dataset.target||el.textContent; el.dataset.target=raw;
+  const m=raw.match(/(\d+)/); if(!m||RM) return;
+  const n=+m[1], t0=performance.now(), dur=1100;
+  const step=now=>{ const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3);
+    el.textContent=raw.replace(m[1],String(Math.round(n*e))); if(p<1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+
+/* --- nav pill --- */
+function movePill(){
+  const pill=$("#nav .nav-pill")||(()=>{const p=document.createElement("span");p.className="nav-pill";$("#nav").prepend(p);return p;})();
+  const a=$("#nav a[aria-current=page]"); if(!a||innerWidth<=980){pill.classList.remove("on");return;}
+  pill.style.left=a.offsetLeft+"px"; pill.style.width=a.offsetWidth+"px"; pill.classList.add("on");
+}
+addEventListener("resize",movePill);
+
+/* --- header shadow, floating buttons, mobile bar --- */
+const toTop=document.createElement("button"); toTop.className="totop"; toTop.type="button";
+toTop.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+document.body.append(toTop);
+toTop.addEventListener("click",()=>scrollTo({top:0,behavior:RM?"auto":"smooth"}));
+const mbar=document.createElement("div"); mbar.className="mbar"; mbar.innerHTML=
+  `<a class="btn btn-2" href="#pulizia" id="mbar-q"></a><a class="btn" data-h="wa" target="_blank" rel="noopener" id="mbar-wa"></a>`;
+document.body.append(mbar);
+function onScroll(){
+  const y=scrollY;
+  $(".hdr").classList.toggle("scrolled",y>8);
+  toTop.classList.toggle("show",y>700);
+  const showBar=y>420 && innerWidth<=760;
+  mbar.classList.toggle("show",showBar); document.body.classList.toggle("mbar-on",showBar);
+}
+addEventListener("scroll",onScroll,{passive:true}); addEventListener("resize",onScroll);
+
+/* --- button light follows the pointer --- */
+document.addEventListener("pointermove",e=>{
+  const b=e.target.closest(".btn"); if(!b) return;
+  const r=b.getBoundingClientRect(); b.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%"); b.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%");
+});
+
+/* --- hero photo tilt (pointer devices only) --- */
+(function(){
+  const fig=$(".hero-photo"), img=$("#img-hero"); if(!fig||RM||!matchMedia("(hover:hover)").matches) return;
+  const wrap=document.createElement("div"); wrap.className="tilt"; img.replaceWith(wrap); wrap.append(img);
+  fig.addEventListener("pointermove",e=>{ const r=wrap.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    wrap.style.transform=`rotateY(${x*6}deg) rotateX(${-y*6}deg)`; });
+  fig.addEventListener("pointerleave",()=>wrap.style.transform="");
+})();
+
+/* --- map interactions --- */
+const PORT_KEYS=["portoTorres","alghero","bosa","cannigione","costaSmeralda","portisco","olbia","sanTeodoro"];
+function wireMaps(){
+  // ports <-> list
+  const dots=$$("#map-clean .m-port"), items=$$("#clean-ports li");
+  items.forEach((li,i)=>{ li.dataset.port=PORT_KEYS[i];
+    li.addEventListener("mouseenter",()=>dots[i]&&dots[i].classList.add("hot"));
+    li.addEventListener("mouseleave",()=>dots[i]&&dots[i].classList.remove("hot")); });
+  dots.forEach((d,i)=>{ d.addEventListener("mouseenter",()=>items[i]&&items[i].classList.add("hot"));
+    d.addEventListener("mouseleave",()=>items[i]&&items[i].classList.remove("hot")); });
+  // routes <-> list
+  const paths=$$("#map-routes .m-route"), rows=$$("#deliv-routes li");
+  rows.forEach((li,i)=>{
+    li.addEventListener("mouseenter",()=>paths.forEach((p,k)=>p.classList.toggle("dim",k!==i)||p.classList.toggle("hot",k===i)));
+    li.addEventListener("mouseleave",()=>paths.forEach(p=>{p.classList.remove("dim");p.classList.remove("hot");}));
+  });
+}
+
+/* --- faq height animation --- */
+function wireFaq(){
+  $$(".faq details").forEach(d=>{
+    if(d.dataset.wired) return; d.dataset.wired=1;
+    const s=d.querySelector("summary"), p=d.querySelector("p");
+    const body=document.createElement("div"); body.className="fq-body"; p.replaceWith(body); body.append(p);
+    s.addEventListener("click",e=>{
+      e.preventDefault();
+      if(RM){ d.open=!d.open; body.style.height=d.open?"auto":"0"; return; }
+      if(d.open){ body.style.height=body.scrollHeight+"px"; requestAnimationFrame(()=>{body.style.height="0"; body.addEventListener("transitionend",()=>d.open=false,{once:true});}); }
+      else { d.open=true; body.style.height="0"; requestAnimationFrame(()=>{body.style.height=body.scrollHeight+"px"; body.addEventListener("transitionend",()=>body.style.height="auto",{once:true});}); }
+    });
+  });
+}
+
+/* --- delivery price calculator --- */
+const RATE=7;
+function wireCalc(){
+  const c=$("#calc"); if(!c) return;
+  const rng=$("#calc-range"), num=$("#calc-num"), out=$("#calc-out");
+  const fmt=n=>new Intl.NumberFormat(LOCALE[lang],{style:"currency",currency:"EUR",maximumFractionDigits:0}).format(n);
+  const update=v=>{ v=Math.max(0,Math.min(2000,Math.round(+v||0))); rng.value=v; num.value=v; out.textContent=fmt(v*RATE); c.dataset.miles=v; };
+  rng.oninput=()=>update(rng.value); num.oninput=()=>update(num.value);
+  update(c.dataset.miles||150);
+  $("#calc-btn").onclick=()=>{ const m=t("calc.msg").replace("{n}",c.dataset.miles);
+    open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener"); };
+}
+const LOCALE={it:"it-IT",en:"en-GB",fr:"fr-FR",de:"de-DE",es:"es-ES"};
+
+/* --- live message preview --- */
+function wirePreview(){
+  const pre=$("#preview pre"); if(!pre) return;
+  const render=()=>{
+    const L=T[lang], v=id=>$(id).value.trim();
+    const picked=[...$$("#f-chips input:checked")].map(i=>L.form.chips[i.value]).join(", ");
+    const lines=[];
+    if(v("#f-name")) lines.push(`${L.form.hello} ${v("#f-name")}.`);
+    if(v("#f-boat")) lines.push(`${L.form.lBoat}: ${v("#f-boat")}`);
+    if(v("#f-port")) lines.push(`${L.form.lPort}: ${v("#f-port")}`);
+    if(picked) lines.push(`${L.form.lServices}: ${picked}`);
+    if(v("#f-reach")) lines.push(`${L.form.lReach}: ${v("#f-reach")}`);
+    if(v("#f-msg")) lines.push("",v("#f-msg"));
+    pre.textContent=lines.join("\n");
+  };
+  $(".formcard").addEventListener("input",render); $(".formcard").addEventListener("change",render);
+  render();
+}
+
+/* --- keyboard --- */
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){ $("#lang-menu").hidden=true; $("#lang-btn").setAttribute("aria-expanded","false"); $("#nav").classList.remove("open"); $(".burger").setAttribute("aria-expanded","false"); }
+});
+
 /* init */
 $("#map-clean").innerHTML=mapSVG("sard");
 $("#map-routes").innerHTML=mapSVG("routes");
@@ -1261,6 +1595,7 @@ applyConfig();
 applyLang();
 route(true);
 banner(true);
+setTimeout(()=>$(".wa").classList.add("show"),900);
 
 addEventListener("hashchange",()=>route(false));
 $("#lang-btn").addEventListener("click",()=>{
