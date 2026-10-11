@@ -31,7 +31,6 @@ h1:focus,main:focus{outline:none}
 .wrap{width:min(1180px,100% - 40px);margin-inline:auto}
 .skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:100;border-radius:6px}
 .skip:focus{left:12px}
-.eyebrow{font:600 .78rem var(--s);letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
 
 /* header */
 .hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -135,7 +134,6 @@ h1:focus,main:focus{outline:none}
 .phead{background:var(--ink);color:#BFD3DB;padding:70px 0 62px}
 .phead h1{color:#fff;margin:14px 0 16px;font-size:clamp(2.1rem,4.6vw,3.4rem)}
 .phead p{font-size:1.15rem;max-width:56ch;color:#BFD3DB}
-.phead .eyebrow{color:var(--sand)}
 .phead-logo{width:230px;max-width:70%;height:auto;display:block;margin-bottom:26px}
 
 /* price strip */
@@ -513,12 +511,10 @@ main.fade{opacity:0}
 }
 body{background:#fff}
 h1,h2,h3,h4{font-family:var(--d)}
-h1,h2{font-weight:650;letter-spacing:-.045em;line-height:.98}
-h1{font-size:clamp(2.9rem,7.2vw,6.4rem)}
+h1,h2{font-weight:650;letter-spacing:-.04em;line-height:.98}
+h1{font-size:clamp(2.9rem,7.2vw,6rem)}
 h2{font-size:clamp(2.1rem,4.4vw,3.6rem);margin-bottom:1.1rem}
 h3{font-weight:650;letter-spacing:-.02em}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--sea-d);letter-spacing:.16em;font-size:.74rem;font-weight:650}
-.eyebrow::before{content:"";width:24px;height:2px;border-radius:2px;background:currentColor}
 .band{padding:clamp(76px,10vw,136px) 0}
 .band-mist{background:var(--mist-2);border-block:0}
 .sec-head{margin-bottom:clamp(36px,5vw,64px)}
@@ -526,7 +522,6 @@ h3{font-weight:650;letter-spacing:-.02em}
 
 /* buttons: pills with a sliding arrow */
 .btn{border-radius:999px;padding:15px 26px;font-weight:650}
-.btn:not(:has(svg))::after{content:"\2192";display:inline-block;transition:transform .3s var(--ease)}
 .btn:hover::after{transform:translateX(4px)}
 .ck .btn::after,dialog .btn::after,.mbar .btn::after,.calc .out .btn::after{content:none}
 .btn-2{background:transparent;border-color:rgba(11,34,56,.2)}
@@ -559,11 +554,10 @@ h3{font-weight:650;letter-spacing:-.02em}
 .hero{display:block;padding:180px 0 56px;color:#fff}
 .hero h1{color:#fff;max-width:11ch;margin:22px 0 0}
 .hero h1 em{color:var(--foam);font-style:normal}
-.hero .eyebrow{color:var(--foam)}
 .hero .lead{color:rgba(255,255,255,.88);font-size:clamp(1.08rem,1.5vw,1.3rem);max-width:46ch}
 .hero .btn{background:#fff;border-color:#fff;color:var(--ink)}
 .hero .btn:hover{background:var(--foam);border-color:var(--foam)}
-.hero .btn-2{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.45);color:#fff;backdrop-filter:blur(6px)}
+.hero .btn-2{background:rgba(7,24,39,.25);border-color:rgba(255,255,255,.5);color:#fff}
 .hero .btn-2:hover{background:rgba(255,255,255,.16);border-color:#fff;color:#fff}
 .hero .trust{border-top-color:rgba(255,255,255,.22);gap:clamp(28px,6vw,72px);margin-top:clamp(40px,7vh,72px)}
 .hero .trust b{color:#fff;font:650 clamp(2rem,3.4vw,2.8rem)/1 var(--d);letter-spacing:-.04em;margin-bottom:8px}
@@ -584,14 +578,12 @@ h3{font-weight:650;letter-spacing:-.02em}
 .card-img{width:calc(100% + 72px);margin:-36px -36px 30px;aspect-ratio:4/3;transition:transform 1.2s var(--ease)}
 .card:hover .card-img{transform:scale(1.04)}
 .card:hover{transform:translateY(-4px);box-shadow:0 40px 70px -40px rgba(11,34,56,.4)}
-.card .num{font:650 .8rem var(--d);letter-spacing:.14em;color:var(--sea-d);margin-bottom:10px}
 .card h3{font:650 clamp(1.7rem,2.6vw,2.2rem)/1.05 var(--d);letter-spacing:-.035em;margin-bottom:14px}
 .card .meta span{background:var(--mist);border-radius:999px;font-weight:550}
 .card li{border-bottom-color:var(--line)}
 @media (max-width:820px){.card{padding:24px}.card-img{width:calc(100% + 48px);margin:-24px -24px 22px}}
 
 /* why */
-.why .n{font:650 .85rem/1 var(--d);letter-spacing:.14em;color:var(--sea-d)}
 .why h3{font-size:1.25rem}
 .why>div{border-color:var(--line)}
 
@@ -605,7 +597,6 @@ h3{font-weight:650;letter-spacing:-.02em}
 .phead::before{background:linear-gradient(180deg,rgba(7,24,39,.55) 0%,rgba(7,24,39,.1) 35%,rgba(7,24,39,.85) 100%),linear-gradient(90deg,rgba(7,24,39,.7),rgba(7,24,39,0) 75%)}
 .phead h1{font-size:clamp(2.8rem,6.4vw,5.4rem);max-width:13ch;margin:18px 0 18px}
 .phead p{color:rgba(255,255,255,.86);font-size:1.2rem}
-.phead .eyebrow{color:var(--foam)}
 @media (max-width:760px){.phead{padding:140px 0 48px;min-height:520px}.phead::before{background:linear-gradient(180deg,rgba(7,24,39,.55),rgba(7,24,39,.88))}}
 
 /* blocks, groups, notes */
@@ -613,17 +604,16 @@ h3{font-weight:650;letter-spacing:-.02em}
 .group h3::before{border-radius:50%;width:8px;height:8px}
 .prod-hi{background:linear-gradient(135deg,#E8F5F7,#fff)}
 .note{background:var(--mist);border-radius:16px}
-.note::before{background:var(--sea)}
 .checks li{border-bottom-color:var(--line)}
 .photo img,.mapfig svg,.mapbox{border-radius:var(--r)}
 
 /* price + calculator */
 .price{background:var(--ink);border-radius:var(--r) var(--r) 0 0;padding:34px 38px}
-.price b{font:650 3.6rem/1 var(--d);letter-spacing:-.05em}
+.price b{font:650 3.6rem/1 var(--d);letter-spacing:-.04em}
 .calc{border-radius:0 0 var(--r) var(--r);border-color:var(--line)}
 .calc .calc-t{font-size:1.2rem;letter-spacing:-.02em;line-height:1.2;margin-bottom:6px}
 .calc .out{background:var(--mist);border-radius:16px}
-.calc .out b{font:650 2.8rem/1.05 var(--d);letter-spacing:-.045em}
+.calc .out b{font:650 2.8rem/1.05 var(--d);letter-spacing:-.04em}
 .calc .out .btn{border-radius:999px}
 
 /* steps */
@@ -667,14 +657,12 @@ footer h4{font:650 1rem var(--d);letter-spacing:-.01em}
    Body 18px; no label or caption below ~14.5px; muted text darker. */
 :root{--muted:#566676}
 body{font-size:1.125rem;line-height:1.65}
-.eyebrow{font-size:.9rem;letter-spacing:.12em}
 .prod-hi .badge{font-size:.85rem;padding:6px 12px}
 .lead,.hero .lead{font-size:clamp(1.15rem,1.6vw,1.35rem)}
 .hero .trust span{font-size:1rem;color:rgba(255,255,255,.8)}
 .tk-track span{font-size:1.02rem}
 #nav a{font-size:1.02rem}
 .btn{font-size:1.04rem}
-.card .num,.why .n{font-size:.9rem}
 .card .meta span{font-size:.92rem;padding:6px 12px}
 .card li,.group .checks li,.checks li,.blk p,.note,.more p,dialog p,.ck p{font-size:1.02rem}
 .steps p,.cost2 li,.cost2 li span,.calc .sub,.cta-hours{font-size:1rem}
@@ -691,6 +679,22 @@ input,select,textarea{font-size:1.05rem}
 footer{font-size:1.02rem;color:#A9BDC9}
 footer .fsmall{font-size:1rem;color:#A9BDC9}
 .fbot{font-size:.95rem}
+
+/* ============ POLISH ============ */
+:root{--i-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 8h11M9.5 4l4 4-4 4'/%3E%3C/svg%3E");--i-check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8.5l3.2 3.2L13 4.8'/%3E%3C/svg%3E");--i-euro:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12.5 4.2a5 5 0 1 0 0 7.6M2.5 6.8h6.5M2.5 9.2h6.5'/%3E%3C/svg%3E")}
+html{scrollbar-color:#B9C7D1 transparent;accent-color:var(--sea)}
+::selection{background:var(--foam);color:var(--ink)}
+input,textarea{caret-color:var(--sea)}
+p{text-wrap:pretty}
+a{text-underline-offset:.18em}
+.hero :focus-visible,.phead :focus-visible,.band-ink :focus-visible,.more :focus-visible,footer :focus-visible,.hdr:not(.scrolled) :focus-visible{outline-color:var(--foam)}
+.btn:not(:has(svg))::after{content:"";width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--i-arrow) center/contain no-repeat;mask:var(--i-arrow) center/contain no-repeat;transition:transform .3s var(--ease)}
+.routes .arw{width:16px;height:16px;flex:none;background:var(--sea);-webkit-mask:var(--i-arrow) center/contain no-repeat;mask:var(--i-arrow) center/contain no-repeat}
+.cost2 .k::before{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:var(--i-check) center/contain no-repeat;mask:var(--i-check) center/contain no-repeat}
+.cost2 .excl .k::before{-webkit-mask-image:var(--i-euro);mask-image:var(--i-euro)}
+.note{display:block;padding:18px 22px}
+.card h3{margin-top:2px}
+.price b,.calc .out b,.hero .trust b{font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -728,7 +732,6 @@ footer .fsmall{font-size:1rem;color:#A9BDC9}
   </figure>
   <div class="wrap hero">
     <div>
-      <span class="eyebrow" data-t="home.eyebrow"></span>
       <h1><span data-t="home.h1a"></span><em data-t="home.h1b"></em></h1>
       <p class="lead" data-t="home.lead"></p>
       <div class="cta-row">
@@ -755,7 +758,6 @@ footer .fsmall{font-size:1rem;color:#A9BDC9}
       <div class="svc">
         <article class="card">
           <img class="card-img" id="img-c1" alt="" data-ta="img.c1">
-          <span class="num">01</span>
           <h3 data-t="home.c1h"></h3>
           <div class="meta" id="meta-c1"></div>
           <p data-t="home.c1p"></p>
@@ -764,7 +766,6 @@ footer .fsmall{font-size:1rem;color:#A9BDC9}
         </article>
         <article class="card">
           <img class="card-img" id="img-c2" alt="" data-ta="img.c2">
-          <span class="num">02</span>
           <h3 data-t="home.c2h"></h3>
           <div class="meta" id="meta-c2"></div>
           <p data-t="home.c2p"></p>
@@ -813,7 +814,6 @@ footer .fsmall{font-size:1rem;color:#A9BDC9}
   <header class="phead">
     <div class="bg" data-bg="alghero" style="background-position:center 26%"></div>
     <div class="wrap">
-      <span class="eyebrow" data-t="clean.eyebrow"></span>
       <h1 tabindex="-1" data-t="clean.h1"></h1>
       <p data-t="clean.intro"></p>
     </div>
@@ -910,7 +910,6 @@ footer .fsmall{font-size:1rem;color:#A9BDC9}
   <header class="phead">
     <div class="bg" data-bg="heel" style="background-position:center 64%"></div>
     <div class="wrap">
-      <span class="eyebrow" data-t="deliv.eyebrow"></span>
       <h1 tabindex="-1" data-t="deliv.h1"></h1>
       <p data-t="deliv.intro"></p>
     </div>
@@ -991,7 +990,6 @@ footer .fsmall{font-size:1rem;color:#A9BDC9}
     <div class="bg" data-bg="anchor" style="background-position:center 60%"></div>
     <div class="wrap">
       <img id="logo-head" class="phead-logo" alt="sail&amp;clean">
-      <span class="eyebrow" data-t="contact.eyebrow"></span>
       <h1 tabindex="-1" data-t="contact.h1"></h1>
       <p data-t="contact.intro"></p>
     </div>
@@ -1677,7 +1675,7 @@ function lists(){
                '<path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/>',
                '<path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="16" r="3"/>'];
   $("#home-why").innerHTML=L.home.why.map((w,i)=>
-    `<div><span class="n">0${i+1}</span><h3>${esc(w.t)}</h3><p>${esc(w.d)}</p></div>`).join("");
+    `<div><h3>${esc(w.t)}</h3><p>${esc(w.d)}</p></div>`).join("");
   $("#clean-groups").innerHTML=L.clean.groups.map(g=>`<div class="group"><h3>${esc(g.t)}</h3><ul class="checks">${li(g.items)}</ul></div>`).join("");
   $("#meta-c1").innerHTML=L.home.c1meta.map(m=>`<span>${esc(m)}</span>`).join("");
   $("#meta-c2").innerHTML=L.home.c2meta.map(m=>`<span>${esc(m)}</span>`).join("");
@@ -1687,10 +1685,10 @@ function lists(){
   $("#deliv-steps").innerHTML=steps(L.deliv.steps);
   $("#deliv-routes").innerHTML=L.deliv.routes.map(r=>{
     const [a,b]=r.split("→");
-    return `<li><span>${esc(a.trim())}</span><span class="arw">→</span><span>${esc(b.trim())}</span></li>`;
+    return `<li><span>${esc(a.trim())}</span><span class="arw" aria-hidden="true"></span><span>${esc(b.trim())}</span></li>`;
   }).join("");
-  const col=(c,cls,k)=>`<div class="${cls}"><h3><span class="k">${k}</span>${esc(c.t)}</h3><ul>${c.items.map(i=>`<li><b>${esc(i.b)}</b><span>${esc(i.s)}</span></li>`).join("")}</ul></div>`;
-  $("#deliv-costs").innerHTML=col(L.deliv.costIncl,"incl","✓")+col(L.deliv.costExcl,"excl","€");
+  const col=(c,cls,k)=>`<div class="${cls}"><h3><span class="k" aria-hidden="true">${k}</span>${esc(c.t)}</h3><ul>${c.items.map(i=>`<li><b>${esc(i.b)}</b><span>${esc(i.s)}</span></li>`).join("")}</ul></div>`;
+  $("#deliv-costs").innerHTML=col(L.deliv.costIncl,"incl","")+col(L.deliv.costExcl,"excl","");
   $("#deliv-faq").innerHTML=L.deliv.faq.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("");
   $("#pv-body").innerHTML=L.privacy.paras.map(p=>`<p>${esc(fill(p))}</p>`).join("");
   const checked=new Set([...$$("#f-chips input:checked")].map(i=>i.value));
@@ -1749,6 +1747,7 @@ function revealVisible(){
 
 function consent(v){
   mapOK=v;
+  try{ localStorage.setItem("sc-consent",v?"1":"0"); }catch(e){}
   const f=$("#gmap");
   if(v){ if(!f.src) f.src=CONFIG.mapEmbed; f.hidden=false; $("#gmap-ph").hidden=true; }
   else { f.removeAttribute("src"); f.hidden=true; $("#gmap-ph").hidden=false; }
@@ -1979,7 +1978,8 @@ $("#map-bg").innerHTML=mapSVG("sard");$("#img-c1").src=IMG.c1;$("#img-c2").src=I
 applyConfig();
 applyLang();
 route(true);
-banner(true);
+{ let saved=null; try{ saved=localStorage.getItem("sc-consent"); }catch(e){}
+  if(saved===null) banner(true); else consent(saved==="1"); }
 setTimeout(()=>$(".wa").classList.add("show"),900);
 
 addEventListener("hashchange",()=>route(false));
