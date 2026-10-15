@@ -1,0 +1,12 @@
+{
+  "name": "sail-and-clean-site",
+  "private": true,
+  "description": "Sail&Clean static website: edit src/index.html, run npm run build",
+  "scripts": {
+    "build": "node tools/build.js",
+    "set-domain": "python3 tools/set-domain.py"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

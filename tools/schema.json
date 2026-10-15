@@ -1,0 +1,151 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "LocalBusiness",
+   "@id": "{{SITE}}#business",
+   "name": "Sail&Clean",
+   "alternateName": "Sail and Clean",
+   "description": "Pulizia di barche fino a 30 metri nel nord della Sardegna e trasferimenti di imbarcazioni fino a 20 metri in tutto il Mediterraneo.",
+   "url": "{{SITE}}",
+   "image": "{{SITE}}og-image.jpg",
+   "logo": "{{SITE}}logo.png",
+   "telephone": "+39 351 753 8315",
+   "email": "sailandclean@gmail.com",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sassari",
+    "addressRegion": "SS",
+    "addressCountry": "IT"
+   },
+   "areaServed": [
+    {
+     "@type": "Place",
+     "name": "Porto Torres"
+    },
+    {
+     "@type": "Place",
+     "name": "Alghero"
+    },
+    {
+     "@type": "Place",
+     "name": "Fertilia"
+    },
+    {
+     "@type": "Place",
+     "name": "Bosa"
+    },
+    {
+     "@type": "Place",
+     "name": "Cannigione"
+    },
+    {
+     "@type": "Place",
+     "name": "Costa Smeralda"
+    },
+    {
+     "@type": "Place",
+     "name": "Portisco"
+    },
+    {
+     "@type": "Place",
+     "name": "Olbia"
+    },
+    {
+     "@type": "Place",
+     "name": "San Teodoro"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Sardegna"
+    },
+    {
+     "@type": "Place",
+     "name": "Mar Mediterraneo"
+    }
+   ],
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "09:00",
+     "closes": "18:00"
+    }
+   ],
+   "founder": {
+    "@type": "Person",
+    "@id": "{{SITE}}#andrea",
+    "name": "Andrea Pani",
+    "jobTitle": "Fondatore e skipper"
+   },
+   "knowsLanguage": [
+    "it",
+    "en",
+    "fr",
+    "de",
+    "es"
+   ],
+   "sameAs": [
+    "https://instagram.com/sailandclean_",
+    "https://www.youtube.com/@SailClean-Official"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servizi",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Pulizia e cura della barca",
+       "serviceType": "Boat cleaning",
+       "description": "Interni, esterni, gel coat, ceratura, decapaggio, lavaggio gommoni e rimessaggio vele per barche fino a 30 metri, in acqua o a secco.",
+       "areaServed": "Nord Sardegna"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Trasferimenti e skipperaggio",
+       "serviceType": "Boat delivery",
+       "description": "Trasferimento di barche fino a 20 metri in tutto il Mediterraneo, oltre le 12 miglia e all'estero.",
+       "areaServed": "Mar Mediterraneo"
+      },
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "price": 7,
+       "priceCurrency": "EUR",
+       "unitCode": "NMI",
+       "unitText": "miglio nautico"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "{{SITE}}#website",
+   "url": "{{SITE}}",
+   "name": "Sail&Clean",
+   "inLanguage": [
+    "it",
+    "en",
+    "fr",
+    "de",
+    "es"
+   ],
+   "publisher": {
+    "@id": "{{SITE}}#business"
+   }
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+# Packages the public website on every push to main, and (optionally) uploads it to Aruba by FTP.
+#
+#  1. Download: Actions tab > latest "Website" run > Artifacts > sailandclean-website.zip
+#     Unzip it and upload the contents to the web folder in Aruba's File Manager.
+#  2. Automatic upload to Aruba (optional): in GitHub > Settings > Secrets and variables > Actions add
+#       secrets:   ARUBA_FTP_SERVER  (e.g. ftp.sailandclean.it)
+#                  ARUBA_FTP_USER
+#                  ARUBA_FTP_PASSWORD
+#       variables: ARUBA_DEPLOY = true
+#                  ARUBA_FTP_DIR      (optional, the web folder on the FTP server, default ./)
+#                  ARUBA_FTP_PROTOCOL (optional: ftps or ftp, default ftps)
+#     See docs/ARUBA.md.
+name: Website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect public files
+        run: |
+          mkdir -p public
+          cp -r index.html 404.html .htaccess robots.txt sitemap.xml llms.txt og-image.jpg logo.png assets \
+                pulizia trasferimenti contatti en fr de es public/
+          [ -f CNAME ] && cp CNAME public/ || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sailandclean-website
+          path: public
+          include-hidden-files: true
+          retention-days: 30
+
+  deploy-aruba:
+    needs: package
+    if: ${{ vars.ARUBA_DEPLOY == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: sailandclean-website
+          path: public
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ARUBA_FTP_SERVER }}
+          username: ${{ secrets.ARUBA_FTP_USER }}
+          password: ${{ secrets.ARUBA_FTP_PASSWORD }}
+          protocol: ${{ vars.ARUBA_FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./public/
+          server-dir: ${{ vars.ARUBA_FTP_DIR || './' }}
