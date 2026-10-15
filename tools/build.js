@@ -40,6 +40,35 @@ const ROUTES = {
 const LOCALE = { it: "it_IT", en: "en_GB", fr: "fr_FR", de: "de_DE", es: "es_ES" };
 const DESC_KEY = { home: "home.lead", pulizia: "clean.intro", trasferimenti: "deliv.intro", contatti: "contact.intro" };
 
+/* Find `const NAME={ it:{...}, en:{...}, ... };` in the script and keep only language L. */
+function keepLang(js, name, L) {
+  const m = new RegExp(`const ${name}\\s*=\\s*\\{`).exec(js);
+  if (!m) return js;
+  const start = m.index + m[0].length - 1;
+  const skipStr = (i) => { const q = js[i]; i++; while (js[i] !== q) { if (js[i] === "\\") i++; i++; } return i; };
+  let depth = 0, i = start;
+  for (; i < js.length; i++) {
+    const ch = js[i];
+    if (ch === '"' || ch === "'" || ch === "`") { i = skipStr(i); continue; }
+    if (ch === "{") depth++;
+    if (ch === "}" && --depth === 0) break;
+  }
+  const body = js.slice(start + 1, i); // it:{...},en:{...}
+  // walk top-level entries
+  let d = 0, j = 0, entries = [], from = 0;
+  for (; j < body.length; j++) {
+    const ch = body[j];
+    if (ch === '"' || ch === "'" || ch === "`") { const q = ch; j++; while (body[j] !== q) { if (body[j] === "\\") j++; j++; } continue; }
+    if (ch === "{" || ch === "[" || ch === "(") d++;
+    else if (ch === "}" || ch === "]" || ch === ")") d--;
+    else if (ch === "," && d === 0) { entries.push(body.slice(from, j)); from = j + 1; }
+  }
+  entries.push(body.slice(from));
+  const mine = entries.filter((e) => new RegExp(`^\\s*${L}\\s*:`).test(e));
+  if (mine.length !== 1) throw new Error(`keepLang: ${name}.${L} not found`);
+  return js.slice(0, start + 1) + mine[0] + js.slice(i);
+}
+
 const write = (rel, data) => { const f = path.join(ROOT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, data); };
 const hash = (buf) => crypto.createHash("sha1").update(buf).digest("hex").slice(0, 8);
 const depthBase = (route) => "../".repeat(route.split("/").filter(Boolean).length);
@@ -63,19 +92,29 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
 
   const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
   let js = scripts.map((m) => m[1]).join("\n;\n");
+  const images = {};
   js = js.replace(/(\b[A-Za-z_]\w*)\s*([:=])\s*"data:image\/webp;base64,([A-Za-z0-9+/=]+)"/g, (m, name, op, b64) => {
     const file = `assets/img/${name.toLowerCase()}.webp`;
     write(file, Buffer.from(b64, "base64"));
+    images[name.toLowerCase()] = b64;
     return `${name}${op}"${file}"`;
   });
-  const jsV = hash(js); write("assets/site.js", js);
+  // one script per language: keep only that language in the text tables (T, TX, WO)
+  const jsFor = {}, jsV = {};
+  for (const L of LANGS) {
+    let out = js;
+    for (const name of ["T", "TX", "WO"]) out = keepLang(out, name, L);
+    jsFor[L] = out; jsV[L] = hash(out);
+    write(`assets/site.${L}.js`, out);
+  }
+  if (fs.existsSync(path.join(ROOT, "assets/site.js"))) fs.unlinkSync(path.join(ROOT, "assets/site.js"));
 
   // page template: external css/js, SEO head rebuilt per page
   let tpl = html
     .replace(styleM[0], `<link rel="stylesheet" href="{{BASE}}assets/site.css?v=${cssV}">`)
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>\n?/, "");
   let first = true;
-  tpl = tpl.replace(/<script>[\s\S]*?<\/script>\n?/g, () => (first ? ((first = false), `<script src="{{BASE}}assets/site.js?v=${jsV}"></script>\n`) : ""));
+  tpl = tpl.replace(/<script>[\s\S]*?<\/script>\n?/g, () => (first ? ((first = false), `<script src="{{BASE}}assets/site.{{LANG}}.js?v={{JSV}}"></script>\n`) : ""));
   tpl = tpl.replace(/<meta name="description"[^>]*>\n?/, "")
     .replace(/<link rel="canonical"[\s\S]*?<link rel="alternate" type="text\/plain"[^>]*>\n?/, "")
     .replace(/<meta name="robots"[^>]*>\n?/, "");
@@ -83,6 +122,19 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
   /* ---------- 2. per-language text, from the real renderer ---------- */
   const browser = await chromium.launch();
   const reader = await browser.newPage();
+
+  /* smaller copies of the content photos for phones (srcset) */
+  const SMALL = { c1: 800, c2: 800, clean: 800, face: 480 };
+  for (const [name, w] of Object.entries(SMALL)) {
+    if (!images[name]) continue;
+    const b64 = await reader.evaluate(async ({ src, w }) => {
+      const im = new Image(); im.src = src; await im.decode();
+      const c = document.createElement("canvas"); c.width = w; c.height = Math.round(im.naturalHeight * w / im.naturalWidth);
+      const x = c.getContext("2d"); x.imageSmoothingQuality = "high"; x.drawImage(im, 0, 0, c.width, c.height);
+      return c.toDataURL("image/webp", 0.84).split(",")[1];
+    }, { src: "data:image/webp;base64," + images[name], w });
+    write(`assets/img/${name}-${w}.webp`, Buffer.from(b64, "base64"));
+  }
   const dict = {};
   for (const L of LANGS) {
     await reader.goto("file://" + SRC + "?lang=" + L + "#home");
@@ -111,7 +163,7 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
   const pagesOut = [];
   for (const L of LANGS) for (const P of PAGES) {
     const route = ROUTES[L][P], BASE = depthBase(route);
-    await bp.setContent(tpl.replaceAll("{{BASE}}", BASE), { waitUntil: "domcontentloaded" });
+    await bp.setContent(tpl.replaceAll("{{BASE}}", BASE).replace("{{LANG}}", L).replace("{{JSV}}", jsV[L]), { waitUntil: "domcontentloaded" });
     const out = await bp.evaluate(({ L, P, BASE, route, D, ROUTES, LANGS, PAGES, SITE, LOCALE, ld }) => {
       const doc = document, H = doc.documentElement;
       const relTo = (r) => BASE + r || "./";
@@ -143,7 +195,16 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       // images visible without JavaScript
       const img = (sel, file) => { const e = doc.querySelector(sel); if (e) e.setAttribute("src", BASE + "assets/img/" + file); };
       img("#img-hero", "hero.webp"); img("#img-c1", "c1.webp"); img("#img-c2", "c2.webp"); img("#img-clean", "clean.webp");
-      img("#face", "face.webp"); img("#face-sm", "face.webp");
+      img("#face", "face.webp"); img("#face-sm", "face.webp"); img("#face-ab", "face.webp"); img("#img-vid", "heel.webp");
+      // [small file, its width], [full file, its width], sizes
+      const srcset = (sel, [sm, smW], [full, fullW], sizes) => { const e = doc.querySelector(sel); if (!e) return;
+        e.setAttribute("srcset", `${BASE}assets/img/${sm} ${smW}w, ${BASE}assets/img/${full} ${fullW}w`); e.setAttribute("sizes", sizes); };
+      srcset("#img-c1", ["c1-800.webp", 800], ["c1.webp", 1400], "(max-width: 820px) 100vw, 560px");
+      srcset("#img-c2", ["c2-800.webp", 800], ["c2.webp", 1400], "(max-width: 820px) 100vw, 560px");
+      srcset("#img-clean", ["clean-800.webp", 800], ["clean.webp", 1500], "(max-width: 880px) 100vw, 600px");
+      srcset("#face", ["face-480.webp", 480], ["face.webp", 900], "(max-width: 880px) 90vw, 420px");
+      srcset("#face-ab", ["face-480.webp", 480], ["face.webp", 900], "(max-width: 640px) 90vw, 360px");
+      srcset("#face-sm", ["face-480.webp", 480], ["face.webp", 900], "96px");
       doc.querySelectorAll(".phead .bg[data-bg]").forEach((b) => { b.style.backgroundImage = `url(${BASE}assets/img/${b.dataset.bg}.webp)`; });
       doc.querySelectorAll("img").forEach((i) => { if (i.id !== "img-hero" && !i.closest(".hdr")) i.setAttribute("loading", "lazy"); });
       // head: title, description, canonical, hreflang, social, structured data
@@ -175,6 +236,9 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       const graph = JSON.parse(JSON.stringify(ld));
       graph["@graph"].push({ "@type": "WebPage", "@id": url + "#webpage", url, name: D.title[P], description: D.desc[P], inLanguage: L,
         isPartOf: { "@id": SITE + "#website" }, about: { "@id": SITE + "#business" } });
+      const faq = [...doc.querySelectorAll("#deliv-faq details")].map((d) => ({ "@type": "Question", name: d.querySelector("summary").textContent.trim(),
+        acceptedAnswer: { "@type": "Answer", text: d.querySelector("p").textContent.trim() } }));
+      if (faq.length) graph["@graph"].push({ "@type": "FAQPage", "@id": url + "#faq", inLanguage: L, isPartOf: { "@id": url + "#webpage" }, mainEntity: faq });
       const s = doc.createElement("script"); s.type = "application/ld+json"; s.textContent = JSON.stringify(graph); head.appendChild(s);
       return "<!DOCTYPE html>\n" + H.outerHTML + "\n";
     }, { L, P, BASE, route, D: dict[L], ROUTES, LANGS, PAGES, SITE, LOCALE, ld });
