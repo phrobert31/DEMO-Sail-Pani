@@ -803,7 +803,7 @@ footer nav a{min-height:44px}
 .wo-lines{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
 @media (max-width:560px){.wo-lines{grid-template-columns:1fr}}
 .wo-ln{padding-top:4px}
-.wo-other{margin-top:16px;max-width:360px}
+.wo-other{max-width:420px}
 .wo-ln label{display:block;margin:0;font:600 .9rem var(--d);color:var(--muted);transition:color .2s}
 .wo .wo-ln input,.wo .wo-ln textarea{width:100%;border:0;border-bottom:1.5px solid var(--line);border-radius:0;background:transparent;font:500 1.12rem var(--d);color:var(--ink);padding:10px 0;box-shadow:none;outline:0;caret-color:var(--sea);transition:border-color .2s}
 .wo .wo-ln textarea{resize:vertical;min-height:84px;line-height:1.5}

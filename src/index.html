@@ -832,7 +832,7 @@ footer nav a{min-height:44px}
 .wo-lines{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
 @media (max-width:560px){.wo-lines{grid-template-columns:1fr}}
 .wo-ln{padding-top:4px}
-.wo-other{margin-top:16px;max-width:360px}
+.wo-other{max-width:420px}
 .wo-ln label{display:block;margin:0;font:600 .9rem var(--d);color:var(--muted);transition:color .2s}
 .wo .wo-ln input,.wo .wo-ln textarea{width:100%;border:0;border-bottom:1.5px solid var(--line);border-radius:0;background:transparent;font:500 1.12rem var(--d);color:var(--ink);padding:10px 0;box-shadow:none;outline:0;caret-color:var(--sea);transition:border-color .2s}
 .wo .wo-ln textarea{resize:vertical;min-height:84px;line-height:1.5}
@@ -1245,8 +1245,7 @@ footer nav a{min-height:44px}
           <div class="wo-bd">
             <h3><span data-w="s3"></span> <span class="wo-tag" data-w="optional"></span></h3>
             <p class="wo-hint" data-w="s3h">Porto o marina dove facciamo il lavoro.</p>
-            <div class="wo-ports" id="wo-ports" role="radiogroup" data-wa="s3"><input type="radio" name="wo-port" id="wo-p0" value="0"><label for="wo-p0">Porto Torres</label><input type="radio" name="wo-port" id="wo-p1" value="1"><label for="wo-p1">Alghero e Fertilia</label><input type="radio" name="wo-port" id="wo-p2" value="2"><label for="wo-p2">Bosa</label><input type="radio" name="wo-port" id="wo-p3" value="3"><label for="wo-p3">Cannigione</label><input type="radio" name="wo-port" id="wo-p4" value="4"><label for="wo-p4">Costa Smeralda</label><input type="radio" name="wo-port" id="wo-p5" value="5"><label for="wo-p5">Portisco</label><input type="radio" name="wo-port" id="wo-p6" value="6"><label for="wo-p6">Olbia</label><input type="radio" name="wo-port" id="wo-p7" value="7"><label for="wo-p7">San Teodoro</label><input type="radio" name="wo-port" id="wo-pX" value="x"><label for="wo-pX">Altro</label></div>
-            <div class="wo-ln wo-other" id="wo-other" hidden><label for="f-port" data-w="otherLbl">Quale porto?</label><input id="f-port" type="text" data-wp="otherPh" placeholder="Nome del porto o della marina"></div>
+            <div class="wo-ln wo-other" id="wo-other"><label for="f-port" data-w="otherLbl">Quale porto?</label><input id="f-port" type="text" data-wp="otherPh" placeholder="Nome del porto o della marina"></div>
           </div>
         </section>
         <section class="wo-step">
@@ -2109,7 +2108,7 @@ const WO={
 it:{modeIntro:"Più dettagli ci dai, più preciso è il preventivo. Ma va bene anche solo un messaggio: ti ricontattiamo noi.",modeLabel:"Come vuoi scriverci",modeFull:"Scheda dettagliata",modeQuick:"Solo un messaggio",optional:"facoltativo",msgLbl:"Messaggio",msgPh:"Raccontaci cosa ti serve: barca, porto, lavori, date…",errMsg:"Scrivi due righe su cosa ti serve.",toSet:"da indicare",s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo di barca",t0:"Vela",t1:"Motore",t2:"Catamarano",full:["Barca a vela","Barca a motore","Catamarano"],
   planLabel:"Pianta della barca: tocca le zone da pulire",lenLabel:"Lunghezza in metri",meters:"metri",both:"pulizia e trasferimento",cleanOnly:"solo pulizia (trasferimenti fino a 20 m)",
   zones:{gom:"Gommone",ext:"Esterni e coperta",gel:"Gel coat e scafo",int:"Interni",sails:"Rimessaggio vele"},
-  s2:"Cosa va fatto",s2h:"Tocca le zone sulla pianta, oppure scegli qui.",s3:"Dove si trova",s3h:"Porto o marina dove facciamo il lavoro.",other:"Altro",otherLbl:"Quale porto?",otherPh:"Nome del porto o della marina",
+  s2:"Cosa va fatto",s2h:"Tocca le zone sulla pianta, oppure scegli qui.",s3:"Dove si trova",s3h:"Porto o marina dove facciamo il lavoro.",other:"Altro",otherLbl:"Quale porto?",otherPh:"es. Olbia, Portisco, Cannigione…",
   s4:"A chi rispondiamo",s4h:"Ti scriviamo noi con il preventivo.",model:"Modello",modelPh:"es. Bavaria 46",note:"Note per noi",notePh:"Date, accesso alla barca, cose da sapere…",
   tkTitle:"Scheda lavoro",tkBoat:"Barca",tkLen:"Lunghezza",tkPort:"Porto",tkWorks:"Lavori",toChoose:"da scegliere",noneYet:"nessuno ancora",
   send:"Invia la scheda su WhatsApp",sent:"Scheda pronta, apro WhatsApp…",mail:"Preferisci l'email?",mailSent:"Apro la tua app email con la scheda già scritta.",
@@ -2117,7 +2116,7 @@ it:{modeIntro:"Più dettagli ci dai, più preciso è il preventivo. Ma va bene a
 en:{modeIntro:"The more you tell us, the more accurate the quote. But a short message is fine too: we'll get back to you.",modeLabel:"How would you like to write to us",modeFull:"Detailed form",modeQuick:"Just a message",optional:"optional",msgLbl:"Message",msgPh:"Tell us what you need: boat, port, work, dates…",errMsg:"Write a line or two about what you need.",toSet:"not set",s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"Sail",t1:"Motor",t2:"Catamaran",full:["Sailing boat","Motor boat","Catamaran"],
   planLabel:"Boat plan: tap the areas to clean",lenLabel:"Length in metres",meters:"metres",both:"cleaning and delivery",cleanOnly:"cleaning only (deliveries up to 20 m)",
   zones:{gom:"Tender",ext:"Exterior and deck",gel:"Gel coat and hull",int:"Interior",sails:"Sail storage"},
-  s2:"What needs doing",s2h:"Tap the areas on the plan, or choose here.",s3:"Where is the boat?",s3h:"Port or marina where we do the work.",other:"Other",otherLbl:"Which port?",otherPh:"Name of the port or marina",
+  s2:"What needs doing",s2h:"Tap the areas on the plan, or choose here.",s3:"Where is the boat?",s3h:"Port or marina where we do the work.",other:"Other",otherLbl:"Which port?",otherPh:"e.g. Olbia, Portisco, Cannigione…",
   s4:"Who should we reply to?",s4h:"We write back to you with the quote.",model:"Model",modelPh:"e.g. Bavaria 46",note:"Notes for us",notePh:"Dates, access to the boat, things to know…",
   tkTitle:"Work order",tkBoat:"Boat",tkLen:"Length",tkPort:"Port",tkWorks:"Work",toChoose:"not chosen yet",noneYet:"none yet",
   send:"Send the work order on WhatsApp",sent:"Work order ready, opening WhatsApp…",mail:"Prefer email?",mailSent:"Opening your email app with the work order filled in.",
@@ -2125,7 +2124,7 @@ en:{modeIntro:"The more you tell us, the more accurate the quote. But a short me
 fr:{modeIntro:"Plus vous nous donnez de détails, plus le devis sera précis. Mais un simple message suffit : nous vous recontactons.",modeLabel:"Comment souhaitez-vous nous écrire",modeFull:"Formulaire détaillé",modeQuick:"Juste un message",optional:"facultatif",msgLbl:"Message",msgPh:"Dites-nous ce qu'il vous faut : bateau, port, travaux, dates…",errMsg:"Écrivez quelques mots sur votre besoin.",toSet:"à préciser",s1:"Le bateau",s1h:"Type et longueur hors tout.",typeLabel:"Type de bateau",t0:"Voilier",t1:"Moteur",t2:"Catamaran",full:["Voilier","Bateau à moteur","Catamaran"],
   planLabel:"Plan du bateau : touchez les zones à nettoyer",lenLabel:"Longueur en mètres",meters:"mètres",both:"nettoyage et convoyage",cleanOnly:"nettoyage uniquement (convoyages jusqu'à 20 m)",
   zones:{gom:"Annexe",ext:"Extérieur et pont",gel:"Gel coat et coque",int:"Intérieur",sails:"Hivernage des voiles"},
-  s2:"Ce qu'il faut faire",s2h:"Touchez les zones sur le plan, ou choisissez ici.",s3:"Où se trouve le bateau ?",s3h:"Port ou marina où nous intervenons.",other:"Autre",otherLbl:"Quel port ?",otherPh:"Nom du port ou de la marina",
+  s2:"Ce qu'il faut faire",s2h:"Touchez les zones sur le plan, ou choisissez ici.",s3:"Où se trouve le bateau ?",s3h:"Port ou marina où nous intervenons.",other:"Autre",otherLbl:"Quel port ?",otherPh:"ex. Olbia, Portisco, Cannigione…",
   s4:"À qui répondre",s4h:"Nous vous écrivons avec le devis.",model:"Modèle",modelPh:"ex. Bavaria 46",note:"Notes pour nous",notePh:"Dates, accès au bateau, choses à savoir…",
   tkTitle:"Bon de travail",tkBoat:"Bateau",tkLen:"Longueur",tkPort:"Port",tkWorks:"Travaux",toChoose:"à choisir",noneYet:"aucun pour l'instant",
   send:"Envoyer le bon sur WhatsApp",sent:"Bon prêt, ouverture de WhatsApp…",mail:"Vous préférez l'e-mail ?",mailSent:"Ouverture de votre messagerie avec le bon déjà rédigé.",
@@ -2133,7 +2132,7 @@ fr:{modeIntro:"Plus vous nous donnez de détails, plus le devis sera précis. Ma
 de:{modeIntro:"Je mehr Details Sie angeben, desto genauer das Angebot. Eine kurze Nachricht genügt aber auch: Wir melden uns bei Ihnen.",modeLabel:"Wie möchten Sie uns schreiben",modeFull:"Ausführliches Formular",modeQuick:"Nur eine Nachricht",optional:"optional",msgLbl:"Nachricht",msgPh:"Sagen Sie uns, was Sie brauchen: Boot, Hafen, Arbeiten, Termine…",errMsg:"Schreiben Sie kurz, was Sie brauchen.",toSet:"noch offen",s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Segel",t1:"Motor",t2:"Katamaran",full:["Segelboot","Motorboot","Katamaran"],
   planLabel:"Bootsplan: tippen Sie auf die zu reinigenden Bereiche",lenLabel:"Länge in Metern",meters:"Meter",both:"Reinigung und Überführung",cleanOnly:"nur Reinigung (Überführungen bis 20 m)",
   zones:{gom:"Beiboot",ext:"Außenbereich und Deck",gel:"Gelcoat und Rumpf",int:"Innenraum",sails:"Segeleinlagerung"},
-  s2:"Was zu tun ist",s2h:"Tippen Sie auf die Bereiche im Plan oder wählen Sie hier.",s3:"Wo liegt das Boot?",s3h:"Hafen oder Marina, in der wir arbeiten.",other:"Anderer Hafen",otherLbl:"Welcher Hafen?",otherPh:"Name des Hafens oder der Marina",
+  s2:"Was zu tun ist",s2h:"Tippen Sie auf die Bereiche im Plan oder wählen Sie hier.",s3:"Wo liegt das Boot?",s3h:"Hafen oder Marina, in der wir arbeiten.",other:"Anderer Hafen",otherLbl:"Welcher Hafen?",otherPh:"z. B. Olbia, Portisco, Cannigione…",
   s4:"Ihre Kontaktdaten",s4h:"Wir schreiben Ihnen mit dem Angebot.",model:"Modell",modelPh:"z. B. Bavaria 46",note:"Hinweise für uns",notePh:"Termine, Zugang zum Boot, Wissenswertes…",
   tkTitle:"Auftragszettel",tkBoat:"Boot",tkLen:"Länge",tkPort:"Hafen",tkWorks:"Arbeiten",toChoose:"noch nicht gewählt",noneYet:"noch keine",
   send:"Auftrag per WhatsApp senden",sent:"Auftrag fertig, WhatsApp wird geöffnet…",mail:"Lieber per E-Mail?",mailSent:"Ihre E-Mail-App öffnet sich mit dem ausgefüllten Auftrag.",
@@ -2141,7 +2140,7 @@ de:{modeIntro:"Je mehr Details Sie angeben, desto genauer das Angebot. Eine kurz
 es:{modeIntro:"Cuantos más detalles nos des, más preciso será el presupuesto. Pero basta con un mensaje: nosotros te contactamos.",modeLabel:"Cómo quieres escribirnos",modeFull:"Formulario detallado",modeQuick:"Solo un mensaje",optional:"opcional",msgLbl:"Mensaje",msgPh:"Cuéntanos qué necesitas: barco, puerto, trabajos, fechas…",errMsg:"Escribe un par de líneas sobre lo que necesitas.",toSet:"por indicar",s1:"El barco",s1h:"Tipo y eslora total.",typeLabel:"Tipo de barco",t0:"Vela",t1:"Motor",t2:"Catamarán",full:["Velero","Barco a motor","Catamarán"],
   planLabel:"Plano del barco: toca las zonas que limpiar",lenLabel:"Eslora en metros",meters:"metros",both:"limpieza y traslado",cleanOnly:"solo limpieza (traslados hasta 20 m)",
   zones:{gom:"Neumática",ext:"Exterior y cubierta",gel:"Gel coat y casco",int:"Interior",sails:"Guardado de velas"},
-  s2:"Qué hay que hacer",s2h:"Toca las zonas en el plano, o elige aquí.",s3:"¿Dónde está el barco?",s3h:"Puerto donde hacemos el trabajo.",other:"Otro",otherLbl:"¿Qué puerto?",otherPh:"Nombre del puerto o la marina",
+  s2:"Qué hay que hacer",s2h:"Toca las zonas en el plano, o elige aquí.",s3:"¿Dónde está el barco?",s3h:"Puerto donde hacemos el trabajo.",other:"Otro",otherLbl:"¿Qué puerto?",otherPh:"p. ej. Olbia, Portisco, Cannigione…",
   s4:"¿A quién respondemos?",s4h:"Te escribimos con el presupuesto.",model:"Modelo",modelPh:"p. ej. Bavaria 46",note:"Notas para nosotros",notePh:"Fechas, acceso al barco, cosas que saber…",
   tkTitle:"Orden de trabajo",tkBoat:"Barco",tkLen:"Eslora",tkPort:"Puerto",tkWorks:"Trabajos",toChoose:"por elegir",noneYet:"ninguno aún",
   send:"Enviar la orden por WhatsApp",sent:"Orden lista, abriendo WhatsApp…",mail:"¿Prefieres el correo?",mailSent:"Abriendo tu correo con la orden ya escrita.",
@@ -2158,16 +2157,11 @@ function woRender(){
   $$("[data-wa]").forEach(el=>el.setAttribute("aria-label",w(el.dataset.wa)));
   $$("[data-wp]").forEach(el=>el.placeholder=w(el.dataset.wp));
   $$(".wo-z").forEach(z=>{ const n=w("zones")[z.dataset.k]; z.setAttribute("aria-label",n); z.querySelector("title").textContent=n; });
-  const cur=$("input[name=wo-port]:checked"), curV=cur?cur.value:"";
-  const ports=L.clean.ports.map((p,i)=>`<input type="radio" name="wo-port" id="wo-p${i}" value="${i}"${curV===String(i)?" checked":""}><label for="wo-p${i}">${esc(p)}</label>`);
-  ports.push(`<input type="radio" name="wo-port" id="wo-pX" value="x"${curV==="x"?" checked":""}><label for="wo-pX">${esc(w("other"))}</label>`);
-  $h("#wo-ports").innerHTML=ports.join("");
   $h("#wo-date").textContent=new Date().toLocaleDateString(lang,{day:"2-digit",month:"short",year:"numeric"});
   woSync();
 }
 function woFlash(id){ const el=$(id); el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
-function woPort(){ const r=$("input[name=wo-port]:checked"); if(!r) return "";
-  return r.value==="x" ? $h("#f-port").value.trim() : T[lang].clean.ports[+r.value]; }
+function woPort(){ return $h("#f-port").value.trim(); }
 function woSync(){
   const type=+($("input[name=wo-type]:checked")||{value:0}).value;
   $h("#wo-plan").dataset.type=type;
@@ -2180,7 +2174,6 @@ function woSync(){
   WO_ZONES.forEach(k=>{ const cb=$(`#f-chips input[value="${k}"]`), on=!!(cb&&cb.checked);
     $$(`.wo-z[data-k="${k}"]`).forEach(z=>{ z.classList.toggle("on",on); z.setAttribute("aria-checked",on); }); });
   $$(".wo-rig").forEach(g=>g.classList.toggle("on",!!($('#f-chips input[value="sails"]')||{}).checked));
-  const r=$("input[name=wo-port]:checked"); $h("#wo-other").hidden=!(r&&r.value==="x");
   const model=$h("#f-boat").value.trim();
   const boatTxt=[woTouched.type?w("full")[type]:"",model].filter(Boolean).join(" · ");
   $h("#wo-o-boat").textContent=boatTxt||w("toSet"); $h("#wo-o-boat").classList.toggle("empty",!boatTxt);
@@ -2197,11 +2190,10 @@ function woSync(){
     z.addEventListener("keydown",e=>{ if(e.key===" "||e.key==="Enter"){ e.preventDefault(); toggle(z); } }); });
   $h(".wo").addEventListener("change",e=>{ if(e.target.name==="wo-type") woTouched.type=true; woSync();
     if(e.target.closest("#f-chips")) woFlash("#wo-o-works");
-    else if(e.target.name==="wo-port"){ woFlash("#wo-o-port"); if(e.target.value==="x") $h("#f-port").focus(); }
     else if(e.target.name==="wo-type") woFlash("#wo-o-boat"); });
   $h(".wo").addEventListener("input",e=>{ if(e.target.id==="f-name"){ $h("#wo-ln-name").classList.remove("err"); $h("#f-err").textContent=""; }
     if(e.target.id==="f-msg"){ $h("#wo-ln-msg").classList.remove("err"); $h("#f-err2").textContent=""; }
-    if(e.target.id==="wo-len") woTouched.len=true; woSync(); });
+    if(e.target.id==="wo-len") woTouched.len=true; woSync(); if(e.target.id==="f-port") woFlash("#wo-o-port"); });
 })();
 
 function applyLang(){
@@ -2407,8 +2399,8 @@ function wireMaps(){
     li.addEventListener("mouseleave",()=>dots[i]&&dots[i].classList.remove("hot")); });
   dots.forEach((d,i)=>{ d.addEventListener("mouseenter",()=>items[i]&&items[i].classList.add("hot"));
     d.addEventListener("mouseleave",()=>items[i]&&items[i].classList.remove("hot")); });
-  const pick=i=>{ const r=$("#wo-p"+i); if(r){ r.checked=true; r.dispatchEvent(new Event("change",{bubbles:true})); }
-    $h(".formcard").scrollIntoView({behavior:RM?"auto":"smooth",block:"start"}); setTimeout(()=>(r||$("#f-name")).focus({preventScroll:true}),RM?0:500); };
+  const pick=i=>{ const f=$("#f-port"); if(f){ f.value=T[lang].clean.ports[i]; f.dispatchEvent(new Event("input",{bubbles:true})); }
+    $h(".formcard").scrollIntoView({behavior:RM?"auto":"smooth",block:"start"}); setTimeout(()=>($("#f-port")||$("#f-name")).focus({preventScroll:true}),RM?0:500); };
   items.forEach((li,i)=>{ li.style.cursor="pointer"; li.title=""; li.addEventListener("click",()=>pick(i)); });
   dots.forEach((d,i)=>d.addEventListener("click",()=>pick(i)));
   // routes <-> list
