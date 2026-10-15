@@ -29,7 +29,7 @@ const T={
 it:{
  img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca"},
  ui:{top:"Torna su",preview:"Anteprima del messaggio",quote:"Preventivo",skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
- calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta, calcolate da Sassari. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
+ calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti"},
  map:{capHome:"Nord della Sardegna.",capClean:"I porti dove lavoriamo abitualmente.",capRoutes:"Alcune rotte già percorse."},
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"pulita e pronta a partire.",
@@ -73,7 +73,7 @@ it:{
   lBoat:"Barca",lPort:"Porto",lServices:"Servizi",lReach:"Recapito"},
  deliv:{eyebrow:"Servizio 02",h1:"Trasferimenti e skipperaggio",
   intro:"Portiamo la tua barca dove serve, anche oltre le 12 miglia e fuori dall'Italia. Barche di qualsiasi tipo fino a 20 metri.",
-  priceText:"al miglio. Il prezzo si calcola sulle miglia della rotta, a partire da Sassari. Le altre spese sono a carico dell'armatore.",
+  priceText:"al miglio. Il prezzo si calcola sulle miglia della rotta. Le altre spese sono a carico dell'armatore.",
   priceBtn:"Chiedi un preventivo",
   routesTitle:"Rotte già percorse",routesSub:"Qualche esempio di trasferimenti portati a termine.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -87,7 +87,7 @@ it:{
    {t:"Sopralluogo",d:"Il controllo prima della partenza si paga anche se poi non si parte: è una giornata di lavoro."},
    {t:"Giorni di attesa",d:"Se la barca non è pronta, ogni giorno passato a terra ad aspettare si paga a giornata."},
    {t:"Documenti",d:"Non ci occupiamo di documenti e pratiche portuali: restano a carico dell'armatore."}],
-  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta, a partire da Sassari."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
+  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
   faqTitle:"Domande frequenti",
   faq:[{q:"Fin dove arrivate?",a:"Ovunque, anche fuori dall'Italia. Le rotte più lunghe si organizzano con qualche giorno di anticipo."},
    {q:"Navigate da soli?",a:"Di norma sì, il trasferimento è in solitario. Quando la rotta o la barca lo richiedono, cerchiamo equipaggio aggiuntivo."},
@@ -125,7 +125,8 @@ it:{
 const TX={
 it:{about:{title:"Chi sale a bordo",more:"Scopri di più su Andrea"},
  video:{title:"Guarda il video",sub:"Dal nostro canale YouTube",play:"Guarda il video di Sail&Clean",note:"Il video si carica da YouTube solo quando premi play.",frame:"Video di Sail&Clean su YouTube"},
- plan:{title:"Calcola la tua rotta",sub:"Scegli i porti di partenza e di arrivo: calcoliamo le miglia e una stima del prezzo.",from:"Partenza",to:"Arrivo",swap:"Inverti partenza e arrivo",
+ plan:{otherPh:"Scrivi il nome del porto",otherHint:"Porto non in elenco: inserisci le miglia se le conosci, altrimenti le calcoliamo noi.",msgNoMiles:"Ciao, vorrei un preventivo per un trasferimento da {a} a {b}.",
+  title:"Calcola la tua rotta",sub:"Scegli i porti di partenza e di arrivo: calcoliamo le miglia e una stima del prezzo.",from:"Partenza",to:"Arrivo",swap:"Inverti partenza e arrivo",
   other:"Altro porto",est:"stima via mare",manual:"inserite a mano",cap:"Rotta indicativa via mare. Tratteggiate: rotte già percorse.",
   msg:"Ciao, vorrei un preventivo per un trasferimento da {a} a {b} (circa {n} miglia).",
   groups:{s:"Sardegna",c:"Corsica",l:"Liguria e Costa Azzurra",t:"Toscana"},names:{}},
@@ -590,18 +591,21 @@ function wireCalc(){
     Object.keys(SEA.ports).filter(k=>SEA.ports[k][2]===g).sort((x,y)=>portName(x).localeCompare(portName(y),LOCALE[lang]))
       .map(k=>`<option value="${k}">${esc(portName(k))}</option>`).join("")+`</optgroup>`).join("")+`<option value="">${esc(L.other)}</option>`;
   A_.innerHTML=opts; B_.innerHTML=opts;
-  const price=v=>{ out.textContent=fmt(v*RATE); c.dataset.miles=v; };
+  const AX=$("#plan-a-x"), BX=$("#plan-b-x"), hint=$("#plan-hint");
+  AX.placeholder=BX.placeholder=L.otherPh; hint.textContent=L.otherHint;
+  const price=v=>{ out.textContent=v>0?fmt(v*RATE):"—"; c.dataset.miles=v; };
   const setMiles=(v,fromRoute)=>{ v=Math.max(0,Math.min(2000,Math.round(+v||0))); rng.value=v; num.value=v; price(v);
     plan.manual=!fromRoute; est.textContent=fromRoute?"≈ "+L.est:(plan.a&&plan.b?L.manual:""); c.classList.toggle("is-manual",!fromRoute); };
   const go=(animate)=>{
     A_.value=plan.a; B_.value=plan.b;
+    const other=!plan.a||!plan.b; AX.hidden=!!plan.a; BX.hidden=!!plan.b; hint.hidden=!other; c.classList.toggle("is-other",other);
     const r=plan.a&&plan.b?seaRoute(plan.a,plan.b):null;
     if(r){ setMiles(Math.round(r.nm/5)*5,true); drawPlan(r,animate); }
-    else { drawPlan(null); if(!plan.a||!plan.b) setMiles(num.value||150,false); }
+    else { drawPlan(null); if(other){ rng.value=0; num.value=""; price(0); est.textContent=""; plan.manual=true; } }
     $$("#deliv-routes button").forEach((bt,i)=>bt.setAttribute("aria-pressed",String(PAST_ROUTES[i][0]===plan.a&&PAST_ROUTES[i][1]===plan.b)));
   };
-  A_.onchange=()=>{ plan.a=A_.value; go(true); }; B_.onchange=()=>{ plan.b=B_.value; go(true); };
-  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; go(true); };
+  A_.onchange=()=>{ plan.a=A_.value; go(true); if(!plan.a) AX.focus(); }; B_.onchange=()=>{ plan.b=B_.value; go(true); if(!plan.b) BX.focus(); };
+  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; [AX.value,BX.value]=[BX.value,AX.value]; go(true); };
   rng.oninput=()=>setMiles(rng.value,false); num.oninput=()=>setMiles(num.value,false);
   $$("#deliv-routes button").forEach((bt,i)=>{
     const r=seaRoute(...PAST_ROUTES[i]); if(r) bt.querySelector(".nm").textContent="≈ "+Math.round(r.nm/5)*5+" NM";
@@ -613,7 +617,8 @@ function wireCalc(){
     ob.observe($h("#map-routes"));
   }
   $h("#calc-btn").onclick=()=>{
-    const m=(!plan.manual&&plan.a&&plan.b?L.msg.replace("{a}",portName(plan.a)).replace("{b}",portName(plan.b)):t("calc.msg")).replace("{n}",c.dataset.miles);
+    const nameOf=(k,x)=>k?portName(k):x.value.trim(), na=nameOf(plan.a,AX), nb=nameOf(plan.b,BX), n=+c.dataset.miles||0;
+    const m=na&&nb ? (n>0?L.msg:L.msgNoMiles).replace("{a}",na).replace("{b}",nb).replace("{n}",n) : t("calc.msg").replace("{n}",n);
     open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener"); };
 }
 let planAnim=0;

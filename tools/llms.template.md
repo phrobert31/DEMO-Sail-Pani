@@ -7,7 +7,7 @@ Sail&Clean (Italian: "pulizia e trasferimenti barche in Sardegna") is a one-pers
 ## Services
 
 - [Boat cleaning and care]({{SITE}}pulizia/): Interior (cabins, saloon, galley, heads) and exterior (deck, cockpit, gel coat, fibreglass, portholes), tender washing, acid wash, waxing, light maintenance, sail storage, post-boatyard clean-up. Afloat or ashore, sailing and motor boats up to 30 metres. Eco-friendly products, classic line or nanotech line. Underwater hull/keel cleaning is not offered. Quoted per boat and chosen services.
-- [Boat delivery and skippering]({{SITE}}trasferimenti/): Delivery of any type of boat up to 20 metres from port to port, beyond 12 nautical miles and abroad. €7 per nautical mile of the route, counted from Sassari. Fuel, marina fees, skipper travel/food/accommodation, inspection day and waiting days are paid separately by the owner; insurance is included. Collection from a boatyard or broker after purchase; skipper service for marinas, boatyards and agencies.
+- [Boat delivery and skippering]({{SITE}}trasferimenti/): Delivery of any type of boat up to 20 metres from port to port, beyond 12 nautical miles and abroad. €7 per nautical mile of the route. Fuel, marina fees, skipper travel/food/accommodation, inspection day and waiting days are paid separately by the owner; insurance is included. Collection from a boatyard or broker after purchase; skipper service for marinas, boatyards and agencies.
 
 ## Where
 

@@ -30,7 +30,7 @@ const T={
 de:{
  img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot"},
  ui:{top:"Nach oben",preview:"Vorschau der Nachricht",quote:"Angebot",skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
- calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet ab Sassari. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
+ calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"sauber und bereit zum Ablegen.",
@@ -74,7 +74,7 @@ de:{
   lBoat:"Boot",lPort:"Hafen",lServices:"Leistungen",lReach:"Kontakt"},
  deliv:{eyebrow:"Leistung 02",h1:"Überführung und Skipper",
   intro:"Wir bringen Ihr Boot dorthin, wo es hin soll, auch über 12 Seemeilen hinaus und außerhalb Italiens. Jede Bootsart bis 20 Meter.",
-  priceText:"pro Seemeile. Der Preis richtet sich nach der Streckenlänge ab Sassari. Die übrigen Kosten trägt der Eigner.",
+  priceText:"pro Seemeile. Der Preis richtet sich nach der Streckenlänge. Die übrigen Kosten trägt der Eigner.",
   priceBtn:"Angebot anfragen",
   routesTitle:"Bereits gefahrene Routen",routesSub:"Einige Beispiele abgeschlossener Überführungen.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -88,7 +88,7 @@ de:{
    {t:"Vorabkontrolle",d:"Die Kontrolle vor der Abfahrt wird auch dann berechnet, wenn das Boot nicht ausläuft: Es ist ein Arbeitstag."},
    {t:"Wartetage",d:"Ist das Boot nicht bereit, wird jeder Wartetag an Land als Tagessatz berechnet."},
    {t:"Dokumente",d:"Dokumente und Hafenformalitäten übernehmen wir nicht: Sie bleiben beim Eigner."}],
-  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € pro Seemeile, gerechnet ab Sassari."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
+  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € pro Seemeile, gerechnet."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
   faqTitle:"Häufige Fragen",
   faq:[{q:"Wie weit fahren Sie?",a:"Überallhin, auch außerhalb Italiens. Längere Routen werden einige Tage im Voraus geplant."},
    {q:"Fahren Sie allein?",a:"In der Regel ja, die Überführung erfolgt einhand. Wenn Route oder Boot es erfordern, suchen wir zusätzliche Crew."},
@@ -126,7 +126,8 @@ de:{
 const TX={
 de:{about:{title:"Wer an Bord kommt",more:"Mehr über Andrea"},
  video:{title:"Video ansehen",sub:"Von unserem YouTube-Kanal",play:"Video von Sail&Clean ansehen",note:"Das Video wird erst beim Abspielen von YouTube geladen.",frame:"Video von Sail&Clean auf YouTube"},
- plan:{title:"Route berechnen",sub:"Wählen Sie Start- und Zielhafen, wir berechnen die Seemeilen und einen Richtpreis.",from:"Abfahrt",to:"Ankunft",swap:"Abfahrt und Ankunft tauschen",
+ plan:{otherPh:"Hafen eingeben",otherHint:"Hafen nicht in der Liste: Geben Sie die Seemeilen ein, wenn Sie sie kennen, sonst berechnen wir sie.",msgNoMiles:"Hallo, ich hätte gern ein Angebot für eine Überführung von {a} nach {b}.",
+  title:"Route berechnen",sub:"Wählen Sie Start- und Zielhafen, wir berechnen die Seemeilen und einen Richtpreis.",from:"Abfahrt",to:"Ankunft",swap:"Abfahrt und Ankunft tauschen",
   other:"Anderer Hafen",est:"geschätzt auf See",manual:"von Hand eingegeben",cap:"Ungefähre Route auf See. Gestrichelt: bereits gefahrene Routen.",
   msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von {a} nach {b} (etwa {n} Seemeilen).",
   groups:{s:"Sardinien",c:"Korsika",l:"Ligurien und Côte d'Azur",t:"Toskana"},names:{genova:"Genua",nizza:"Nizza",portoferraio:"Portoferraio (Elba)",santaTeresa:"Santa Teresa Gallura"}},
@@ -591,18 +592,21 @@ function wireCalc(){
     Object.keys(SEA.ports).filter(k=>SEA.ports[k][2]===g).sort((x,y)=>portName(x).localeCompare(portName(y),LOCALE[lang]))
       .map(k=>`<option value="${k}">${esc(portName(k))}</option>`).join("")+`</optgroup>`).join("")+`<option value="">${esc(L.other)}</option>`;
   A_.innerHTML=opts; B_.innerHTML=opts;
-  const price=v=>{ out.textContent=fmt(v*RATE); c.dataset.miles=v; };
+  const AX=$("#plan-a-x"), BX=$("#plan-b-x"), hint=$("#plan-hint");
+  AX.placeholder=BX.placeholder=L.otherPh; hint.textContent=L.otherHint;
+  const price=v=>{ out.textContent=v>0?fmt(v*RATE):"—"; c.dataset.miles=v; };
   const setMiles=(v,fromRoute)=>{ v=Math.max(0,Math.min(2000,Math.round(+v||0))); rng.value=v; num.value=v; price(v);
     plan.manual=!fromRoute; est.textContent=fromRoute?"≈ "+L.est:(plan.a&&plan.b?L.manual:""); c.classList.toggle("is-manual",!fromRoute); };
   const go=(animate)=>{
     A_.value=plan.a; B_.value=plan.b;
+    const other=!plan.a||!plan.b; AX.hidden=!!plan.a; BX.hidden=!!plan.b; hint.hidden=!other; c.classList.toggle("is-other",other);
     const r=plan.a&&plan.b?seaRoute(plan.a,plan.b):null;
     if(r){ setMiles(Math.round(r.nm/5)*5,true); drawPlan(r,animate); }
-    else { drawPlan(null); if(!plan.a||!plan.b) setMiles(num.value||150,false); }
+    else { drawPlan(null); if(other){ rng.value=0; num.value=""; price(0); est.textContent=""; plan.manual=true; } }
     $$("#deliv-routes button").forEach((bt,i)=>bt.setAttribute("aria-pressed",String(PAST_ROUTES[i][0]===plan.a&&PAST_ROUTES[i][1]===plan.b)));
   };
-  A_.onchange=()=>{ plan.a=A_.value; go(true); }; B_.onchange=()=>{ plan.b=B_.value; go(true); };
-  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; go(true); };
+  A_.onchange=()=>{ plan.a=A_.value; go(true); if(!plan.a) AX.focus(); }; B_.onchange=()=>{ plan.b=B_.value; go(true); if(!plan.b) BX.focus(); };
+  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; [AX.value,BX.value]=[BX.value,AX.value]; go(true); };
   rng.oninput=()=>setMiles(rng.value,false); num.oninput=()=>setMiles(num.value,false);
   $$("#deliv-routes button").forEach((bt,i)=>{
     const r=seaRoute(...PAST_ROUTES[i]); if(r) bt.querySelector(".nm").textContent="≈ "+Math.round(r.nm/5)*5+" NM";
@@ -614,7 +618,8 @@ function wireCalc(){
     ob.observe($h("#map-routes"));
   }
   $h("#calc-btn").onclick=()=>{
-    const m=(!plan.manual&&plan.a&&plan.b?L.msg.replace("{a}",portName(plan.a)).replace("{b}",portName(plan.b)):t("calc.msg")).replace("{n}",c.dataset.miles);
+    const nameOf=(k,x)=>k?portName(k):x.value.trim(), na=nameOf(plan.a,AX), nb=nameOf(plan.b,BX), n=+c.dataset.miles||0;
+    const m=na&&nb ? (n>0?L.msg:L.msgNoMiles).replace("{a}",na).replace("{b}",nb).replace("{n}",n) : t("calc.msg").replace("{n}",n);
     open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener"); };
 }
 let planAnim=0;

@@ -1085,3 +1085,13 @@ body[data-page=home] .cta-face img{display:none}
 .av-k.av-full::before{background:#8A96A3}
 @media (max-width:760px){.av-m{grid-template-columns:repeat(6,minmax(0,1fr));row-gap:14px}}
 @media (prefers-reduced-motion:reduce){.vid-btn,.av-m li.av-few::after,.band-ink.wave::before{animation:none}.card.rv .card-img{clip-path:none}.sec-head.rv::before{transition:none;background-size:28px 2px}}
+.fcontacts{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.fcontacts li{line-height:1.35;display:flex;flex-wrap:wrap;align-items:center;column-gap:6px}
+.fcontacts .fl::after{content:":"}
+.fcontacts .fl{color:rgba(255,255,255,.62);font-size:.92rem;margin-right:2px}
+.fcontacts a{overflow-wrap:anywhere}
+.plan-x{width:100%;min-height:48px;margin-top:8px;border:1px solid var(--sea);border-radius:12px;padding:0 14px;font:500 1rem var(--s);color:var(--ink);background:#fff}
+.plan-x:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(63,110,156,.2)}
+.plan-hint{margin:-8px 0 18px;padding:12px 14px;border-radius:12px;background:#FBE7E1;color:#7A3322;font-size:.95rem;line-height:1.45}
+.plan-ports{align-items:start}.plan-swap{margin-top:27px}
+@media (max-width:440px){.plan-swap{margin-top:-2px}}

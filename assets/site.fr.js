@@ -30,7 +30,7 @@ const T={
 fr:{
  img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau"},
  ui:{top:"Haut de page",preview:"Aperçu du message",quote:"Devis",skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
- calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles, comptée depuis Sassari. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
+ calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact"},
  map:{capHome:"Nord de la Sardaigne.",capClean:"Les ports et marinas où nous intervenons régulièrement.",capRoutes:"Quelques convoyages déjà réalisés."},
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"propre et prêt à partir.",
@@ -74,7 +74,7 @@ fr:{
   lBoat:"Bateau",lPort:"Port",lServices:"Services",lReach:"Contact"},
  deliv:{eyebrow:"Service 02",h1:"Convoyage et skipper",
   intro:"Nous amenons votre bateau où il doit aller, y compris au-delà de 12 milles et hors d'Italie. Tout type de bateau jusqu'à 20 mètres.",
-  priceText:"par mille. Le prix est calculé sur la distance du trajet, au départ de Sassari. Les autres frais sont à la charge du propriétaire.",
+  priceText:"par mille. Le prix est calculé sur la distance du trajet. Les autres frais sont à la charge du propriétaire.",
   priceBtn:"Demander un devis",
   routesTitle:"Convoyages déjà réalisés",routesSub:"Quelques exemples de convoyages menés à terme.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -88,7 +88,7 @@ fr:{
    {t:"Visite préalable",d:"Le contrôle avant départ est facturé même si le bateau ne part pas" + NB + ": c'est une journée de travail."},
    {t:"Jours d'attente",d:"Si le bateau n'est pas prêt, chaque jour d'attente à terre est facturé à la journée."},
    {t:"Documents",d:"Nous ne gérons ni les documents ni les formalités portuaires" + NB + ": ils restent au propriétaire."}],
-  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille parcouru, au départ de Sassari."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
+  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille parcouru."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
   faqTitle:"Questions fréquentes",
   faq:[{q:"Jusqu'où allez-vous" + NB + "?",a:"Partout, y compris hors d'Italie. Les routes les plus longues se préparent quelques jours à l'avance."},
    {q:"Naviguez-vous seul" + NB + "?",a:"En règle générale oui, le convoyage se fait en solitaire. Si la route ou le bateau l'exigent, nous cherchons un équipier."},
@@ -126,7 +126,8 @@ fr:{
 const TX={
 fr:{about:{title:"Qui monte à bord",more:"En savoir plus sur Andrea"},
  video:{title:"Voir la vidéo",sub:"Sur notre chaîne YouTube",play:"Voir la vidéo de Sail&Clean",note:"La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture.",frame:"Vidéo de Sail&Clean sur YouTube"},
- plan:{title:"Calculez votre route",sub:"Choisissez les ports de départ et d'arrivée" + NB + ": nous calculons les milles et une estimation du prix.",from:"Départ",to:"Arrivée",swap:"Inverser départ et arrivée",
+ plan:{otherPh:"Saisissez le nom du port",otherHint:"Port absent de la liste" + NB + ": saisissez les milles si vous les connaissez, sinon nous les calculons.",msgNoMiles:"Bonjour, je voudrais un devis pour un convoyage de {a} à {b}.",
+  title:"Calculez votre route",sub:"Choisissez les ports de départ et d'arrivée" + NB + ": nous calculons les milles et une estimation du prix.",from:"Départ",to:"Arrivée",swap:"Inverser départ et arrivée",
   other:"Autre port",est:"estimation par la mer",manual:"saisis à la main",cap:"Route indicative par la mer. En pointillés" + NB + ": routes déjà parcourues.",
   msg:"Bonjour, je voudrais un devis pour un convoyage de {a} à {b} (environ {n} milles).",
   groups:{s:"Sardaigne",c:"Corse",l:"Ligurie et Côte d'Azur",t:"Toscane"},names:{genova:"Gênes",nizza:"Nice",livorno:"Livourne",laSpezia:"La Spezia",sanremo:"San Remo",portoVecchio:"Porto-Vecchio",portoferraio:"Portoferraio (île d'Elbe)",santaTeresa:"Santa Teresa Gallura"}},
@@ -591,18 +592,21 @@ function wireCalc(){
     Object.keys(SEA.ports).filter(k=>SEA.ports[k][2]===g).sort((x,y)=>portName(x).localeCompare(portName(y),LOCALE[lang]))
       .map(k=>`<option value="${k}">${esc(portName(k))}</option>`).join("")+`</optgroup>`).join("")+`<option value="">${esc(L.other)}</option>`;
   A_.innerHTML=opts; B_.innerHTML=opts;
-  const price=v=>{ out.textContent=fmt(v*RATE); c.dataset.miles=v; };
+  const AX=$("#plan-a-x"), BX=$("#plan-b-x"), hint=$("#plan-hint");
+  AX.placeholder=BX.placeholder=L.otherPh; hint.textContent=L.otherHint;
+  const price=v=>{ out.textContent=v>0?fmt(v*RATE):"—"; c.dataset.miles=v; };
   const setMiles=(v,fromRoute)=>{ v=Math.max(0,Math.min(2000,Math.round(+v||0))); rng.value=v; num.value=v; price(v);
     plan.manual=!fromRoute; est.textContent=fromRoute?"≈ "+L.est:(plan.a&&plan.b?L.manual:""); c.classList.toggle("is-manual",!fromRoute); };
   const go=(animate)=>{
     A_.value=plan.a; B_.value=plan.b;
+    const other=!plan.a||!plan.b; AX.hidden=!!plan.a; BX.hidden=!!plan.b; hint.hidden=!other; c.classList.toggle("is-other",other);
     const r=plan.a&&plan.b?seaRoute(plan.a,plan.b):null;
     if(r){ setMiles(Math.round(r.nm/5)*5,true); drawPlan(r,animate); }
-    else { drawPlan(null); if(!plan.a||!plan.b) setMiles(num.value||150,false); }
+    else { drawPlan(null); if(other){ rng.value=0; num.value=""; price(0); est.textContent=""; plan.manual=true; } }
     $$("#deliv-routes button").forEach((bt,i)=>bt.setAttribute("aria-pressed",String(PAST_ROUTES[i][0]===plan.a&&PAST_ROUTES[i][1]===plan.b)));
   };
-  A_.onchange=()=>{ plan.a=A_.value; go(true); }; B_.onchange=()=>{ plan.b=B_.value; go(true); };
-  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; go(true); };
+  A_.onchange=()=>{ plan.a=A_.value; go(true); if(!plan.a) AX.focus(); }; B_.onchange=()=>{ plan.b=B_.value; go(true); if(!plan.b) BX.focus(); };
+  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; [AX.value,BX.value]=[BX.value,AX.value]; go(true); };
   rng.oninput=()=>setMiles(rng.value,false); num.oninput=()=>setMiles(num.value,false);
   $$("#deliv-routes button").forEach((bt,i)=>{
     const r=seaRoute(...PAST_ROUTES[i]); if(r) bt.querySelector(".nm").textContent="≈ "+Math.round(r.nm/5)*5+" NM";
@@ -614,7 +618,8 @@ function wireCalc(){
     ob.observe($h("#map-routes"));
   }
   $h("#calc-btn").onclick=()=>{
-    const m=(!plan.manual&&plan.a&&plan.b?L.msg.replace("{a}",portName(plan.a)).replace("{b}",portName(plan.b)):t("calc.msg")).replace("{n}",c.dataset.miles);
+    const nameOf=(k,x)=>k?portName(k):x.value.trim(), na=nameOf(plan.a,AX), nb=nameOf(plan.b,BX), n=+c.dataset.miles||0;
+    const m=na&&nb ? (n>0?L.msg:L.msgNoMiles).replace("{a}",na).replace("{b}",nb).replace("{n}",n) : t("calc.msg").replace("{n}",n);
     open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener"); };
 }
 let planAnim=0;

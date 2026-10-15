@@ -30,7 +30,7 @@ const T={
 en:{
  img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat"},
  ui:{top:"Back to top",preview:"Message preview",quote:"Get a quote",skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
- calc:{title:"Get an estimate",sub:"Enter the route distance in miles, counted from Sassari. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
+ calc:{title:"Get an estimate",sub:"Enter the route distance in miles. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"clean and ready to sail.",
@@ -74,7 +74,7 @@ en:{
   lBoat:"Boat",lPort:"Port",lServices:"Services",lReach:"Contact"},
  deliv:{eyebrow:"Service 02",h1:"Delivery and skippering",
   intro:"We take your boat where it needs to go, including beyond 12 miles and outside Italy. Any type of boat up to 20 metres.",
-  priceText:"per mile. The price is based on the route distance, measured from Sassari. Other costs are paid by the owner.",
+  priceText:"per mile. The price is based on the route distance. Other costs are paid by the owner.",
   priceBtn:"Request a quote",
   routesTitle:"Routes already sailed",routesSub:"A few examples of deliveries completed.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -88,7 +88,7 @@ en:{
    {t:"Inspection",d:"The pre-departure check is paid for even if the boat then does not leave: it is a working day."},
    {t:"Waiting days",d:"If the boat is not ready, every day spent waiting ashore is charged as a day rate."},
    {t:"Paperwork",d:"We do not handle documents or port formalities: those stay with the owner."}],
-  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 per mile of the route, measured from Sassari."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
+  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 per mile of the route."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
   faqTitle:"Frequently asked questions",
   faq:[{q:"How far do you go?",a:"Anywhere, including outside Italy. Longer routes are arranged a few days ahead."},
    {q:"Do you sail alone?",a:"Usually, yes: deliveries are single-handed. When the route or the boat calls for it, we bring extra crew."},
@@ -126,7 +126,8 @@ en:{
 const TX={
 en:{about:{title:"Who comes aboard",more:"More about Andrea"},
  video:{title:"Watch the video",sub:"From our YouTube channel",play:"Watch the Sail&Clean video",note:"The video loads from YouTube only when you press play.",frame:"Sail&Clean video on YouTube"},
- plan:{title:"Plan your route",sub:"Pick the departure and arrival ports and we work out the miles and a price estimate.",from:"From",to:"To",swap:"Swap departure and arrival",
+ plan:{otherPh:"Type the port name",otherHint:"Port not on the list: enter the miles if you know them, otherwise we work them out.",msgNoMiles:"Hi, I'd like a quote for a delivery from {a} to {b}.",
+  title:"Plan your route",sub:"Pick the departure and arrival ports and we work out the miles and a price estimate.",from:"From",to:"To",swap:"Swap departure and arrival",
   other:"Another port",est:"estimate by sea",manual:"entered by hand",cap:"Indicative sea route. Dashed: routes we have already sailed.",
   msg:"Hi, I'd like a quote for a delivery from {a} to {b} (about {n} miles).",
   groups:{s:"Sardinia",c:"Corsica",l:"Liguria and French Riviera",t:"Tuscany"},names:{genova:"Genoa",nizza:"Nice",livorno:"Livorno",portoferraio:"Portoferraio (Elba)",santaTeresa:"Santa Teresa Gallura"}},
@@ -591,18 +592,21 @@ function wireCalc(){
     Object.keys(SEA.ports).filter(k=>SEA.ports[k][2]===g).sort((x,y)=>portName(x).localeCompare(portName(y),LOCALE[lang]))
       .map(k=>`<option value="${k}">${esc(portName(k))}</option>`).join("")+`</optgroup>`).join("")+`<option value="">${esc(L.other)}</option>`;
   A_.innerHTML=opts; B_.innerHTML=opts;
-  const price=v=>{ out.textContent=fmt(v*RATE); c.dataset.miles=v; };
+  const AX=$("#plan-a-x"), BX=$("#plan-b-x"), hint=$("#plan-hint");
+  AX.placeholder=BX.placeholder=L.otherPh; hint.textContent=L.otherHint;
+  const price=v=>{ out.textContent=v>0?fmt(v*RATE):"—"; c.dataset.miles=v; };
   const setMiles=(v,fromRoute)=>{ v=Math.max(0,Math.min(2000,Math.round(+v||0))); rng.value=v; num.value=v; price(v);
     plan.manual=!fromRoute; est.textContent=fromRoute?"≈ "+L.est:(plan.a&&plan.b?L.manual:""); c.classList.toggle("is-manual",!fromRoute); };
   const go=(animate)=>{
     A_.value=plan.a; B_.value=plan.b;
+    const other=!plan.a||!plan.b; AX.hidden=!!plan.a; BX.hidden=!!plan.b; hint.hidden=!other; c.classList.toggle("is-other",other);
     const r=plan.a&&plan.b?seaRoute(plan.a,plan.b):null;
     if(r){ setMiles(Math.round(r.nm/5)*5,true); drawPlan(r,animate); }
-    else { drawPlan(null); if(!plan.a||!plan.b) setMiles(num.value||150,false); }
+    else { drawPlan(null); if(other){ rng.value=0; num.value=""; price(0); est.textContent=""; plan.manual=true; } }
     $$("#deliv-routes button").forEach((bt,i)=>bt.setAttribute("aria-pressed",String(PAST_ROUTES[i][0]===plan.a&&PAST_ROUTES[i][1]===plan.b)));
   };
-  A_.onchange=()=>{ plan.a=A_.value; go(true); }; B_.onchange=()=>{ plan.b=B_.value; go(true); };
-  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; go(true); };
+  A_.onchange=()=>{ plan.a=A_.value; go(true); if(!plan.a) AX.focus(); }; B_.onchange=()=>{ plan.b=B_.value; go(true); if(!plan.b) BX.focus(); };
+  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; [AX.value,BX.value]=[BX.value,AX.value]; go(true); };
   rng.oninput=()=>setMiles(rng.value,false); num.oninput=()=>setMiles(num.value,false);
   $$("#deliv-routes button").forEach((bt,i)=>{
     const r=seaRoute(...PAST_ROUTES[i]); if(r) bt.querySelector(".nm").textContent="≈ "+Math.round(r.nm/5)*5+" NM";
@@ -614,7 +618,8 @@ function wireCalc(){
     ob.observe($h("#map-routes"));
   }
   $h("#calc-btn").onclick=()=>{
-    const m=(!plan.manual&&plan.a&&plan.b?L.msg.replace("{a}",portName(plan.a)).replace("{b}",portName(plan.b)):t("calc.msg")).replace("{n}",c.dataset.miles);
+    const nameOf=(k,x)=>k?portName(k):x.value.trim(), na=nameOf(plan.a,AX), nb=nameOf(plan.b,BX), n=+c.dataset.miles||0;
+    const m=na&&nb ? (n>0?L.msg:L.msgNoMiles).replace("{a}",na).replace("{b}",nb).replace("{n}",n) : t("calc.msg").replace("{n}",n);
     open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener"); };
 }
 let planAnim=0;

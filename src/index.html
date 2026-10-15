@@ -1114,6 +1114,16 @@ body[data-page=home] .cta-face img{display:none}
 .av-k.av-full::before{background:#8A96A3}
 @media (max-width:760px){.av-m{grid-template-columns:repeat(6,minmax(0,1fr));row-gap:14px}}
 @media (prefers-reduced-motion:reduce){.vid-btn,.av-m li.av-few::after,.band-ink.wave::before{animation:none}.card.rv .card-img{clip-path:none}.sec-head.rv::before{transition:none;background-size:28px 2px}}
+.fcontacts{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.fcontacts li{line-height:1.35;display:flex;flex-wrap:wrap;align-items:center;column-gap:6px}
+.fcontacts .fl::after{content:":"}
+.fcontacts .fl{color:rgba(255,255,255,.62);font-size:.92rem;margin-right:2px}
+.fcontacts a{overflow-wrap:anywhere}
+.plan-x{width:100%;min-height:48px;margin-top:8px;border:1px solid var(--sea);border-radius:12px;padding:0 14px;font:500 1rem var(--s);color:var(--ink);background:#fff}
+.plan-x:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(63,110,156,.2)}
+.plan-hint{margin:-8px 0 18px;padding:12px 14px;border-radius:12px;background:#FBE7E1;color:#7A3322;font-size:.95rem;line-height:1.45}
+.plan-ports{align-items:start}.plan-swap{margin-top:27px}
+@media (max-width:440px){.plan-swap{margin-top:-2px}}
 </style>
 </head>
 <body>
@@ -1478,7 +1488,7 @@ body[data-page=home] .cta-face img{display:none}
     <div class="wrap">
       <div class="price">
         <b>7 €</b>
-        <span class="t" data-t="deliv.priceText">al miglio. Il prezzo si calcola sulle miglia della rotta, a partire da Sassari. Le altre spese sono a carico dell'armatore.</span>
+        <span class="t" data-t="deliv.priceText">al miglio. Il prezzo si calcola sulle miglia della rotta. Le altre spese sono a carico dell'armatore.</span>
         <a class="btn btn-l" href="#contatti" data-t="deliv.priceBtn">Chiedi un preventivo</a>
       </div>
       <div class="calc plan" id="calc" data-miles="197">
@@ -1490,10 +1500,11 @@ body[data-page=home] .cta-face img{display:none}
           <h2 class="calc-t" data-t="plan.title">Calcola la tua rotta</h2>
           <p class="sub" data-t="plan.sub">Scegli i porti di partenza e di arrivo: calcoliamo le miglia e una stima del prezzo.</p>
           <div class="plan-ports">
-            <div class="pp"><label for="plan-a" data-t="plan.from">Partenza</label><select id="plan-a"></select></div>
+            <div class="pp"><label for="plan-a" data-t="plan.from">Partenza</label><select id="plan-a"></select><input type="text" class="plan-x" id="plan-a-x" hidden autocomplete="off"></div>
             <button type="button" class="plan-swap" id="plan-swap" data-ta="plan.swap" aria-label="Inverti"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v15M3 15l4 4 4-4M17 20V5M13 9l4-4 4 4"/></svg></button>
-            <div class="pp"><label for="plan-b" data-t="plan.to">Arrivo</label><select id="plan-b"></select></div>
+            <div class="pp"><label for="plan-b" data-t="plan.to">Arrivo</label><select id="plan-b"></select><input type="text" class="plan-x" id="plan-b-x" hidden autocomplete="off"></div>
           </div>
+          <p class="plan-hint" id="plan-hint" hidden></p>
           <label for="calc-num" data-t="calc.miles">Miglia della rotta</label>
           <input type="range" id="calc-range" min="0" max="1000" step="5" aria-hidden="true" tabindex="-1">
           <div class="row"><input type="number" id="calc-num" min="0" max="2000" step="1" inputmode="numeric"><span>NM</span><small class="plan-est" id="plan-est"></small></div>
@@ -1524,7 +1535,7 @@ body[data-page=home] .cta-face img{display:none}
   <section class="band">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.costTitle">Costi e condizioni</h2><p data-t="deliv.costSub">Tutto viene messo per iscritto nel preventivo.</p></div>
-      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Compreso nel prezzo</h3><ul><li><b>Il servizio di trasferimento</b><span>7 € per ogni miglio della rotta, a partire da Sassari.</span></li><li><b>Assicurazione</b><span>A nostro carico.</span></li><li><b>Pianificazione della rotta</b><span>Finestra meteo e soste carburante.</span></li><li><b>Aggiornamenti durante il viaggio</b><span>Sai sempre dov'è la barca.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>A parte, a carico dell'armatore</h3><ul><li><b>Carburante e ormeggi</b><span>Lungo la rotta.</span></li><li><b>Viaggio, vitto e alloggio dello skipper</b><span>Per raggiungere la barca e rientrare.</span></li><li><b>Sopralluogo</b><span>Una giornata di lavoro, anche se poi non si parte.</span></li><li><b>Giorni di attesa</b><span>Se la barca non è pronta, si paga a giornata.</span></li><li><b>Documenti e pratiche</b><span>Restano all'armatore.</span></li></ul></div></div>
+      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Compreso nel prezzo</h3><ul><li><b>Il servizio di trasferimento</b><span>7 € per ogni miglio della rotta.</span></li><li><b>Assicurazione</b><span>A nostro carico.</span></li><li><b>Pianificazione della rotta</b><span>Finestra meteo e soste carburante.</span></li><li><b>Aggiornamenti durante il viaggio</b><span>Sai sempre dov'è la barca.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>A parte, a carico dell'armatore</h3><ul><li><b>Carburante e ormeggi</b><span>Lungo la rotta.</span></li><li><b>Viaggio, vitto e alloggio dello skipper</b><span>Per raggiungere la barca e rientrare.</span></li><li><b>Sopralluogo</b><span>Una giornata di lavoro, anche se poi non si parte.</span></li><li><b>Giorni di attesa</b><span>Se la barca non è pronta, si paga a giornata.</span></li><li><b>Documenti e pratiche</b><span>Restano all'armatore.</span></li></ul></div></div>
     </div>
   </section>
 
@@ -1630,10 +1641,12 @@ body[data-page=home] .cta-face img{display:none}
       </div>
       <div>
         <h4 data-t="footer.contact">Contatti</h4>
-        <a data-h="tel" data-c="phoneShow" href="tel:+393517538315">+39 351 753 8315</a><br>
-        <a data-h="mail" data-c="email" href="mailto:sailandclean@gmail.com">sailandclean@gmail.com</a><br>
-        <a data-h="ig" target="_blank" rel="noopener" data-c="igShow" href="https://instagram.com/sailandclean_">@sailandclean_</a><br>
-        <a data-h="yt" target="_blank" rel="noopener" data-c="ytShow" href="https://www.youtube.com/@SailClean-Official">@SailClean-Official</a>
+        <ul class="fcontacts">
+          <li><span class="fl" data-t="contact.phone">Telefono e WhatsApp</span> <a data-h="tel" data-c="phoneShow" href="tel:+393517538315">+39 351 753 8315</a></li>
+          <li><span class="fl" data-t="contact.email">Email</span> <a data-h="mail" data-c="email" href="mailto:sailandclean@gmail.com">sailandclean@gmail.com</a></li>
+          <li><span class="fl">Instagram</span> <a data-h="ig" target="_blank" rel="noopener" data-c="igShow" href="https://instagram.com/sailandclean_">@sailandclean_</a></li>
+          <li><span class="fl">YouTube</span> <a data-h="yt" target="_blank" rel="noopener" data-c="ytShow" href="https://www.youtube.com/@SailClean-Official">@SailClean-Official</a></li>
+        </ul>
       </div>
       <div>
         <h4 data-t="contact.base">Base</h4>
@@ -1700,7 +1713,7 @@ const T={
 it:{
  img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca"},
  ui:{top:"Torna su",preview:"Anteprima del messaggio",quote:"Preventivo",skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
- calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta, calcolate da Sassari. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
+ calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti"},
  map:{capHome:"Nord della Sardegna.",capClean:"I porti dove lavoriamo abitualmente.",capRoutes:"Alcune rotte già percorse."},
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"pulita e pronta a partire.",
@@ -1744,7 +1757,7 @@ it:{
   lBoat:"Barca",lPort:"Porto",lServices:"Servizi",lReach:"Recapito"},
  deliv:{eyebrow:"Servizio 02",h1:"Trasferimenti e skipperaggio",
   intro:"Portiamo la tua barca dove serve, anche oltre le 12 miglia e fuori dall'Italia. Barche di qualsiasi tipo fino a 20 metri.",
-  priceText:"al miglio. Il prezzo si calcola sulle miglia della rotta, a partire da Sassari. Le altre spese sono a carico dell'armatore.",
+  priceText:"al miglio. Il prezzo si calcola sulle miglia della rotta. Le altre spese sono a carico dell'armatore.",
   priceBtn:"Chiedi un preventivo",
   routesTitle:"Rotte già percorse",routesSub:"Qualche esempio di trasferimenti portati a termine.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -1758,7 +1771,7 @@ it:{
    {t:"Sopralluogo",d:"Il controllo prima della partenza si paga anche se poi non si parte: è una giornata di lavoro."},
    {t:"Giorni di attesa",d:"Se la barca non è pronta, ogni giorno passato a terra ad aspettare si paga a giornata."},
    {t:"Documenti",d:"Non ci occupiamo di documenti e pratiche portuali: restano a carico dell'armatore."}],
-  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta, a partire da Sassari."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
+  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
   faqTitle:"Domande frequenti",
   faq:[{q:"Fin dove arrivate?",a:"Ovunque, anche fuori dall'Italia. Le rotte più lunghe si organizzano con qualche giorno di anticipo."},
    {q:"Navigate da soli?",a:"Di norma sì, il trasferimento è in solitario. Quando la rotta o la barca lo richiedono, cerchiamo equipaggio aggiuntivo."},
@@ -1794,7 +1807,7 @@ it:{
 en:{
  img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat"},
  ui:{top:"Back to top",preview:"Message preview",quote:"Get a quote",skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
- calc:{title:"Get an estimate",sub:"Enter the route distance in miles, counted from Sassari. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
+ calc:{title:"Get an estimate",sub:"Enter the route distance in miles. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"clean and ready to sail.",
@@ -1838,7 +1851,7 @@ en:{
   lBoat:"Boat",lPort:"Port",lServices:"Services",lReach:"Contact"},
  deliv:{eyebrow:"Service 02",h1:"Delivery and skippering",
   intro:"We take your boat where it needs to go, including beyond 12 miles and outside Italy. Any type of boat up to 20 metres.",
-  priceText:"per mile. The price is based on the route distance, measured from Sassari. Other costs are paid by the owner.",
+  priceText:"per mile. The price is based on the route distance. Other costs are paid by the owner.",
   priceBtn:"Request a quote",
   routesTitle:"Routes already sailed",routesSub:"A few examples of deliveries completed.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -1852,7 +1865,7 @@ en:{
    {t:"Inspection",d:"The pre-departure check is paid for even if the boat then does not leave: it is a working day."},
    {t:"Waiting days",d:"If the boat is not ready, every day spent waiting ashore is charged as a day rate."},
    {t:"Paperwork",d:"We do not handle documents or port formalities: those stay with the owner."}],
-  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 per mile of the route, measured from Sassari."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
+  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 per mile of the route."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
   faqTitle:"Frequently asked questions",
   faq:[{q:"How far do you go?",a:"Anywhere, including outside Italy. Longer routes are arranged a few days ahead."},
    {q:"Do you sail alone?",a:"Usually, yes: deliveries are single-handed. When the route or the boat calls for it, we bring extra crew."},
@@ -1888,7 +1901,7 @@ en:{
 fr:{
  img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau"},
  ui:{top:"Haut de page",preview:"Aperçu du message",quote:"Devis",skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
- calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles, comptée depuis Sassari. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
+ calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact"},
  map:{capHome:"Nord de la Sardaigne.",capClean:"Les ports et marinas où nous intervenons régulièrement.",capRoutes:"Quelques convoyages déjà réalisés."},
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"propre et prêt à partir.",
@@ -1932,7 +1945,7 @@ fr:{
   lBoat:"Bateau",lPort:"Port",lServices:"Services",lReach:"Contact"},
  deliv:{eyebrow:"Service 02",h1:"Convoyage et skipper",
   intro:"Nous amenons votre bateau où il doit aller, y compris au-delà de 12 milles et hors d'Italie. Tout type de bateau jusqu'à 20 mètres.",
-  priceText:"par mille. Le prix est calculé sur la distance du trajet, au départ de Sassari. Les autres frais sont à la charge du propriétaire.",
+  priceText:"par mille. Le prix est calculé sur la distance du trajet. Les autres frais sont à la charge du propriétaire.",
   priceBtn:"Demander un devis",
   routesTitle:"Convoyages déjà réalisés",routesSub:"Quelques exemples de convoyages menés à terme.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -1946,7 +1959,7 @@ fr:{
    {t:"Visite préalable",d:"Le contrôle avant départ est facturé même si le bateau ne part pas" + NB + ": c'est une journée de travail."},
    {t:"Jours d'attente",d:"Si le bateau n'est pas prêt, chaque jour d'attente à terre est facturé à la journée."},
    {t:"Documents",d:"Nous ne gérons ni les documents ni les formalités portuaires" + NB + ": ils restent au propriétaire."}],
-  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille parcouru, au départ de Sassari."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
+  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille parcouru."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
   faqTitle:"Questions fréquentes",
   faq:[{q:"Jusqu'où allez-vous" + NB + "?",a:"Partout, y compris hors d'Italie. Les routes les plus longues se préparent quelques jours à l'avance."},
    {q:"Naviguez-vous seul" + NB + "?",a:"En règle générale oui, le convoyage se fait en solitaire. Si la route ou le bateau l'exigent, nous cherchons un équipier."},
@@ -1982,7 +1995,7 @@ fr:{
 de:{
  img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot"},
  ui:{top:"Nach oben",preview:"Vorschau der Nachricht",quote:"Angebot",skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
- calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet ab Sassari. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
+ calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"sauber und bereit zum Ablegen.",
@@ -2026,7 +2039,7 @@ de:{
   lBoat:"Boot",lPort:"Hafen",lServices:"Leistungen",lReach:"Kontakt"},
  deliv:{eyebrow:"Leistung 02",h1:"Überführung und Skipper",
   intro:"Wir bringen Ihr Boot dorthin, wo es hin soll, auch über 12 Seemeilen hinaus und außerhalb Italiens. Jede Bootsart bis 20 Meter.",
-  priceText:"pro Seemeile. Der Preis richtet sich nach der Streckenlänge ab Sassari. Die übrigen Kosten trägt der Eigner.",
+  priceText:"pro Seemeile. Der Preis richtet sich nach der Streckenlänge. Die übrigen Kosten trägt der Eigner.",
   priceBtn:"Angebot anfragen",
   routesTitle:"Bereits gefahrene Routen",routesSub:"Einige Beispiele abgeschlossener Überführungen.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -2040,7 +2053,7 @@ de:{
    {t:"Vorabkontrolle",d:"Die Kontrolle vor der Abfahrt wird auch dann berechnet, wenn das Boot nicht ausläuft: Es ist ein Arbeitstag."},
    {t:"Wartetage",d:"Ist das Boot nicht bereit, wird jeder Wartetag an Land als Tagessatz berechnet."},
    {t:"Dokumente",d:"Dokumente und Hafenformalitäten übernehmen wir nicht: Sie bleiben beim Eigner."}],
-  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € pro Seemeile, gerechnet ab Sassari."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
+  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € pro Seemeile, gerechnet."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
   faqTitle:"Häufige Fragen",
   faq:[{q:"Wie weit fahren Sie?",a:"Überallhin, auch außerhalb Italiens. Längere Routen werden einige Tage im Voraus geplant."},
    {q:"Fahren Sie allein?",a:"In der Regel ja, die Überführung erfolgt einhand. Wenn Route oder Boot es erfordern, suchen wir zusätzliche Crew."},
@@ -2076,7 +2089,7 @@ de:{
 es:{
  img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco"},
  ui:{top:"Volver arriba",preview:"Vista previa del mensaje",quote:"Presupuesto",skip:"Ir al contenido",menu:"Abrir el menú",whatsapp:"Escríbenos por WhatsApp",contact:"Contacto"},
- calc:{title:"Calcula una estimación",sub:"Indica la distancia en millas, contada desde Sassari. Si no la conoces, envíanos los dos puertos y la calculamos nosotros.",miles:"Distancia en millas",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
+ calc:{title:"Calcula una estimación",sub:"Indica la distancia en millas. Si no la conoces, envíanos los dos puertos y la calculamos nosotros.",miles:"Distancia en millas",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
  nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto"},
  map:{capHome:"Norte de Cerdeña.",capClean:"Los puertos deportivos donde trabajamos habitualmente.",capRoutes:"Algunas rutas ya realizadas."},
  home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"limpio y listo para zarpar.",
@@ -2120,7 +2133,7 @@ es:{
   lBoat:"Barco",lPort:"Puerto",lServices:"Servicios",lReach:"Contacto"},
  deliv:{eyebrow:"Servicio 02",h1:"Traslados y patrón",
   intro:"Llevamos tu barco donde haga falta, también más allá de las 12 millas y fuera de Italia. Cualquier tipo de barco hasta 20 metros.",
-  priceText:"por milla. El precio se calcula según la distancia en millas, desde Sassari. Los demás gastos corren a cargo del armador.",
+  priceText:"por milla. El precio se calcula según la distancia en millas. Los demás gastos corren a cargo del armador.",
   priceBtn:"Pedir presupuesto",
   routesTitle:"Rutas ya realizadas",routesSub:"Algunos ejemplos de traslados completados.",
   routes:["Porto Torres → Marina di Andora","Alassio → Porto Torres","Fertilia → Porto Vecchio"],
@@ -2134,7 +2147,7 @@ es:{
    {t:"Revisión previa",d:"La revisión antes de salir se paga aunque después no se zarpe: es una jornada de trabajo."},
    {t:"Días de espera",d:"Si el barco no está listo, cada día de espera en tierra se cobra por jornada."},
    {t:"Documentación",d:"No nos ocupamos de documentos ni trámites portuarios: quedan a cargo del armador."}],
-  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"7 € por milla recorrida, desde Sassari."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
+  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"7 € por milla recorrida."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
   faqTitle:"Preguntas frecuentes",
   faq:[{q:"¿Hasta dónde llegáis?",a:"A cualquier destino, también fuera de Italia. Las rutas más largas se organizan con unos días de antelación."},
    {q:"¿Navegáis solos?",a:"Por norma sí, el traslado es en solitario. Cuando la ruta o el barco lo requieren, buscamos tripulación adicional."},
@@ -2173,35 +2186,40 @@ es:{
 const TX={
 it:{about:{title:"Chi sale a bordo",more:"Scopri di più su Andrea"},
  video:{title:"Guarda il video",sub:"Dal nostro canale YouTube",play:"Guarda il video di Sail&Clean",note:"Il video si carica da YouTube solo quando premi play.",frame:"Video di Sail&Clean su YouTube"},
- plan:{title:"Calcola la tua rotta",sub:"Scegli i porti di partenza e di arrivo: calcoliamo le miglia e una stima del prezzo.",from:"Partenza",to:"Arrivo",swap:"Inverti partenza e arrivo",
+ plan:{otherPh:"Scrivi il nome del porto",otherHint:"Porto non in elenco: inserisci le miglia se le conosci, altrimenti le calcoliamo noi.",msgNoMiles:"Ciao, vorrei un preventivo per un trasferimento da {a} a {b}.",
+  title:"Calcola la tua rotta",sub:"Scegli i porti di partenza e di arrivo: calcoliamo le miglia e una stima del prezzo.",from:"Partenza",to:"Arrivo",swap:"Inverti partenza e arrivo",
   other:"Altro porto",est:"stima via mare",manual:"inserite a mano",cap:"Rotta indicativa via mare. Tratteggiate: rotte già percorse.",
   msg:"Ciao, vorrei un preventivo per un trasferimento da {a} a {b} (circa {n} miglia).",
   groups:{s:"Sardegna",c:"Corsica",l:"Liguria e Costa Azzurra",t:"Toscana"},names:{}},
  av:{title:"Disponibilità nei prossimi mesi",sub:"In estate i posti finiscono presto: scrivici per tempo.",ok:"Disponibile",few:"Pochi posti",full:"Al completo"}},
 en:{about:{title:"Who comes aboard",more:"More about Andrea"},
  video:{title:"Watch the video",sub:"From our YouTube channel",play:"Watch the Sail&Clean video",note:"The video loads from YouTube only when you press play.",frame:"Sail&Clean video on YouTube"},
- plan:{title:"Plan your route",sub:"Pick the departure and arrival ports and we work out the miles and a price estimate.",from:"From",to:"To",swap:"Swap departure and arrival",
+ plan:{otherPh:"Type the port name",otherHint:"Port not on the list: enter the miles if you know them, otherwise we work them out.",msgNoMiles:"Hi, I'd like a quote for a delivery from {a} to {b}.",
+  title:"Plan your route",sub:"Pick the departure and arrival ports and we work out the miles and a price estimate.",from:"From",to:"To",swap:"Swap departure and arrival",
   other:"Another port",est:"estimate by sea",manual:"entered by hand",cap:"Indicative sea route. Dashed: routes we have already sailed.",
   msg:"Hi, I'd like a quote for a delivery from {a} to {b} (about {n} miles).",
   groups:{s:"Sardinia",c:"Corsica",l:"Liguria and French Riviera",t:"Tuscany"},names:{genova:"Genoa",nizza:"Nice",livorno:"Livorno",portoferraio:"Portoferraio (Elba)",santaTeresa:"Santa Teresa Gallura"}},
  av:{title:"Availability in the coming months",sub:"Summer fills up fast, so get in touch early.",ok:"Available",few:"Few slots left",full:"Fully booked"}},
 fr:{about:{title:"Qui monte à bord",more:"En savoir plus sur Andrea"},
  video:{title:"Voir la vidéo",sub:"Sur notre chaîne YouTube",play:"Voir la vidéo de Sail&Clean",note:"La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture.",frame:"Vidéo de Sail&Clean sur YouTube"},
- plan:{title:"Calculez votre route",sub:"Choisissez les ports de départ et d'arrivée" + NB + ": nous calculons les milles et une estimation du prix.",from:"Départ",to:"Arrivée",swap:"Inverser départ et arrivée",
+ plan:{otherPh:"Saisissez le nom du port",otherHint:"Port absent de la liste" + NB + ": saisissez les milles si vous les connaissez, sinon nous les calculons.",msgNoMiles:"Bonjour, je voudrais un devis pour un convoyage de {a} à {b}.",
+  title:"Calculez votre route",sub:"Choisissez les ports de départ et d'arrivée" + NB + ": nous calculons les milles et une estimation du prix.",from:"Départ",to:"Arrivée",swap:"Inverser départ et arrivée",
   other:"Autre port",est:"estimation par la mer",manual:"saisis à la main",cap:"Route indicative par la mer. En pointillés" + NB + ": routes déjà parcourues.",
   msg:"Bonjour, je voudrais un devis pour un convoyage de {a} à {b} (environ {n} milles).",
   groups:{s:"Sardaigne",c:"Corse",l:"Ligurie et Côte d'Azur",t:"Toscane"},names:{genova:"Gênes",nizza:"Nice",livorno:"Livourne",laSpezia:"La Spezia",sanremo:"San Remo",portoVecchio:"Porto-Vecchio",portoferraio:"Portoferraio (île d'Elbe)",santaTeresa:"Santa Teresa Gallura"}},
  av:{title:"Disponibilités des prochains mois",sub:"L'été, les créneaux partent vite" + NB + ": écrivez-nous tôt.",ok:"Disponible",few:"Peu de places",full:"Complet"}},
 de:{about:{title:"Wer an Bord kommt",more:"Mehr über Andrea"},
  video:{title:"Video ansehen",sub:"Von unserem YouTube-Kanal",play:"Video von Sail&Clean ansehen",note:"Das Video wird erst beim Abspielen von YouTube geladen.",frame:"Video von Sail&Clean auf YouTube"},
- plan:{title:"Route berechnen",sub:"Wählen Sie Start- und Zielhafen, wir berechnen die Seemeilen und einen Richtpreis.",from:"Abfahrt",to:"Ankunft",swap:"Abfahrt und Ankunft tauschen",
+ plan:{otherPh:"Hafen eingeben",otherHint:"Hafen nicht in der Liste: Geben Sie die Seemeilen ein, wenn Sie sie kennen, sonst berechnen wir sie.",msgNoMiles:"Hallo, ich hätte gern ein Angebot für eine Überführung von {a} nach {b}.",
+  title:"Route berechnen",sub:"Wählen Sie Start- und Zielhafen, wir berechnen die Seemeilen und einen Richtpreis.",from:"Abfahrt",to:"Ankunft",swap:"Abfahrt und Ankunft tauschen",
   other:"Anderer Hafen",est:"geschätzt auf See",manual:"von Hand eingegeben",cap:"Ungefähre Route auf See. Gestrichelt: bereits gefahrene Routen.",
   msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von {a} nach {b} (etwa {n} Seemeilen).",
   groups:{s:"Sardinien",c:"Korsika",l:"Ligurien und Côte d'Azur",t:"Toskana"},names:{genova:"Genua",nizza:"Nizza",portoferraio:"Portoferraio (Elba)",santaTeresa:"Santa Teresa Gallura"}},
  av:{title:"Verfügbarkeit in den nächsten Monaten",sub:"Im Sommer sind die Termine schnell vergeben, melden Sie sich früh.",ok:"Frei",few:"Wenige Termine",full:"Ausgebucht"}},
 es:{about:{title:"Quién sube a bordo",more:"Más sobre Andrea"},
  video:{title:"Ver el vídeo",sub:"De nuestro canal de YouTube",play:"Ver el vídeo de Sail&Clean",note:"El vídeo solo se carga desde YouTube al pulsar play.",frame:"Vídeo de Sail&Clean en YouTube"},
- plan:{title:"Calcula tu ruta",sub:"Elige los puertos de salida y llegada: calculamos las millas y un precio orientativo.",from:"Salida",to:"Llegada",swap:"Invertir salida y llegada",
+ plan:{otherPh:"Escribe el nombre del puerto",otherHint:"Puerto fuera de la lista: introduce las millas si las conoces; si no, las calculamos nosotros.",msgNoMiles:"Hola, quisiera un presupuesto para un traslado de {a} a {b}.",
+  title:"Calcula tu ruta",sub:"Elige los puertos de salida y llegada: calculamos las millas y un precio orientativo.",from:"Salida",to:"Llegada",swap:"Invertir salida y llegada",
   other:"Otro puerto",est:"estimación por mar",manual:"introducidas a mano",cap:"Ruta orientativa por mar. Discontinuas: rutas ya realizadas.",
   msg:"Hola, quisiera un presupuesto para un traslado de {a} a {b} (unas {n} millas).",
   groups:{s:"Cerdeña",c:"Córcega",l:"Liguria y Costa Azul",t:"Toscana"},names:{genova:"Génova",nizza:"Niza",livorno:"Livorno",monaco:"Mónaco",portoferraio:"Portoferraio (Elba)",santaTeresa:"Santa Teresa Gallura"}},
@@ -2700,18 +2718,21 @@ function wireCalc(){
     Object.keys(SEA.ports).filter(k=>SEA.ports[k][2]===g).sort((x,y)=>portName(x).localeCompare(portName(y),LOCALE[lang]))
       .map(k=>`<option value="${k}">${esc(portName(k))}</option>`).join("")+`</optgroup>`).join("")+`<option value="">${esc(L.other)}</option>`;
   A_.innerHTML=opts; B_.innerHTML=opts;
-  const price=v=>{ out.textContent=fmt(v*RATE); c.dataset.miles=v; };
+  const AX=$("#plan-a-x"), BX=$("#plan-b-x"), hint=$("#plan-hint");
+  AX.placeholder=BX.placeholder=L.otherPh; hint.textContent=L.otherHint;
+  const price=v=>{ out.textContent=v>0?fmt(v*RATE):"—"; c.dataset.miles=v; };
   const setMiles=(v,fromRoute)=>{ v=Math.max(0,Math.min(2000,Math.round(+v||0))); rng.value=v; num.value=v; price(v);
     plan.manual=!fromRoute; est.textContent=fromRoute?"≈ "+L.est:(plan.a&&plan.b?L.manual:""); c.classList.toggle("is-manual",!fromRoute); };
   const go=(animate)=>{
     A_.value=plan.a; B_.value=plan.b;
+    const other=!plan.a||!plan.b; AX.hidden=!!plan.a; BX.hidden=!!plan.b; hint.hidden=!other; c.classList.toggle("is-other",other);
     const r=plan.a&&plan.b?seaRoute(plan.a,plan.b):null;
     if(r){ setMiles(Math.round(r.nm/5)*5,true); drawPlan(r,animate); }
-    else { drawPlan(null); if(!plan.a||!plan.b) setMiles(num.value||150,false); }
+    else { drawPlan(null); if(other){ rng.value=0; num.value=""; price(0); est.textContent=""; plan.manual=true; } }
     $$("#deliv-routes button").forEach((bt,i)=>bt.setAttribute("aria-pressed",String(PAST_ROUTES[i][0]===plan.a&&PAST_ROUTES[i][1]===plan.b)));
   };
-  A_.onchange=()=>{ plan.a=A_.value; go(true); }; B_.onchange=()=>{ plan.b=B_.value; go(true); };
-  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; go(true); };
+  A_.onchange=()=>{ plan.a=A_.value; go(true); if(!plan.a) AX.focus(); }; B_.onchange=()=>{ plan.b=B_.value; go(true); if(!plan.b) BX.focus(); };
+  $h("#plan-swap").onclick=()=>{ [plan.a,plan.b]=[plan.b,plan.a]; [AX.value,BX.value]=[BX.value,AX.value]; go(true); };
   rng.oninput=()=>setMiles(rng.value,false); num.oninput=()=>setMiles(num.value,false);
   $$("#deliv-routes button").forEach((bt,i)=>{
     const r=seaRoute(...PAST_ROUTES[i]); if(r) bt.querySelector(".nm").textContent="≈ "+Math.round(r.nm/5)*5+" NM";
@@ -2723,7 +2744,8 @@ function wireCalc(){
     ob.observe($h("#map-routes"));
   }
   $h("#calc-btn").onclick=()=>{
-    const m=(!plan.manual&&plan.a&&plan.b?L.msg.replace("{a}",portName(plan.a)).replace("{b}",portName(plan.b)):t("calc.msg")).replace("{n}",c.dataset.miles);
+    const nameOf=(k,x)=>k?portName(k):x.value.trim(), na=nameOf(plan.a,AX), nb=nameOf(plan.b,BX), n=+c.dataset.miles||0;
+    const m=na&&nb ? (n>0?L.msg:L.msgNoMiles).replace("{a}",na).replace("{b}",nb).replace("{n}",n) : t("calc.msg").replace("{n}",n);
     open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener"); };
 }
 let planAnim=0;
