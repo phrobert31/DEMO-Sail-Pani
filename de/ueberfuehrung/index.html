@@ -56,14 +56,14 @@
     <div class="wrap">
       <div class="price">
         <b>7 €</b>
-        <span class="t" data-t="deliv.priceText">pro Seemeile. Der Preis richtet sich nach den Seemeilen der Route, ab Sassari. Die übrigen Kosten trägt der Eigner.</span>
+        <span class="t" data-t="deliv.priceText">pro Seemeile. Der Preis richtet sich nach der Streckenlänge ab Sassari. Die übrigen Kosten trägt der Eigner.</span>
         <a class="btn btn-l" href="../../de/kontakt/" data-t="deliv.priceBtn">Angebot anfragen</a>
       </div>
       <div class="calc" id="calc" data-miles="150">
         <div>
           <h2 class="calc-t" data-t="calc.title">Schätzung berechnen</h2>
-          <p class="sub" data-t="calc.sub">Geben Sie die Seemeilen der Route ein, gerechnet ab Sassari. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen und wir rechnen sie aus.</p>
-          <label for="calc-num" data-t="calc.miles">Seemeilen der Route</label>
+          <p class="sub" data-t="calc.sub">Geben Sie die Streckenlänge in Seemeilen ein, gerechnet ab Sassari. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.</p>
+          <label for="calc-num" data-t="calc.miles">Strecke in Seemeilen</label>
           <input type="range" id="calc-range" min="0" max="1000" step="5" aria-hidden="true" tabindex="-1">
           <div class="row"><input type="number" id="calc-num" min="0" max="2000" step="1" inputmode="numeric"><span>NM</span></div>
         </div>
@@ -87,7 +87,7 @@
         <h2 data-t="deliv.routesTitle">Bereits gefahrene Routen</h2>
         <p data-t="deliv.routesSub">Einige Beispiele abgeschlossener Überführungen.</p>
         <ul class="routes" id="deliv-routes" style="margin-top:20px"><li><span>Porto Torres</span><span class="arw" aria-hidden="true"></span><span>Marina di Andora</span></li><li><span>Alassio</span><span class="arw" aria-hidden="true"></span><span>Porto Torres</span></li><li><span>Fertilia</span><span class="arw" aria-hidden="true"></span><span>Porto Vecchio</span></li></ul>
-        <p style="margin-top:20px;color:var(--muted)" data-t="deliv.routesNote">Wir fahren überall, in Italien und im Ausland. Steht Ihre Route nicht in der Liste, fragen Sie trotzdem an.</p>
+        <p style="margin-top:20px;color:var(--muted)" data-t="deliv.routesNote">Wir fahren überallhin, in Italien und ins Ausland. Steht Ihre Route nicht in der Liste, fragen Sie trotzdem an.</p>
       </div>
     </div>
   </section>
@@ -102,7 +102,7 @@
   <section class="band">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.costTitle">Kosten und Bedingungen</h2><p data-t="deliv.costSub">Alles wird im Angebot schriftlich festgehalten.</p></div>
-      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Im Preis enthalten</h3><ul><li><b>Die Überführung selbst</b><span>7 € für jede Seemeile der Route, ab Sassari.</span></li><li><b>Versicherung</b><span>Übernehmen wir.</span></li><li><b>Routenplanung</b><span>Wetterfenster und Tankstopps.</span></li><li><b>Meldungen unterwegs</b><span>Sie wissen immer, wo das Boot ist.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>Gesondert, zulasten des Eigners</h3><ul><li><b>Treibstoff und Liegegebühren</b><span>Entlang der Route.</span></li><li><b>Anreise, Verpflegung und Unterkunft des Skippers</b><span>Zum Boot und zurück.</span></li><li><b>Vorabkontrolle</b><span>Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft.</span></li><li><b>Wartetage</b><span>Ist das Boot nicht bereit, pro Tag berechnet.</span></li><li><b>Dokumente und Formalitäten</b><span>Bleiben beim Eigner.</span></li></ul></div></div>
+      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Im Preis enthalten</h3><ul><li><b>Die Überführung selbst</b><span>7 € pro Seemeile, gerechnet ab Sassari.</span></li><li><b>Versicherung</b><span>Übernehmen wir.</span></li><li><b>Routenplanung</b><span>Wetterfenster und Tankstopps.</span></li><li><b>Meldungen unterwegs</b><span>Sie wissen immer, wo das Boot ist.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>Gesondert, zulasten des Eigners</h3><ul><li><b>Treibstoff und Liegegebühren</b><span>Entlang der Route.</span></li><li><b>Anreise, Verpflegung und Unterkunft des Skippers</b><span>Zum Boot und zurück.</span></li><li><b>Vorabkontrolle</b><span>Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft.</span></li><li><b>Wartetage</b><span>Ist das Boot nicht bereit, pro Tag berechnet.</span></li><li><b>Dokumente und Formalitäten</b><span>Bleiben beim Eigner.</span></li></ul></div></div>
     </div>
   </section>
 
@@ -113,7 +113,7 @@
         <div class="faq" id="deliv-faq"><details><summary>Wie weit fahren Sie?</summary><p>Überallhin, auch außerhalb Italiens. Längere Routen werden einige Tage im Voraus geplant.</p></details><details><summary>Fahren Sie allein?</summary><p>In der Regel ja, die Überführung erfolgt einhand. Wenn Route oder Boot es erfordern, suchen wir zusätzliche Crew.</p></details><details><summary>Nehmen Sie jedes Boot?</summary><p>Jede Art bis 20 Meter, sofern es in gutem Zustand ist. Boote, die nicht in Ordnung sind, übernehmen wir nicht.</p></details><details><summary>Ich habe gerade ein Boot gekauft, holen Sie es ab?</summary><p>Ja. Wir holen es bei der Werft oder beim Makler ab und bringen es in Ihren Hafen.</p></details><details><summary>Arbeiten Sie mit Marinas und Agenturen?</summary><p>Ja, wir skippern auch für Marinas, Werften und Charteragenturen.</p></details></div>
         <aside class="more">
           <h3 data-t="deliv.moreTitle">Noch Fragen?</h3>
-          <p data-t="deliv.moreText">Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Zeiten.</p>
+          <p data-t="deliv.moreText">Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.</p>
           <a class="btn btn-l" data-h="wa" target="_blank" rel="noopener" data-t="ui.whatsapp" href="https://wa.me/393517538315">Per WhatsApp schreiben</a>
         </aside>
       </div>
@@ -155,7 +155,7 @@
         <a data-h="yt" target="_blank" rel="noopener" data-c="ytShow" href="https://www.youtube.com/@SailClean-Official">@SailClean-Official</a>
       </div>
       <div>
-        <h4 data-t="contact.base">Basis</h4>
+        <h4 data-t="contact.base">Standort</h4>
         <p class="fsmall"><span data-c="base">Sassari (SS), Sardegna</span><br><span data-t="contact.hoursV">Täglich, 9:00–18:00. Über WhatsApp antworten wir auch später.</span></p>
       </div>
     </div>
@@ -185,11 +185,11 @@
 
 <dialog id="privacy" aria-labelledby="pv-t">
   <h2 id="pv-t" data-t="privacy.title">Datenschutzhinweis</h2>
-  <div id="pv-body"><p>Verantwortlicher: Andrea Pani, Sassari (SS), Sardegna. Kontakt: sailandclean@gmail.com.</p><p>Diese statische Website wird bei GitHub Pages gehostet, das die IP-Adressen der Besucher aus technischen und Sicherheitsgründen protokolliert.</p><p>Das Formular sendet uns keine Daten direkt: Es öffnet WhatsApp oder Ihr E-Mail-Programm mit der fertigen Nachricht. Wir nutzen Ihre Angaben nur, um zu antworten und die gewünschte Leistung zu erbringen.</p><p>Die Schriften sind in die Website eingebunden und werden nicht von externen Diensten geladen. Die Karte von Google Maps wird erst nach Ihrer Einwilligung geladen; Google verarbeitet die Daten dann nach der eigenen Datenschutzerklärung.</p><p>Sie können jederzeit Auskunft, Berichtigung oder Löschung Ihrer Daten per E-Mail an sailandclean@gmail.com verlangen und Beschwerde bei der italienischen Datenschutzbehörde (Garante) einlegen.</p></div>
+  <div id="pv-body"><p>Verantwortlicher: Andrea Pani, Sassari (SS), Sardegna. Kontakt: sailandclean@gmail.com.</p><p>Diese Website besteht aus statischen Seiten. Der Hosting-Anbieter protokolliert die IP-Adressen der Besucher aus technischen und Sicherheitsgründen.</p><p>Das Formular sendet uns keine Daten direkt: Es öffnet WhatsApp oder Ihr E-Mail-Programm mit der fertigen Nachricht. Wir nutzen Ihre Angaben nur, um zu antworten und die gewünschte Leistung zu erbringen.</p><p>Die Schriften sind in die Website eingebunden und werden nicht von externen Diensten geladen. Die Karte von Google Maps wird erst nach Ihrer Einwilligung geladen; Google verarbeitet die Daten dann nach der eigenen Datenschutzerklärung.</p><p>Sie können jederzeit Auskunft, Berichtigung oder Löschung Ihrer Daten per E-Mail an sailandclean@gmail.com verlangen und Beschwerde bei der italienischen Datenschutzbehörde (Garante) einlegen.</p></div>
   <button type="button" class="btn" id="pv-close" data-t="privacy.close">Schließen</button>
 </dialog>
 
-<script src="../../assets/site.js?v=9f6cc8d2"></script>
+<script src="../../assets/site.js?v=1a600a60"></script>
 
 
 </body></html>

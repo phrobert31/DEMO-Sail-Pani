@@ -56,14 +56,14 @@
     <div class="wrap">
       <div class="price">
         <b>7 €</b>
-        <span class="t" data-t="deliv.priceText">par mille. Le prix se calcule sur les milles de la route, au départ de Sassari. Les autres frais sont à la charge du propriétaire.</span>
+        <span class="t" data-t="deliv.priceText">par mille. Le prix est calculé sur la distance du trajet, au départ de Sassari. Les autres frais sont à la charge du propriétaire.</span>
         <a class="btn btn-l" href="../../fr/contact/" data-t="deliv.priceBtn">Demander un devis</a>
       </div>
       <div class="calc" id="calc" data-miles="150">
         <div>
           <h2 class="calc-t" data-t="calc.title">Calculer une estimation</h2>
-          <p class="sub" data-t="calc.sub">Indiquez les milles de la route, comptés depuis Sassari. Si vous ne les connaissez pas, envoyez-nous les deux ports et nous les calculons.</p>
-          <label for="calc-num" data-t="calc.miles">Milles de la route</label>
+          <p class="sub" data-t="calc.sub">Indiquez la distance en milles, comptée depuis Sassari. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.</p>
+          <label for="calc-num" data-t="calc.miles">Distance en milles</label>
           <input type="range" id="calc-range" min="0" max="1000" step="5" aria-hidden="true" tabindex="-1">
           <div class="row"><input type="number" id="calc-num" min="0" max="2000" step="1" inputmode="numeric"><span>NM</span></div>
         </div>
@@ -71,7 +71,7 @@
           <small data-t="calc.total">Estimation du service</small>
           <b id="calc-out">€ 0</b>
           <p data-t="calc.note">Service seul&nbsp;: carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.</p>
-          <button type="button" class="btn" id="calc-btn" data-t="calc.btn">Demander un devis pour cette route</button>
+          <button type="button" class="btn" id="calc-btn" data-t="calc.btn">Demander un devis pour ce trajet</button>
         </div>
       </div>
     </div>
@@ -81,13 +81,13 @@
     <div class="wrap two-map two">
       <figure class="mapfig">
         <div id="map-routes"></div>
-        <figcaption data-t="map.capRoutes">Quelques routes déjà effectuées.</figcaption>
+        <figcaption data-t="map.capRoutes">Quelques convoyages déjà réalisés.</figcaption>
       </figure>
       <div>
-        <h2 data-t="deliv.routesTitle">Routes déjà effectuées</h2>
+        <h2 data-t="deliv.routesTitle">Convoyages déjà réalisés</h2>
         <p data-t="deliv.routesSub">Quelques exemples de convoyages menés à terme.</p>
         <ul class="routes" id="deliv-routes" style="margin-top:20px"><li><span>Porto Torres</span><span class="arw" aria-hidden="true"></span><span>Marina di Andora</span></li><li><span>Alassio</span><span class="arw" aria-hidden="true"></span><span>Porto Torres</span></li><li><span>Fertilia</span><span class="arw" aria-hidden="true"></span><span>Porto Vecchio</span></li></ul>
-        <p style="margin-top:20px;color:var(--muted)" data-t="deliv.routesNote">Nous naviguons partout, en Italie et à l'étranger. Si votre route n'est pas listée, demandez quand même.</p>
+        <p style="margin-top:20px;color:var(--muted)" data-t="deliv.routesNote">Nous naviguons partout, en Italie et à l'étranger. Si votre trajet n'y figure pas, demandez-nous quand même.</p>
       </div>
     </div>
   </section>
@@ -102,7 +102,7 @@
   <section class="band">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.costTitle">Coûts et conditions</h2><p data-t="deliv.costSub">Tout est écrit dans le devis.</p></div>
-      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Compris dans le prix</h3><ul><li><b>Le convoyage lui-même</b><span>7 € par mille de la route, au départ de Sassari.</span></li><li><b>Assurance</b><span>À notre charge.</span></li><li><b>Préparation de la route</b><span>Fenêtre météo et escales carburant.</span></li><li><b>Nouvelles pendant le trajet</b><span>Vous savez toujours où est le bateau.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>À part, à la charge du propriétaire</h3><ul><li><b>Carburant et frais de port</b><span>Sur la route.</span></li><li><b>Voyage, repas et hébergement du skipper</b><span>Pour rejoindre le bateau et rentrer.</span></li><li><b>Visite préalable</b><span>Une journée de travail, même si le bateau ne part pas.</span></li><li><b>Jours d'attente</b><span>Si le bateau n'est pas prêt, facturés à la journée.</span></li><li><b>Documents et formalités</b><span>Restent au propriétaire.</span></li></ul></div></div>
+      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Compris dans le prix</h3><ul><li><b>Le convoyage lui-même</b><span>7 € par mille parcouru, au départ de Sassari.</span></li><li><b>Assurance</b><span>À notre charge.</span></li><li><b>Préparation de la route</b><span>Fenêtre météo et escales carburant.</span></li><li><b>Nouvelles pendant le trajet</b><span>Vous savez toujours où est le bateau.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>À part, à la charge du propriétaire</h3><ul><li><b>Carburant et frais de port</b><span>Sur la route.</span></li><li><b>Voyage, repas et hébergement du skipper</b><span>Pour rejoindre le bateau et rentrer.</span></li><li><b>Visite préalable</b><span>Une journée de travail, même si le bateau ne part pas.</span></li><li><b>Jours d'attente</b><span>Si le bateau n'est pas prêt, facturés à la journée.</span></li><li><b>Documents et formalités</b><span>Restent au propriétaire.</span></li></ul></div></div>
     </div>
   </section>
 
@@ -110,7 +110,7 @@
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.faqTitle">Questions fréquentes</h2></div>
       <div class="faq-grid">
-        <div class="faq" id="deliv-faq"><details><summary>Jusqu'où allez-vous&nbsp;?</summary><p>Partout, y compris hors d'Italie. Les routes les plus longues se préparent quelques jours à l'avance.</p></details><details><summary>Naviguez-vous seul&nbsp;?</summary><p>En règle générale oui, le convoyage se fait en solitaire. Si la route ou le bateau l'exigent, nous cherchons un équipier.</p></details><details><summary>Acceptez-vous tous les bateaux&nbsp;?</summary><p>Tout type jusqu'à 20 mètres, à condition qu'il soit en bon état. Nous ne prenons pas en charge un bateau qui n'est pas en ordre.</p></details><details><summary>Je viens d'acheter un bateau, pouvez-vous aller le chercher&nbsp;?</summary><p>Oui. Nous le récupérons au chantier ou chez le courtier et l'amenons à votre port.</p></details><details><summary>Travaillez-vous avec des marinas et des agences&nbsp;?</summary><p>Oui, nous assurons aussi le skippage pour des marinas, des chantiers et des agences de location.</p></details></div>
+        <div class="faq" id="deliv-faq"><details><summary>Jusqu'où allez-vous&nbsp;?</summary><p>Partout, y compris hors d'Italie. Les routes les plus longues se préparent quelques jours à l'avance.</p></details><details><summary>Naviguez-vous seul&nbsp;?</summary><p>En règle générale oui, le convoyage se fait en solitaire. Si la route ou le bateau l'exigent, nous cherchons un équipier.</p></details><details><summary>Acceptez-vous tous les bateaux&nbsp;?</summary><p>Tout type jusqu'à 20 mètres, à condition qu'il soit en bon état. Nous ne prenons pas en charge un bateau qui n'est pas en état de naviguer.</p></details><details><summary>Je viens d'acheter un bateau, pouvez-vous aller le chercher&nbsp;?</summary><p>Oui. Nous le récupérons au chantier ou chez le courtier et l'amenons à votre port.</p></details><details><summary>Travaillez-vous avec des marinas et des agences&nbsp;?</summary><p>Oui, nous assurons aussi des missions de skipper pour des marinas, des chantiers et des agences de location.</p></details></div>
         <aside class="more">
           <h3 data-t="deliv.moreTitle">D'autres questions&nbsp;?</h3>
           <p data-t="deliv.moreText">Écrivez-nous sur WhatsApp&nbsp;: nous répondons tous les jours, même en dehors des horaires.</p>
@@ -185,11 +185,11 @@
 
 <dialog id="privacy" aria-labelledby="pv-t">
   <h2 id="pv-t" data-t="privacy.title">Politique de confidentialité</h2>
-  <div id="pv-body"><p>Responsable du traitement&nbsp;: Andrea Pani, Sassari (SS), Sardegna. Contact&nbsp;: sailandclean@gmail.com.</p><p>Ce site statique est hébergé par GitHub Pages, qui enregistre les adresses IP des visiteurs pour des raisons techniques et de sécurité.</p><p>Le formulaire ne nous envoie pas de données directement&nbsp;: il ouvre WhatsApp ou votre messagerie avec le message déjà rédigé. Nous utilisons vos informations uniquement pour vous répondre et fournir le service demandé.</p><p>Les polices sont intégrées au site et ne sont pas chargées depuis des services externes. La carte Google Maps ne se charge qu'après votre accord&nbsp;; Google traite alors les données selon sa propre politique.</p><p>Vous pouvez demander l'accès, la rectification ou la suppression de vos données à tout moment en écrivant à sailandclean@gmail.com, et déposer une réclamation auprès de l'autorité italienne de protection des données (Garante).</p></div>
+  <div id="pv-body"><p>Responsable du traitement&nbsp;: Andrea Pani, Sassari (SS), Sardegna. Contact&nbsp;: sailandclean@gmail.com.</p><p>Ce site est composé de pages statiques. L'hébergeur enregistre les adresses IP des visiteurs pour des raisons techniques et de sécurité.</p><p>Le formulaire ne nous envoie pas de données directement&nbsp;: il ouvre WhatsApp ou votre messagerie avec le message déjà rédigé. Nous utilisons vos informations uniquement pour vous répondre et fournir le service demandé.</p><p>Les polices sont intégrées au site et ne sont pas chargées depuis des services externes. La carte Google Maps ne se charge qu'après votre accord&nbsp;; Google traite alors les données selon sa propre politique.</p><p>Vous pouvez demander l'accès, la rectification ou la suppression de vos données à tout moment en écrivant à sailandclean@gmail.com, et déposer une réclamation auprès de l'autorité italienne de protection des données (Garante).</p></div>
   <button type="button" class="btn" id="pv-close" data-t="privacy.close">Fermer</button>
 </dialog>
 
-<script src="../../assets/site.js?v=9f6cc8d2"></script>
+<script src="../../assets/site.js?v=1a600a60"></script>
 
 
 </body></html>

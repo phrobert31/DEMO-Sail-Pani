@@ -56,14 +56,14 @@
     <div class="wrap">
       <div class="price">
         <b>7 €</b>
-        <span class="t" data-t="deliv.priceText">por milla. El precio se calcula sobre las millas de la ruta, desde Sassari. Los demás gastos corren a cargo del armador.</span>
+        <span class="t" data-t="deliv.priceText">por milla. El precio se calcula según la distancia en millas, desde Sassari. Los demás gastos corren a cargo del armador.</span>
         <a class="btn btn-l" href="../../es/contacto/" data-t="deliv.priceBtn">Pedir presupuesto</a>
       </div>
       <div class="calc" id="calc" data-miles="150">
         <div>
           <h2 class="calc-t" data-t="calc.title">Calcula una estimación</h2>
-          <p class="sub" data-t="calc.sub">Indica las millas de la ruta, contadas desde Sassari. Si no las conoces, envíanos los dos puertos y las calculamos nosotros.</p>
-          <label for="calc-num" data-t="calc.miles">Millas de la ruta</label>
+          <p class="sub" data-t="calc.sub">Indica la distancia en millas, contada desde Sassari. Si no la conoces, envíanos los dos puertos y la calculamos nosotros.</p>
+          <label for="calc-num" data-t="calc.miles">Distancia en millas</label>
           <input type="range" id="calc-range" min="0" max="1000" step="5" aria-hidden="true" tabindex="-1">
           <div class="row"><input type="number" id="calc-num" min="0" max="2000" step="1" inputmode="numeric"><span>NM</span></div>
         </div>
@@ -102,7 +102,7 @@
   <section class="band">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.costTitle">Costes y condiciones</h2><p data-t="deliv.costSub">Todo queda por escrito en el presupuesto.</p></div>
-      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Incluido en el precio</h3><ul><li><b>El traslado en sí</b><span>7 € por cada milla de la ruta, desde Sassari.</span></li><li><b>Seguro</b><span>Corre de nuestra cuenta.</span></li><li><b>Planificación de la ruta</b><span>Ventana meteorológica y paradas de combustible.</span></li><li><b>Novedades durante el viaje</b><span>Siempre sabes dónde está el barco.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>Aparte, a cargo del armador</h3><ul><li><b>Combustible y amarres</b><span>Durante la ruta.</span></li><li><b>Viaje, comidas y alojamiento del patrón</b><span>Para llegar al barco y volver.</span></li><li><b>Revisión previa</b><span>Una jornada de trabajo, aunque después no se zarpe.</span></li><li><b>Días de espera</b><span>Si el barco no está listo, se cobra por día.</span></li><li><b>Documentos y trámites</b><span>Quedan a cargo del armador.</span></li></ul></div></div>
+      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Incluido en el precio</h3><ul><li><b>El traslado en sí</b><span>7 € por milla recorrida, desde Sassari.</span></li><li><b>Seguro</b><span>Corre de nuestra cuenta.</span></li><li><b>Planificación de la ruta</b><span>Ventana meteorológica y paradas de combustible.</span></li><li><b>Novedades durante el viaje</b><span>Siempre sabes dónde está el barco.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>Aparte, a cargo del armador</h3><ul><li><b>Combustible y amarres</b><span>Durante la ruta.</span></li><li><b>Viaje, comidas y alojamiento del patrón</b><span>Para llegar al barco y volver.</span></li><li><b>Revisión previa</b><span>Una jornada de trabajo, aunque después no se zarpe.</span></li><li><b>Días de espera</b><span>Si el barco no está listo, se cobra por día.</span></li><li><b>Documentos y trámites</b><span>Quedan a cargo del armador.</span></li></ul></div></div>
     </div>
   </section>
 
@@ -185,11 +185,11 @@
 
 <dialog id="privacy" aria-labelledby="pv-t">
   <h2 id="pv-t" data-t="privacy.title">Aviso de privacidad</h2>
-  <div id="pv-body"><p>Responsable del tratamiento: Andrea Pani, Sassari (SS), Sardegna. Contacto: sailandclean@gmail.com.</p><p>Esta web estática está alojada en GitHub Pages, que registra las direcciones IP de los visitantes por motivos técnicos y de seguridad.</p><p>El formulario no nos envía datos directamente: abre WhatsApp o tu programa de correo con el mensaje ya escrito. Usamos lo que nos envías solo para responderte y prestar el servicio solicitado.</p><p>Las tipografías están incluidas en la web y no se descargan de servicios externos. El mapa de Google Maps se carga solo tras tu consentimiento, y en ese caso Google trata los datos según su propia política.</p><p>Puedes solicitar acceso, rectificación o supresión de tus datos en cualquier momento escribiendo a sailandclean@gmail.com, y presentar una reclamación ante la autoridad italiana de protección de datos (Garante).</p></div>
+  <div id="pv-body"><p>Responsable del tratamiento: Andrea Pani, Sassari (SS), Sardegna. Contacto: sailandclean@gmail.com.</p><p>Esta web está formada por páginas estáticas. El proveedor de alojamiento registra las direcciones IP de los visitantes por motivos técnicos y de seguridad.</p><p>El formulario no nos envía datos directamente: abre WhatsApp o tu programa de correo con el mensaje ya escrito. Usamos lo que nos envías solo para responderte y prestar el servicio solicitado.</p><p>Las tipografías están incluidas en la web y no se descargan de servicios externos. El mapa de Google Maps se carga solo tras tu consentimiento, y en ese caso Google trata los datos según su propia política.</p><p>Puedes solicitar acceso, rectificación o supresión de tus datos en cualquier momento escribiendo a sailandclean@gmail.com, y presentar una reclamación ante la autoridad italiana de protección de datos (Garante).</p></div>
   <button type="button" class="btn" id="pv-close" data-t="privacy.close">Cerrar</button>
 </dialog>
 
-<script src="../../assets/site.js?v=9f6cc8d2"></script>
+<script src="../../assets/site.js?v=1a600a60"></script>
 
 
 </body></html>

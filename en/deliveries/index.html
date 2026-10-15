@@ -56,21 +56,21 @@
     <div class="wrap">
       <div class="price">
         <b>7 €</b>
-        <span class="t" data-t="deliv.priceText">per mile. The price is calculated on the miles of the route, starting from Sassari. Other costs are paid by the owner.</span>
+        <span class="t" data-t="deliv.priceText">per mile. The price is based on the route distance, measured from Sassari. Other costs are paid by the owner.</span>
         <a class="btn btn-l" href="../../en/contact/" data-t="deliv.priceBtn">Request a quote</a>
       </div>
       <div class="calc" id="calc" data-miles="150">
         <div>
-          <h2 class="calc-t" data-t="calc.title">Work out an estimate</h2>
-          <p class="sub" data-t="calc.sub">Enter the miles of the route, counted from Sassari. If you do not know them, send us the two ports and we will work it out.</p>
-          <label for="calc-num" data-t="calc.miles">Miles of the route</label>
+          <h2 class="calc-t" data-t="calc.title">Get an estimate</h2>
+          <p class="sub" data-t="calc.sub">Enter the route distance in miles, counted from Sassari. Don't know it? Send us the two ports and we'll work it out.</p>
+          <label for="calc-num" data-t="calc.miles">Route distance (miles)</label>
           <input type="range" id="calc-range" min="0" max="1000" step="5" aria-hidden="true" tabindex="-1">
           <div class="row"><input type="number" id="calc-num" min="0" max="2000" step="1" inputmode="numeric"><span>NM</span></div>
         </div>
         <div class="out">
           <small data-t="calc.total">Service estimate</small>
           <b id="calc-out">€ 0</b>
-          <p data-t="calc.note">Service only: fuel, marina fees and the skipper's expenses are separate. The final quote follows the inspection.</p>
+          <p data-t="calc.note">Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.</p>
           <button type="button" class="btn" id="calc-btn" data-t="calc.btn">Request a quote for this route</button>
         </div>
       </div>
@@ -87,7 +87,7 @@
         <h2 data-t="deliv.routesTitle">Routes already sailed</h2>
         <p data-t="deliv.routesSub">A few examples of deliveries completed.</p>
         <ul class="routes" id="deliv-routes" style="margin-top:20px"><li><span>Porto Torres</span><span class="arw" aria-hidden="true"></span><span>Marina di Andora</span></li><li><span>Alassio</span><span class="arw" aria-hidden="true"></span><span>Porto Torres</span></li><li><span>Fertilia</span><span class="arw" aria-hidden="true"></span><span>Porto Vecchio</span></li></ul>
-        <p style="margin-top:20px;color:var(--muted)" data-t="deliv.routesNote">We sail anywhere, in Italy and abroad. If your route is not listed, ask anyway.</p>
+        <p style="margin-top:20px;color:var(--muted)" data-t="deliv.routesNote">We sail anywhere, in Italy and abroad. If your route isn't listed, just ask.</p>
       </div>
     </div>
   </section>
@@ -95,14 +95,14 @@
   <section class="band band-mist">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.howTitle">How it works</h2></div>
-      <ol class="steps" id="deliv-steps"><li><h3>You write to us</h3><p>Departure and arrival port, dates, model and length.</p></li><li><h3>Inspection on board</h3><p>We come to see the boat in person: photos are not enough.</p></li><li><h3>Departure</h3><p>We leave in the right weather window, with the fuel stops the route needs.</p></li><li><h3>Handover</h3><p>The boat arrives at the agreed port.</p></li></ol>
+      <ol class="steps" id="deliv-steps"><li><h3>Get in touch</h3><p>Departure and arrival port, dates, model and length.</p></li><li><h3>Inspection on board</h3><p>We come to see the boat in person: photos are not enough.</p></li><li><h3>Departure</h3><p>We leave in the right weather window, with the fuel stops the route needs.</p></li><li><h3>Handover</h3><p>The boat arrives at the agreed port.</p></li></ol>
     </div>
   </section>
 
   <section class="band">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.costTitle">Costs and conditions</h2><p data-t="deliv.costSub">Everything is written into the quote.</p></div>
-      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Included in the price</h3><ul><li><b>The delivery itself</b><span>€7 for every mile of the route, starting from Sassari.</span></li><li><b>Insurance</b><span>On us.</span></li><li><b>Passage planning</b><span>Weather window and fuel stops.</span></li><li><b>Updates along the way</b><span>You always know where the boat is.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>Separate, paid by the owner</h3><ul><li><b>Fuel and marina fees</b><span>Along the route.</span></li><li><b>Skipper's travel, food and accommodation</b><span>To reach the boat and return.</span></li><li><b>Inspection</b><span>One working day, even if the boat then does not leave.</span></li><li><b>Waiting days</b><span>If the boat is not ready, charged per day.</span></li><li><b>Documents and formalities</b><span>Stay with the owner.</span></li></ul></div></div>
+      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Included in the price</h3><ul><li><b>The delivery itself</b><span>€7 per mile of the route, measured from Sassari.</span></li><li><b>Insurance</b><span>On us.</span></li><li><b>Passage planning</b><span>Weather window and fuel stops.</span></li><li><b>Updates along the way</b><span>You always know where the boat is.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>Separate, paid by the owner</h3><ul><li><b>Fuel and marina fees</b><span>Along the route.</span></li><li><b>Skipper's travel, food and accommodation</b><span>To reach the boat and return.</span></li><li><b>Inspection</b><span>A full working day, charged even if the boat doesn't sail.</span></li><li><b>Waiting days</b><span>Charged per day if the boat isn't ready.</span></li><li><b>Documents and formalities</b><span>Remain the owner's responsibility.</span></li></ul></div></div>
     </div>
   </section>
 
@@ -110,10 +110,10 @@
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.faqTitle">Frequently asked questions</h2></div>
       <div class="faq-grid">
-        <div class="faq" id="deliv-faq"><details><summary>How far do you go?</summary><p>Anywhere, including outside Italy. Longer routes are arranged a few days ahead.</p></details><details><summary>Do you sail alone?</summary><p>As a rule yes, the delivery is single-handed. When the route or the boat calls for it, we find extra crew.</p></details><details><summary>Do you take any boat?</summary><p>Any type up to 20 metres, as long as it is in good condition. We do not take on boats that are not in order.</p></details><details><summary>I have just bought a boat, can you collect it?</summary><p>Yes. We pick it up from the yard or the broker and bring it to your port.</p></details><details><summary>Do you work with marinas and agencies?</summary><p>Yes, we also skipper for marinas, boatyards and charter agencies.</p></details></div>
+        <div class="faq" id="deliv-faq"><details><summary>How far do you go?</summary><p>Anywhere, including outside Italy. Longer routes are arranged a few days ahead.</p></details><details><summary>Do you sail alone?</summary><p>Usually, yes: deliveries are single-handed. When the route or the boat calls for it, we bring extra crew.</p></details><details><summary>Do you take any boat?</summary><p>Any type up to 20 metres, as long as it's in good condition. We don't take on boats that aren't seaworthy.</p></details><details><summary>I have just bought a boat, can you collect it?</summary><p>Yes. We pick it up from the yard or the broker and bring it to your port.</p></details><details><summary>Do you work with marinas and agencies?</summary><p>Yes, we also skipper for marinas, boatyards and charter agencies.</p></details></div>
         <aside class="more">
           <h3 data-t="deliv.moreTitle">More questions?</h3>
-          <p data-t="deliv.moreText">Message us on WhatsApp: we reply every day, also outside working hours.</p>
+          <p data-t="deliv.moreText">Message us on WhatsApp: we reply every day, even outside working hours.</p>
           <a class="btn btn-l" data-h="wa" target="_blank" rel="noopener" data-t="ui.whatsapp" href="https://wa.me/393517538315">Message us on WhatsApp</a>
         </aside>
       </div>
@@ -156,7 +156,7 @@
       </div>
       <div>
         <h4 data-t="contact.base">Base</h4>
-        <p class="fsmall"><span data-c="base">Sassari (SS), Sardegna</span><br><span data-t="contact.hoursV">Every day, 9:00–18:00. On WhatsApp we also reply later.</span></p>
+        <p class="fsmall"><span data-c="base">Sassari (SS), Sardegna</span><br><span data-t="contact.hoursV">Every day, 9:00–18:00. On WhatsApp we reply later too.</span></p>
       </div>
     </div>
     <div class="fbot">
@@ -185,11 +185,11 @@
 
 <dialog id="privacy" aria-labelledby="pv-t">
   <h2 id="pv-t" data-t="privacy.title">Privacy notice</h2>
-  <div id="pv-body"><p>Data controller: Andrea Pani, Sassari (SS), Sardegna. Contact: sailandclean@gmail.com.</p><p>This is a static site hosted on GitHub Pages, which logs visitors' IP addresses for technical and security reasons.</p><p>The form does not send data to us directly: it opens WhatsApp or your email app with the message already written. We use what you send only to reply and to provide the service you ask for.</p><p>Fonts are included in the site and are not loaded from external services. The Google Maps map loads only after your consent, and Google then processes data under its own privacy policy.</p><p>You can ask for access to, correction or deletion of your data at any time by writing to sailandclean@gmail.com, and you can lodge a complaint with the Italian data protection authority (Garante).</p></div>
+  <div id="pv-body"><p>Data controller: Andrea Pani, Sassari (SS), Sardegna. Contact: sailandclean@gmail.com.</p><p>This is a static website. The hosting provider logs visitors' IP addresses for technical and security reasons.</p><p>The form does not send data to us directly: it opens WhatsApp or your email app with the message already written. We use what you send only to reply and to provide the service you ask for.</p><p>Fonts are included in the site and are not loaded from external services. The Google Maps map loads only after your consent, and Google then processes data under its own privacy policy.</p><p>You can ask for access to, correction or deletion of your data at any time by writing to sailandclean@gmail.com, and you can lodge a complaint with the Italian data protection authority (Garante).</p></div>
   <button type="button" class="btn" id="pv-close" data-t="privacy.close">Close</button>
 </dialog>
 
-<script src="../../assets/site.js?v=9f6cc8d2"></script>
+<script src="../../assets/site.js?v=1a600a60"></script>
 
 
 </body></html>
