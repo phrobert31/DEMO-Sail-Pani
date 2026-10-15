@@ -940,6 +940,35 @@ footer nav a{min-height:44px}
 .lang li a{display:flex;align-items:center;min-height:44px;width:100%;padding:0 11px;border-radius:6px;font:500 .98rem var(--s);color:var(--ink);text-decoration:none}
 .lang li a:hover{background:var(--mist)}
 .lang li a[aria-current]{background:var(--mist);font-weight:700}
+
+/* ---- boat plans (sail / motor / catamaran) ---- */
+.wo-v{display:none}
+.wo-plan[data-type="0"] .wo-v0,.wo-plan[data-type="1"] .wo-v1,.wo-plan[data-type="2"] .wo-v2{display:inline}
+.wo-rail{fill:none;stroke:#A9BCCD;stroke-width:1;pointer-events:none}
+.wo-well{fill:#EEF3F8;stroke:var(--ink);stroke-width:1.3;pointer-events:none}
+.wo-line{fill:none;stroke:var(--ink);stroke-width:1.3;pointer-events:none}
+.wo-line.wo-fill{fill:#fff}
+.wo-screen{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;pointer-events:none}
+.wo-net{fill:url(#wo-netp);stroke:var(--ink);stroke-width:1.2;pointer-events:none}
+.wo-tow{fill:none;stroke:#9FB0BC;stroke-width:1.4;stroke-dasharray:4 4}
+.wo-spreader{stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;pointer-events:none}
+.wo-shroud{stroke:#7F93A6;stroke-width:1;pointer-events:none}
+.wo-rig.on .wo-boom,.wo-rig.on .wo-spreader{stroke:var(--sea)}
+.wo-rig.on .wo-mast{fill:var(--sea)}
+/* ---- detailed form or just a message ---- */
+.wo-mode{padding:26px 28px 22px;border-bottom:1px solid var(--line);background:var(--mist-2)}
+.wo-modeintro{font-size:1.02rem;color:var(--body);margin-bottom:14px;max-width:60ch}
+.wo-modeseg{margin-bottom:0}
+.wo-tag{font:600 .78rem var(--d);letter-spacing:.02em;color:var(--muted);background:var(--mist);border-radius:6px;padding:3px 8px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.wo-log{counter-reset:wo}
+.wo-step{counter-increment:wo}
+.wo-no::before{content:counter(wo,decimal-leading-zero)}
+.wo-log[data-mode="quick"] .wo-opt{display:none}
+.wo-log[data-mode="quick"] #f-msg{min-height:150px}
+.wo-log[data-mode="quick"] #wo-ln-msg{order:-1}
+.wo[data-mode="quick"] .wo-r-opt{display:none}
+.wo-ln.err textarea{border-bottom-color:#C2453B}
+@media (max-width:560px){.wo-mode{padding:20px}.wo-modeseg{grid-template-columns:repeat(2,minmax(0,1fr))}.wo-modeseg label svg{display:inline;width:18px;height:18px}}
 </style>
 </head>
 <body>
@@ -1119,34 +1148,81 @@ footer nav a{min-height:44px}
       <ol class="steps wo-steps" id="clean-steps"><li><h3>Compila il modulo</h3><p>Modello, lunghezza, porto e servizi che ti servono.</p></li><li><h3>Manda le foto</h3><p>Su WhatsApp, così vediamo subito lo stato della barca.</p></li><li><h3>Ricevi il preventivo</h3><p>Con i servizi scelti, la linea di prodotti e la trasferta.</p></li><li><h3>Fissiamo la data</h3><p>Concordiamo il giorno e veniamo a bordo.</p></li></ol>
       <div class="wo">
       <form class="wo-log formcard" id="wo-log" novalidate>
-        <section class="wo-step">
-          <div class="wo-no">01</div>
+        <div class="wo-mode">
+          <p class="wo-modeintro" data-w="modeIntro"></p>
+          <div class="wo-seg wo-modeseg" role="radiogroup" data-wa="modeLabel">
+            <input type="radio" name="wo-mode" id="wo-m-full" value="full" checked><label for="wo-m-full"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span data-w="modeFull"></span></label>
+            <input type="radio" name="wo-mode" id="wo-m-quick" value="quick"><label for="wo-m-quick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg><span data-w="modeQuick"></span></label>
+          </div>
+        </div>
+        <section class="wo-step wo-opt">
+          <div class="wo-no"></div>
           <div class="wo-bd">
-            <h3 data-w="s1">La barca</h3>
+            <h3><span data-w="s1"></span> <span class="wo-tag" data-w="optional"></span></h3>
             <p class="wo-hint" data-w="s1h">Tipo di barca e lunghezza complessiva.</p>
             <div class="wo-seg" role="radiogroup" data-wa="typeLabel">
               <input type="radio" name="wo-type" id="wo-t0" value="0" checked><label for="wo-t0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v14M12 4l7 12h-7M12 7l-6 9h6M3 19c3 2 15 2 18 0"/></svg><span data-w="t0">Vela</span></label>
               <input type="radio" name="wo-type" id="wo-t1" value="1"><label for="wo-t1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h18l-2 4H5zM7 15l2-5h7l3 5M10 10V7h4"/></svg><span data-w="t1">Motore</span></label>
               <input type="radio" name="wo-type" id="wo-t2" value="2"><label for="wo-t2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17h7l-1 2H4zM14 17h7l-1 2h-5zM6 17V13h12v4M12 13V4l5 8"/></svg><span data-w="t2">Catamarano</span></label>
             </div>
-            <div class="wo-plan" id="wo-plan">
+            <div class="wo-plan" id="wo-plan" data-type="0">
               <svg viewBox="0 0 640 230" role="group" data-wa="planLabel">
-                <defs><pattern id="wo-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#E3ECF5"/><line x1="0" y1="0" x2="0" y2="9" stroke="#3F6E9C" stroke-width="3"/></pattern></defs>
-                <path class="wo-water" d="M0 200c40 0 40-6 80-6s40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6"/>
-                <path class="wo-water" d="M0 26c40 0 40-6 80-6s40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6"/>
+                <defs><pattern id="wo-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#E3ECF5"/><line x1="0" y1="0" x2="0" y2="9" stroke="#3F6E9C" stroke-width="3"/></pattern><pattern id="wo-netp" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#fff"/><path d="M0 0V10M0 0H10" stroke="#9FB0C2" stroke-width="1"/></pattern></defs>
+                <path class="wo-water" d="M0 210c40 0 40-6 80-6s40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6"/>
+                <path class="wo-water" d="M0 20c40 0 40-6 80-6s40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6 40-6 80-6 40 6 80 6"/>
                 <g class="wo-hull" id="wo-hull">
-                  <path d="M88 112H48" stroke="#9FB0BC" stroke-width="1.4" stroke-dasharray="4 4"/>
-                  <rect class="wo-z wo-tender" data-k="gom" tabindex="0" role="checkbox" x="6" y="96" width="44" height="32" rx="16"><title></title></rect>
-                  <path class="wo-z wo-deck" data-k="ext" tabindex="0" role="checkbox" d="M96 52 L430 46 C520 48 584 86 606 113 C584 140 520 178 430 180 L96 174 Q82 113 96 52Z"><title></title></path>
-                  <path class="wo-z wo-band" data-k="gel" tabindex="0" role="checkbox" d="M96 52 L430 46 C520 48 584 86 606 113 C584 140 520 178 430 180 L96 174 Q82 113 96 52Z"><title></title></path>
-                  <rect class="wo-z wo-cabin" data-k="int" tabindex="0" role="checkbox" x="190" y="80" width="230" height="66" rx="30"><title></title></rect>
-                  <circle class="wo-porthole" cx="236" cy="113" r="6"/><circle class="wo-porthole" cx="276" cy="113" r="6"/><circle class="wo-porthole" cx="316" cy="113" r="6"/>
-                  <g class="wo-rig" id="wo-rig">
-                    <rect class="wo-z wo-sailz" data-k="sails" tabindex="0" role="checkbox" x="300" y="60" width="160" height="40" rx="10"><title></title></rect>
-                    <line class="wo-boom" x1="320" y1="80" x2="450" y2="80"/>
-                    <circle class="wo-mast" cx="450" cy="80" r="7"/>
-                  </g>
-                </g>
+<g class="wo-v wo-v0">
+  <path class="wo-tow" d="M54 115H78"/>
+  <rect class="wo-z wo-tender" data-k="gom" tabindex="0" role="checkbox" x="10" y="99" width="44" height="32" rx="16"><title></title></rect>
+  <path class="wo-z wo-deck" data-k="ext" tabindex="0" role="checkbox" d="M78 64C150 56 300 50 410 52C500 54 570 84 614 115C570 146 500 176 410 178C300 180 150 174 78 166C70 150 68 80 78 64Z"><title></title></path>
+  <path class="wo-rail" transform="translate(22.5 7.5) scale(.935)" d="M78 64C150 56 300 50 410 52C500 54 570 84 614 115C570 146 500 176 410 178C300 180 150 174 78 166C70 150 68 80 78 64Z"/>
+  <path class="wo-well" d="M98 86H176Q190 86 190 100V130Q190 144 176 144H98Q90 115 98 86Z"/>
+  <circle class="wo-line" cx="118" cy="115" r="13"/><path class="wo-line" d="M105 115H131M118 102V128"/>
+  <path class="wo-line" d="M600 115H630"/>
+  <rect class="wo-line wo-fill" x="470" y="104" width="22" height="22" rx="3"/>
+  <path class="wo-z wo-band" data-k="gel" tabindex="0" role="checkbox" d="M78 64C150 56 300 50 410 52C500 54 570 84 614 115C570 146 500 176 410 178C300 180 150 174 78 166C70 150 68 80 78 64Z"><title></title></path>
+  <path class="wo-z wo-cabin" data-k="int" tabindex="0" role="checkbox" d="M206 84H352C384 86 404 100 412 115C404 130 384 144 352 146H206Q198 115 206 84Z"><title></title></path>
+  <rect class="wo-line wo-fill" x="236" y="104" width="22" height="22" rx="3"/><rect class="wo-line wo-fill" x="300" y="106" width="18" height="18" rx="3"/>
+  <g class="wo-rig">
+    <path class="wo-shroud" d="M398 68L380 56M398 68L416 54M398 162L380 174M398 162L416 176"/>
+    <path class="wo-spreader" d="M398 68V162"/>
+    <path class="wo-boom" d="M398 115H192"/>
+    <circle class="wo-mast" cx="398" cy="115" r="7"/>
+    <path class="wo-z wo-sailz" data-k="sails" tabindex="0" role="checkbox" d="M370 115a28 28 0 1 0 56 0a28 28 0 1 0-56 0ZM186 105H226V125H186Z"><title></title></path>
+  </g>
+</g>
+<g class="wo-v wo-v1">
+  <path class="wo-tow" d="M48 115H54"/>
+  <rect class="wo-z wo-tender" data-k="gom" tabindex="0" role="checkbox" x="4" y="99" width="44" height="32" rx="16"><title></title></rect>
+  <rect class="wo-well" x="54" y="76" width="22" height="78" rx="4"/>
+  <path class="wo-z wo-deck" data-k="ext" tabindex="0" role="checkbox" d="M70 60C170 52 320 48 420 50C515 53 580 86 616 115C580 144 515 177 420 180C320 182 170 178 70 170C64 150 62 80 70 60Z"><title></title></path>
+  <path class="wo-rail" transform="translate(22.3 7.5) scale(.935)" d="M70 60C170 52 320 48 420 50C515 53 580 86 616 115C580 144 515 177 420 180C320 182 170 178 70 170C64 150 62 80 70 60Z"/>
+  <path class="wo-well" d="M92 82H160V148H92Q84 115 92 82Z"/>
+  <rect class="wo-line wo-fill" x="458" y="94" width="72" height="42" rx="14"/><path class="wo-line" d="M494 94V136"/>
+  <path class="wo-z wo-band" data-k="gel" tabindex="0" role="checkbox" d="M70 60C170 52 320 48 420 50C515 53 580 86 616 115C580 144 515 177 420 180C320 182 170 178 70 170C64 150 62 80 70 60Z"><title></title></path>
+  <path class="wo-z wo-cabin" data-k="int" tabindex="0" role="checkbox" d="M176 76H360C396 80 420 98 428 115C420 132 396 150 360 154H176Q166 115 176 76Z"><title></title></path>
+  <path class="wo-screen" d="M346 82C386 88 410 102 418 115C410 128 386 142 346 148"/>
+  <rect class="wo-line" x="226" y="94" width="70" height="42" rx="10"/><path class="wo-line" d="M250 94V136M272 94V136"/>
+</g>
+<g class="wo-v wo-v2">
+  <path class="wo-tow" d="M84 115H112"/>
+  <rect class="wo-z wo-tender" data-k="gom" tabindex="0" role="checkbox" x="40" y="99" width="44" height="32" rx="16"><title></title></rect>
+  <rect class="wo-net" x="440" y="82" width="112" height="66" rx="2"/>
+  <path class="wo-z wo-deck" data-k="ext" tabindex="-1" d="M116 76H432Q440 76 440 84V146Q440 154 432 154H116Z"><title></title></path>
+  <path class="wo-z wo-deck" data-k="ext" tabindex="0" role="checkbox" d="M96 40C200 34 360 32 470 36C540 38 590 46 616 58C590 70 540 80 470 82C360 86 200 84 96 80C90 70 90 50 96 40ZM96 190C200 196 360 198 470 194C540 192 590 184 616 172C590 160 540 150 470 148C360 144 200 146 96 150C90 160 90 180 96 190Z"><title></title></path>
+  <path class="wo-well" d="M122 92H178Q188 92 188 102V128Q188 138 178 138H122Q116 115 122 92Z"/>
+  <path class="wo-z wo-band" data-k="gel" tabindex="0" role="checkbox" d="M96 40C200 34 360 32 470 36C540 38 590 46 616 58C590 70 540 80 470 82C360 86 200 84 96 80C90 70 90 50 96 40ZM96 190C200 196 360 198 470 194C540 192 590 184 616 172C590 160 540 150 470 148C360 144 200 146 96 150C90 160 90 180 96 190Z"><title></title></path>
+  <path class="wo-z wo-cabin" data-k="int" tabindex="0" role="checkbox" d="M200 86H388Q408 86 410 104V126Q408 144 388 144H200Q190 115 200 86Z"><title></title></path>
+  <rect class="wo-line wo-fill" x="236" y="104" width="22" height="22" rx="3"/><rect class="wo-line wo-fill" x="320" y="104" width="22" height="22" rx="3"/>
+  <g class="wo-rig">
+    <path class="wo-shroud" d="M424 78L404 62M424 78L444 60M424 152L404 168M424 152L444 170"/>
+    <path class="wo-spreader" d="M424 78V152"/>
+    <path class="wo-boom" d="M424 115H196"/>
+    <circle class="wo-mast" cx="424" cy="115" r="7"/>
+    <path class="wo-z wo-sailz" data-k="sails" tabindex="0" role="checkbox" d="M396 115a28 28 0 1 0 56 0a28 28 0 1 0-56 0ZM182 105H220V125H182Z"><title></title></path>
+  </g>
+</g>
+</g>
               </svg>
             </div>
             <div class="wo-ruler">
@@ -1156,25 +1232,25 @@ footer nav a{min-height:44px}
             <div class="wo-lenout"><b id="wo-len-out">14 m</b><span id="wo-len-note"></span></div>
           </div>
         </section>
-        <section class="wo-step">
-          <div class="wo-no">02</div>
+        <section class="wo-step wo-opt">
+          <div class="wo-no"></div>
           <div class="wo-bd">
-            <h3 data-w="s2">Cosa va fatto</h3>
+            <h3><span data-w="s2"></span> <span class="wo-tag" data-w="optional"></span></h3>
             <p class="wo-hint" data-w="s2h">Tocca le zone sulla pianta, oppure scegli qui.</p>
             <div class="wo-works" id="f-chips"><input type="checkbox" id="wo-w-int" value="int"><label for="wo-w-int">Interni</label><input type="checkbox" id="wo-w-ext" value="ext"><label for="wo-w-ext">Esterni</label><input type="checkbox" id="wo-w-gel" value="gel"><label for="wo-w-gel">Gel coat</label><input type="checkbox" id="wo-w-wax" value="wax"><label for="wo-w-wax">Ceratura</label><input type="checkbox" id="wo-w-dec" value="dec"><label for="wo-w-dec">Decapaggio</label><input type="checkbox" id="wo-w-gom" value="gom"><label for="wo-w-gom">Gommone</label><input type="checkbox" id="wo-w-sails" value="sails"><label for="wo-w-sails">Rimessaggio vele</label><input type="checkbox" id="wo-w-tr" value="tr"><label for="wo-w-tr">Trasferimento</label></div>
           </div>
         </section>
-        <section class="wo-step">
-          <div class="wo-no">03</div>
+        <section class="wo-step wo-opt">
+          <div class="wo-no"></div>
           <div class="wo-bd">
-            <h3 data-w="s3">Dove si trova</h3>
+            <h3><span data-w="s3"></span> <span class="wo-tag" data-w="optional"></span></h3>
             <p class="wo-hint" data-w="s3h">Porto o marina dove facciamo il lavoro.</p>
             <div class="wo-ports" id="wo-ports" role="radiogroup" data-wa="s3"><input type="radio" name="wo-port" id="wo-p0" value="0"><label for="wo-p0">Porto Torres</label><input type="radio" name="wo-port" id="wo-p1" value="1"><label for="wo-p1">Alghero e Fertilia</label><input type="radio" name="wo-port" id="wo-p2" value="2"><label for="wo-p2">Bosa</label><input type="radio" name="wo-port" id="wo-p3" value="3"><label for="wo-p3">Cannigione</label><input type="radio" name="wo-port" id="wo-p4" value="4"><label for="wo-p4">Costa Smeralda</label><input type="radio" name="wo-port" id="wo-p5" value="5"><label for="wo-p5">Portisco</label><input type="radio" name="wo-port" id="wo-p6" value="6"><label for="wo-p6">Olbia</label><input type="radio" name="wo-port" id="wo-p7" value="7"><label for="wo-p7">San Teodoro</label><input type="radio" name="wo-port" id="wo-pX" value="x"><label for="wo-pX">Altro</label></div>
             <div class="wo-ln wo-other" id="wo-other" hidden><label for="f-port" data-w="otherLbl">Quale porto?</label><input id="f-port" type="text" data-wp="otherPh" placeholder="Nome del porto o della marina"></div>
           </div>
         </section>
         <section class="wo-step">
-          <div class="wo-no">04</div>
+          <div class="wo-no"></div>
           <div class="wo-bd">
             <h3 data-w="s4">A chi rispondiamo</h3>
             <p class="wo-hint" data-w="s4h">Ti scriviamo noi con il preventivo.</p>
@@ -1182,7 +1258,7 @@ footer nav a{min-height:44px}
               <div class="wo-ln" id="wo-ln-name"><label for="f-name"><span data-t="form.name">Nome</span> <span class="wo-req">*</span></label><input id="f-name" type="text" autocomplete="name"><p class="wo-msg" id="f-err" role="alert"></p></div>
               <div class="wo-ln"><label for="f-reach" data-t="form.reach">Email o telefono</label><input id="f-reach" type="text" autocomplete="email"></div>
               <div class="wo-ln"><label for="f-boat" data-w="model">Modello</label><input id="f-boat" type="text" data-wp="modelPh" placeholder="es. Bavaria 46"></div>
-              <div class="wo-ln wo-full"><label for="f-msg" data-w="note">Note per noi</label><textarea id="f-msg" data-wp="notePh" placeholder="Date, accesso alla barca, cose da sapere…"></textarea></div>
+              <div class="wo-ln wo-full" id="wo-ln-msg"><label for="f-msg" data-w="note"></label><textarea id="f-msg" data-wp="notePh" placeholder="Date, accesso alla barca, cose da sapere…"></textarea><p class="wo-msg" id="f-err2" role="alert"></p></div>
             </div>
           </div>
         </section>
@@ -1194,10 +1270,10 @@ footer nav a{min-height:44px}
             <svg class="wo-tk-mini" viewBox="0 0 120 40" aria-hidden="true"><path d="M8 20h104M98 12l14 8-14 8" fill="none" stroke="#3F6E9C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="20" r="4" fill="#102E50"/></svg>
           </div>
           <dl>
-            <dt data-w="tkBoat">Barca</dt><dd id="wo-o-boat"></dd>
-            <dt data-w="tkLen">Lunghezza</dt><dd id="wo-o-len"></dd>
-            <dt data-w="tkPort">Porto</dt><dd id="wo-o-port"></dd>
-            <dt data-w="tkWorks">Lavori</dt><dd id="wo-o-works"></dd>
+            <dt class="wo-r-opt" data-w="tkBoat">Barca</dt><dd class="wo-r-opt" id="wo-o-boat"></dd>
+            <dt class="wo-r-opt" data-w="tkLen">Lunghezza</dt><dd class="wo-r-opt" id="wo-o-len"></dd>
+            <dt class="wo-r-opt" data-w="tkPort">Porto</dt><dd class="wo-r-opt" id="wo-o-port"></dd>
+            <dt class="wo-r-opt" data-w="tkWorks">Lavori</dt><dd class="wo-r-opt" id="wo-o-works"></dd>
             <dt data-t="form.name">Nome</dt><dd id="wo-o-name"></dd>
           </dl>
         </div>
@@ -2030,7 +2106,7 @@ function lists(){
    WORK ORDER (scheda lavoro) quote form
    ======================================================= */
 const WO={
-it:{s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo di barca",t0:"Vela",t1:"Motore",t2:"Catamarano",full:["Barca a vela","Barca a motore","Catamarano"],
+it:{modeIntro:"Più dettagli ci dai, più preciso è il preventivo. Ma va bene anche solo un messaggio: ti ricontattiamo noi.",modeLabel:"Come vuoi scriverci",modeFull:"Scheda dettagliata",modeQuick:"Solo un messaggio",optional:"facoltativo",msgLbl:"Messaggio",msgPh:"Raccontaci cosa ti serve: barca, porto, lavori, date…",errMsg:"Scrivi due righe su cosa ti serve.",toSet:"da indicare",s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo di barca",t0:"Vela",t1:"Motore",t2:"Catamarano",full:["Barca a vela","Barca a motore","Catamarano"],
   planLabel:"Pianta della barca: tocca le zone da pulire",lenLabel:"Lunghezza in metri",meters:"metri",both:"pulizia e trasferimento",cleanOnly:"solo pulizia (trasferimenti fino a 20 m)",
   zones:{gom:"Gommone",ext:"Esterni e coperta",gel:"Gel coat e scafo",int:"Interni",sails:"Rimessaggio vele"},
   s2:"Cosa va fatto",s2h:"Tocca le zone sulla pianta, oppure scegli qui.",s3:"Dove si trova",s3h:"Porto o marina dove facciamo il lavoro.",other:"Altro",otherLbl:"Quale porto?",otherPh:"Nome del porto o della marina",
@@ -2038,7 +2114,7 @@ it:{s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo d
   tkTitle:"Scheda lavoro",tkBoat:"Barca",tkLen:"Lunghezza",tkPort:"Porto",tkWorks:"Lavori",toChoose:"da scegliere",noneYet:"nessuno ancora",
   send:"Invia la scheda su WhatsApp",sent:"Scheda pronta, apro WhatsApp…",mail:"Preferisci l'email?",mailSent:"Apro la tua app email con la scheda già scritta.",
   waHelp:"Se WhatsApp non si apre, usa l'email.",errName:"Scrivi il tuo nome: ci serve per risponderti.",intro:"Scheda lavoro"},
-en:{s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"Sail",t1:"Motor",t2:"Catamaran",full:["Sailing boat","Motor boat","Catamaran"],
+en:{modeIntro:"The more you tell us, the more accurate the quote. But a short message is fine too: we'll get back to you.",modeLabel:"How would you like to write to us",modeFull:"Detailed form",modeQuick:"Just a message",optional:"optional",msgLbl:"Message",msgPh:"Tell us what you need: boat, port, work, dates…",errMsg:"Write a line or two about what you need.",toSet:"not set",s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"Sail",t1:"Motor",t2:"Catamaran",full:["Sailing boat","Motor boat","Catamaran"],
   planLabel:"Boat plan: tap the areas to clean",lenLabel:"Length in metres",meters:"metres",both:"cleaning and delivery",cleanOnly:"cleaning only (deliveries up to 20 m)",
   zones:{gom:"Tender",ext:"Exterior and deck",gel:"Gel coat and hull",int:"Interior",sails:"Sail storage"},
   s2:"What needs doing",s2h:"Tap the areas on the plan, or choose here.",s3:"Where is the boat?",s3h:"Port or marina where we do the work.",other:"Other",otherLbl:"Which port?",otherPh:"Name of the port or marina",
@@ -2046,7 +2122,7 @@ en:{s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"
   tkTitle:"Work order",tkBoat:"Boat",tkLen:"Length",tkPort:"Port",tkWorks:"Work",toChoose:"not chosen yet",noneYet:"none yet",
   send:"Send the work order on WhatsApp",sent:"Work order ready, opening WhatsApp…",mail:"Prefer email?",mailSent:"Opening your email app with the work order filled in.",
   waHelp:"If WhatsApp does not open, use email.",errName:"Please enter your name so we can reply.",intro:"Work order"},
-fr:{s1:"Le bateau",s1h:"Type et longueur hors tout.",typeLabel:"Type de bateau",t0:"Voilier",t1:"Moteur",t2:"Catamaran",full:["Voilier","Bateau à moteur","Catamaran"],
+fr:{modeIntro:"Plus vous nous donnez de détails, plus le devis sera précis. Mais un simple message suffit : nous vous recontactons.",modeLabel:"Comment souhaitez-vous nous écrire",modeFull:"Formulaire détaillé",modeQuick:"Juste un message",optional:"facultatif",msgLbl:"Message",msgPh:"Dites-nous ce qu'il vous faut : bateau, port, travaux, dates…",errMsg:"Écrivez quelques mots sur votre besoin.",toSet:"à préciser",s1:"Le bateau",s1h:"Type et longueur hors tout.",typeLabel:"Type de bateau",t0:"Voilier",t1:"Moteur",t2:"Catamaran",full:["Voilier","Bateau à moteur","Catamaran"],
   planLabel:"Plan du bateau : touchez les zones à nettoyer",lenLabel:"Longueur en mètres",meters:"mètres",both:"nettoyage et convoyage",cleanOnly:"nettoyage uniquement (convoyages jusqu'à 20 m)",
   zones:{gom:"Annexe",ext:"Extérieur et pont",gel:"Gel coat et coque",int:"Intérieur",sails:"Hivernage des voiles"},
   s2:"Ce qu'il faut faire",s2h:"Touchez les zones sur le plan, ou choisissez ici.",s3:"Où se trouve le bateau ?",s3h:"Port ou marina où nous intervenons.",other:"Autre",otherLbl:"Quel port ?",otherPh:"Nom du port ou de la marina",
@@ -2054,7 +2130,7 @@ fr:{s1:"Le bateau",s1h:"Type et longueur hors tout.",typeLabel:"Type de bateau",
   tkTitle:"Bon de travail",tkBoat:"Bateau",tkLen:"Longueur",tkPort:"Port",tkWorks:"Travaux",toChoose:"à choisir",noneYet:"aucun pour l'instant",
   send:"Envoyer le bon sur WhatsApp",sent:"Bon prêt, ouverture de WhatsApp…",mail:"Vous préférez l'e-mail ?",mailSent:"Ouverture de votre messagerie avec le bon déjà rédigé.",
   waHelp:"Si WhatsApp ne s'ouvre pas, utilisez l'e-mail.",errName:"Indiquez votre nom : nous en avons besoin pour vous répondre.",intro:"Bon de travail"},
-de:{s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Segel",t1:"Motor",t2:"Katamaran",full:["Segelboot","Motorboot","Katamaran"],
+de:{modeIntro:"Je mehr Details Sie angeben, desto genauer das Angebot. Eine kurze Nachricht genügt aber auch: Wir melden uns bei Ihnen.",modeLabel:"Wie möchten Sie uns schreiben",modeFull:"Ausführliches Formular",modeQuick:"Nur eine Nachricht",optional:"optional",msgLbl:"Nachricht",msgPh:"Sagen Sie uns, was Sie brauchen: Boot, Hafen, Arbeiten, Termine…",errMsg:"Schreiben Sie kurz, was Sie brauchen.",toSet:"noch offen",s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Segel",t1:"Motor",t2:"Katamaran",full:["Segelboot","Motorboot","Katamaran"],
   planLabel:"Bootsplan: tippen Sie auf die zu reinigenden Bereiche",lenLabel:"Länge in Metern",meters:"Meter",both:"Reinigung und Überführung",cleanOnly:"nur Reinigung (Überführungen bis 20 m)",
   zones:{gom:"Beiboot",ext:"Außenbereich und Deck",gel:"Gelcoat und Rumpf",int:"Innenraum",sails:"Segeleinlagerung"},
   s2:"Was zu tun ist",s2h:"Tippen Sie auf die Bereiche im Plan oder wählen Sie hier.",s3:"Wo liegt das Boot?",s3h:"Hafen oder Marina, in der wir arbeiten.",other:"Anderer Hafen",otherLbl:"Welcher Hafen?",otherPh:"Name des Hafens oder der Marina",
@@ -2062,7 +2138,7 @@ de:{s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Seg
   tkTitle:"Auftragszettel",tkBoat:"Boot",tkLen:"Länge",tkPort:"Hafen",tkWorks:"Arbeiten",toChoose:"noch nicht gewählt",noneYet:"noch keine",
   send:"Auftrag per WhatsApp senden",sent:"Auftrag fertig, WhatsApp wird geöffnet…",mail:"Lieber per E-Mail?",mailSent:"Ihre E-Mail-App öffnet sich mit dem ausgefüllten Auftrag.",
   waHelp:"Falls sich WhatsApp nicht öffnet, nutzen Sie E-Mail.",errName:"Bitte geben Sie Ihren Namen an, damit wir antworten können.",intro:"Auftragszettel"},
-es:{s1:"El barco",s1h:"Tipo y eslora total.",typeLabel:"Tipo de barco",t0:"Vela",t1:"Motor",t2:"Catamarán",full:["Velero","Barco a motor","Catamarán"],
+es:{modeIntro:"Cuantos más detalles nos des, más preciso será el presupuesto. Pero basta con un mensaje: nosotros te contactamos.",modeLabel:"Cómo quieres escribirnos",modeFull:"Formulario detallado",modeQuick:"Solo un mensaje",optional:"opcional",msgLbl:"Mensaje",msgPh:"Cuéntanos qué necesitas: barco, puerto, trabajos, fechas…",errMsg:"Escribe un par de líneas sobre lo que necesitas.",toSet:"por indicar",s1:"El barco",s1h:"Tipo y eslora total.",typeLabel:"Tipo de barco",t0:"Vela",t1:"Motor",t2:"Catamarán",full:["Velero","Barco a motor","Catamarán"],
   planLabel:"Plano del barco: toca las zonas que limpiar",lenLabel:"Eslora en metros",meters:"metros",both:"limpieza y traslado",cleanOnly:"solo limpieza (traslados hasta 20 m)",
   zones:{gom:"Neumática",ext:"Exterior y cubierta",gel:"Gel coat y casco",int:"Interior",sails:"Guardado de velas"},
   s2:"Qué hay que hacer",s2h:"Toca las zonas en el plano, o elige aquí.",s3:"¿Dónde está el barco?",s3h:"Puerto donde hacemos el trabajo.",other:"Otro",otherLbl:"¿Qué puerto?",otherPh:"Nombre del puerto o la marina",
@@ -2073,6 +2149,8 @@ es:{s1:"El barco",s1h:"Tipo y eslora total.",typeLabel:"Tipo de barco",t0:"Vela"
 };
 const w=k=>(WO[lang]||WO.it)[k];
 const WO_ZONES=["gom","ext","gel","int","sails"];
+const woTouched={type:false,len:false};
+const woMode=()=>(($("input[name=wo-mode]:checked")||{}).value==="quick"?"quick":"full");
 
 function woRender(){
   const L=T[lang];
@@ -2092,18 +2170,21 @@ function woPort(){ const r=$("input[name=wo-port]:checked"); if(!r) return "";
   return r.value==="x" ? $h("#f-port").value.trim() : T[lang].clean.ports[+r.value]; }
 function woSync(){
   const type=+($("input[name=wo-type]:checked")||{value:0}).value;
-  $h("#wo-plan").classList.toggle("motor",type===1);
+  $h("#wo-plan").dataset.type=type;
+  const mode=woMode(); $h("#wo-log").dataset.mode=mode; $h(".wo").dataset.mode=mode;
+  $h("#wo-ln-msg label").textContent=w(mode==="quick"?"msgLbl":"note"); $h("#f-msg").placeholder=w(mode==="quick"?"msgPh":"notePh");
   const len=+$h("#wo-len").value, p=(len-5)/25*100;
   $h("#wo-len").style.setProperty("--p",p+"%"); $h("#wo-len").setAttribute("aria-valuetext",len+" "+w("meters"));
   $h("#wo-len-out").textContent=len+" m"; $h("#wo-len-note").textContent=len<=20?w("both"):w("cleanOnly");
   $h("#wo-hull").style.transform=`scale(${(0.62+p/100*0.38).toFixed(3)})`;
   WO_ZONES.forEach(k=>{ const cb=$(`#f-chips input[value="${k}"]`), on=!!(cb&&cb.checked);
     $$(`.wo-z[data-k="${k}"]`).forEach(z=>{ z.classList.toggle("on",on); z.setAttribute("aria-checked",on); }); });
-  $h("#wo-rig").classList.toggle("on",!!($('#f-chips input[value="sails"]')||{}).checked);
+  $$(".wo-rig").forEach(g=>g.classList.toggle("on",!!($('#f-chips input[value="sails"]')||{}).checked));
   const r=$("input[name=wo-port]:checked"); $h("#wo-other").hidden=!(r&&r.value==="x");
   const model=$h("#f-boat").value.trim();
-  $h("#wo-o-boat").textContent=w("full")[type]+(model?" · "+model:"");
-  $h("#wo-o-len").textContent=len+" m";
+  const boatTxt=[woTouched.type?w("full")[type]:"",model].filter(Boolean).join(" · ");
+  $h("#wo-o-boat").textContent=boatTxt||w("toSet"); $h("#wo-o-boat").classList.toggle("empty",!boatTxt);
+  $h("#wo-o-len").textContent=woTouched.len?len+" m":w("toSet"); $h("#wo-o-len").classList.toggle("empty",!woTouched.len);
   const port=woPort(); $h("#wo-o-port").textContent=port||w("toChoose"); $h("#wo-o-port").classList.toggle("empty",!port);
   const picked=[...$$("#f-chips input:checked")].map(i=>T[lang].form.chips[i.value]);
   $h("#wo-o-works").innerHTML=picked.length?picked.map(x=>`<span class="pill">${esc(x)}</span>`).join(""):esc(w("noneYet"));
@@ -2114,11 +2195,13 @@ function woSync(){
   const toggle=z=>{ const cb=$(`#f-chips input[value="${z.dataset.k}"]`); if(!cb) return; cb.checked=!cb.checked; woSync(); woFlash("#wo-o-works"); };
   $$(".wo-z").forEach(z=>{ z.addEventListener("click",()=>toggle(z));
     z.addEventListener("keydown",e=>{ if(e.key===" "||e.key==="Enter"){ e.preventDefault(); toggle(z); } }); });
-  $h(".wo").addEventListener("change",e=>{ woSync();
+  $h(".wo").addEventListener("change",e=>{ if(e.target.name==="wo-type") woTouched.type=true; woSync();
     if(e.target.closest("#f-chips")) woFlash("#wo-o-works");
     else if(e.target.name==="wo-port"){ woFlash("#wo-o-port"); if(e.target.value==="x") $h("#f-port").focus(); }
     else if(e.target.name==="wo-type") woFlash("#wo-o-boat"); });
-  $h(".wo").addEventListener("input",e=>{ if(e.target.id==="f-name"){ $h("#wo-ln-name").classList.remove("err"); $h("#f-err").textContent=""; } woSync(); });
+  $h(".wo").addEventListener("input",e=>{ if(e.target.id==="f-name"){ $h("#wo-ln-name").classList.remove("err"); $h("#f-err").textContent=""; }
+    if(e.target.id==="f-msg"){ $h("#wo-ln-msg").classList.remove("err"); $h("#f-err2").textContent=""; }
+    if(e.target.id==="wo-len") woTouched.len=true; woSync(); });
 })();
 
 function applyLang(){
@@ -2182,18 +2265,25 @@ function banner(show){ $h("#ck").hidden=!show; document.body.classList.toggle("c
 
 function compose(){
   const L=T[lang];
-  const v=id=>$(id).value.trim();
-  const name=v("#f-name");
+  const v=id=>$h(id).value.trim();
+  const name=v("#f-name"), mode=woMode(), msg=v("#f-msg");
+  $h("#f-err").textContent=""; $h("#f-err2").textContent="";
   if(!name){ $h("#f-err").textContent=w("errName"); $h("#wo-ln-name").classList.add("err"); $h("#f-name").focus(); return null; }
-  $h("#f-err").textContent="";
-  const type=+($("input[name=wo-type]:checked")||{value:0}).value;
-  const picked=[...$$("#f-chips input:checked")].map(i=>L.form.chips[i.value]).join(", ");
-  const lines=[`${L.form.hello} ${name}. ${w("intro")}:`];
-  lines.push(`${L.form.lBoat}: ${w("full")[type]}${v("#f-boat")?" · "+v("#f-boat"):""}, ${$h("#wo-len").value} m`);
-  const port=woPort(); if(port) lines.push(`${L.form.lPort}: ${port}`);
-  if(picked) lines.push(`${L.form.lServices}: ${picked}`);
+  if(mode==="quick"&&!msg){ $h("#f-err2").textContent=w("errMsg"); $h("#wo-ln-msg").classList.add("err"); $h("#f-msg").focus(); return null; }
+  const lines=[`${L.form.hello} ${name}.`];
+  if(mode==="full"){
+    lines[0]+=` ${w("intro")}:`;
+    const type=+($("input[name=wo-type]:checked")||{value:0}).value;
+    const boat=[woTouched.type?w("full")[type]:"",v("#f-boat"),woTouched.len?$h("#wo-len").value+" m":""].filter(Boolean).join(", ");
+    if(boat) lines.push(`${L.form.lBoat}: ${boat}`);
+    const port=woPort(); if(port) lines.push(`${L.form.lPort}: ${port}`);
+    const picked=[...$$("#f-chips input:checked")].map(i=>L.form.chips[i.value]).join(", ");
+    if(picked) lines.push(`${L.form.lServices}: ${picked}`);
+  }
+  if(lines.length===1){ lines[0]=`${L.form.hello} ${name}.`;   // no details picked: then a message is needed
+    if(!msg){ $h("#f-err2").textContent=w("errMsg"); $h("#wo-ln-msg").classList.add("err"); $h("#f-msg").focus(); return null; } }
   if(v("#f-reach")) lines.push(`${L.form.lReach}: ${v("#f-reach")}`);
-  return lines.join("\n")+(v("#f-msg")?"\n\n"+v("#f-msg"):"");
+  return lines.join("\n")+(msg?"\n\n"+msg:"");
 }
 
 

@@ -607,7 +607,7 @@ function lists(){
    WORK ORDER (scheda lavoro) quote form
    ======================================================= */
 const WO={
-it:{s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo di barca",t0:"Vela",t1:"Motore",t2:"Catamarano",full:["Barca a vela","Barca a motore","Catamarano"],
+it:{modeIntro:"Più dettagli ci dai, più preciso è il preventivo. Ma va bene anche solo un messaggio: ti ricontattiamo noi.",modeLabel:"Come vuoi scriverci",modeFull:"Scheda dettagliata",modeQuick:"Solo un messaggio",optional:"facoltativo",msgLbl:"Messaggio",msgPh:"Raccontaci cosa ti serve: barca, porto, lavori, date…",errMsg:"Scrivi due righe su cosa ti serve.",toSet:"da indicare",s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo di barca",t0:"Vela",t1:"Motore",t2:"Catamarano",full:["Barca a vela","Barca a motore","Catamarano"],
   planLabel:"Pianta della barca: tocca le zone da pulire",lenLabel:"Lunghezza in metri",meters:"metri",both:"pulizia e trasferimento",cleanOnly:"solo pulizia (trasferimenti fino a 20 m)",
   zones:{gom:"Gommone",ext:"Esterni e coperta",gel:"Gel coat e scafo",int:"Interni",sails:"Rimessaggio vele"},
   s2:"Cosa va fatto",s2h:"Tocca le zone sulla pianta, oppure scegli qui.",s3:"Dove si trova",s3h:"Porto o marina dove facciamo il lavoro.",other:"Altro",otherLbl:"Quale porto?",otherPh:"Nome del porto o della marina",
@@ -615,7 +615,7 @@ it:{s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo d
   tkTitle:"Scheda lavoro",tkBoat:"Barca",tkLen:"Lunghezza",tkPort:"Porto",tkWorks:"Lavori",toChoose:"da scegliere",noneYet:"nessuno ancora",
   send:"Invia la scheda su WhatsApp",sent:"Scheda pronta, apro WhatsApp…",mail:"Preferisci l'email?",mailSent:"Apro la tua app email con la scheda già scritta.",
   waHelp:"Se WhatsApp non si apre, usa l'email.",errName:"Scrivi il tuo nome: ci serve per risponderti.",intro:"Scheda lavoro"},
-en:{s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"Sail",t1:"Motor",t2:"Catamaran",full:["Sailing boat","Motor boat","Catamaran"],
+en:{modeIntro:"The more you tell us, the more accurate the quote. But a short message is fine too: we'll get back to you.",modeLabel:"How would you like to write to us",modeFull:"Detailed form",modeQuick:"Just a message",optional:"optional",msgLbl:"Message",msgPh:"Tell us what you need: boat, port, work, dates…",errMsg:"Write a line or two about what you need.",toSet:"not set",s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"Sail",t1:"Motor",t2:"Catamaran",full:["Sailing boat","Motor boat","Catamaran"],
   planLabel:"Boat plan: tap the areas to clean",lenLabel:"Length in metres",meters:"metres",both:"cleaning and delivery",cleanOnly:"cleaning only (deliveries up to 20 m)",
   zones:{gom:"Tender",ext:"Exterior and deck",gel:"Gel coat and hull",int:"Interior",sails:"Sail storage"},
   s2:"What needs doing",s2h:"Tap the areas on the plan, or choose here.",s3:"Where is the boat?",s3h:"Port or marina where we do the work.",other:"Other",otherLbl:"Which port?",otherPh:"Name of the port or marina",
@@ -623,7 +623,7 @@ en:{s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"
   tkTitle:"Work order",tkBoat:"Boat",tkLen:"Length",tkPort:"Port",tkWorks:"Work",toChoose:"not chosen yet",noneYet:"none yet",
   send:"Send the work order on WhatsApp",sent:"Work order ready, opening WhatsApp…",mail:"Prefer email?",mailSent:"Opening your email app with the work order filled in.",
   waHelp:"If WhatsApp does not open, use email.",errName:"Please enter your name so we can reply.",intro:"Work order"},
-fr:{s1:"Le bateau",s1h:"Type et longueur hors tout.",typeLabel:"Type de bateau",t0:"Voilier",t1:"Moteur",t2:"Catamaran",full:["Voilier","Bateau à moteur","Catamaran"],
+fr:{modeIntro:"Plus vous nous donnez de détails, plus le devis sera précis. Mais un simple message suffit : nous vous recontactons.",modeLabel:"Comment souhaitez-vous nous écrire",modeFull:"Formulaire détaillé",modeQuick:"Juste un message",optional:"facultatif",msgLbl:"Message",msgPh:"Dites-nous ce qu'il vous faut : bateau, port, travaux, dates…",errMsg:"Écrivez quelques mots sur votre besoin.",toSet:"à préciser",s1:"Le bateau",s1h:"Type et longueur hors tout.",typeLabel:"Type de bateau",t0:"Voilier",t1:"Moteur",t2:"Catamaran",full:["Voilier","Bateau à moteur","Catamaran"],
   planLabel:"Plan du bateau : touchez les zones à nettoyer",lenLabel:"Longueur en mètres",meters:"mètres",both:"nettoyage et convoyage",cleanOnly:"nettoyage uniquement (convoyages jusqu'à 20 m)",
   zones:{gom:"Annexe",ext:"Extérieur et pont",gel:"Gel coat et coque",int:"Intérieur",sails:"Hivernage des voiles"},
   s2:"Ce qu'il faut faire",s2h:"Touchez les zones sur le plan, ou choisissez ici.",s3:"Où se trouve le bateau ?",s3h:"Port ou marina où nous intervenons.",other:"Autre",otherLbl:"Quel port ?",otherPh:"Nom du port ou de la marina",
@@ -631,7 +631,7 @@ fr:{s1:"Le bateau",s1h:"Type et longueur hors tout.",typeLabel:"Type de bateau",
   tkTitle:"Bon de travail",tkBoat:"Bateau",tkLen:"Longueur",tkPort:"Port",tkWorks:"Travaux",toChoose:"à choisir",noneYet:"aucun pour l'instant",
   send:"Envoyer le bon sur WhatsApp",sent:"Bon prêt, ouverture de WhatsApp…",mail:"Vous préférez l'e-mail ?",mailSent:"Ouverture de votre messagerie avec le bon déjà rédigé.",
   waHelp:"Si WhatsApp ne s'ouvre pas, utilisez l'e-mail.",errName:"Indiquez votre nom : nous en avons besoin pour vous répondre.",intro:"Bon de travail"},
-de:{s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Segel",t1:"Motor",t2:"Katamaran",full:["Segelboot","Motorboot","Katamaran"],
+de:{modeIntro:"Je mehr Details Sie angeben, desto genauer das Angebot. Eine kurze Nachricht genügt aber auch: Wir melden uns bei Ihnen.",modeLabel:"Wie möchten Sie uns schreiben",modeFull:"Ausführliches Formular",modeQuick:"Nur eine Nachricht",optional:"optional",msgLbl:"Nachricht",msgPh:"Sagen Sie uns, was Sie brauchen: Boot, Hafen, Arbeiten, Termine…",errMsg:"Schreiben Sie kurz, was Sie brauchen.",toSet:"noch offen",s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Segel",t1:"Motor",t2:"Katamaran",full:["Segelboot","Motorboot","Katamaran"],
   planLabel:"Bootsplan: tippen Sie auf die zu reinigenden Bereiche",lenLabel:"Länge in Metern",meters:"Meter",both:"Reinigung und Überführung",cleanOnly:"nur Reinigung (Überführungen bis 20 m)",
   zones:{gom:"Beiboot",ext:"Außenbereich und Deck",gel:"Gelcoat und Rumpf",int:"Innenraum",sails:"Segeleinlagerung"},
   s2:"Was zu tun ist",s2h:"Tippen Sie auf die Bereiche im Plan oder wählen Sie hier.",s3:"Wo liegt das Boot?",s3h:"Hafen oder Marina, in der wir arbeiten.",other:"Anderer Hafen",otherLbl:"Welcher Hafen?",otherPh:"Name des Hafens oder der Marina",
@@ -639,7 +639,7 @@ de:{s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Seg
   tkTitle:"Auftragszettel",tkBoat:"Boot",tkLen:"Länge",tkPort:"Hafen",tkWorks:"Arbeiten",toChoose:"noch nicht gewählt",noneYet:"noch keine",
   send:"Auftrag per WhatsApp senden",sent:"Auftrag fertig, WhatsApp wird geöffnet…",mail:"Lieber per E-Mail?",mailSent:"Ihre E-Mail-App öffnet sich mit dem ausgefüllten Auftrag.",
   waHelp:"Falls sich WhatsApp nicht öffnet, nutzen Sie E-Mail.",errName:"Bitte geben Sie Ihren Namen an, damit wir antworten können.",intro:"Auftragszettel"},
-es:{s1:"El barco",s1h:"Tipo y eslora total.",typeLabel:"Tipo de barco",t0:"Vela",t1:"Motor",t2:"Catamarán",full:["Velero","Barco a motor","Catamarán"],
+es:{modeIntro:"Cuantos más detalles nos des, más preciso será el presupuesto. Pero basta con un mensaje: nosotros te contactamos.",modeLabel:"Cómo quieres escribirnos",modeFull:"Formulario detallado",modeQuick:"Solo un mensaje",optional:"opcional",msgLbl:"Mensaje",msgPh:"Cuéntanos qué necesitas: barco, puerto, trabajos, fechas…",errMsg:"Escribe un par de líneas sobre lo que necesitas.",toSet:"por indicar",s1:"El barco",s1h:"Tipo y eslora total.",typeLabel:"Tipo de barco",t0:"Vela",t1:"Motor",t2:"Catamarán",full:["Velero","Barco a motor","Catamarán"],
   planLabel:"Plano del barco: toca las zonas que limpiar",lenLabel:"Eslora en metros",meters:"metros",both:"limpieza y traslado",cleanOnly:"solo limpieza (traslados hasta 20 m)",
   zones:{gom:"Neumática",ext:"Exterior y cubierta",gel:"Gel coat y casco",int:"Interior",sails:"Guardado de velas"},
   s2:"Qué hay que hacer",s2h:"Toca las zonas en el plano, o elige aquí.",s3:"¿Dónde está el barco?",s3h:"Puerto donde hacemos el trabajo.",other:"Otro",otherLbl:"¿Qué puerto?",otherPh:"Nombre del puerto o la marina",
@@ -650,6 +650,8 @@ es:{s1:"El barco",s1h:"Tipo y eslora total.",typeLabel:"Tipo de barco",t0:"Vela"
 };
 const w=k=>(WO[lang]||WO.it)[k];
 const WO_ZONES=["gom","ext","gel","int","sails"];
+const woTouched={type:false,len:false};
+const woMode=()=>(($("input[name=wo-mode]:checked")||{}).value==="quick"?"quick":"full");
 
 function woRender(){
   const L=T[lang];
@@ -669,18 +671,21 @@ function woPort(){ const r=$("input[name=wo-port]:checked"); if(!r) return "";
   return r.value==="x" ? $h("#f-port").value.trim() : T[lang].clean.ports[+r.value]; }
 function woSync(){
   const type=+($("input[name=wo-type]:checked")||{value:0}).value;
-  $h("#wo-plan").classList.toggle("motor",type===1);
+  $h("#wo-plan").dataset.type=type;
+  const mode=woMode(); $h("#wo-log").dataset.mode=mode; $h(".wo").dataset.mode=mode;
+  $h("#wo-ln-msg label").textContent=w(mode==="quick"?"msgLbl":"note"); $h("#f-msg").placeholder=w(mode==="quick"?"msgPh":"notePh");
   const len=+$h("#wo-len").value, p=(len-5)/25*100;
   $h("#wo-len").style.setProperty("--p",p+"%"); $h("#wo-len").setAttribute("aria-valuetext",len+" "+w("meters"));
   $h("#wo-len-out").textContent=len+" m"; $h("#wo-len-note").textContent=len<=20?w("both"):w("cleanOnly");
   $h("#wo-hull").style.transform=`scale(${(0.62+p/100*0.38).toFixed(3)})`;
   WO_ZONES.forEach(k=>{ const cb=$(`#f-chips input[value="${k}"]`), on=!!(cb&&cb.checked);
     $$(`.wo-z[data-k="${k}"]`).forEach(z=>{ z.classList.toggle("on",on); z.setAttribute("aria-checked",on); }); });
-  $h("#wo-rig").classList.toggle("on",!!($('#f-chips input[value="sails"]')||{}).checked);
+  $$(".wo-rig").forEach(g=>g.classList.toggle("on",!!($('#f-chips input[value="sails"]')||{}).checked));
   const r=$("input[name=wo-port]:checked"); $h("#wo-other").hidden=!(r&&r.value==="x");
   const model=$h("#f-boat").value.trim();
-  $h("#wo-o-boat").textContent=w("full")[type]+(model?" · "+model:"");
-  $h("#wo-o-len").textContent=len+" m";
+  const boatTxt=[woTouched.type?w("full")[type]:"",model].filter(Boolean).join(" · ");
+  $h("#wo-o-boat").textContent=boatTxt||w("toSet"); $h("#wo-o-boat").classList.toggle("empty",!boatTxt);
+  $h("#wo-o-len").textContent=woTouched.len?len+" m":w("toSet"); $h("#wo-o-len").classList.toggle("empty",!woTouched.len);
   const port=woPort(); $h("#wo-o-port").textContent=port||w("toChoose"); $h("#wo-o-port").classList.toggle("empty",!port);
   const picked=[...$$("#f-chips input:checked")].map(i=>T[lang].form.chips[i.value]);
   $h("#wo-o-works").innerHTML=picked.length?picked.map(x=>`<span class="pill">${esc(x)}</span>`).join(""):esc(w("noneYet"));
@@ -691,11 +696,13 @@ function woSync(){
   const toggle=z=>{ const cb=$(`#f-chips input[value="${z.dataset.k}"]`); if(!cb) return; cb.checked=!cb.checked; woSync(); woFlash("#wo-o-works"); };
   $$(".wo-z").forEach(z=>{ z.addEventListener("click",()=>toggle(z));
     z.addEventListener("keydown",e=>{ if(e.key===" "||e.key==="Enter"){ e.preventDefault(); toggle(z); } }); });
-  $h(".wo").addEventListener("change",e=>{ woSync();
+  $h(".wo").addEventListener("change",e=>{ if(e.target.name==="wo-type") woTouched.type=true; woSync();
     if(e.target.closest("#f-chips")) woFlash("#wo-o-works");
     else if(e.target.name==="wo-port"){ woFlash("#wo-o-port"); if(e.target.value==="x") $h("#f-port").focus(); }
     else if(e.target.name==="wo-type") woFlash("#wo-o-boat"); });
-  $h(".wo").addEventListener("input",e=>{ if(e.target.id==="f-name"){ $h("#wo-ln-name").classList.remove("err"); $h("#f-err").textContent=""; } woSync(); });
+  $h(".wo").addEventListener("input",e=>{ if(e.target.id==="f-name"){ $h("#wo-ln-name").classList.remove("err"); $h("#f-err").textContent=""; }
+    if(e.target.id==="f-msg"){ $h("#wo-ln-msg").classList.remove("err"); $h("#f-err2").textContent=""; }
+    if(e.target.id==="wo-len") woTouched.len=true; woSync(); });
 })();
 
 function applyLang(){
@@ -759,18 +766,25 @@ function banner(show){ $h("#ck").hidden=!show; document.body.classList.toggle("c
 
 function compose(){
   const L=T[lang];
-  const v=id=>$(id).value.trim();
-  const name=v("#f-name");
+  const v=id=>$h(id).value.trim();
+  const name=v("#f-name"), mode=woMode(), msg=v("#f-msg");
+  $h("#f-err").textContent=""; $h("#f-err2").textContent="";
   if(!name){ $h("#f-err").textContent=w("errName"); $h("#wo-ln-name").classList.add("err"); $h("#f-name").focus(); return null; }
-  $h("#f-err").textContent="";
-  const type=+($("input[name=wo-type]:checked")||{value:0}).value;
-  const picked=[...$$("#f-chips input:checked")].map(i=>L.form.chips[i.value]).join(", ");
-  const lines=[`${L.form.hello} ${name}. ${w("intro")}:`];
-  lines.push(`${L.form.lBoat}: ${w("full")[type]}${v("#f-boat")?" · "+v("#f-boat"):""}, ${$h("#wo-len").value} m`);
-  const port=woPort(); if(port) lines.push(`${L.form.lPort}: ${port}`);
-  if(picked) lines.push(`${L.form.lServices}: ${picked}`);
+  if(mode==="quick"&&!msg){ $h("#f-err2").textContent=w("errMsg"); $h("#wo-ln-msg").classList.add("err"); $h("#f-msg").focus(); return null; }
+  const lines=[`${L.form.hello} ${name}.`];
+  if(mode==="full"){
+    lines[0]+=` ${w("intro")}:`;
+    const type=+($("input[name=wo-type]:checked")||{value:0}).value;
+    const boat=[woTouched.type?w("full")[type]:"",v("#f-boat"),woTouched.len?$h("#wo-len").value+" m":""].filter(Boolean).join(", ");
+    if(boat) lines.push(`${L.form.lBoat}: ${boat}`);
+    const port=woPort(); if(port) lines.push(`${L.form.lPort}: ${port}`);
+    const picked=[...$$("#f-chips input:checked")].map(i=>L.form.chips[i.value]).join(", ");
+    if(picked) lines.push(`${L.form.lServices}: ${picked}`);
+  }
+  if(lines.length===1){ lines[0]=`${L.form.hello} ${name}.`;   // no details picked: then a message is needed
+    if(!msg){ $h("#f-err2").textContent=w("errMsg"); $h("#wo-ln-msg").classList.add("err"); $h("#f-msg").focus(); return null; } }
   if(v("#f-reach")) lines.push(`${L.form.lReach}: ${v("#f-reach")}`);
-  return lines.join("\n")+(v("#f-msg")?"\n\n"+v("#f-msg"):"");
+  return lines.join("\n")+(msg?"\n\n"+msg:"");
 }
 
 
