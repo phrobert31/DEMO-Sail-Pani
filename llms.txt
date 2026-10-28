@@ -25,12 +25,13 @@ Sail&Clean (Italian: "pulizia e trasferimenti barche in Sardegna") is a small, y
 
 ## About
 
-- [About and contact](https://phrobert31.github.io/DEMO-Sail-Pani/contatti/): Andrea Pani, founder and skipper, from Sassari. First went to sea at Asinara during Covid, supporting researchers studying cetaceans and marine habitats; then charter crew, skipper, professional deliveries around Sardinia and to mainland Italy, Lega Navale, and boatyard work alongside riggers. Holds the Italian boating licence for beyond 12 nautical miles. Service is insured. Available all year.
+- [About](https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/): Andrea Pani, founder and skipper, from Sassari. First went to sea at Asinara during Covid, supporting researchers studying cetaceans and marine habitats; then charter crew, skipper, professional deliveries around Sardinia and to mainland Italy, Lega Navale, and boatyard work alongside riggers. Holds the Italian boating licence for beyond 12 nautical miles. Service is insured. Available all year. Values: client care, know-how, continuous learning, reliability, presence.
+- [Contact](https://phrobert31.github.io/DEMO-Sail-Pani/contatti/): phone, WhatsApp, email, Instagram, YouTube and map.
 
 ## Languages
 
-- Italian: https://phrobert31.github.io/DEMO-Sail-Pani/ · https://phrobert31.github.io/DEMO-Sail-Pani/pulizia/ · https://phrobert31.github.io/DEMO-Sail-Pani/trasferimenti/ · https://phrobert31.github.io/DEMO-Sail-Pani/contatti/
-- English: https://phrobert31.github.io/DEMO-Sail-Pani/en/ · https://phrobert31.github.io/DEMO-Sail-Pani/en/cleaning/ · https://phrobert31.github.io/DEMO-Sail-Pani/en/deliveries/ · https://phrobert31.github.io/DEMO-Sail-Pani/en/contact/
-- French: https://phrobert31.github.io/DEMO-Sail-Pani/fr/ · https://phrobert31.github.io/DEMO-Sail-Pani/fr/nettoyage/ · https://phrobert31.github.io/DEMO-Sail-Pani/fr/convoyage/ · https://phrobert31.github.io/DEMO-Sail-Pani/fr/contact/
-- German: https://phrobert31.github.io/DEMO-Sail-Pani/de/ · https://phrobert31.github.io/DEMO-Sail-Pani/de/reinigung/ · https://phrobert31.github.io/DEMO-Sail-Pani/de/ueberfuehrung/ · https://phrobert31.github.io/DEMO-Sail-Pani/de/kontakt/
-- Spanish: https://phrobert31.github.io/DEMO-Sail-Pani/es/ · https://phrobert31.github.io/DEMO-Sail-Pani/es/limpieza/ · https://phrobert31.github.io/DEMO-Sail-Pani/es/traslados/ · https://phrobert31.github.io/DEMO-Sail-Pani/es/contacto/
+- Italian: https://phrobert31.github.io/DEMO-Sail-Pani/ · https://phrobert31.github.io/DEMO-Sail-Pani/pulizia/ · https://phrobert31.github.io/DEMO-Sail-Pani/trasferimenti/ · https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/ · https://phrobert31.github.io/DEMO-Sail-Pani/contatti/
+- English: https://phrobert31.github.io/DEMO-Sail-Pani/en/ · https://phrobert31.github.io/DEMO-Sail-Pani/en/cleaning/ · https://phrobert31.github.io/DEMO-Sail-Pani/en/deliveries/ · https://phrobert31.github.io/DEMO-Sail-Pani/en/about/ · https://phrobert31.github.io/DEMO-Sail-Pani/en/contact/
+- French: https://phrobert31.github.io/DEMO-Sail-Pani/fr/ · https://phrobert31.github.io/DEMO-Sail-Pani/fr/nettoyage/ · https://phrobert31.github.io/DEMO-Sail-Pani/fr/convoyage/ · https://phrobert31.github.io/DEMO-Sail-Pani/fr/a-propos/ · https://phrobert31.github.io/DEMO-Sail-Pani/fr/contact/
+- German: https://phrobert31.github.io/DEMO-Sail-Pani/de/ · https://phrobert31.github.io/DEMO-Sail-Pani/de/reinigung/ · https://phrobert31.github.io/DEMO-Sail-Pani/de/ueberfuehrung/ · https://phrobert31.github.io/DEMO-Sail-Pani/de/ueber-uns/ · https://phrobert31.github.io/DEMO-Sail-Pani/de/kontakt/
+- Spanish: https://phrobert31.github.io/DEMO-Sail-Pani/es/ · https://phrobert31.github.io/DEMO-Sail-Pani/es/limpieza/ · https://phrobert31.github.io/DEMO-Sail-Pani/es/traslados/ · https://phrobert31.github.io/DEMO-Sail-Pani/es/quienes-somos/ · https://phrobert31.github.io/DEMO-Sail-Pani/es/contacto/

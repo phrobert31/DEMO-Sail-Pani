@@ -31,7 +31,7 @@ es:{
  img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco"},
  ui:{top:"Volver arriba",preview:"Vista previa del mensaje",quote:"Presupuesto",skip:"Ir al contenido",menu:"Abrir el menú",whatsapp:"Escríbenos por WhatsApp",contact:"Contacto"},
  calc:{title:"Calcula una estimación",sub:"Indica la distancia en millas. Si no la conoces, envíanos los dos puertos y la calculamos nosotros.",miles:"Distancia en millas",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
- nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto"},
+ nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto",about:"Quiénes somos"},
  map:{capHome:"Norte de Cerdeña.",capClean:"Los puertos deportivos donde trabajamos habitualmente.",capRoutes:"Algunas rutas ya realizadas."},
  home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"limpio y listo para zarpar.",
   lead:"Cuidado artesanal de barcos de hasta 30 metros en el norte de Cerdeña y traslados de hasta 20 metros por todo el Mediterráneo.",
@@ -94,14 +94,14 @@ es:{
    {q:"Acabo de comprar un barco, ¿podéis ir a recogerlo?",a:"Sí. Lo recogemos en el astillero o en el bróker y lo llevamos a tu puerto."},
    {q:"¿Trabajáis con puertos deportivos y agencias?",a:"Sí, también hacemos de patrón para puertos deportivos, astilleros y agencias de alquiler."}],
   faqBtn:"Hablemos"},
- contact:{eyebrow:"Quiénes somos",h1:"Quiénes somos y contacto",intro:"Respondemos todos los días. Por WhatsApp, también fuera de horario.",
+ contact:{eyebrow:"Quiénes somos",h1:"Contacto",intro:"Respondemos todos los días. Por WhatsApp, también fuera de horario.",
   avail:"Disponible todo el año",
   role:"Fundador y patrón",
   bio1:"Soy Andrea, de Sassari. Mi primer contacto con el mar fue en la Asinara, durante el Covid: acompañaba en el mar a investigadores que estudian los cetáceos y los ambientes marinos. Allí nació mi respeto por el mar y por lo que protege.",
   bio2:"Después vinieron el chárter como marinero, los años de patrón y los traslados entre Cerdeña y el continente. Hoy Sail&Clean es una pequeña empresa artesanal: cuidamos los barcos a mano, junto con algunos colaboradores.",
   lic:"Titulación para más de 12 millas",licP:"Es la titulación italiana exigida para los traslados en mar abierto.",
   ins:"Servicio asegurado",insP:"El seguro del servicio corre de nuestra cuenta y está incluido en el precio.",
-  detailsTitle:"Contacto",phone:"Teléfono y WhatsApp",email:"Email",ig:"Instagram",hours:"Horario",
+  detailsTitle:"Cómo contactarnos",phone:"Teléfono y WhatsApp",email:"Email",ig:"Instagram",hours:"Horario",
   hoursV:"Todos los días, 9:00–18:00. Por WhatsApp respondemos también más tarde.",base:"Base",langs:"Idiomas",
   langsV:"Italiano, inglés, francés, alemán, español",
   pro:"¿Gestionas un puerto deportivo, un astillero o una agencia? Podemos atender directamente a tus clientes.",
@@ -123,7 +123,7 @@ es:{
 
 /* texts added for the about block, video, route planner and availability (merged into T) */
 const TX={
-es:{about:{title:"Quién sube a bordo",more:"Más sobre Andrea"},
+es:{aboutp:{nav:"Quiénes somos",h1:"Quiénes somos",intro:"Una pequeña empresa artesanal del norte de Cerdeña: quiénes somos, de dónde venimos y cómo trabajamos.",ctaTitle:"¿Hablamos?",ctaText:"Escríbenos por WhatsApp o consulta todos los contactos."},about:{title:"Quién sube a bordo",more:"Más sobre Andrea"},
  video:{title:"Ver el vídeo",sub:"De nuestro canal de YouTube",play:"Ver el vídeo de Sail&Clean",note:"El vídeo solo se carga desde YouTube al pulsar play.",frame:"Vídeo de Sail&Clean en YouTube"},
  plan:{otherPh:"Escribe el nombre del puerto",otherHint:"Puerto fuera de la lista: introduce las millas si las conoces; si no, las calculamos nosotros.",msgNoMiles:"Hola, quisiera un presupuesto para un traslado de {a} a {b}.",
   title:"Calcula tu ruta",sub:"Elige los puertos de salida y llegada: calculamos las millas y un precio orientativo.",from:"Salida",to:"Llegada",swap:"Invertir salida y llegada",
@@ -223,7 +223,7 @@ function mapSVG(kind){
    ======================================================= */
 const LANGS=["it","en","fr","de","es"];
 const LANG_NAMES={it:"Italiano",en:"English",fr:"Français",de:"Deutsch",es:"Español"};
-const PAGES=["home","pulizia","trasferimenti","contatti"];
+const PAGES=["home","pulizia","trasferimenti","chisiamo","contatti"];
 const $=q=>document.querySelector(q), $$=q=>document.querySelectorAll(q);
 /* Built multi-page site: each page carries its language, page id and path to the site root.
    The single-file source (src/index.html) has none of these and keeps hash routing. */
@@ -374,7 +374,7 @@ function applyLang(){
 }
 
 function title(){
-  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",contatti:"contact"}[page]));
+  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
 }
 
@@ -714,7 +714,7 @@ document.addEventListener("keydown",e=>{
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
 const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
-$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);
+$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
 $h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
 $$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);

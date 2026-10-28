@@ -30,7 +30,7 @@ it:{
  img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca"},
  ui:{top:"Torna su",preview:"Anteprima del messaggio",quote:"Preventivo",skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
  calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
- nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti"},
+ nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti",about:"Chi siamo"},
  map:{capHome:"Nord della Sardegna.",capClean:"I porti dove lavoriamo abitualmente.",capRoutes:"Alcune rotte già percorse."},
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"pulita e pronta a partire.",
   lead:"Cura artigianale delle barche fino a 30 metri nel nord della Sardegna e trasferimenti fino a 20 metri in tutto il Mediterraneo.",
@@ -93,14 +93,14 @@ it:{
    {q:"Ho appena comprato una barca, potete ritirarla?",a:"Sì. Andiamo a prenderla dal cantiere o dal broker e la portiamo al tuo porto."},
    {q:"Lavorate con porti turistici e agenzie?",a:"Sì, facciamo skipperaggio anche per porti turistici, cantieri e agenzie di noleggio."}],
   faqBtn:"Parliamone"},
- contact:{eyebrow:"Chi siamo",h1:"Chi siamo e contatti",intro:"Rispondiamo tutti i giorni. Su WhatsApp anche fuori orario.",
+ contact:{eyebrow:"Chi siamo",h1:"Contatti",intro:"Rispondiamo tutti i giorni. Su WhatsApp anche fuori orario.",
   avail:"Disponibile tutto l'anno",
   role:"Fondatore e skipper",
   bio1:"Sono Andrea, di Sassari. Il mio primo contatto con la nautica è stato all'Asinara, durante il Covid: accompagnavo in mare i ricercatori che studiano i cetacei e gli ambienti marini. Lì è nato il rispetto per il mare e per l'ambiente che protegge.",
   bio2:"Poi il charter come marinaio, gli anni da skipper e i trasferimenti tra la Sardegna e il continente. Oggi Sail&Clean è una piccola azienda artigiana: curiamo le barche a mano, insieme ad alcuni collaboratori.",
   lic:"Patente nautica oltre le 12 miglia",licP:"È l'abilitazione richiesta per i trasferimenti in mare aperto.",
   ins:"Servizio assicurato",insP:"L'assicurazione per il servizio è a nostro carico ed è compresa nel prezzo.",
-  detailsTitle:"Contatti",phone:"Telefono e WhatsApp",email:"Email",ig:"Instagram",hours:"Orari",
+  detailsTitle:"Come raggiungerci",phone:"Telefono e WhatsApp",email:"Email",ig:"Instagram",hours:"Orari",
   hoursV:"Tutti i giorni, 9:00–18:00. Su WhatsApp rispondiamo anche più tardi.",base:"Base",langs:"Lingue",
   langsV:"Italiano, inglese, francese, tedesco, spagnolo",
   pro:"Gestisci un porto turistico, un cantiere o un'agenzia? Possiamo occuparci direttamente dei tuoi clienti.",
@@ -121,7 +121,7 @@ it:{
 
 /* texts added for the about block, video, route planner and availability (merged into T) */
 const TX={
-it:{about:{title:"Chi sale a bordo",more:"Scopri di più su Andrea"},
+it:{aboutp:{nav:"Chi siamo",h1:"Chi siamo",intro:"Una piccola azienda artigiana del nord della Sardegna: chi siamo, da dove veniamo e come lavoriamo.",ctaTitle:"Vuoi parlarne con noi?",ctaText:"Scrivici su WhatsApp o trova tutti i contatti."},about:{title:"Chi sale a bordo",more:"Scopri di più su Andrea"},
  video:{title:"Guarda il video",sub:"Dal nostro canale YouTube",play:"Guarda il video di Sail&Clean",note:"Il video si carica da YouTube solo quando premi play.",frame:"Video di Sail&Clean su YouTube"},
  plan:{otherPh:"Scrivi il nome del porto",otherHint:"Porto non in elenco: inserisci le miglia se le conosci, altrimenti le calcoliamo noi.",msgNoMiles:"Ciao, vorrei un preventivo per un trasferimento da {a} a {b}.",
   title:"Calcola la tua rotta",sub:"Scegli i porti di partenza e di arrivo: calcoliamo le miglia e una stima del prezzo.",from:"Partenza",to:"Arrivo",swap:"Inverti partenza e arrivo",
@@ -220,7 +220,7 @@ function mapSVG(kind){
    ======================================================= */
 const LANGS=["it","en","fr","de","es"];
 const LANG_NAMES={it:"Italiano",en:"English",fr:"Français",de:"Deutsch",es:"Español"};
-const PAGES=["home","pulizia","trasferimenti","contatti"];
+const PAGES=["home","pulizia","trasferimenti","chisiamo","contatti"];
 const $=q=>document.querySelector(q), $$=q=>document.querySelectorAll(q);
 /* Built multi-page site: each page carries its language, page id and path to the site root.
    The single-file source (src/index.html) has none of these and keeps hash routing. */
@@ -370,7 +370,7 @@ function applyLang(){
 }
 
 function title(){
-  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",contatti:"contact"}[page]));
+  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
 }
 
@@ -710,7 +710,7 @@ document.addEventListener("keydown",e=>{
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
 const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
-$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);
+$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
 $h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
 $$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);

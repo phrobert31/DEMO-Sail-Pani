@@ -21,12 +21,12 @@ See [docs/ARUBA.md](docs/ARUBA.md).
 
 ## Pages
 
-| | Home | Cleaning | Deliveries | Contact |
-|---|---|---|---|---|
-| it | `/` | `/pulizia/` | `/trasferimenti/` | `/contatti/` |
-| en | `/en/` | `/en/cleaning/` | `/en/deliveries/` | `/en/contact/` |
-| fr | `/fr/` | `/fr/nettoyage/` | `/fr/convoyage/` | `/fr/contact/` |
-| de | `/de/` | `/de/reinigung/` | `/de/ueberfuehrung/` | `/de/kontakt/` |
-| es | `/es/` | `/es/limpieza/` | `/es/traslados/` | `/es/contacto/` |
+| | Home | Cleaning | Deliveries | About | Contact |
+|---|---|---|---|---|---|
+| it | `/` | `/pulizia/` | `/trasferimenti/` | `/chi-siamo/` | `/contatti/` |
+| en | `/en/` | `/en/cleaning/` | `/en/deliveries/` | `/en/about/` | `/en/contact/` |
+| fr | `/fr/` | `/fr/nettoyage/` | `/fr/convoyage/` | `/fr/a-propos/` | `/fr/contact/` |
+| de | `/de/` | `/de/reinigung/` | `/de/ueberfuehrung/` | `/de/ueber-uns/` | `/de/kontakt/` |
+| es | `/es/` | `/es/limpieza/` | `/es/traslados/` | `/es/quienes-somos/` | `/es/contacto/` |
 
 Old links such as `/#pulizia` or `/?lang=en` redirect to the matching page.

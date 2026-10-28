@@ -31,6 +31,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/trasferimenti/"/>
   </url>
   <url>
+    <loc>https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phrobert31.github.io/DEMO-Sail-Pani/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://phrobert31.github.io/DEMO-Sail-Pani/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://phrobert31.github.io/DEMO-Sail-Pani/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://phrobert31.github.io/DEMO-Sail-Pani/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+  </url>
+  <url>
     <loc>https://phrobert31.github.io/DEMO-Sail-Pani/contatti/</loc>
     <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/contatti/"/>
@@ -69,6 +79,16 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://phrobert31.github.io/DEMO-Sail-Pani/de/ueberfuehrung/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://phrobert31.github.io/DEMO-Sail-Pani/es/traslados/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/trasferimenti/"/>
+  </url>
+  <url>
+    <loc>https://phrobert31.github.io/DEMO-Sail-Pani/en/about/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phrobert31.github.io/DEMO-Sail-Pani/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://phrobert31.github.io/DEMO-Sail-Pani/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://phrobert31.github.io/DEMO-Sail-Pani/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://phrobert31.github.io/DEMO-Sail-Pani/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
   </url>
   <url>
     <loc>https://phrobert31.github.io/DEMO-Sail-Pani/en/contact/</loc>
@@ -111,6 +131,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/trasferimenti/"/>
   </url>
   <url>
+    <loc>https://phrobert31.github.io/DEMO-Sail-Pani/fr/a-propos/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phrobert31.github.io/DEMO-Sail-Pani/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://phrobert31.github.io/DEMO-Sail-Pani/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://phrobert31.github.io/DEMO-Sail-Pani/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://phrobert31.github.io/DEMO-Sail-Pani/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+  </url>
+  <url>
     <loc>https://phrobert31.github.io/DEMO-Sail-Pani/fr/contact/</loc>
     <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/contatti/"/>
@@ -151,6 +181,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/trasferimenti/"/>
   </url>
   <url>
+    <loc>https://phrobert31.github.io/DEMO-Sail-Pani/de/ueber-uns/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phrobert31.github.io/DEMO-Sail-Pani/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://phrobert31.github.io/DEMO-Sail-Pani/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://phrobert31.github.io/DEMO-Sail-Pani/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://phrobert31.github.io/DEMO-Sail-Pani/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+  </url>
+  <url>
     <loc>https://phrobert31.github.io/DEMO-Sail-Pani/de/kontakt/</loc>
     <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/contatti/"/>
@@ -189,6 +229,16 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://phrobert31.github.io/DEMO-Sail-Pani/de/ueberfuehrung/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://phrobert31.github.io/DEMO-Sail-Pani/es/traslados/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/trasferimenti/"/>
+  </url>
+  <url>
+    <loc>https://phrobert31.github.io/DEMO-Sail-Pani/es/quienes-somos/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://phrobert31.github.io/DEMO-Sail-Pani/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://phrobert31.github.io/DEMO-Sail-Pani/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://phrobert31.github.io/DEMO-Sail-Pani/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://phrobert31.github.io/DEMO-Sail-Pani/es/quienes-somos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://phrobert31.github.io/DEMO-Sail-Pani/chi-siamo/"/>
   </url>
   <url>
     <loc>https://phrobert31.github.io/DEMO-Sail-Pani/es/contacto/</loc>

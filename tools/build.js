@@ -7,7 +7,7 @@
 
   It writes plain static files to the repository root, ready for GitHub Pages
   or any web host (Aruba):
-      index.html, pulizia/, trasferimenti/, contatti/      Italian
+      index.html, pulizia/, trasferimenti/, chi-siamo/, contatti/   Italian
       en/, fr/, de/, es/ (+ their page folders)            other languages
       assets/ (css, js, fonts, images), sitemap.xml, robots.txt, llms.txt,
       404.html, .htaccess
@@ -29,16 +29,16 @@ const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, "site.config.json"), "utf
 const SITE = (process.env.BASE_URL || CFG.baseUrl).replace(/\/?$/, "/");
 
 const LANGS = ["it", "en", "fr", "de", "es"];
-const PAGES = ["home", "pulizia", "trasferimenti", "contatti"];
+const PAGES = ["home", "pulizia", "trasferimenti", "chisiamo", "contatti"];
 const ROUTES = {
-  it: { home: "", pulizia: "pulizia/", trasferimenti: "trasferimenti/", contatti: "contatti/" },
-  en: { home: "en/", pulizia: "en/cleaning/", trasferimenti: "en/deliveries/", contatti: "en/contact/" },
-  fr: { home: "fr/", pulizia: "fr/nettoyage/", trasferimenti: "fr/convoyage/", contatti: "fr/contact/" },
-  de: { home: "de/", pulizia: "de/reinigung/", trasferimenti: "de/ueberfuehrung/", contatti: "de/kontakt/" },
-  es: { home: "es/", pulizia: "es/limpieza/", trasferimenti: "es/traslados/", contatti: "es/contacto/" },
+  it: { home: "", pulizia: "pulizia/", trasferimenti: "trasferimenti/", chisiamo: "chi-siamo/", contatti: "contatti/" },
+  en: { home: "en/", pulizia: "en/cleaning/", trasferimenti: "en/deliveries/", chisiamo: "en/about/", contatti: "en/contact/" },
+  fr: { home: "fr/", pulizia: "fr/nettoyage/", trasferimenti: "fr/convoyage/", chisiamo: "fr/a-propos/", contatti: "fr/contact/" },
+  de: { home: "de/", pulizia: "de/reinigung/", trasferimenti: "de/ueberfuehrung/", chisiamo: "de/ueber-uns/", contatti: "de/kontakt/" },
+  es: { home: "es/", pulizia: "es/limpieza/", trasferimenti: "es/traslados/", chisiamo: "es/quienes-somos/", contatti: "es/contacto/" },
 };
 const LOCALE = { it: "it_IT", en: "en_GB", fr: "fr_FR", de: "de_DE", es: "es_ES" };
-const DESC_KEY = { home: "home.lead", pulizia: "clean.intro", trasferimenti: "deliv.intro", contatti: "contact.intro" };
+const DESC_KEY = { home: "home.lead", pulizia: "clean.intro", trasferimenti: "deliv.intro", chisiamo: "aboutp.intro", contatti: "contact.intro" };
 
 /* Find `const NAME={ it:{...}, en:{...}, ... };` in the script and keep only language L. */
 function keepLang(js, name, L) {
@@ -195,7 +195,7 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       // images visible without JavaScript
       const img = (sel, file) => { const e = doc.querySelector(sel); if (e) e.setAttribute("src", BASE + "assets/img/" + file); };
       img("#img-hero", "hero.webp"); img("#img-c1", "c1.webp"); img("#img-c2", "c2.webp"); img("#img-clean", "clean.webp");
-      img("#face", "face.webp"); img("#face-sm", "face.webp"); img("#face-ab", "face.webp"); img("#img-vid", "heel.webp");
+      img("#face", "face.webp"); img("#face-sm", "face.webp"); img("#face-ab", "face.webp"); img("#face-ct", "face.webp"); img("#img-vid", "heel.webp");
       // [small file, its width], [full file, its width], sizes
       const srcset = (sel, [sm, smW], [full, fullW], sizes) => { const e = doc.querySelector(sel); if (!e) return;
         e.setAttribute("srcset", `${BASE}assets/img/${sm} ${smW}w, ${BASE}assets/img/${full} ${fullW}w`); e.setAttribute("sizes", sizes); };
@@ -205,6 +205,7 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       srcset("#face", ["face-480.webp", 480], ["face.webp", 900], "(max-width: 880px) 90vw, 420px");
       srcset("#face-ab", ["face-480.webp", 480], ["face.webp", 900], "(max-width: 640px) 90vw, 360px");
       srcset("#face-sm", ["face-480.webp", 480], ["face.webp", 900], "96px");
+      srcset("#face-ct", ["face-480.webp", 480], ["face.webp", 900], "110px");
       doc.querySelectorAll(".phead .bg[data-bg]").forEach((b) => { b.style.backgroundImage = `url(${BASE}assets/img/${b.dataset.bg}.webp)`; });
       doc.querySelectorAll("img").forEach((i) => { if (i.id !== "img-hero" && !i.closest(".hdr")) i.setAttribute("loading", "lazy"); });
       // head: title, description, canonical, hreflang, social, structured data

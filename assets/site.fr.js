@@ -31,7 +31,7 @@ fr:{
  img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau"},
  ui:{top:"Haut de page",preview:"Aperçu du message",quote:"Devis",skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
  calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
- nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact"},
+ nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact",about:"À propos"},
  map:{capHome:"Nord de la Sardaigne.",capClean:"Les ports et marinas où nous intervenons régulièrement.",capRoutes:"Quelques convoyages déjà réalisés."},
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"propre et prêt à partir.",
   lead:"Entretien artisanal des bateaux jusqu'à 30 mètres dans le nord de la Sardaigne, et convoyages jusqu'à 20 mètres dans toute la Méditerranée.",
@@ -94,14 +94,14 @@ fr:{
    {q:"Je viens d'acheter un bateau, pouvez-vous aller le chercher" + NB + "?",a:"Oui. Nous le récupérons au chantier ou chez le courtier et l'amenons à votre port."},
    {q:"Travaillez-vous avec des marinas et des agences" + NB + "?",a:"Oui, nous assurons aussi des missions de skipper pour des marinas, des chantiers et des agences de location."}],
   faqBtn:"Parlons-en"},
- contact:{eyebrow:"À propos",h1:"À propos et contact",intro:"Nous répondons tous les jours. Sur WhatsApp, même en dehors des horaires.",
+ contact:{eyebrow:"À propos",h1:"Contact",intro:"Nous répondons tous les jours. Sur WhatsApp, même en dehors des horaires.",
   avail:"Disponible toute l'année",
   role:"Fondateur et skipper",
   bio1:"Je suis Andrea, de Sassari. Mon premier contact avec la mer, c'était à l'Asinara pendant le Covid : j'accompagnais en mer des chercheurs qui étudient les cétacés et les milieux marins. C'est là qu'est né mon respect pour la mer et pour ce qu'elle protège.",
   bio2:"Puis le charter comme équipier, des années comme skipper et des convoyages entre la Sardaigne et le continent. Aujourd'hui, Sail&Clean est une petite entreprise artisanale : nous prenons soin des bateaux à la main, avec quelques collaborateurs.",
   lic:"Permis au-delà de 12 milles",licP:"C'est le permis italien requis pour les convoyages en haute mer.",
   ins:"Service assuré",insP:"L'assurance du service est à notre charge et comprise dans le prix.",
-  detailsTitle:"Contact",phone:"Téléphone et WhatsApp",email:"E-mail",ig:"Instagram",hours:"Horaires",
+  detailsTitle:"Nous joindre",phone:"Téléphone et WhatsApp",email:"E-mail",ig:"Instagram",hours:"Horaires",
   hoursV:"Tous les jours, 9h00–18h00. Sur WhatsApp, nous répondons aussi plus tard.",base:"Base",langs:"Langues",
   langsV:"Italien, anglais, français, allemand, espagnol",
   pro:"Vous gérez une marina, un chantier ou une agence" + NB + "? Nous pouvons traiter directement avec vos clients.",
@@ -122,7 +122,7 @@ fr:{
 
 /* texts added for the about block, video, route planner and availability (merged into T) */
 const TX={
-fr:{about:{title:"Qui monte à bord",more:"En savoir plus sur Andrea"},
+fr:{aboutp:{nav:"À propos",h1:"À propos",intro:"Une petite entreprise artisanale du nord de la Sardaigne : qui nous sommes, d'où nous venons et comment nous travaillons.",ctaTitle:"Envie d'en parler ?",ctaText:"Écrivez-nous sur WhatsApp ou retrouvez tous nos contacts."},about:{title:"Qui monte à bord",more:"En savoir plus sur Andrea"},
  video:{title:"Voir la vidéo",sub:"Sur notre chaîne YouTube",play:"Voir la vidéo de Sail&Clean",note:"La vidéo ne se charge depuis YouTube que lorsque vous appuyez sur lecture.",frame:"Vidéo de Sail&Clean sur YouTube"},
  plan:{otherPh:"Saisissez le nom du port",otherHint:"Port absent de la liste" + NB + ": saisissez les milles si vous les connaissez, sinon nous les calculons.",msgNoMiles:"Bonjour, je voudrais un devis pour un convoyage de {a} à {b}.",
   title:"Calculez votre route",sub:"Choisissez les ports de départ et d'arrivée" + NB + ": nous calculons les milles et une estimation du prix.",from:"Départ",to:"Arrivée",swap:"Inverser départ et arrivée",
@@ -221,7 +221,7 @@ function mapSVG(kind){
    ======================================================= */
 const LANGS=["it","en","fr","de","es"];
 const LANG_NAMES={it:"Italiano",en:"English",fr:"Français",de:"Deutsch",es:"Español"};
-const PAGES=["home","pulizia","trasferimenti","contatti"];
+const PAGES=["home","pulizia","trasferimenti","chisiamo","contatti"];
 const $=q=>document.querySelector(q), $$=q=>document.querySelectorAll(q);
 /* Built multi-page site: each page carries its language, page id and path to the site root.
    The single-file source (src/index.html) has none of these and keeps hash routing. */
@@ -371,7 +371,7 @@ function applyLang(){
 }
 
 function title(){
-  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",contatti:"contact"}[page]));
+  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
 }
 
@@ -711,7 +711,7 @@ document.addEventListener("keydown",e=>{
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
 const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
-$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);
+$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
 $h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
 $$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);

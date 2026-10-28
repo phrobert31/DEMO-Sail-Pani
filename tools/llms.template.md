@@ -25,12 +25,13 @@ Sail&Clean (Italian: "pulizia e trasferimenti barche in Sardegna") is a small, y
 
 ## About
 
-- [About and contact]({{SITE}}contatti/): Andrea Pani, founder and skipper, from Sassari. First went to sea at Asinara during Covid, supporting researchers studying cetaceans and marine habitats; then charter crew, skipper, professional deliveries around Sardinia and to mainland Italy, Lega Navale, and boatyard work alongside riggers. Holds the Italian boating licence for beyond 12 nautical miles. Service is insured. Available all year.
+- [About]({{SITE}}chi-siamo/): Andrea Pani, founder and skipper, from Sassari. First went to sea at Asinara during Covid, supporting researchers studying cetaceans and marine habitats; then charter crew, skipper, professional deliveries around Sardinia and to mainland Italy, Lega Navale, and boatyard work alongside riggers. Holds the Italian boating licence for beyond 12 nautical miles. Service is insured. Available all year. Values: client care, know-how, continuous learning, reliability, presence.
+- [Contact]({{SITE}}contatti/): phone, WhatsApp, email, Instagram, YouTube and map.
 
 ## Languages
 
-- Italian: {{SITE}} · {{SITE}}pulizia/ · {{SITE}}trasferimenti/ · {{SITE}}contatti/
-- English: {{SITE}}en/ · {{SITE}}en/cleaning/ · {{SITE}}en/deliveries/ · {{SITE}}en/contact/
-- French: {{SITE}}fr/ · {{SITE}}fr/nettoyage/ · {{SITE}}fr/convoyage/ · {{SITE}}fr/contact/
-- German: {{SITE}}de/ · {{SITE}}de/reinigung/ · {{SITE}}de/ueberfuehrung/ · {{SITE}}de/kontakt/
-- Spanish: {{SITE}}es/ · {{SITE}}es/limpieza/ · {{SITE}}es/traslados/ · {{SITE}}es/contacto/
+- Italian: {{SITE}} · {{SITE}}pulizia/ · {{SITE}}trasferimenti/ · {{SITE}}chi-siamo/ · {{SITE}}contatti/
+- English: {{SITE}}en/ · {{SITE}}en/cleaning/ · {{SITE}}en/deliveries/ · {{SITE}}en/about/ · {{SITE}}en/contact/
+- French: {{SITE}}fr/ · {{SITE}}fr/nettoyage/ · {{SITE}}fr/convoyage/ · {{SITE}}fr/a-propos/ · {{SITE}}fr/contact/
+- German: {{SITE}}de/ · {{SITE}}de/reinigung/ · {{SITE}}de/ueberfuehrung/ · {{SITE}}de/ueber-uns/ · {{SITE}}de/kontakt/
+- Spanish: {{SITE}}es/ · {{SITE}}es/limpieza/ · {{SITE}}es/traslados/ · {{SITE}}es/quienes-somos/ · {{SITE}}es/contacto/

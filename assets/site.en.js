@@ -31,7 +31,7 @@ en:{
  img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat"},
  ui:{top:"Back to top",preview:"Message preview",quote:"Get a quote",skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
  calc:{title:"Get an estimate",sub:"Enter the route distance in miles. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
- nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact"},
+ nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact",about:"About"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"clean and ready to sail.",
   lead:"Hands-on care for boats up to 30 metres in north Sardinia, and deliveries of boats up to 20 metres across the Mediterranean.",
@@ -94,14 +94,14 @@ en:{
    {q:"I have just bought a boat, can you collect it?",a:"Yes. We pick it up from the yard or the broker and bring it to your port."},
    {q:"Do you work with marinas and agencies?",a:"Yes, we also skipper for marinas, boatyards and charter agencies."}],
   faqBtn:"Let's talk"},
- contact:{eyebrow:"About us",h1:"About and contact",intro:"We answer every day, and on WhatsApp even outside working hours.",
+ contact:{eyebrow:"About us",h1:"Contact",intro:"We answer every day, and on WhatsApp even outside working hours.",
   avail:"Available all year",
   role:"Founder and skipper",
   bio1:"I'm Andrea, from Sassari. My first time at sea was at Asinara during Covid, taking out researchers who study whales, dolphins and marine habitats. That is where my respect for the sea, and for the life it protects, began.",
   bio2:"Then came charter work as crew, years as a skipper and deliveries between Sardinia and mainland Italy. Today Sail&Clean is a small craft business: we look after boats by hand, with a few colleagues.",
   lic:"Licence for beyond 12 miles",licP:"This is the Italian boating licence required for open-sea deliveries.",
   ins:"Insured service",insP:"Insurance for the service is on us and included in the price.",
-  detailsTitle:"Contact",phone:"Phone and WhatsApp",email:"Email",ig:"Instagram",hours:"Hours",
+  detailsTitle:"How to reach us",phone:"Phone and WhatsApp",email:"Email",ig:"Instagram",hours:"Hours",
   hoursV:"Every day, 9:00–18:00. On WhatsApp we reply later too.",base:"Base",langs:"Languages",
   langsV:"Italian, English, French, German, Spanish",
   pro:"Do you run a marina, a boatyard or an agency? We can deal with your clients directly.",
@@ -122,7 +122,7 @@ en:{
 
 /* texts added for the about block, video, route planner and availability (merged into T) */
 const TX={
-en:{about:{title:"Who comes aboard",more:"More about Andrea"},
+en:{aboutp:{nav:"About",h1:"About",intro:"A small craft business from north Sardinia: who we are, where we come from and how we work.",ctaTitle:"Want to talk it through?",ctaText:"Message us on WhatsApp or find all our contact details."},about:{title:"Who comes aboard",more:"More about Andrea"},
  video:{title:"Watch the video",sub:"From our YouTube channel",play:"Watch the Sail&Clean video",note:"The video loads from YouTube only when you press play.",frame:"Sail&Clean video on YouTube"},
  plan:{otherPh:"Type the port name",otherHint:"Port not on the list: enter the miles if you know them, otherwise we work them out.",msgNoMiles:"Hi, I'd like a quote for a delivery from {a} to {b}.",
   title:"Plan your route",sub:"Pick the departure and arrival ports and we work out the miles and a price estimate.",from:"From",to:"To",swap:"Swap departure and arrival",
@@ -221,7 +221,7 @@ function mapSVG(kind){
    ======================================================= */
 const LANGS=["it","en","fr","de","es"];
 const LANG_NAMES={it:"Italiano",en:"English",fr:"Français",de:"Deutsch",es:"Español"};
-const PAGES=["home","pulizia","trasferimenti","contatti"];
+const PAGES=["home","pulizia","trasferimenti","chisiamo","contatti"];
 const $=q=>document.querySelector(q), $$=q=>document.querySelectorAll(q);
 /* Built multi-page site: each page carries its language, page id and path to the site root.
    The single-file source (src/index.html) has none of these and keeps hash routing. */
@@ -371,7 +371,7 @@ function applyLang(){
 }
 
 function title(){
-  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",contatti:"contact"}[page]));
+  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
 }
 
@@ -711,7 +711,7 @@ document.addEventListener("keydown",e=>{
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
 const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
-$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);
+$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
 $h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
 $$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);

@@ -31,7 +31,7 @@ de:{
  img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot"},
  ui:{top:"Nach oben",preview:"Vorschau der Nachricht",quote:"Angebot",skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
  calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
- nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt"},
+ nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt",about:"Über uns"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"sauber und bereit zum Ablegen.",
   lead:"Handwerkliche Bootspflege für Boote bis 30 Meter im Norden Sardiniens und Überführungen bis 20 Meter im ganzen Mittelmeer.",
@@ -94,14 +94,14 @@ de:{
    {q:"Ich habe gerade ein Boot gekauft, holen Sie es ab?",a:"Ja. Wir holen es bei der Werft oder beim Makler ab und bringen es in Ihren Hafen."},
    {q:"Arbeiten Sie mit Marinas und Agenturen?",a:"Ja, wir skippern auch für Marinas, Werften und Charteragenturen."}],
   faqBtn:"Sprechen wir darüber"},
- contact:{eyebrow:"Über uns",h1:"Über uns und Kontakt",intro:"Wir antworten täglich. Über WhatsApp auch außerhalb der Geschäftszeiten.",
+ contact:{eyebrow:"Über uns",h1:"Kontakt",intro:"Wir antworten täglich. Über WhatsApp auch außerhalb der Geschäftszeiten.",
   avail:"Das ganze Jahr verfügbar",
   role:"Gründer und Skipper",
   bio1:"Ich bin Andrea aus Sassari. Zum ersten Mal auf See war ich während Covid vor der Asinara: Ich habe Forscher begleitet, die Wale, Delfine und Meereslebensräume untersuchen. Dort hat mein Respekt vor dem Meer begonnen.",
   bio2:"Dann kamen Charter als Crew, Jahre als Skipper und Überführungen zwischen Sardinien und dem Festland. Heute ist Sail&Clean ein kleiner Handwerksbetrieb: Wir pflegen Boote von Hand, zusammen mit einigen Mitarbeitern.",
   lic:"Bootsführerschein über 12 Seemeilen",licP:"Das ist die in Italien vorgeschriebene Befähigung für Überführungen auf offener See.",
   ins:"Versicherte Leistung",insP:"Die Versicherung für die Leistung übernehmen wir, sie ist im Preis enthalten.",
-  detailsTitle:"Kontakt",phone:"Telefon und WhatsApp",email:"E-Mail",ig:"Instagram",hours:"Erreichbarkeit",
+  detailsTitle:"So erreichen Sie uns",phone:"Telefon und WhatsApp",email:"E-Mail",ig:"Instagram",hours:"Erreichbarkeit",
   hoursV:"Täglich, 9:00–18:00. Über WhatsApp antworten wir auch später.",base:"Standort",langs:"Sprachen",
   langsV:"Italienisch, Englisch, Französisch, Deutsch, Spanisch",
   pro:"Betreiben Sie eine Marina, eine Werft oder eine Agentur? Wir betreuen Ihre Kunden gern direkt.",
@@ -122,7 +122,7 @@ de:{
 
 /* texts added for the about block, video, route planner and availability (merged into T) */
 const TX={
-de:{about:{title:"Wer an Bord kommt",more:"Mehr über Andrea"},
+de:{aboutp:{nav:"Über uns",h1:"Über uns",intro:"Ein kleiner Handwerksbetrieb aus dem Norden Sardiniens: wer wir sind, woher wir kommen und wie wir arbeiten.",ctaTitle:"Wollen Sie mit uns sprechen?",ctaText:"Schreiben Sie uns auf WhatsApp oder finden Sie alle Kontaktdaten."},about:{title:"Wer an Bord kommt",more:"Mehr über Andrea"},
  video:{title:"Video ansehen",sub:"Von unserem YouTube-Kanal",play:"Video von Sail&Clean ansehen",note:"Das Video wird erst beim Abspielen von YouTube geladen.",frame:"Video von Sail&Clean auf YouTube"},
  plan:{otherPh:"Hafen eingeben",otherHint:"Hafen nicht in der Liste: Geben Sie die Seemeilen ein, wenn Sie sie kennen, sonst berechnen wir sie.",msgNoMiles:"Hallo, ich hätte gern ein Angebot für eine Überführung von {a} nach {b}.",
   title:"Route berechnen",sub:"Wählen Sie Start- und Zielhafen, wir berechnen die Seemeilen und einen Richtpreis.",from:"Abfahrt",to:"Ankunft",swap:"Abfahrt und Ankunft tauschen",
@@ -221,7 +221,7 @@ function mapSVG(kind){
    ======================================================= */
 const LANGS=["it","en","fr","de","es"];
 const LANG_NAMES={it:"Italiano",en:"English",fr:"Français",de:"Deutsch",es:"Español"};
-const PAGES=["home","pulizia","trasferimenti","contatti"];
+const PAGES=["home","pulizia","trasferimenti","chisiamo","contatti"];
 const $=q=>document.querySelector(q), $$=q=>document.querySelectorAll(q);
 /* Built multi-page site: each page carries its language, page id and path to the site root.
    The single-file source (src/index.html) has none of these and keeps hash routing. */
@@ -371,7 +371,7 @@ function applyLang(){
 }
 
 function title(){
-  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",contatti:"contact"}[page]));
+  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
 }
 
@@ -711,7 +711,7 @@ document.addEventListener("keydown",e=>{
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
 const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
-$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);
+$h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
 $h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
 $$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);
