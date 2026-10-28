@@ -1,12 +1,12 @@
 # Sail&Clean
 
-> Boat cleaning in north Sardinia (boats up to 30 m) and boat delivery/skippering across the Mediterranean (boats up to 20 m, €7 per nautical mile). Run by skipper Andrea Pani, based in Sassari, Italy.
+> Hands-on boat care by a small craft business in north Sardinia (boats up to 30 m) and boat delivery/skippering across the Mediterranean (boats up to 20 m, €7 per nautical mile). Run by skipper Andrea Pani, based in Sassari, Italy.
 
-Sail&Clean (Italian: "pulizia e trasferimenti barche in Sardegna") is a one-person-led marine service. The owner answers the phone and does the work on board; there is no intermediary. Website languages: Italian, English, French, German, Spanish.
+Sail&Clean (Italian: "pulizia e trasferimenti barche in Sardegna") is a small, young craft business. The owner answers the phone and does the work on board; there is no intermediary. Work is done by hand, a few clients at a time, with products chosen for each surface and its condition (no bleach or harsh degreasers). Website languages: Italian, English, French, German, Spanish.
 
 ## Services
 
-- [Boat cleaning and care]({{SITE}}pulizia/): Interior (cabins, saloon, galley, heads) and exterior (deck, cockpit, gel coat, fibreglass, portholes), tender washing, acid wash, waxing, light maintenance, sail storage, post-boatyard clean-up. Afloat or ashore, sailing and motor boats up to 30 metres. Eco-friendly products, classic line or nanotech line. Underwater hull/keel cleaning is not offered. Quoted per boat and chosen services.
+- [Boat cleaning and care]({{SITE}}pulizia/): Sailing and motor boats up to 30 metres, afloat or ashore. Teak washing, brightening, oiling and protection; teak restoration (sanding, re-caulking seams, re-bonding lifted areas); cleaning and restoring stainless steel; servicing deck hardware such as clutches and winches; portholes; gel coat cleaning and polishing; topside polishing; small gel coat and fibreglass repairs; acid wash and waxing; biminis and cushions; PVC and neoprene tender tubes; mould removal; interior regular cleaning or deep cleaning with steam sanitising. Nanotechnology products: protective films for faster daily cleaning on working boats, and racing-grade sanding products. Underwater hull/keel cleaning is not offered. Quoted per boat and chosen services.
 - [Boat delivery and skippering]({{SITE}}trasferimenti/): Delivery of any type of boat up to 20 metres from port to port, beyond 12 nautical miles and abroad. €7 per nautical mile of the route. Fuel, marina fees, skipper travel/food/accommodation, inspection day and waiting days are paid separately by the owner; insurance is included. Collection from a boatyard or broker after purchase; skipper service for marinas, boatyards and agencies.
 
 ## Where
@@ -25,7 +25,7 @@ Sail&Clean (Italian: "pulizia e trasferimenti barche in Sardegna") is a one-pers
 
 ## About
 
-- [About and contact]({{SITE}}contatti/): Andrea Pani, founder and skipper, from Sassari. Started as crew on a catamaran at Asinara. Holds the Italian boating licence for beyond 12 nautical miles. Service is insured. Available all year.
+- [About and contact]({{SITE}}contatti/): Andrea Pani, founder and skipper, from Sassari. First went to sea at Asinara during Covid, supporting researchers studying cetaceans and marine habitats; then charter crew, skipper, professional deliveries around Sardinia and to mainland Italy, Lega Navale, and boatyard work alongside riggers. Holds the Italian boating licence for beyond 12 nautical miles. Service is insured. Available all year.
 
 ## Languages
 

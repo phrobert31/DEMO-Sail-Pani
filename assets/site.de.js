@@ -34,12 +34,12 @@ de:{
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"sauber und bereit zum Ablegen.",
-  lead:"Wir reinigen Boote bis 30 Meter im Norden Sardiniens und überführen Boote bis 20 Meter im gesamten Mittelmeer.",
+  lead:"Handwerkliche Bootspflege für Boote bis 30 Meter im Norden Sardiniens und Überführungen bis 20 Meter im ganzen Mittelmeer.",
   cta1:"Reinigungsleistungen",cta2:"Überführungen",
   t1:"maximale Länge, Reinigung",t2:"maximale Länge, Überführung",t3:"pro Seemeile, Überführung",
   svcTitle:"Leistungen",svcSub:"Wir arbeiten für private Eigner, Marinas und Werften.",
-  c1h:"Reinigung und Pflege",c1p:"Innen, außen und kleine Instandhaltung, im Wasser oder an Land. Sie entscheiden, was nötig ist.",
-  c1:["Innen: Kajüten, Salon, Nasszellen","Außen: Deck, Gelcoat, GFK, Bullaugen","Beiboot-Wäsche, Entfernung von Ablagerungen, Wachsen","Umweltfreundliche Mittel, klassische Linie oder Nanotechnologie","Segeleinlagerung"],
+  c1h:"Reinigung und Pflege",c1p:"Handwerk, von Hand gemacht, mit dem richtigen Mittel für jede Oberfläche. Im Wasser oder an Land.",
+  c1:["Teak: Reinigung, Aufhellen, Ölen und Restaurierung","Gelcoat und Bordwände: Reinigung und Politur","Edelstahl und Beschläge wie Winschen und Klemmen","Biminis, Polster, Schläuche und Schimmelentfernung","Innenraum: normale Reinigung oder Tiefenreinigung mit Dampf"],
   c1meta:["Bis 30 m","Norden Sardiniens","Im Wasser oder an Land"],c2meta:["Bis 20 m","7 € pro Seemeile","Auch ins Ausland"],
   c1btn:"Reinigungsleistungen ansehen",
   c2h:"Überführung und Skipper",c2p:"Wir bringen Ihr Boot von Hafen zu Hafen, auch über 12 Seemeilen hinaus und ins Ausland.",
@@ -47,27 +47,25 @@ de:{
   c2btn:"So läuft eine Überführung ab",
   roseCap:"Die Windrose des Mittelmeers.",winds:["Tramontana, aus Norden", "Grecale, aus Nordosten", "Levante, aus Osten", "Schirokko, aus Südosten", "Ostro, aus Süden", "Libeccio, aus Südwesten", "Ponente, aus Westen", "Mistral, aus Nordwesten"],
   whyTitle:"Warum Sail&Clean",
-  why:[{t:"Umweltfreundliche Mittel",d:"Klassische Linie oder Nanotechnologie, die mehr kostet und länger schützt. Sie haben die Wahl."},
-       {t:"Sie sprechen mit dem, der an Bord kommt",d:"Wir gehen selbst ans Telefon und arbeiten selbst an Ihrem Boot. Ohne Zwischenhändler."},
-       {t:"Klare Preise",d:"Überführungen zu 7 € pro Seemeile. Reinigung nach Angebot, je nach Boot und gewählten Leistungen."}],
+  why:[{t:"Von Hand gemacht",d:"Wenige Aufträge gleichzeitig, damit jedes Detail stimmt: Teak mit der Maserung gebürstet, gut gepflegter Edelstahl, eine saubere Leine, die frei läuft."},{t:"Das richtige Mittel, nicht das aggressivste",d:"Wir wählen die Mittel nach Oberfläche und Zustand. Kein Chlorbleiche und keine scharfen Entfetter, die Gelcoat, Teak und Gummi schaden."},{t:"Erreichbar und zuverlässig",d:"Sie sprechen mit den Leuten, die an Bord kommen: Wir gehen ans Telefon und arbeiten selbst an Ihrem Boot, immer auf dem neuesten Stand bei Mitteln und Methoden."}],
   ctaTitle:"Erzählen Sie uns von Ihrem Boot",ctaText:"Senden Sie Modell, Länge und Hafen. Sie erhalten ein Angebot."},
  clean:{eyebrow:"Leistung 01",h1:"Reinigung und Bootspflege",
-  intro:"Segel- und Motorboote bis 30 Meter, im Wasser oder an Land. Sie entscheiden: nur innen, nur außen oder alles.",
+  intro:"Handwerk an Segel- und Motorbooten bis 30 Meter, im Wasser oder an Land. Sie wählen, was nötig ist, vom Teak bis zum Innenraum.",
   whatTitle:"Was wir machen",whatSub:"Jeder Einsatz wird individuell zusammengestellt: Sie sagen uns, was Sie brauchen, und wir erstellen das Angebot.",
-  list:["Innen: Kajüten, Salon, Pantry","Nasszellen und Sanitär","Deck und Cockpit","Gelcoat","GFK","Bullaugen und Scheiben","Beiboot-Wäsche","Entfernung von Ablagerungen","Wachsen","Kleine Instandhaltung","Segeleinlagerung","Reinigung nach dem Werftaufenthalt"],
+  list:["Teak: Reinigung mit Reinigern, Aufheller, Ölen und Schutz","Teak-Restaurierung: Schleifen, Fugen erneuern, gelöste Stellen neu verkleben","Reinigung und Aufbereitung von Edelstahl","Instandsetzung von Beschlägen wie Klemmen und Winschen","Reinigung der Bullaugen","Gelcoat reinigen und polieren","Bordwände polieren","Kleine Schäden an Gelcoat und GFK","Ablagerungen entfernen und wachsen","Biminis, Sprayhoods und Polster","Schläuche und Gummi aus PVC und Neopren","Schimmelentfernung","Normale Reinigung: Saugen und Aufräumen","Tiefenreinigung: Saugen, Dampfdesinfektion, Reinigung mit Reinigern und Maschinen für Polster"],
   noHull:"Die Kielreinigung unter Wasser führen wir nicht durch. Alles andere machen wir im Wasser wie an Land.",
-  prodTitle:"Produkte",prodSub:"Wir verwenden ausschließlich umweltfreundliche Mittel. Sie haben zwei Linien zur Wahl.",
-  prod1h:"Klassische Linie",prod1p:"Umweltfreundliche Mittel für die normale Reinigung, zu geringeren Kosten.",
-  prod2h:"Nanotechnologie · empfohlen",prod2p:"Sie kostet mehr und bringt ein besseres Ergebnis: Die Oberfläche bleibt länger geschützt und verschmutzt langsamer. Diese Linie empfehlen wir.",
-  groups:[{t:"Außen",items:["Deck und Cockpit","Gelcoat und GFK","Bullaugen und Scheiben","Wachsen","Entfernung von Ablagerungen"]},{t:"Innen",items:["Kajüten, Salon, Pantry","Nasszellen und Sanitär","Lüften und Ordnung an Bord"]},{t:"Weitere Leistungen",items:["Beiboot-Wäsche","Kleine Instandhaltung","Segeleinlagerung","Reinigung nach dem Werftaufenthalt"]}],badge:"Empfohlen",
+  prodTitle:"Das richtige Mittel für jede Oberfläche",prodSub:"Reinigen heißt nicht nur, einen Fleck zu entfernen, sondern sich um das zu kümmern, was man hat. Wir wählen die Mittel aus Erfahrung, nach Oberfläche und Zustand des Bootes, um es zu schützen und das Meer zu schonen.",
+  prod1h:"Keine Chlorbleiche, keine scharfen Entfetter",prod1p:"Sie sehen sauber aus, greifen aber mit dem Schmutz auch die Oberfläche an und machen sie mit der Zeit spröde. Altes Gelcoat behandelt man nicht wie neues.",
+  prod2h:"Nanotechnologie",prod2p:"Wenn Ihr Boot ein Arbeitsgerät ist: ein Schutzfilm, der die tägliche Reinigung beschleunigt. Wenn Sie Geschwindigkeit suchen: Schleifarbeiten mit Mitteln aus internationalen Regatten und Olympia, laut Hersteller mit 45 % mehr Effizienz.",
+  groups:[{t:"Deck, Teak und Edelstahl",items:["Teak: Reinigung mit Reinigern, Aufheller, Ölen und Schutz","Teak-Restaurierung: Schleifen, Fugen erneuern, gelöste Stellen neu verkleben","Reinigung und Aufbereitung von Edelstahl","Instandsetzung von Beschlägen wie Klemmen und Winschen","Reinigung der Bullaugen"]},{t:"Rumpf und Gelcoat",items:["Gelcoat reinigen und polieren","Bordwände polieren","Kleine Schäden an Gelcoat und GFK","Ablagerungen entfernen und wachsen"]},{t:"Stoffe, Gummi und Schimmel",items:["Biminis, Sprayhoods und Polster","Schläuche und Gummi aus PVC und Neopren","Schimmelentfernung"]},{t:"Innenraum",items:["Normale Reinigung: Saugen und Aufräumen","Tiefenreinigung: Saugen, Dampfdesinfektion, Reinigung mit Reinigern und Maschinen für Polster"]}],badge:"Empfohlen",
   areaTitle:"Wo wir arbeiten",areaSub:"Norden Sardiniens. Wir erreichen die wichtigsten Häfen und Marinas der Küste.",
   ports:["Porto Torres","Alghero und Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"Die Anfahrt wird gesondert berechnet und ist im Angebot immer ausgewiesen. Für Häfen außerhalb dieser Liste fragen Sie einfach an.",
   quoteTitle:"So erhalten Sie ein Angebot",quoteSub:"Der Service läuft auf Anfrage, ohne Buchungsfrist. Die Dauer hängt vom Modell des Bootes und seinem Zustand ab.",
-  steps:[{t:"Formular ausfüllen",d:"Modell, Länge, Hafen und gewünschte Leistungen."},{t:"Fotos senden",d:"Per WhatsApp, damit wir den Zustand des Bootes sofort sehen."},{t:"Angebot erhalten",d:"Mit den gewählten Leistungen, der Produktlinie und der Anfahrt."},{t:"Termin festlegen",d:"Wir vereinbaren einen Tag und kommen an Bord."}]},
+  steps:[{t:"Formular ausfüllen",d:"Modell, Länge, Hafen und gewünschte Arbeiten."},{t:"Fotos schicken",d:"Über WhatsApp, damit wir den Zustand des Bootes gleich sehen."},{t:"Angebot erhalten",d:"Mit den gewählten Arbeiten, den passenden Mitteln und der Anfahrt."},{t:"Termin festlegen",d:"Wir vereinbaren einen Tag und kommen an Bord."}],prod3h:"Ein Beispiel: Schimmel auf Schläuchen",prod3p:"Chlorbleiche auf PVC und Neopren greift die obere Schicht an und verteilt den Schimmel über das ganze Beiboot, im nächsten Jahr ist er wieder da. Das richtige Mittel bindet den Schimmel, er lässt sich mit klarem Wasser abspülen, ohne das Material zu schädigen."},
  form:{title:"Angebot anfragen",name:"Name",reach:"E-Mail oder Telefon",boat:"Modell und Länge",boatPh:"z. B. Bavaria 46, 14 m",
   port:"Hafen oder Marina",portPh:"z. B. Olbia",services:"Leistungen, die Sie interessieren",msg:"Nachricht",msgPh:"Sagen Sie uns, was Sie brauchen und wann.",
-  chips:{int:"Innen",ext:"Außen",gel:"Gelcoat",wax:"Wachsen",dec:"Ablagerungen entfernen",gom:"Beiboot",sails:"Segeleinlagerung",tr:"Überführung"},
+  chips:{ext:"Deck und Teak",gel:"Gelcoat und Bordwände",steel:"Edelstahl und Winschen",wax:"Ablagerungen und Wachs",fab:"Biminis und Polster",gom:"Beiboot und Schläuche",mold:"Schimmel",int:"Innenraum",tr:"Überführung"},
   wa:"Per WhatsApp senden",mail:"Per E-Mail senden",
   photos:"Hängen Sie nach dem Senden ein paar Fotos des Bootes an: So können wir genauer kalkulieren.",
   err:"Bitte geben Sie mindestens Ihren Namen und eine Nachricht ein.",hello:"Hallo, mein Name ist",subject:"Angebotsanfrage über die Website",
@@ -99,8 +97,8 @@ de:{
  contact:{eyebrow:"Über uns",h1:"Über uns und Kontakt",intro:"Wir antworten täglich. Über WhatsApp auch außerhalb der Geschäftszeiten.",
   avail:"Das ganze Jahr verfügbar",
   role:"Gründer und Skipper",
-  bio1:"Ich bin Andrea, komme aus Sassari und arbeite in den Häfen im Norden Sardiniens. Angefangen habe ich als Crew auf einem Katamaran vor der Asinara, dort hat meine Leidenschaft begonnen.",
-  bio2:"Mit Sail&Clean kümmere ich mich um Reinigung und Pflege von Booten sowie um Überführungen auf dem Seeweg, zusammen mit einigen Mitarbeitern.",
+  bio1:"Ich bin Andrea aus Sassari. Zum ersten Mal auf See war ich während Covid vor der Asinara: Ich habe Forscher begleitet, die Wale, Delfine und Meereslebensräume untersuchen. Dort hat mein Respekt vor dem Meer begonnen.",
+  bio2:"Dann kamen Charter als Crew, Jahre als Skipper und Überführungen zwischen Sardinien und dem Festland. Heute ist Sail&Clean ein kleiner Handwerksbetrieb: Wir pflegen Boote von Hand, zusammen mit einigen Mitarbeitern.",
   lic:"Bootsführerschein über 12 Seemeilen",licP:"Das ist die in Italien vorgeschriebene Befähigung für Überführungen auf offener See.",
   ins:"Versicherte Leistung",insP:"Die Versicherung für die Leistung übernehmen wir, sie ist im Preis enthalten.",
   detailsTitle:"Kontakt",phone:"Telefon und WhatsApp",email:"E-Mail",ig:"Instagram",hours:"Erreichbarkeit",
@@ -131,7 +129,7 @@ de:{about:{title:"Wer an Bord kommt",more:"Mehr über Andrea"},
   other:"Anderer Hafen",est:"geschätzt auf See",manual:"von Hand eingegeben",cap:"Ungefähre Route auf See. Gestrichelt: bereits gefahrene Routen.",
   msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von {a} nach {b} (etwa {n} Seemeilen).",
   groups:{s:"Sardinien",c:"Korsika",l:"Ligurien und Côte d'Azur",t:"Toskana"},names:{genova:"Genua",nizza:"Nizza",portoferraio:"Portoferraio (Elba)",santaTeresa:"Santa Teresa Gallura"}},
- av:{title:"Verfügbarkeit in den nächsten Monaten",sub:"Im Sommer sind die Termine schnell vergeben, melden Sie sich früh.",ok:"Frei",few:"Wenige Termine",full:"Ausgebucht"}}};
+ av:{title:"Verfügbarkeit in den nächsten Monaten",sub:"Im Sommer sind die Termine schnell vergeben, melden Sie sich früh.",ok:"Frei",few:"Wenige Termine",full:"Ausgebucht"},story:{title:"Unser Weg",sub:"Sail&Clean ist ein kleiner, junger Handwerksbetrieb. So hat alles angefangen.",items:[{t:"Asinara",d:"Während Covid auf See mit Forschern, die Wale, Delfine und Meereslebensräume untersuchen. Daraus entstand ein bewussterer, nachhaltiger Blick aufs Meer."},{t:"Charter",d:"Die erste Arbeit an Bord als Crew: harte Arbeit und das Leben auf dem Boot."},{t:"Skipper",d:"Jahre an Bord mit immer neuen Menschen: lernen, sich anzupassen und sich um den Kunden zu kümmern."},{t:"Überführungen",d:"Die ersten professionellen Überführungen rund um Sardinien und zwischen Sardinien und dem Festland, mit der ersten großen Verantwortung."},{t:"Lega Navale und Werften",d:"Über die Lega Navale haben wir die Menschen kennengelernt, die mit dem Meer leben. In den Werften haben wir mit Riggern an Segelbooten gearbeitet."}]},values:{title:"Wie wir arbeiten",p1:"Für uns ist Handarbeit der Kern unserer Arbeit. Wer etwas anfasst, muss wissen, was er in den Händen hält: glattes, sauberes Teak, ein gleichmäßiger Lack, gut gepflegter Edelstahl, eine Leine, die frei läuft, das Geräusch einer gut geölten Winsch.",p2:"Und der wiederholte Handgriff schafft Erfahrung: mit der Maserung bürsten, sorgfältig polieren, damit das Ergebnis hält, einen Mechanismus zerlegen und pflegen. Wir arbeiten mit wenigen Kunden gleichzeitig, um kein Detail aus den Augen zu verlieren.",qTitle:"Die Fragen, die wir uns jeden Tag stellen",qs:["Wie können wir unserem Kunden am besten helfen?","Wie werden wir bessere Handwerker als gestern?","Wie geben wir dem Boot, an dem wir arbeiten, einen Mehrwert?"],tags:["Kundenbetreuung","Fachwissen","Ständige Weiterbildung","Zuverlässigkeit","Präsenz"]}}};
 for(const l in TX) if(T[l]) Object.assign(T[l],TX[l]);
 
 /* =======================================================
@@ -279,6 +277,9 @@ function lists(){
   const col=(c,cls,k)=>`<div class="${cls}"><h3><span class="k" aria-hidden="true">${k}</span>${esc(c.t)}</h3><ul>${c.items.map(i=>`<li><b>${esc(i.b)}</b><span>${esc(i.s)}</span></li>`).join("")}</ul></div>`;
   $h("#deliv-costs").innerHTML=col(L.deliv.costIncl,"incl","")+col(L.deliv.costExcl,"excl","");
   $h("#deliv-faq").innerHTML=L.deliv.faq.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("");
+  $h("#story-list").innerHTML=L.story.items.map(x=>`<li><h3>${esc(x.t)}</h3><p>${esc(x.d)}</p></li>`).join("");
+  $h("#vals-qs").innerHTML=L.values.qs.map(q=>`<li>${esc(q)}</li>`).join("");
+  $h("#vals-tags").innerHTML=L.values.tags.map(q=>`<li>${esc(q)}</li>`).join("");
   $h("#pv-body").innerHTML=L.privacy.paras.map(p=>`<p>${esc(fill(p))}</p>`).join("");
   const checked=new Set([...$$("#f-chips input:checked")].map(i=>i.value));
   $h("#f-chips").innerHTML=Object.entries(L.form.chips).map(([k,v])=>
@@ -294,14 +295,14 @@ function lists(){
 const WO={
 de:{modeIntro:"Je mehr Details Sie angeben, desto genauer das Angebot. Eine kurze Nachricht genügt aber auch: Wir melden uns bei Ihnen.",modeLabel:"Wie möchten Sie uns schreiben",modeFull:"Ausführliches Formular",modeQuick:"Nur eine Nachricht",optional:"optional",msgLbl:"Nachricht",msgPh:"Sagen Sie uns, was Sie brauchen: Boot, Hafen, Arbeiten, Termine…",errMsg:"Schreiben Sie kurz, was Sie brauchen.",toSet:"noch offen",s1:"Das Boot",s1h:"Typ und Länge über alles.",typeLabel:"Bootstyp",t0:"Segel",t1:"Motor",t2:"Katamaran",full:["Segelboot","Motorboot","Katamaran"],
   planLabel:"Bootsplan: tippen Sie auf die zu reinigenden Bereiche",lenLabel:"Länge in Metern",meters:"Meter",both:"Reinigung und Überführung",cleanOnly:"nur Reinigung (Überführungen bis 20 m)",
-  zones:{gom:"Beiboot",ext:"Außenbereich und Deck",gel:"Gelcoat und Rumpf",int:"Innenraum",sails:"Segeleinlagerung"},
+  zones:{gom:"Beiboot und Schläuche",ext:"Deck und Teak",gel:"Gelcoat und Bordwände",int:"Innenraum",steel:"Edelstahl und Winschen"},
   s2:"Was zu tun ist",s2h:"Tippen Sie auf die Bereiche im Plan oder wählen Sie hier.",s3:"Wo liegt das Boot?",s3h:"Hafen oder Marina, in der wir arbeiten.",other:"Anderer Hafen",otherLbl:"Welcher Hafen?",otherPh:"z. B. Olbia, Portisco, Cannigione…",
   s4:"Ihre Kontaktdaten",s4h:"Wir schreiben Ihnen mit dem Angebot.",model:"Modell",modelPh:"z. B. Bavaria 46",note:"Hinweise für uns",notePh:"Termine, Zugang zum Boot, Wissenswertes…",
   tkTitle:"Auftragszettel",tkBoat:"Boot",tkLen:"Länge",tkPort:"Hafen",tkWorks:"Arbeiten",toChoose:"noch nicht gewählt",noneYet:"noch keine",
   send:"Auftrag per WhatsApp senden",sent:"Auftrag fertig, WhatsApp wird geöffnet…",mail:"Lieber per E-Mail?",mailSent:"Ihre E-Mail-App öffnet sich mit dem ausgefüllten Auftrag.",
   waHelp:"Falls sich WhatsApp nicht öffnet, nutzen Sie E-Mail.",errName:"Bitte geben Sie Ihren Namen an, damit wir antworten können.",intro:"Auftragszettel"}};
 const w=k=>(WO[lang]||WO.it)[k];
-const WO_ZONES=["gom","ext","gel","int","sails"];
+const WO_ZONES=["gom","ext","gel","int","steel"];
 const woTouched={type:false,len:false};
 const woMode=()=>(($("input[name=wo-mode]:checked")||{}).value==="quick"?"quick":"full");
 
@@ -327,7 +328,7 @@ function woSync(){
   $h("#wo-hull").style.transform=`scale(${(0.62+p/100*0.38).toFixed(3)})`;
   WO_ZONES.forEach(k=>{ const cb=$(`#f-chips input[value="${k}"]`), on=!!(cb&&cb.checked);
     $$(`.wo-z[data-k="${k}"]`).forEach(z=>{ z.classList.toggle("on",on); z.setAttribute("aria-checked",on); }); });
-  $$(".wo-rig").forEach(g=>g.classList.toggle("on",!!($('#f-chips input[value="sails"]')||{}).checked));
+  $$(".wo-rig").forEach(g=>g.classList.toggle("on",!!($('#f-chips input[value="steel"]')||{}).checked));
   const model=$h("#f-boat").value.trim();
   const boatTxt=[woTouched.type?w("full")[type]:"",model].filter(Boolean).join(" · ");
   $h("#wo-o-boat").textContent=boatTxt||w("toSet"); $h("#wo-o-boat").classList.toggle("empty",!boatTxt);

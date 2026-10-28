@@ -6,7 +6,7 @@
    "@id": "{{SITE}}#business",
    "name": "Sail&Clean",
    "alternateName": "Sail and Clean",
-   "description": "Pulizia di barche fino a 30 metri nel nord della Sardegna e trasferimenti di imbarcazioni fino a 20 metri in tutto il Mediterraneo.",
+   "description": "Cura artigianale delle barche fino a 30 metri nel nord della Sardegna e trasferimenti di imbarcazioni fino a 20 metri in tutto il Mediterraneo.",
    "url": "{{SITE}}",
    "image": "{{SITE}}og-image.jpg",
    "logo": "{{SITE}}logo.png",
@@ -107,7 +107,7 @@
        "@type": "Service",
        "name": "Pulizia e cura della barca",
        "serviceType": "Boat cleaning",
-       "description": "Interni, esterni, gel coat, ceratura, decapaggio, lavaggio gommoni e rimessaggio vele per barche fino a 30 metri, in acqua o a secco.",
+       "description": "Teak (lavaggio, oleatura e restauro), acciai e componenti meccaniche, gel coat e murate, decapaggio e ceratura, tendalini e cuscineria, tubolari, eliminazione della muffa, interni ordinari o a vapore. Barche fino a 30 metri, in acqua o a secco.",
        "areaServed": "Nord Sardegna"
       }
      },

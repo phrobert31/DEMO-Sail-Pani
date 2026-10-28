@@ -33,12 +33,12 @@ it:{
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti"},
  map:{capHome:"Nord della Sardegna.",capClean:"I porti dove lavoriamo abitualmente.",capRoutes:"Alcune rotte già percorse."},
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"pulita e pronta a partire.",
-  lead:"Puliamo barche fino a 30 metri nel nord della Sardegna e trasferiamo imbarcazioni fino a 20 metri in tutto il Mediterraneo.",
+  lead:"Cura artigianale delle barche fino a 30 metri nel nord della Sardegna e trasferimenti fino a 20 metri in tutto il Mediterraneo.",
   cta1:"Servizi di pulizia",cta2:"Trasferimenti",
   t1:"lunghezza massima, pulizie",t2:"lunghezza massima, trasferimenti",t3:"al miglio, trasferimenti",
   svcTitle:"Servizi",svcSub:"Lavoriamo per armatori privati, porti turistici e cantieri.",
-  c1h:"Pulizia e cura",c1p:"Interni, esterni e piccola manutenzione, in acqua o a secco. Scegli tu cosa serve.",
-  c1:["Interni: cabine, dinette, bagni","Esterni: coperta, gel coat, vetroresina, oblò","Lavaggio gommoni, decapaggio, ceratura","Prodotti ecosostenibili, linea classica o nanotecnologia","Rimessaggio vele"],
+  c1h:"Pulizia e cura",c1p:"Lavoro artigiano, fatto a mano, con il prodotto giusto per ogni superficie. In acqua o a secco.",
+  c1:["Teak: lavaggio, sbiancatura, oleatura e restauro","Gel coat e murate: pulizia e lucidatura","Acciai e componenti meccaniche, come winch e stopper","Tendalini, cuscineria, tubolari ed eliminazione della muffa","Interni: pulizia ordinaria o profonda a vapore"],
   c1meta:["Fino a 30 m","Nord della Sardegna","In acqua o a secco"],c2meta:["Fino a 20 m","7 € al miglio","Anche all'estero"],
   c1btn:"Vedi i servizi di pulizia",
   c2h:"Trasferimenti e skipperaggio",c2p:"Portiamo la tua barca da un porto all'altro, oltre le 12 miglia e all'estero.",
@@ -46,27 +46,25 @@ it:{
   c2btn:"Come funziona un trasferimento",
   roseCap:"Rosa dei venti del Mediterraneo.",winds:["Tramontana, da nord", "Grecale, da nord-est", "Levante, da est", "Scirocco, da sud-est", "Ostro, da sud", "Libeccio, da sud-ovest", "Ponente, da ovest", "Maestrale, da nord-ovest"],
   whyTitle:"Perché Sail&Clean",
-  why:[{t:"Prodotti ecosostenibili",d:"Linea classica oppure nanotecnologia, che costa di più e protegge più a lungo. Scegli tu."},
-       {t:"Parli con chi sale a bordo",d:"Rispondiamo noi al telefono e siamo noi a lavorare sulla tua barca. Nessun intermediario."},
-       {t:"Prezzi chiari",d:"Trasferimenti a 7 € al miglio. Pulizie con preventivo in base alla barca e ai servizi che scegli."}],
+  why:[{t:"Lavoro fatto a mano",d:"Pochi lavori alla volta, per curare ogni dettaglio: il teak spazzolato seguendo la venatura, l'acciaio ben trattato, la cima pulita che scorre fluida."},{t:"Il prodotto giusto, non il più aggressivo",d:"Scegliamo i prodotti in base alla superficie e al suo stato. Niente varechina né sgrassatori che rovinano gel coat, teak e gomme."},{t:"Presenza e affidabilità",d:"Parli con chi sale a bordo: rispondiamo noi e lavoriamo noi sulla tua barca, con aggiornamento continuo su prodotti e tecniche."}],
   ctaTitle:"Dicci di che barca si tratta",ctaText:"Mandaci modello, lunghezza e porto. Ti rispondiamo con un preventivo."},
  clean:{eyebrow:"Servizio 01",h1:"Pulizia e cura della barca",
-  intro:"Barche a vela e a motore fino a 30 metri, in acqua o a secco. Decidi tu se pulire solo gli interni, solo gli esterni o tutto.",
+  intro:"Lavoro artigiano su barche a vela e a motore fino a 30 metri, in acqua o a secco. Scegli tu cosa serve: dal teak agli interni.",
   whatTitle:"Cosa facciamo",whatSub:"Ogni intervento è su misura: ci dici cosa ti serve e prepariamo il preventivo.",
-  list:["Interni: cabine, dinette, cucina","Bagni e sanitari","Coperta e pozzetto","Gel coat","Vetroresina","Oblò e cristalli","Lavaggio gommoni","Decapaggio","Ceratura","Piccola manutenzione","Rimessaggio vele","Pulizia dopo il cantiere"],
+  list:["Teak: lavaggio con detergenti, sbiancante, oleatura e protezione","Restauro del teak: levigatura, ripristino dei comenti, incollaggio delle zone sollevate","Pulizia e ripristino degli acciai","Ripristino e restauro di componenti meccaniche, come stopper e winch","Pulizia degli oblò","Pulizia e lucidatura del gel coat","Lucidatura delle murate","Piccoli danni su gel coat e vetroresina","Decapaggio e ceratura","Tendalini e cuscineria","Tubolari e gomme in PVC e neoprene","Eliminazione della muffa","Pulizia ordinaria: aspirazione e riordino degli spazi","Pulizia profonda: aspirazione, sanificazione a vapore, lavaggio con detergenti e macchinari per le cuscinerie"],
   noHull:"Non eseguiamo la pulizia della chiglia sott'acqua. Per il resto lavoriamo con la barca sia in acqua sia a secco.",
-  prodTitle:"Prodotti",prodSub:"Usiamo solo prodotti ecosostenibili. Puoi scegliere tra due linee.",
-  prod1h:"Linea classica",prod1p:"Prodotti ecosostenibili per la pulizia ordinaria, con un costo più contenuto.",
-  prod2h:"Nanotecnologia · consigliata",prod2p:"Costa di più e dà un risultato migliore: la superficie resta protetta più a lungo e si sporca meno. È la linea che consigliamo.",
-  groups:[{t:"Esterni",items:["Coperta e pozzetto","Gel coat e vetroresina","Oblò e cristalli","Ceratura","Decapaggio"]},{t:"Interni",items:["Cabine, dinette, cucina","Bagni e sanitari","Aerazione e ordine a bordo"]},{t:"Altri servizi",items:["Lavaggio gommoni","Piccola manutenzione","Rimessaggio vele","Pulizia dopo il cantiere"]}],badge:"Consigliata",
+  prodTitle:"Il prodotto giusto per ogni superficie",prodSub:"Pulire non vuol dire solo togliere una macchia: vuol dire prendersi cura di quello che abbiamo. Scegliamo i prodotti in base all'esperienza, alla superficie e allo stato della barca, per proteggerla e per rispettare il mare.",
+  prod1h:"Niente varechina né sgrassatori",prod1p:"Danno l'idea del pulito, ma insieme allo sporco corrodono la superficie e con il tempo la rendono fragile. Un gel coat vecchio non si tratta come uno nuovo.",
+  prod2h:"Nanotecnologia",prod2p:"Per chi usa la barca per lavoro: un film protettivo che rende più veloce la pulizia di tutti i giorni. Per chi cerca la velocità: levigature con prodotti usati nelle regate internazionali e alle Olimpiadi, con un'efficienza dichiarata dal produttore del +45%.",
+  groups:[{t:"Coperta, teak e acciai",items:["Teak: lavaggio con detergenti, sbiancante, oleatura e protezione","Restauro del teak: levigatura, ripristino dei comenti, incollaggio delle zone sollevate","Pulizia e ripristino degli acciai","Ripristino e restauro di componenti meccaniche, come stopper e winch","Pulizia degli oblò"]},{t:"Scafo e gel coat",items:["Pulizia e lucidatura del gel coat","Lucidatura delle murate","Piccoli danni su gel coat e vetroresina","Decapaggio e ceratura"]},{t:"Tessuti, gomme e muffa",items:["Tendalini e cuscineria","Tubolari e gomme in PVC e neoprene","Eliminazione della muffa"]},{t:"Interni",items:["Pulizia ordinaria: aspirazione e riordino degli spazi","Pulizia profonda: aspirazione, sanificazione a vapore, lavaggio con detergenti e macchinari per le cuscinerie"]}],badge:"Consigliata",
   areaTitle:"Dove lavoriamo",areaSub:"Nord della Sardegna. Raggiungiamo i principali porti turistici della costa.",
   ports:["Porto Torres","Alghero e Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"La trasferta si paga a parte ed è sempre indicata nel preventivo. Per altri porti, chiedi senza impegno.",
   quoteTitle:"Come chiedere un preventivo",quoteSub:"Il servizio è su richiesta, senza scadenze di prenotazione. I tempi dipendono dal modello della barca e dal suo stato.",
-  steps:[{t:"Compila il modulo",d:"Modello, lunghezza, porto e servizi che ti servono."},{t:"Manda le foto",d:"Su WhatsApp, così vediamo subito lo stato della barca."},{t:"Ricevi il preventivo",d:"Con i servizi scelti, la linea di prodotti e la trasferta."},{t:"Fissiamo la data",d:"Concordiamo il giorno e veniamo a bordo."}]},
+  steps:[{t:"Compila il modulo",d:"Modello, lunghezza, porto e lavori che ti servono."},{t:"Manda le foto",d:"Su WhatsApp, così vediamo subito lo stato della barca."},{t:"Ricevi il preventivo",d:"Con i lavori scelti, i prodotti adatti e la trasferta."},{t:"Fissiamo la data",d:"Concordiamo il giorno e veniamo a bordo."}],prod3h:"Un esempio: la muffa sui tubolari",prod3p:"La varechina su PVC e neoprene corrode lo strato superficiale e sparge la muffa sul gommone, che l'anno dopo ricompare. Il prodotto giusto intrappola la muffa e la porta via con la sola acqua, senza rovinare il materiale."},
  form:{title:"Richiedi un preventivo",name:"Nome",reach:"Email o telefono",boat:"Modello e lunghezza",boatPh:"es. Bavaria 46, 14 m",
   port:"Porto",portPh:"es. Olbia",services:"Servizi che ti interessano",msg:"Messaggio",msgPh:"Raccontaci cosa ti serve e quando.",
-  chips:{int:"Interni",ext:"Esterni",gel:"Gel coat",wax:"Ceratura",dec:"Decapaggio",gom:"Gommone",sails:"Rimessaggio vele",tr:"Trasferimento"},
+  chips:{ext:"Coperta e teak",gel:"Gel coat e murate",steel:"Acciai e winch",wax:"Decapaggio e ceratura",fab:"Tendalini e cuscineria",gom:"Gommone e tubolari",mold:"Muffa",int:"Interni",tr:"Trasferimento"},
   wa:"Invia su WhatsApp",mail:"Invia per email",
   photos:"Dopo aver inviato il messaggio, allega qualche foto della barca: ci aiuta a fare un preventivo preciso.",
   err:"Inserisci almeno il nome e un messaggio.",hello:"Ciao, sono",subject:"Richiesta di preventivo dal sito",
@@ -98,8 +96,8 @@ it:{
  contact:{eyebrow:"Chi siamo",h1:"Chi siamo e contatti",intro:"Rispondiamo tutti i giorni. Su WhatsApp anche fuori orario.",
   avail:"Disponibile tutto l'anno",
   role:"Fondatore e skipper",
-  bio1:"Sono Andrea, di Sassari, e lavoro nei porti del nord della Sardegna. Ho iniziato come marinaio su un catamarano all'Asinara, ed è lì che è nata la passione.",
-  bio2:"Con Sail&Clean mi occupo della pulizia e della cura delle barche e dei trasferimenti via mare, insieme ad alcuni collaboratori.",
+  bio1:"Sono Andrea, di Sassari. Il mio primo contatto con la nautica è stato all'Asinara, durante il Covid: accompagnavo in mare i ricercatori che studiano i cetacei e gli ambienti marini. Lì è nato il rispetto per il mare e per l'ambiente che protegge.",
+  bio2:"Poi il charter come marinaio, gli anni da skipper e i trasferimenti tra la Sardegna e il continente. Oggi Sail&Clean è una piccola azienda artigiana: curiamo le barche a mano, insieme ad alcuni collaboratori.",
   lic:"Patente nautica oltre le 12 miglia",licP:"È l'abilitazione richiesta per i trasferimenti in mare aperto.",
   ins:"Servizio assicurato",insP:"L'assicurazione per il servizio è a nostro carico ed è compresa nel prezzo.",
   detailsTitle:"Contatti",phone:"Telefono e WhatsApp",email:"Email",ig:"Instagram",hours:"Orari",
@@ -130,7 +128,7 @@ it:{about:{title:"Chi sale a bordo",more:"Scopri di più su Andrea"},
   other:"Altro porto",est:"stima via mare",manual:"inserite a mano",cap:"Rotta indicativa via mare. Tratteggiate: rotte già percorse.",
   msg:"Ciao, vorrei un preventivo per un trasferimento da {a} a {b} (circa {n} miglia).",
   groups:{s:"Sardegna",c:"Corsica",l:"Liguria e Costa Azzurra",t:"Toscana"},names:{}},
- av:{title:"Disponibilità nei prossimi mesi",sub:"In estate i posti finiscono presto: scrivici per tempo.",ok:"Disponibile",few:"Pochi posti",full:"Al completo"}}};
+ av:{title:"Disponibilità nei prossimi mesi",sub:"In estate i posti finiscono presto: scrivici per tempo.",ok:"Disponibile",few:"Pochi posti",full:"Al completo"},story:{title:"Il nostro percorso",sub:"Sail&Clean è una piccola azienda artigiana, giovane e dinamica. È nata così.",items:[{t:"Asinara",d:"Durante il Covid, in mare con i ricercatori che studiano i cetacei e gli ambienti marini. Nasce uno sguardo più consapevole e sostenibile verso il mare."},{t:"Charter",d:"Il primo imbarco come marinaio: la fatica e la vita in barca."},{t:"Skipper",d:"Anni a bordo con persone sempre diverse: imparare ad adattarsi e a curare il rapporto con il cliente."},{t:"Trasferimenti",d:"I primi trasferimenti da professionisti, in Sardegna e tra la Sardegna e il continente, con le prime grandi responsabilità."},{t:"Lega Navale e cantieri",d:"Con la Lega Navale abbiamo conosciuto chi vive il mare. Nei cantieri abbiamo lavorato accanto ai rigger sulle barche a vela."}]},values:{title:"Il nostro modo di lavorare",p1:"Per noi la manualità è l'essenza del lavoro. Toccare ti obbliga a conoscere quello che hai tra le mani: un teak liscio e pulito, una verniciatura regolare, un acciaio ben trattato, una cima che scorre fluida, il suono di un ingranaggio ben oliato.",p2:"E il gesto, ripetuto, costruisce l'esperienza: spazzolare seguendo le venature del legno, lucidare con cura perché il risultato duri, smontare un meccanismo e prendersene cura. Lavoriamo con pochi clienti alla volta per non perdere l'attenzione al dettaglio.",qTitle:"Le domande che ci facciamo ogni giorno",qs:["Come possiamo aiutare al meglio il nostro cliente?","Come possiamo essere artigiani migliori di ieri?","Come possiamo dare valore alla barca su cui lavoriamo?"],tags:["Cura del cliente","Conoscenza","Aggiornamento continuo","Affidabilità","Presenza"]}}};
 for(const l in TX) if(T[l]) Object.assign(T[l],TX[l]);
 
 /* =======================================================
@@ -278,6 +276,9 @@ function lists(){
   const col=(c,cls,k)=>`<div class="${cls}"><h3><span class="k" aria-hidden="true">${k}</span>${esc(c.t)}</h3><ul>${c.items.map(i=>`<li><b>${esc(i.b)}</b><span>${esc(i.s)}</span></li>`).join("")}</ul></div>`;
   $h("#deliv-costs").innerHTML=col(L.deliv.costIncl,"incl","")+col(L.deliv.costExcl,"excl","");
   $h("#deliv-faq").innerHTML=L.deliv.faq.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("");
+  $h("#story-list").innerHTML=L.story.items.map(x=>`<li><h3>${esc(x.t)}</h3><p>${esc(x.d)}</p></li>`).join("");
+  $h("#vals-qs").innerHTML=L.values.qs.map(q=>`<li>${esc(q)}</li>`).join("");
+  $h("#vals-tags").innerHTML=L.values.tags.map(q=>`<li>${esc(q)}</li>`).join("");
   $h("#pv-body").innerHTML=L.privacy.paras.map(p=>`<p>${esc(fill(p))}</p>`).join("");
   const checked=new Set([...$$("#f-chips input:checked")].map(i=>i.value));
   $h("#f-chips").innerHTML=Object.entries(L.form.chips).map(([k,v])=>
@@ -293,14 +294,14 @@ function lists(){
 const WO={
 it:{modeIntro:"Più dettagli ci dai, più preciso è il preventivo. Ma va bene anche solo un messaggio: ti ricontattiamo noi.",modeLabel:"Come vuoi scriverci",modeFull:"Scheda dettagliata",modeQuick:"Solo un messaggio",optional:"facoltativo",msgLbl:"Messaggio",msgPh:"Raccontaci cosa ti serve: barca, porto, lavori, date…",errMsg:"Scrivi due righe su cosa ti serve.",toSet:"da indicare",s1:"La barca",s1h:"Tipo di barca e lunghezza complessiva.",typeLabel:"Tipo di barca",t0:"Vela",t1:"Motore",t2:"Catamarano",full:["Barca a vela","Barca a motore","Catamarano"],
   planLabel:"Pianta della barca: tocca le zone da pulire",lenLabel:"Lunghezza in metri",meters:"metri",both:"pulizia e trasferimento",cleanOnly:"solo pulizia (trasferimenti fino a 20 m)",
-  zones:{gom:"Gommone",ext:"Esterni e coperta",gel:"Gel coat e scafo",int:"Interni",sails:"Rimessaggio vele"},
+  zones:{gom:"Gommone e tubolari",ext:"Coperta e teak",gel:"Gel coat e murate",int:"Interni",steel:"Acciai e winch"},
   s2:"Cosa va fatto",s2h:"Tocca le zone sulla pianta, oppure scegli qui.",s3:"Dove si trova",s3h:"Porto o marina dove facciamo il lavoro.",other:"Altro",otherLbl:"Quale porto?",otherPh:"es. Olbia, Portisco, Cannigione…",
   s4:"A chi rispondiamo",s4h:"Ti scriviamo noi con il preventivo.",model:"Modello",modelPh:"es. Bavaria 46",note:"Note per noi",notePh:"Date, accesso alla barca, cose da sapere…",
   tkTitle:"Scheda lavoro",tkBoat:"Barca",tkLen:"Lunghezza",tkPort:"Porto",tkWorks:"Lavori",toChoose:"da scegliere",noneYet:"nessuno ancora",
   send:"Invia la scheda su WhatsApp",sent:"Scheda pronta, apro WhatsApp…",mail:"Preferisci l'email?",mailSent:"Apro la tua app email con la scheda già scritta.",
   waHelp:"Se WhatsApp non si apre, usa l'email.",errName:"Scrivi il tuo nome: ci serve per risponderti.",intro:"Scheda lavoro"}};
 const w=k=>(WO[lang]||WO.it)[k];
-const WO_ZONES=["gom","ext","gel","int","sails"];
+const WO_ZONES=["gom","ext","gel","int","steel"];
 const woTouched={type:false,len:false};
 const woMode=()=>(($("input[name=wo-mode]:checked")||{}).value==="quick"?"quick":"full");
 
@@ -326,7 +327,7 @@ function woSync(){
   $h("#wo-hull").style.transform=`scale(${(0.62+p/100*0.38).toFixed(3)})`;
   WO_ZONES.forEach(k=>{ const cb=$(`#f-chips input[value="${k}"]`), on=!!(cb&&cb.checked);
     $$(`.wo-z[data-k="${k}"]`).forEach(z=>{ z.classList.toggle("on",on); z.setAttribute("aria-checked",on); }); });
-  $$(".wo-rig").forEach(g=>g.classList.toggle("on",!!($('#f-chips input[value="sails"]')||{}).checked));
+  $$(".wo-rig").forEach(g=>g.classList.toggle("on",!!($('#f-chips input[value="steel"]')||{}).checked));
   const model=$h("#f-boat").value.trim();
   const boatTxt=[woTouched.type?w("full")[type]:"",model].filter(Boolean).join(" · ");
   $h("#wo-o-boat").textContent=boatTxt||w("toSet"); $h("#wo-o-boat").classList.toggle("empty",!boatTxt);
