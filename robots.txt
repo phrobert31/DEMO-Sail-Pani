@@ -25,4 +25,4 @@ User-agent: meta-externalagent
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://phrobert31.github.io/DEMO-Sail-Pani/sitemap.xml
+Sitemap: https://www.sailandclean.it/sitemap.xml

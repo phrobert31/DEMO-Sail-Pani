@@ -4,7 +4,7 @@
 Options -Indexes
 DirectoryIndex index.html
 AddDefaultCharset utf-8
-ErrorDocument 404 /DEMO-Sail-Pani/404.html
+ErrorDocument 404 /404.html
 
 AddType font/woff2 .woff2
 AddType image/webp .webp
@@ -19,9 +19,9 @@ AddType application/xml .xml
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # One canonical host (phrobert31.github.io): www and non-www go to the same address
-  # RewriteCond %{HTTP_HOST} !^phrobert31\.github\.io$ [NC]
-  # RewriteRule ^ https://phrobert31.github.io%{REQUEST_URI} [L,R=301]
+  # One canonical host (www.sailandclean.it): www and non-www go to the same address
+  RewriteCond %{HTTP_HOST} !^www\.sailandclean\.it$ [NC]
+  RewriteRule ^ https://www.sailandclean.it%{REQUEST_URI} [L,R=301]
 
   # Never publish the source and tooling folders if they get uploaded by mistake
   RewriteRule ^(src|tools|docs|node_modules|\.claude|\.github)(/|$) - [F,L]
