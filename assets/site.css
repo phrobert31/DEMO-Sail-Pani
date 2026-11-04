@@ -1215,3 +1215,13 @@ b,strong{font-weight:700}
 .av-m li.av-few{background:#FDF0D2;color:#7A5200}
 .av-m li.av-few::after,.av-k.av-few::before{background:var(--sun-d)}
 .about-p .bio .avail{justify-self:start}
+/* footer banner (from the mood board cover) */
+.fbanner{position:relative;isolation:isolate;overflow:hidden;border-radius:var(--r);margin-top:48px;min-height:clamp(170px,17vw,230px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:28px clamp(24px,4.5vw,64px)}
+.fbanner .bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:30% 58%}
+.fbanner::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,38,71,.96) 0%,rgba(10,38,71,.82) 34%,rgba(10,38,71,.15) 72%)}
+.fbanner::after{content:"";position:absolute;right:0;bottom:0;width:clamp(110px,15vw,210px);aspect-ratio:1;background:var(--swoosh) right bottom/100% 100% no-repeat}
+.fb-t{margin:0;font:800 clamp(1.7rem,3.6vw,3rem)/1.04 var(--d);letter-spacing:-.02em;color:#BFE0F5}
+.fb-t span{color:var(--sun)}
+.fb-sub{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.45);font:600 clamp(.72rem,1vw,.9rem)/1 var(--d);letter-spacing:.24em;color:#fff}
+@media (max-width:640px){.fbanner .bg{background-position:72% 60%}.fbanner::before{background:linear-gradient(90deg,rgba(10,38,71,.94),rgba(10,38,71,.55))}}
+.fbanner+.fbot{border-top:0;margin-top:22px}
