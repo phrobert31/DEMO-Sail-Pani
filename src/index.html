@@ -2533,6 +2533,18 @@ let page=MPA?ROOT.dataset.page:"home", mapOK=false;
 const t=p=>p.split(".").reduce((o,k)=>o==null?o:o[k],T[lang])??"";
 const fill=s=>String(s).replaceAll("{owner}",CONFIG.owner).replaceAll("{email}",CONFIG.email).replaceAll("{base}",CONFIG.base);
 
+/* Open WhatsApp with a ready-made message. On phones go straight to the app
+   (whatsapp://) in the same tab: the wa.me page in a new tab often loses the
+   text when WhatsApp starts up. If the app is not installed, fall back to wa.me. */
+function waSend(text){
+  const q="phone="+CONFIG.phoneIntl+"&text="+encodeURIComponent(text), web="https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(text);
+  const phone=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Mac/.test(navigator.platform));
+  if(!phone){ window.open(web,"_blank","noopener"); return; }
+  let left=false; const off=()=>{ if(document.visibilityState==="hidden") left=true; };
+  document.addEventListener("visibilitychange",off);
+  location.href="whatsapp://send?"+q;
+  setTimeout(()=>{ document.removeEventListener("visibilitychange",off); if(!left&&document.visibilityState==="visible") location.href=web; },1600);
+}
 function applyConfig(){
   const show=Object.assign({},CONFIG,{
     igShow:"@"+CONFIG.instagram,
@@ -2954,7 +2966,7 @@ function wireCalc(){
   $h("#calc-btn").onclick=()=>{
     const nameOf=(k,x)=>k?portName(k):x.value.trim(), na=nameOf(plan.a,AX), nb=nameOf(plan.b,BX), n=+c.dataset.miles||0;
     const m=na&&nb ? (n>0?L.msg:L.msgNoMiles).replace("{a}",na).replace("{b}",nb).replace("{n}",n) : t("calc.msg").replace("{n}",n);
-    open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener"); };
+    waSend(m); };
 }
 let planAnim=0;
 function drawPlan(r,animate){
@@ -3093,7 +3105,7 @@ $h("#send-wa").addEventListener("click",()=>{
   const m=compose(); if(!m) return;
   $h("#send-wa").classList.add("sent"); $h("#wo-send-lbl").textContent=w("sent"); $h("#wo-status").textContent=w("waHelp");
   setTimeout(()=>{ $h("#send-wa").classList.remove("sent"); $h("#wo-send-lbl").textContent=w("send"); },4000);
-  window.open("https://wa.me/"+CONFIG.phoneIntl+"?text="+encodeURIComponent(m),"_blank","noopener");
+  waSend(m);
 });
 $h("#send-mail").addEventListener("click",()=>{
   const m=compose(); if(m) $h("#wo-status").textContent=w("mailSent"); if(m) location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent(t("form.subject"))+"&body="+encodeURIComponent(m);
