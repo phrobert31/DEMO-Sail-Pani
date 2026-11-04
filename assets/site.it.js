@@ -6,7 +6,7 @@ const CONFIG = {
   owner: "Andrea Pani",
   phoneShow: "+39 351 753 8315",
   phoneIntl: "393517538315",
-  email: "sailandclean@gmail.com",
+  email: "info@sailandclean.it",
   instagram: "sailandclean_",
   youtube: "SailClean-Official",        // CHECK: Instagram handles cannot contain "&"
   vat: "",                            // add the P. IVA when available
