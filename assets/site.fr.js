@@ -33,7 +33,7 @@ fr:{
  calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact",about:"À propos"},
  map:{capHome:"Nord de la Sardaigne.",capClean:"Les ports et marinas où nous intervenons régulièrement.",capRoutes:"Quelques convoyages déjà réalisés."},
- home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"propre et prêt à partir.",
+ home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"notre passion.",
   lead:"Entretien artisanal des bateaux jusqu'à 30 mètres dans le nord de la Sardaigne, et convoyages jusqu'à 20 mètres dans toute la Méditerranée.",
   cta1:"Services de nettoyage",cta2:"Convoyages",
   t1:"longueur maximale, nettoyage",t2:"longueur maximale, convoyage",t3:"par mille, convoyage",
@@ -46,7 +46,7 @@ fr:{
   c2:["Tout type de bateau jusqu'à 20 mètres","7 € par mille","Contrôle du bateau sur place avant le départ","Récupération au chantier ou chez le courtier après l'achat","Skipper pour marinas, chantiers et agences"],
   c2btn:"Comment se passe un convoyage",
   roseCap:"La rose des vents de la Méditerranée.",winds:["Tramontane, du nord", "Grec, du nord-est", "Levant, de l'est", "Sirocco, du sud-est", "Ostro, du sud", "Libeccio, du sud-ouest", "Ponant, de l'ouest", "Mistral, du nord-ouest"],
-  whyTitle:"Pourquoi Sail&Clean",
+  whyTitle:"Chaque détail compte.",
   why:[{t:"Un travail fait main",d:"Peu de chantiers à la fois, pour soigner chaque détail : le teck brossé dans le sens du fil, l'inox bien traité, le bout propre qui coulisse."},{t:"Le bon produit, pas le plus agressif",d:"Nous choisissons les produits selon la surface et son état. Pas d'eau de Javel ni de dégraissants qui abîment gel coat, teck et caoutchouc."},{t:"Présents et fiables",d:"Vous parlez à ceux qui montent à bord : c'est nous qui répondons et nous qui travaillons sur votre bateau, toujours à jour sur les produits et les méthodes."}],
   ctaTitle:"Parlez-nous de votre bateau",ctaText:"Envoyez le modèle, la longueur et le port. Nous répondons avec un devis."},
  clean:{eyebrow:"Service 01",h1:"Nettoyage et entretien du bateau",
@@ -365,11 +365,18 @@ function applyLang(){
   $h("#mbar-q").textContent=t("ui.quote"); $h("#mbar-wa").textContent="WhatsApp";
   $h(".wa").setAttribute("data-tip",t("ui.whatsapp")); toTop.setAttribute("aria-label",t("ui.top"));
   $h("#mbar-wa").href="https://wa.me/"+CONFIG.phoneIntl;
+  highlight();
   primeReveal(); movePill();
   title();
   if(!MPA) history.replaceState(null,"","?lang="+lang+location.hash);
 }
 
+function highlight(){
+  $$(".hero h1 em, .phead h1, .sec-head h2, .calc-t, .band-ink h2").forEach(h=>{
+    const txt=h.textContent.trim(), m=txt.match(/^(.*\s)(\S+)$/); if(!m) return;
+    h.innerHTML=esc(m[1])+`<span class="hl">${esc(m[2])}</span>`;
+  });
+}
 function title(){
   const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
@@ -710,10 +717,10 @@ document.addEventListener("keydown",e=>{
 /* init */
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
-const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
+const FACE="assets/img/face.webp", IMG={bow:"assets/img/bow.webp",cleat:"assets/img/cleat.webp",cover:"assets/img/cover.webp",hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
 $h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
-$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
-$$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
+$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.bow);$h("#img-cleat").src=A(IMG.cleat);
+$$(".bg[data-bg]").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);
 if(MPA && page==="home" && lang==="it"){
   const want=qs.get("lang"), hash=location.hash.slice(1);

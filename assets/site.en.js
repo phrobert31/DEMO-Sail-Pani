@@ -33,7 +33,7 @@ en:{
  calc:{title:"Get an estimate",sub:"Enter the route distance in miles. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact",about:"About"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
- home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"clean and ready to sail.",
+ home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"our passion.",
   lead:"Hands-on care for boats up to 30 metres in north Sardinia, and deliveries of boats up to 20 metres across the Mediterranean.",
   cta1:"Cleaning services",cta2:"Deliveries",
   t1:"maximum length, cleaning",t2:"maximum length, delivery",t3:"per mile, delivery",
@@ -46,7 +46,7 @@ en:{
   c2:["Any type of boat up to 20 metres","€7 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
   c2btn:"How a delivery works",
   roseCap:"The Mediterranean wind rose.",winds:["Tramontana, from the north", "Grecale, from the north-east", "Levante, from the east", "Scirocco, from the south-east", "Ostro, from the south", "Libeccio, from the south-west", "Ponente, from the west", "Maestrale, from the north-west"],
-  whyTitle:"Why Sail&Clean",
+  whyTitle:"Every detail counts.",
   why:[{t:"Done by hand",d:"A few jobs at a time, so every detail gets attention: teak brushed along the grain, well-treated steel, a clean line that runs freely."},{t:"The right product, not the harshest",d:"We choose products for each surface and its condition. No bleach or harsh degreasers that damage gel coat, teak and rubber."},{t:"There when you need us",d:"You talk to the people who come aboard: we answer the phone and we work on your boat, always keeping up with new products and methods."}],
   ctaTitle:"Tell us about the boat",ctaText:"Send us the model, length and port, and we'll reply with a quote."},
  clean:{eyebrow:"Service 01",h1:"Boat cleaning and care",
@@ -365,11 +365,18 @@ function applyLang(){
   $h("#mbar-q").textContent=t("ui.quote"); $h("#mbar-wa").textContent="WhatsApp";
   $h(".wa").setAttribute("data-tip",t("ui.whatsapp")); toTop.setAttribute("aria-label",t("ui.top"));
   $h("#mbar-wa").href="https://wa.me/"+CONFIG.phoneIntl;
+  highlight();
   primeReveal(); movePill();
   title();
   if(!MPA) history.replaceState(null,"","?lang="+lang+location.hash);
 }
 
+function highlight(){
+  $$(".hero h1 em, .phead h1, .sec-head h2, .calc-t, .band-ink h2").forEach(h=>{
+    const txt=h.textContent.trim(), m=txt.match(/^(.*\s)(\S+)$/); if(!m) return;
+    h.innerHTML=esc(m[1])+`<span class="hl">${esc(m[2])}</span>`;
+  });
+}
 function title(){
   const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
@@ -710,10 +717,10 @@ document.addEventListener("keydown",e=>{
 /* init */
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
-const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
+const FACE="assets/img/face.webp", IMG={bow:"assets/img/bow.webp",cleat:"assets/img/cleat.webp",cover:"assets/img/cover.webp",hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
 $h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
-$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
-$$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
+$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.bow);$h("#img-cleat").src=A(IMG.cleat);
+$$(".bg[data-bg]").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);
 if(MPA && page==="home" && lang==="it"){
   const want=qs.get("lang"), hash=location.hash.slice(1);

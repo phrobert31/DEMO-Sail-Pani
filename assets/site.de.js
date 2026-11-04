@@ -33,7 +33,7 @@ de:{
  calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt",about:"Über uns"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
- home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"sauber und bereit zum Ablegen.",
+ home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"unsere Leidenschaft.",
   lead:"Handwerkliche Bootspflege für Boote bis 30 Meter im Norden Sardiniens und Überführungen bis 20 Meter im ganzen Mittelmeer.",
   cta1:"Reinigungsleistungen",cta2:"Überführungen",
   t1:"maximale Länge, Reinigung",t2:"maximale Länge, Überführung",t3:"pro Seemeile, Überführung",
@@ -46,7 +46,7 @@ de:{
   c2:["Jede Bootsart bis 20 Meter","7 € pro Seemeile","Kontrolle des Bootes vor Ort vor der Abfahrt","Abholung von Werft oder Makler nach dem Kauf","Skipper für Marinas, Werften und Agenturen"],
   c2btn:"So läuft eine Überführung ab",
   roseCap:"Die Windrose des Mittelmeers.",winds:["Tramontana, aus Norden", "Grecale, aus Nordosten", "Levante, aus Osten", "Schirokko, aus Südosten", "Ostro, aus Süden", "Libeccio, aus Südwesten", "Ponente, aus Westen", "Mistral, aus Nordwesten"],
-  whyTitle:"Warum Sail&Clean",
+  whyTitle:"Jedes Detail zählt.",
   why:[{t:"Von Hand gemacht",d:"Wenige Aufträge gleichzeitig, damit jedes Detail stimmt: Teak mit der Maserung gebürstet, gut gepflegter Edelstahl, eine saubere Leine, die frei läuft."},{t:"Das richtige Mittel, nicht das aggressivste",d:"Wir wählen die Mittel nach Oberfläche und Zustand. Kein Chlorbleiche und keine scharfen Entfetter, die Gelcoat, Teak und Gummi schaden."},{t:"Erreichbar und zuverlässig",d:"Sie sprechen mit den Leuten, die an Bord kommen: Wir gehen ans Telefon und arbeiten selbst an Ihrem Boot, immer auf dem neuesten Stand bei Mitteln und Methoden."}],
   ctaTitle:"Erzählen Sie uns von Ihrem Boot",ctaText:"Senden Sie Modell, Länge und Hafen. Sie erhalten ein Angebot."},
  clean:{eyebrow:"Leistung 01",h1:"Reinigung und Bootspflege",
@@ -365,11 +365,18 @@ function applyLang(){
   $h("#mbar-q").textContent=t("ui.quote"); $h("#mbar-wa").textContent="WhatsApp";
   $h(".wa").setAttribute("data-tip",t("ui.whatsapp")); toTop.setAttribute("aria-label",t("ui.top"));
   $h("#mbar-wa").href="https://wa.me/"+CONFIG.phoneIntl;
+  highlight();
   primeReveal(); movePill();
   title();
   if(!MPA) history.replaceState(null,"","?lang="+lang+location.hash);
 }
 
+function highlight(){
+  $$(".hero h1 em, .phead h1, .sec-head h2, .calc-t, .band-ink h2").forEach(h=>{
+    const txt=h.textContent.trim(), m=txt.match(/^(.*\s)(\S+)$/); if(!m) return;
+    h.innerHTML=esc(m[1])+`<span class="hl">${esc(m[2])}</span>`;
+  });
+}
 function title(){
   const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
@@ -710,10 +717,10 @@ document.addEventListener("keydown",e=>{
 /* init */
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
-const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
+const FACE="assets/img/face.webp", IMG={bow:"assets/img/bow.webp",cleat:"assets/img/cleat.webp",cover:"assets/img/cover.webp",hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
 $h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
-$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
-$$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
+$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.bow);$h("#img-cleat").src=A(IMG.cleat);
+$$(".bg[data-bg]").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);
 if(MPA && page==="home" && lang==="it"){
   const want=qs.get("lang"), hash=location.hash.slice(1);

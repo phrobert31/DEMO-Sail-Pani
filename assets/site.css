@@ -2,14 +2,14 @@
 /* Montserrat (logo wordmark only), SIL Open Font License 1.1 */
 @font-face{font-family:"Brand";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/brand-500.woff2) format("woff2")}
 /* Hanken Grotesk, SIL Open Font License 1.1 */
-@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/hanken-grotesk-100-900.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/montserrat-100-900.woff2) format("woff2")}
 
 *,*::before,*::after{box-sizing:border-box;margin:0}
 :root{
   --ink:#102E50;--ink-2:#1C4574;--body:#33485F;--muted:#6B8095;
   --sea:#3F6E9C;--sea-d:#2F5D8A;--mist:#EAF4F7;--mist-2:#F5FAFB;--line:#D2E3EA;
   --sand:#7BD3E0;--red:#C2453B;
-  --d:"Hanken Grotesk",system-ui,sans-serif;--s:"Hanken Grotesk",system-ui,sans-serif;
+  --d:"Montserrat",system-ui,sans-serif;--s:"Montserrat",system-ui,sans-serif;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 html,body{overflow-x:clip}
@@ -1126,3 +1126,92 @@ body[data-page=home] .cta-face img{display:none}
 .ct-who p{color:var(--sea-d);font-weight:600;margin:0}
 .ct-who .about-more{margin-top:12px}
 @media (max-width:520px){.ct-who{align-items:flex-start;gap:16px;padding:20px}.ct-who img{width:84px;height:104px}.ct-who .avail{font-size:.82rem}}
+/* ===== MOOD BOARD THEME: deep navy, sun yellow, sky blue, coral, cream; Montserrat; corner swooshes ===== */
+:root{
+  --ink:#0F3460;--ink-2:#1A4A80;--deep:#0A2647;--body:#33475E;--muted:#55667A;
+  --sea:#2F6FAE;--sea-d:#235A92;--foam:#9FD0EE;--sky:#7CC0E8;
+  --sun:#F5B731;--sun-d:#C98500;--coral:#EE7A5F;--coral-d:#C4553C;
+  --cream:#FBF6EC;--mist:#EEF4FA;--mist-2:#FBF6EC;--line:#E4E3DE;
+  --d:"Montserrat",system-ui,sans-serif;--s:"Montserrat",system-ui,sans-serif;
+  --swoosh:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%23F5B731' d='M300 0C228 92 198 192 214 300H300Z'/%3E%3Cpath fill='%237CC0E8' d='M300 118C228 170 172 236 138 300H300Z'/%3E%3Cpath fill='%230F3460' d='M300 204C248 230 214 262 194 300H300Z'/%3E%3Cpath fill='%23EE7A5F' d='M300 254C274 264 254 281 244 300H300Z'/%3E%3C/svg%3E");
+}
+body{font-family:var(--s);font-size:16.5px;line-height:1.7;color:var(--body);font-feature-settings:"kern"}
+h1,h2,h3,h4{font-family:var(--d);letter-spacing:-.02em}
+h1,h2{font-weight:800;line-height:1.04}
+h1{font-size:clamp(2.6rem,6.4vw,5.2rem)}
+h2{font-size:clamp(2rem,4vw,3.2rem)}
+h3{font-weight:700;letter-spacing:-.01em}
+.phead h1{font-size:clamp(2.5rem,5.8vw,4.6rem)}
+.hl{color:var(--sun-d)}
+.hero .hl,.phead .hl,.band-ink .hl,.vals-q .hl{color:var(--sun)}
+.hero h1 em{color:#fff}
+.hero h1{max-width:12ch}
+p,li{font-weight:450}
+b,strong{font-weight:700}
+
+/* section numbers in sun yellow */
+.sec-head::before{color:var(--sun-d);background-image:linear-gradient(var(--sun),var(--sun))}
+.band-ink .sec-head::before{color:var(--sun)}
+
+/* cream bands, as in the mood board */
+.band-mist{background:var(--cream)}
+.about-band+.band-ink.wave{--wave-fill:var(--cream)}
+
+/* corner swooshes */
+.hero-x::before,.phead::after,.band-ink::after,.card::after,.vid-play .vid-sw,.calc.plan::after{content:"";position:absolute;pointer-events:none;background:var(--swoosh) right bottom/100% 100% no-repeat}
+.hero-x::before{right:0;bottom:0;width:clamp(170px,27vw,440px);aspect-ratio:1;z-index:0}
+.phead::after{right:0;bottom:0;width:clamp(140px,22vw,340px);aspect-ratio:1;z-index:0}
+.band-ink{position:relative;isolation:isolate;overflow:hidden}
+.band-ink::after{right:0;top:0;width:clamp(130px,18vw,280px);aspect-ratio:1;transform:scaleY(-1);z-index:-1}
+.card{position:relative}
+.card::after{right:0;top:0;width:96px;height:96px;transform:scaleY(-1);z-index:2;border-top-right-radius:inherit}
+.card{overflow:hidden}
+.calc.plan{position:relative;overflow:hidden}
+.calc.plan::after{right:0;bottom:0;width:120px;height:120px;opacity:.95}
+@media (max-width:760px){.hero-x::before{width:150px}.phead::after{width:120px}.band-ink::after{width:110px}}
+
+/* hero: navy from the left, like the mood board posts */
+.hero-x::after{background:linear-gradient(90deg,rgba(10,38,71,.9) 0%,rgba(10,38,71,.62) 42%,rgba(10,38,71,.12) 78%),linear-gradient(0deg,rgba(10,38,71,.75),rgba(10,38,71,0) 45%)!important}
+.phead::before{background:linear-gradient(90deg,rgba(10,38,71,.88) 0%,rgba(10,38,71,.55) 50%,rgba(10,38,71,.12) 100%),linear-gradient(0deg,rgba(10,38,71,.6),rgba(10,38,71,0) 50%)!important}
+@media (max-width:760px){.hero-x::after{background:linear-gradient(180deg,rgba(10,38,71,.45),rgba(10,38,71,.88))!important}.phead::before{background:linear-gradient(180deg,rgba(10,38,71,.5),rgba(10,38,71,.88))!important}}
+.ticker{background:var(--deep)}
+.tk-track span::before{background:var(--sun)}
+
+/* buttons: navy, tide fills with sun yellow and navy text */
+.btn{--tide-c:var(--sun);font-weight:700;letter-spacing:.005em}
+.btn:hover,.btn:focus-visible{color:var(--ink)}
+.btn-2,.btn-l,.hero .btn{--tide-c:var(--sun)}
+.btn-2:hover,.btn-l:hover,.hero .btn:hover{color:var(--ink)}
+.wo-btn{--tide-c:var(--sun)}
+.wo-btn:hover,.wo-btn:focus-visible{color:var(--ink)}
+
+/* home CTA over the mood-board sunset */
+.cta-photo .bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center 55%}
+.cta-photo .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,38,71,.94) 0%,rgba(10,38,71,.78) 45%,rgba(10,38,71,.3) 100%)}
+.band-ink.cta-photo{background:var(--deep)}
+@media (max-width:760px){.cta-photo .bg::after{background:rgba(10,38,71,.82)}}
+
+/* products photo (cleat) */
+.prod-ph{margin:0 0 26px;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;position:relative}
+.prod-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.prod-ph::after{content:"";position:absolute;right:0;bottom:0;width:90px;height:90px;background:var(--swoosh) right bottom/100% 100% no-repeat}
+
+/* accents */
+.card-img{aspect-ratio:4/3}
+.meta span::before,.checks li::before{color:var(--sea)}
+.prod-hi .badge{background:var(--sun);color:var(--ink)}
+.vals-q li::before{color:var(--sun)}
+.vals-q{position:relative;overflow:hidden}
+.vals-q::after{content:"";position:absolute;right:0;bottom:0;width:120px;height:120px;background:var(--swoosh) right bottom/100% 100% no-repeat;opacity:.9}
+.story::before{background:linear-gradient(90deg,var(--sun),var(--sky))}
+.story li::before{box-shadow:0 0 0 5px var(--cream)}
+.vid-play .vid-btn::after{border-left-color:var(--ink)}
+.vid-btn{background:var(--sun)}
+.m-plan{stroke:var(--sun-d)}
+.m-hull{fill:var(--sun)}
+.m-end-b{fill:var(--sun-d)}
+.routes li button[aria-pressed=true]{box-shadow:inset 3px 0 0 var(--sun)}
+.about-more{background-image:linear-gradient(var(--sun),var(--sun))}
+.av-m li.av-few{background:#FDF0D2;color:#7A5200}
+.av-m li.av-few::after,.av-k.av-few::before{background:var(--sun-d)}
+.about-p .bio .avail{justify-self:start}

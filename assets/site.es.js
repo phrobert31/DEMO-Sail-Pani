@@ -33,7 +33,7 @@ es:{
  calc:{title:"Calcula una estimación",sub:"Indica la distancia en millas. Si no la conoces, envíanos los dos puertos y la calculamos nosotros.",miles:"Distancia en millas",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
  nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto",about:"Quiénes somos"},
  map:{capHome:"Norte de Cerdeña.",capClean:"Los puertos deportivos donde trabajamos habitualmente.",capRoutes:"Algunas rutas ya realizadas."},
- home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"limpio y listo para zarpar.",
+ home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"nuestra pasión.",
   lead:"Cuidado artesanal de barcos de hasta 30 metros en el norte de Cerdeña y traslados de hasta 20 metros por todo el Mediterráneo.",
   cta1:"Servicios de limpieza",cta2:"Traslados",
   t1:"eslora máxima, limpieza",t2:"eslora máxima, traslado",t3:"por milla, traslado",
@@ -46,7 +46,7 @@ es:{
   c2:["Cualquier tipo de barco hasta 20 metros","7 € por milla","Revisión del barco en persona antes de salir","Recogida en astillero o bróker tras la compra","Patrón para puertos deportivos, astilleros y agencias"],
   c2btn:"Cómo funciona un traslado",
   roseCap:"La rosa de los vientos del Mediterráneo.",winds:["Tramontana, del norte", "Gregal, del nordeste", "Levante, del este", "Siroco, del sudeste", "Ostro, del sur", "Lebeche, del sudoeste", "Poniente, del oeste", "Mistral, del noroeste"],
-  whyTitle:"Por qué Sail&Clean",
+  whyTitle:"Cada detalle cuenta.",
   why:[{t:"Trabajo hecho a mano",d:"Pocos trabajos a la vez para cuidar cada detalle: la teca cepillada siguiendo la veta, el acero bien tratado, el cabo limpio que corre suelto."},{t:"El producto adecuado, no el más agresivo",d:"Elegimos los productos según la superficie y su estado. Nada de lejía ni desengrasantes que estropean gel coat, teca y gomas."},{t:"Cercanos y fiables",d:"Hablas con quien sube a bordo: respondemos nosotros y trabajamos nosotros en tu barco, siempre al día en productos y técnicas."}],
   ctaTitle:"Cuéntanos cómo es el barco",ctaText:"Envíanos modelo, eslora y puerto. Te respondemos con un presupuesto."},
  clean:{eyebrow:"Servicio 01",h1:"Limpieza y cuidado del barco",
@@ -368,11 +368,18 @@ function applyLang(){
   $h("#mbar-q").textContent=t("ui.quote"); $h("#mbar-wa").textContent="WhatsApp";
   $h(".wa").setAttribute("data-tip",t("ui.whatsapp")); toTop.setAttribute("aria-label",t("ui.top"));
   $h("#mbar-wa").href="https://wa.me/"+CONFIG.phoneIntl;
+  highlight();
   primeReveal(); movePill();
   title();
   if(!MPA) history.replaceState(null,"","?lang="+lang+location.hash);
 }
 
+function highlight(){
+  $$(".hero h1 em, .phead h1, .sec-head h2, .calc-t, .band-ink h2").forEach(h=>{
+    const txt=h.textContent.trim(), m=txt.match(/^(.*\s)(\S+)$/); if(!m) return;
+    h.innerHTML=esc(m[1])+`<span class="hl">${esc(m[2])}</span>`;
+  });
+}
 function title(){
   const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
@@ -713,10 +720,10 @@ document.addEventListener("keydown",e=>{
 /* init */
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
-const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
+const FACE="assets/img/face.webp", IMG={bow:"assets/img/bow.webp",cleat:"assets/img/cleat.webp",cover:"assets/img/cover.webp",hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
 $h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
-$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
-$$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
+$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.bow);$h("#img-cleat").src=A(IMG.cleat);
+$$(".bg[data-bg]").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);
 if(MPA && page==="home" && lang==="it"){
   const want=qs.get("lang"), hash=location.hash.slice(1);

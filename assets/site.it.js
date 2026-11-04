@@ -32,7 +32,7 @@ it:{
  calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti",about:"Chi siamo"},
  map:{capHome:"Nord della Sardegna.",capClean:"I porti dove lavoriamo abitualmente.",capRoutes:"Alcune rotte già percorse."},
- home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"pulita e pronta a partire.",
+ home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"la nostra cura.",
   lead:"Cura artigianale delle barche fino a 30 metri nel nord della Sardegna e trasferimenti fino a 20 metri in tutto il Mediterraneo.",
   cta1:"Servizi di pulizia",cta2:"Trasferimenti",
   t1:"lunghezza massima, pulizie",t2:"lunghezza massima, trasferimenti",t3:"al miglio, trasferimenti",
@@ -45,7 +45,7 @@ it:{
   c2:["Barche di qualsiasi tipo fino a 20 metri","7 € al miglio","Controllo della barca di persona prima di partire","Ritiro da cantiere o broker dopo l'acquisto","Skipper per porti turistici, cantieri e agenzie"],
   c2btn:"Come funziona un trasferimento",
   roseCap:"Rosa dei venti del Mediterraneo.",winds:["Tramontana, da nord", "Grecale, da nord-est", "Levante, da est", "Scirocco, da sud-est", "Ostro, da sud", "Libeccio, da sud-ovest", "Ponente, da ovest", "Maestrale, da nord-ovest"],
-  whyTitle:"Perché Sail&Clean",
+  whyTitle:"Ogni dettaglio conta.",
   why:[{t:"Lavoro fatto a mano",d:"Pochi lavori alla volta, per curare ogni dettaglio: il teak spazzolato seguendo la venatura, l'acciaio ben trattato, la cima pulita che scorre fluida."},{t:"Il prodotto giusto, non il più aggressivo",d:"Scegliamo i prodotti in base alla superficie e al suo stato. Niente varechina né sgrassatori che rovinano gel coat, teak e gomme."},{t:"Presenza e affidabilità",d:"Parli con chi sale a bordo: rispondiamo noi e lavoriamo noi sulla tua barca, con aggiornamento continuo su prodotti e tecniche."}],
   ctaTitle:"Dicci di che barca si tratta",ctaText:"Mandaci modello, lunghezza e porto. Ti rispondiamo con un preventivo."},
  clean:{eyebrow:"Servizio 01",h1:"Pulizia e cura della barca",
@@ -364,11 +364,18 @@ function applyLang(){
   $h("#mbar-q").textContent=t("ui.quote"); $h("#mbar-wa").textContent="WhatsApp";
   $h(".wa").setAttribute("data-tip",t("ui.whatsapp")); toTop.setAttribute("aria-label",t("ui.top"));
   $h("#mbar-wa").href="https://wa.me/"+CONFIG.phoneIntl;
+  highlight();
   primeReveal(); movePill();
   title();
   if(!MPA) history.replaceState(null,"","?lang="+lang+location.hash);
 }
 
+function highlight(){
+  $$(".hero h1 em, .phead h1, .sec-head h2, .calc-t, .band-ink h2").forEach(h=>{
+    const txt=h.textContent.trim(), m=txt.match(/^(.*\s)(\S+)$/); if(!m) return;
+    h.innerHTML=esc(m[1])+`<span class="hl">${esc(m[2])}</span>`;
+  });
+}
 function title(){
   const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
@@ -709,10 +716,10 @@ document.addEventListener("keydown",e=>{
 /* init */
 $h("#map-clean").innerHTML=mapSVG("sard");
 $h("#map-routes").innerHTML=mapSVG("routes");
-const FACE="assets/img/face.webp", IMG={hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
+const FACE="assets/img/face.webp", IMG={bow:"assets/img/bow.webp",cleat:"assets/img/cleat.webp",cover:"assets/img/cover.webp",hero:"assets/img/hero.webp",c1:"assets/img/c1.webp",c2:"assets/img/c2.webp",clean:"assets/img/clean.webp",alghero:"assets/img/alghero.webp",heel:"assets/img/heel.webp",anchor:"assets/img/anchor.webp"};
 $h("#face").src=A(FACE);$h("#face-sm").src=A(FACE);$h("#face-ab").src=A(FACE);$h("#face-ct").src=A(FACE);
-$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.heel);
-$$(".phead .bg").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
+$h("#img-hero").src=A(IMG.hero);$h("#img-vid").src=A(IMG.bow);$h("#img-cleat").src=A(IMG.cleat);
+$$(".bg[data-bg]").forEach(b=>b.style.backgroundImage=`url(${A(IMG[b.dataset.bg])})`);
 $h("#map-bg").innerHTML=mapSVG("sard");$h("#img-c1").src=A(IMG.c1);$h("#img-c2").src=A(IMG.c2);$h("#img-clean").src=A(IMG.clean);
 if(MPA && page==="home" && lang==="it"){
   const want=qs.get("lang"), hash=location.hash.slice(1);
