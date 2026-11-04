@@ -1225,3 +1225,4 @@ b,strong{font-weight:700}
 .fb-sub{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.45);font:600 clamp(.72rem,1vw,.9rem)/1 var(--d);letter-spacing:.24em;color:#fff}
 @media (max-width:640px){.fbanner .bg{background-position:72% 60%}.fbanner::before{background:linear-gradient(90deg,rgba(10,38,71,.94),rgba(10,38,71,.55))}}
 .fbanner+.fbot{border-top:0;margin-top:22px}
+.ccard-wide{grid-column:1/-1}

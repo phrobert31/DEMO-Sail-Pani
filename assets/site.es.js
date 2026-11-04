@@ -7,6 +7,7 @@ const CONFIG = {
   phoneShow: "+39 351 753 8315",
   phoneIntl: "393517538315",
   email: "info@sailandclean.it",
+  pec: "info@pec.sailandclean.it",     // certified email (PEC)
   instagram: "sailandclean_",
   youtube: "SailClean-Official",        // CHECK: Instagram handles cannot contain "&"
   vat: "",                            // add the P. IVA when available
@@ -249,7 +250,7 @@ function applyConfig(){
     vatLabel: CONFIG.vat ? "P. IVA "+CONFIG.vat : CONFIG.owner
   });
   $$("[data-c]").forEach(el=>el.textContent=show[el.dataset.c]||"");
-  const H={tel:"tel:+"+CONFIG.phoneIntl,mail:"mailto:"+CONFIG.email,
+  const H={tel:"tel:+"+CONFIG.phoneIntl,mail:"mailto:"+CONFIG.email,pec:"mailto:"+CONFIG.pec,
     wa:"https://wa.me/"+CONFIG.phoneIntl,ig:"https://instagram.com/"+CONFIG.instagram,yt:"https://www.youtube.com/@"+CONFIG.youtube,gmaps:CONFIG.mapLink};
   $$("[data-h]").forEach(el=>el.setAttribute("href",H[el.dataset.h]));
   $h("#yr").textContent=new Date().getFullYear();

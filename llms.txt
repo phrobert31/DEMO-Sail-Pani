@@ -18,6 +18,7 @@ Sail&Clean (Italian: "pulizia e trasferimenti barche in Sardegna") is a small, y
 
 - Phone and WhatsApp: +39 351 753 8315 (every day 9:00–18:00; WhatsApp replies also later)
 - Email: info@sailandclean.it
+- PEC (certified email): info@pec.sailandclean.it
 - Base: Sassari (SS), Sardinia, Italy
 - Instagram: https://instagram.com/sailandclean_
 - YouTube: https://www.youtube.com/@SailClean-Official
