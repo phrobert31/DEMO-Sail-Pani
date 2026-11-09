@@ -35,7 +35,7 @@ fr:{
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact",about:"À propos"},
  map:{capHome:"Nord de la Sardaigne.",capClean:"Les ports et marinas où nous intervenons régulièrement.",capRoutes:"Quelques convoyages déjà réalisés."},
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"notre passion.",
-  lead:"Entretien artisanal des bateaux jusqu'à 30 mètres dans le nord de la Sardaigne, et convoyages jusqu'à 20 mètres dans toute la Méditerranée.",
+  lead:"Un savoir-faire artisanal et un soin minutieux des bateaux dans tout le nord de la Sardaigne. Convoyages de bateaux jusqu'à 20 mètres dans toute la Méditerranée.",
   cta1:"Services de nettoyage",cta2:"Convoyages",
   t1:"longueur maximale, nettoyage",t2:"longueur maximale, convoyage",t3:"par mille, convoyage",
   svcTitle:"Services",svcSub:"Nous travaillons pour des propriétaires, des marinas et des chantiers.",

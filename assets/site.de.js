@@ -35,7 +35,7 @@ de:{
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt",about:"Über uns"},
  map:{capHome:"Norden Sardiniens.",capClean:"Die Häfen und Marinas, in denen wir regelmäßig arbeiten.",capRoutes:"Einige bereits gefahrene Routen."},
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"unsere Leidenschaft.",
-  lead:"Handwerkliche Bootspflege für Boote bis 30 Meter im Norden Sardiniens und Überführungen bis 20 Meter im ganzen Mittelmeer.",
+  lead:"Handwerkliche Arbeit und gründliche Pflege für Boote im ganzen Norden Sardiniens. Überführungen von Booten bis 20 Meter im gesamten Mittelmeer.",
   cta1:"Reinigungsleistungen",cta2:"Überführungen",
   t1:"maximale Länge, Reinigung",t2:"maximale Länge, Überführung",t3:"pro Seemeile, Überführung",
   svcTitle:"Leistungen",svcSub:"Wir arbeiten für private Eigner, Marinas und Werften.",

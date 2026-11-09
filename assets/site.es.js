@@ -35,7 +35,7 @@ es:{
  nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto",about:"Quiénes somos"},
  map:{capHome:"Norte de Cerdeña.",capClean:"Los puertos deportivos donde trabajamos habitualmente.",capRoutes:"Algunas rutas ya realizadas."},
  home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"nuestra pasión.",
-  lead:"Cuidado artesanal de barcos de hasta 30 metros en el norte de Cerdeña y traslados de hasta 20 metros por todo el Mediterráneo.",
+  lead:"Trabajo artesanal y cuidado a fondo de las embarcaciones en todo el norte de Cerdeña. Traslados de barcos de hasta 20 metros por todo el Mediterráneo.",
   cta1:"Servicios de limpieza",cta2:"Traslados",
   t1:"eslora máxima, limpieza",t2:"eslora máxima, traslado",t3:"por milla, traslado",
   svcTitle:"Servicios",svcSub:"Trabajamos para armadores particulares, puertos deportivos y astilleros.",

@@ -35,7 +35,7 @@ en:{
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact",about:"About"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"our passion.",
-  lead:"Hands-on care for boats up to 30 metres in north Sardinia, and deliveries of boats up to 20 metres across the Mediterranean.",
+  lead:"Hands-on craftsmanship and thorough care for boats across north Sardinia. Deliveries of boats up to 20 metres throughout the Mediterranean.",
   cta1:"Cleaning services",cta2:"Deliveries",
   t1:"maximum length, cleaning",t2:"maximum length, delivery",t3:"per mile, delivery",
   svcTitle:"Services",svcSub:"We work for private owners, marinas and boatyards.",
