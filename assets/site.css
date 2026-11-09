@@ -1226,3 +1226,15 @@ b,strong{font-weight:700}
 @media (max-width:640px){.fbanner .bg{background-position:72% 60%}.fbanner::before{background:linear-gradient(90deg,rgba(10,38,71,.94),rgba(10,38,71,.55))}}
 .fbanner+.fbot{border-top:0;margin-top:22px}
 .ccard-wide{grid-column:1/-1}
+/* Andrea's portrait: new photo, face near the top */
+#face,#face-ab,#face-ct,#face-sm,#face-hero{object-position:46% 18%}
+.hero-who{display:none}
+@media (min-width:1100px){
+  .hero-x .hero{position:static}
+  .hero-who{display:block;position:absolute;right:max(40px,calc((100vw - 1180px)/2 + 20px));top:50%;transform:translateY(-48%) rotate(2deg);z-index:1;width:clamp(230px,19vw,290px);border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);border:5px solid #fff;transition:transform .5s var(--ease)}
+  .hero-who:hover{transform:translateY(-50%) rotate(0deg)}
+  .hero-who img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .hero-who span{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(180deg,rgba(10,38,71,0),rgba(10,38,71,.9));color:#fff}
+  .hero-who b{display:block;font:800 1.1rem/1.2 var(--d)}
+  .hero-who small{display:block;color:var(--sun);font-weight:600;font-size:.86rem}
+}

@@ -195,17 +195,18 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       // images visible without JavaScript
       const img = (sel, file) => { const e = doc.querySelector(sel); if (e) e.setAttribute("src", BASE + "assets/img/" + file); };
       img("#img-hero", "hero.webp"); img("#img-c1", "c1.webp"); img("#img-c2", "c2.webp"); img("#img-clean", "clean.webp");
-      img("#face", "face.webp"); img("#face-sm", "face.webp"); img("#face-ab", "face.webp"); img("#face-ct", "face.webp"); img("#img-vid", "bow.webp"); img("#img-cleat", "cleat.webp");
+      img("#face", "face.webp"); img("#face-sm", "face.webp"); img("#face-ab", "face.webp"); img("#face-ct", "face.webp"); img("#face-hero", "face.webp"); img("#img-vid", "bow.webp"); img("#img-cleat", "cleat.webp");
       // [small file, its width], [full file, its width], sizes
       const srcset = (sel, [sm, smW], [full, fullW], sizes) => { const e = doc.querySelector(sel); if (!e) return;
         e.setAttribute("srcset", `${BASE}assets/img/${sm} ${smW}w, ${BASE}assets/img/${full} ${fullW}w`); e.setAttribute("sizes", sizes); };
       srcset("#img-c1", ["c1-800.webp", 800], ["c1.webp", 868], "(max-width: 820px) 100vw, 560px");
       srcset("#img-c2", ["c2-800.webp", 800], ["c2.webp", 1248], "(max-width: 820px) 100vw, 560px");
       srcset("#img-clean", ["clean-800.webp", 800], ["clean.webp", 1500], "(max-width: 880px) 100vw, 600px");
-      srcset("#face", ["face-480.webp", 480], ["face.webp", 900], "(max-width: 880px) 90vw, 420px");
-      srcset("#face-ab", ["face-480.webp", 480], ["face.webp", 900], "(max-width: 640px) 90vw, 360px");
-      srcset("#face-sm", ["face-480.webp", 480], ["face.webp", 900], "96px");
-      srcset("#face-ct", ["face-480.webp", 480], ["face.webp", 900], "110px");
+      srcset("#face", ["face-480.webp", 480], ["face.webp", 1080], "(max-width: 880px) 90vw, 420px");
+      srcset("#face-ab", ["face-480.webp", 480], ["face.webp", 1080], "(max-width: 640px) 90vw, 360px");
+      srcset("#face-sm", ["face-480.webp", 480], ["face.webp", 1080], "96px");
+      srcset("#face-hero", ["face-480.webp", 480], ["face.webp", 1080], "290px");
+      srcset("#face-ct", ["face-480.webp", 480], ["face.webp", 1080], "110px");
       doc.querySelectorAll(".bg[data-bg]").forEach((b) => { b.style.backgroundImage = `url(${BASE}assets/img/${b.dataset.bg}.webp)`; });
       doc.querySelectorAll("img").forEach((i) => { if (i.id !== "img-hero" && !i.closest(".hdr")) i.setAttribute("loading", "lazy"); });
       // head: title, description, canonical, hreflang, social, structured data
