@@ -28,7 +28,7 @@ const CONFIG = {
 const NB="\u00a0";
 const T={
 it:{
- img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca"},
+ img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca",c1:"Mano che pulisce lo scafo con un panno, accanto a una bitta",c2:"Tramonto sul mare dal ponte di una barca",cloth:"Pulizia a mano con un panno in microfibra"},
  ui:{top:"Torna su",preview:"Anteprima del messaggio",quote:"Preventivo",skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
  calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti",about:"Chi siamo"},
@@ -61,7 +61,7 @@ it:{
   areaTitle:"Dove lavoriamo",areaSub:"Nord della Sardegna. Raggiungiamo i principali porti turistici della costa.",
   ports:["Porto Torres","Alghero e Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"La trasferta si paga a parte ed è sempre indicata nel preventivo. Per altri porti, chiedi senza impegno.",
-  quoteTitle:"Come chiedere un preventivo",quoteSub:"Il servizio è su richiesta, senza scadenze di prenotazione. I tempi dipendono dal modello della barca e dal suo stato.",
+  quoteTitle:"Come chiedere un preventivo",quoteSub:"Il servizio è su richiesta. I tempi dipendono dal modello della barca e dal suo stato: d'estate conviene scriverci per tempo.",
   steps:[{t:"Compila il modulo",d:"Modello, lunghezza, porto e lavori che ti servono."},{t:"Manda le foto",d:"Su WhatsApp, così vediamo subito lo stato della barca."},{t:"Ricevi il preventivo",d:"Con i lavori scelti, i prodotti adatti e la trasferta."},{t:"Fissiamo la data",d:"Concordiamo il giorno e veniamo a bordo."}],prod3h:"Un esempio: la muffa sui tubolari",prod3p:"La varechina su PVC e neoprene corrode lo strato superficiale e sparge la muffa sul gommone, che l'anno dopo ricompare. Il prodotto giusto intrappola la muffa e la porta via con la sola acqua, senza rovinare il materiale."},
  form:{title:"Richiedi un preventivo",name:"Nome",reach:"Email o telefono",boat:"Modello e lunghezza",boatPh:"es. Bavaria 46, 14 m",
   port:"Porto",portPh:"es. Olbia",services:"Servizi che ti interessano",msg:"Messaggio",msgPh:"Raccontaci cosa ti serve e quando.",
@@ -116,7 +116,7 @@ it:{
    "I caratteri tipografici sono inclusi nel sito e non vengono scaricati da servizi esterni. La mappa di Google Maps si carica solo dopo il tuo consenso, e in quel caso Google tratta i dati secondo la propria informativa.",
    "Il video di YouTube nella home si carica solo quando premi play: da quel momento YouTube tratta i dati secondo la propria informativa.",
    "Puoi chiedere in qualsiasi momento accesso, rettifica o cancellazione dei tuoi dati scrivendo a {email}, e puoi presentare reclamo al Garante per la protezione dei dati personali."]},
- footer:{blurb:"Pulizia e cura delle barche nel nord della Sardegna, trasferimenti in tutto il Mediterraneo.",pages:"Pagine",contact:"Contatti"}
+ footer:{blurb:"Manodopera artigianale e cura delle imbarcazioni nel nord Sardegna, trasferimenti in tutto il Mediterraneo.",pages:"Pagine",contact:"Contatti"}
 }};
 
 

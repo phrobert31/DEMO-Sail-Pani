@@ -29,7 +29,7 @@ const NB="\u00a0";
 const T={
 
 es:{
- img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco"},
+ img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco",c1:"Mano limpiando el casco con un paño junto a una cornamusa",c2:"Atardecer sobre el mar desde la cubierta de un barco",cloth:"Limpieza a mano con un paño de microfibra"},
  ui:{top:"Volver arriba",preview:"Vista previa del mensaje",quote:"Presupuesto",skip:"Ir al contenido",menu:"Abrir el menú",whatsapp:"Escríbenos por WhatsApp",contact:"Contacto"},
  calc:{title:"Calcula una estimación",sub:"Indica la distancia en millas. Si no la conoces, envíanos los dos puertos y la calculamos nosotros.",miles:"Distancia en millas",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
  nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto",about:"Quiénes somos"},
@@ -62,7 +62,7 @@ es:{
   areaTitle:"Dónde trabajamos",areaSub:"Norte de Cerdeña. Llegamos a los principales puertos deportivos de la costa.",
   ports:["Porto Torres","Alghero y Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"El desplazamiento se paga aparte y siempre se indica en el presupuesto. Para puertos fuera de esta lista, pregúntanos.",
-  quoteTitle:"Cómo pedir presupuesto",quoteSub:"El servicio funciona a petición, sin plazos de reserva. Los tiempos dependen del modelo del barco y de su estado.",
+  quoteTitle:"Cómo pedir presupuesto",quoteSub:"El servicio funciona a petición. Los tiempos dependen del modelo del barco y de su estado: en verano conviene escribirnos con tiempo.",
   steps:[{t:"Rellena el formulario",d:"Modelo, eslora, puerto y trabajos que necesitas."},{t:"Envía fotos",d:"Por WhatsApp, para ver enseguida el estado del barco."},{t:"Recibe el presupuesto",d:"Con los trabajos elegidos, los productos adecuados y el desplazamiento."},{t:"Fijamos la fecha",d:"Acordamos el día y subimos a bordo."}],prod3h:"Un ejemplo: el moho en los flotadores",prod3p:"La lejía sobre PVC y neopreno corroe la capa superficial y esparce el moho por toda la neumática, que al año siguiente vuelve a salir. El producto adecuado atrapa el moho y se va con agua, sin dañar el material."},
  form:{title:"Pedir presupuesto",name:"Nombre",reach:"Email o teléfono",boat:"Modelo y eslora",boatPh:"p. ej. Bavaria 46, 14 m",
   port:"Puerto",portPh:"p. ej. Olbia",services:"Servicios que te interesan",msg:"Mensaje",msgPh:"Cuéntanos qué necesitas y cuándo.",
@@ -117,7 +117,7 @@ es:{
    "Las tipografías están incluidas en la web y no se descargan de servicios externos. El mapa de Google Maps se carga solo tras tu consentimiento, y en ese caso Google trata los datos según su propia política.",
    "El vídeo de YouTube de la página de inicio solo se carga cuando pulsas play. A partir de ese momento, YouTube trata los datos según su propia política.",
    "Puedes solicitar acceso, rectificación o supresión de tus datos en cualquier momento escribiendo a {email}, y presentar una reclamación ante la autoridad italiana de protección de datos (Garante)."]},
- footer:{blurb:"Limpieza y cuidado de barcos en el norte de Cerdeña, traslados por todo el Mediterráneo.",pages:"Páginas",contact:"Contacto"}
+ footer:{blurb:"Cuidado artesanal de barcos en el norte de Cerdeña, traslados por todo el Mediterráneo.",pages:"Páginas",contact:"Contacto"}
 }
 };
 

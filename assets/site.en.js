@@ -29,7 +29,7 @@ const NB="\u00a0";
 const T={
 
 en:{
- img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat"},
+ img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat",c1:"Hand cleaning the hull with a cloth next to a cleat",c2:"Sunset over the sea from a boat's deck",cloth:"Cleaning by hand with a microfibre cloth"},
  ui:{top:"Back to top",preview:"Message preview",quote:"Get a quote",skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
  calc:{title:"Get an estimate",sub:"Enter the route distance in miles. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact",about:"About"},
@@ -62,7 +62,7 @@ en:{
   areaTitle:"Where we work",areaSub:"North Sardinia. We reach the main ports and marinas along the coast.",
   ports:["Porto Torres","Alghero and Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"Travel to your berth is charged separately and always stated in the quote. For ports outside this list, just ask.",
-  quoteTitle:"How to get a quote",quoteSub:"We work on request, with no booking deadlines. Timing depends on the boat and its condition.",
+  quoteTitle:"How to get a quote",quoteSub:"We work on request. Timing depends on the boat and its condition, and in summer it's best to get in touch early.",
   steps:[{t:"Fill in the form",d:"Model, length, port and the work you need."},{t:"Send photos",d:"On WhatsApp, so we can see the boat's condition straight away."},{t:"Get your quote",d:"With the work you chose, the right products and travel costs."},{t:"We set a date",d:"We agree on a day and come aboard."}],prod3h:"An example: mould on tender tubes",prod3p:"Bleach on PVC and neoprene corrodes the top layer and spreads the mould across the tender, and it comes back the next year. The right product traps the mould and rinses it away with plain water, without damaging the material."},
  form:{title:"Request a quote",name:"Name",reach:"Email or phone",boat:"Model and length",boatPh:"e.g. Bavaria 46, 14 m",
   port:"Port or marina",portPh:"e.g. Olbia",services:"Services you are interested in",msg:"Message",msgPh:"Tell us what you need and when.",
@@ -117,7 +117,7 @@ en:{
    "Fonts are included in the site and are not loaded from external services. The Google Maps map loads only after your consent, and Google then processes data under its own privacy policy.",
    "The YouTube video on the home page loads only when you press play. From then on, YouTube processes data under its own privacy policy.",
    "You can ask for access to, correction or deletion of your data at any time by writing to {email}, and you can lodge a complaint with the Italian data protection authority (Garante)."]},
- footer:{blurb:"Boat cleaning and care in north Sardinia, deliveries across the Mediterranean.",pages:"Pages",contact:"Contact"}
+ footer:{blurb:"Hands-on boat care in north Sardinia, deliveries across the Mediterranean.",pages:"Pages",contact:"Contact"}
 }};
 
 

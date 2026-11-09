@@ -1335,7 +1335,7 @@ b,strong{font-weight:700}
       </div>
       <div class="svc">
         <article class="card">
-          <img class="card-img" id="img-c1" data-ta="img.c1" alt="Lavaggio della coperta di una barca in porto">
+          <img class="card-img" id="img-c1" data-ta="img.c1" alt="Mano che pulisce lo scafo con un panno, accanto a una bitta">
           <h3 data-t="home.c1h">Pulizia e cura</h3>
           <div class="meta" id="meta-c1"><span>Fino a 30 m</span><span>Nord della Sardegna</span><span>In acqua o a secco</span></div>
           <p data-t="home.c1p">Interni, esterni e piccola manutenzione, in acqua o a secco. Scegli tu cosa serve.</p>
@@ -1343,7 +1343,7 @@ b,strong{font-weight:700}
           <a class="btn" href="#pulizia" data-t="home.c1btn">Vedi i servizi di pulizia</a>
         </article>
         <article class="card">
-          <img class="card-img" id="img-c2" data-ta="img.c2" alt="Barca a vela in navigazione">
+          <img class="card-img" id="img-c2" data-ta="img.c2" alt="Tramonto sul mare dal ponte di una barca">
           <h3 data-t="home.c2h">Trasferimenti e skipperaggio</h3>
           <div class="meta" id="meta-c2"><span>Fino a 20 m</span><span>7 € al miglio</span><span>Anche all'estero</span></div>
           <p data-t="home.c2p">Portiamo la tua barca da un porto all'altro, oltre le 12 miglia e all'estero.</p>
@@ -1443,7 +1443,7 @@ b,strong{font-weight:700}
     <div class="wrap two">
       <div>
         <h2 data-t="clean.prodTitle">Prodotti</h2>
-        <figure class="prod-ph"><img id="img-cleat" data-ta="clean.prodTitle" alt=""></figure>
+        <figure class="prod-ph"><img id="img-cleat" data-ta="img.cloth" alt="Pulizia a mano con un panno in microfibra"></figure>
         <p data-t="clean.prodSub">Usiamo solo prodotti ecosostenibili. Puoi scegliere tra due linee.</p>
       </div>
       <div class="blocks" style="grid-template-columns:1fr">
@@ -1935,7 +1935,7 @@ const CONFIG = {
 const NB="\u00a0";
 const T={
 it:{
- img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca"},
+ img:{"hero": "Costa del nord della Sardegna vista dall'alto", "c1": "Lavaggio della coperta di una barca in porto", "c2": "Barca a vela in navigazione", "clean": "Pulizia dei dettagli di una barca",c1:"Mano che pulisce lo scafo con un panno, accanto a una bitta",c2:"Tramonto sul mare dal ponte di una barca",cloth:"Pulizia a mano con un panno in microfibra"},
  ui:{top:"Torna su",preview:"Anteprima del messaggio",quote:"Preventivo",skip:"Vai al contenuto",menu:"Apri il menu",whatsapp:"Scrivici su WhatsApp",contact:"Contatti"},
  calc:{title:"Calcola una stima",sub:"Inserisci le miglia della rotta. Se non le conosci, scrivici i due porti e le calcoliamo noi.",miles:"Miglia della rotta",total:"Stima del servizio",note:"Solo il servizio: carburante, ormeggi e spese dello skipper sono a parte. Il preventivo definitivo arriva dopo il sopralluogo.",btn:"Chiedi il preventivo per questa rotta",msg:"Ciao, vorrei un preventivo per un trasferimento di circa {n} miglia."},
  nav:{home:"Home",clean:"Pulizia",deliv:"Trasferimenti",contact:"Contatti",about:"Chi siamo"},
@@ -1968,7 +1968,7 @@ it:{
   areaTitle:"Dove lavoriamo",areaSub:"Nord della Sardegna. Raggiungiamo i principali porti turistici della costa.",
   ports:["Porto Torres","Alghero e Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"La trasferta si paga a parte ed è sempre indicata nel preventivo. Per altri porti, chiedi senza impegno.",
-  quoteTitle:"Come chiedere un preventivo",quoteSub:"Il servizio è su richiesta, senza scadenze di prenotazione. I tempi dipendono dal modello della barca e dal suo stato.",
+  quoteTitle:"Come chiedere un preventivo",quoteSub:"Il servizio è su richiesta. I tempi dipendono dal modello della barca e dal suo stato: d'estate conviene scriverci per tempo.",
   steps:[{t:"Compila il modulo",d:"Modello, lunghezza, porto e lavori che ti servono."},{t:"Manda le foto",d:"Su WhatsApp, così vediamo subito lo stato della barca."},{t:"Ricevi il preventivo",d:"Con i lavori scelti, i prodotti adatti e la trasferta."},{t:"Fissiamo la data",d:"Concordiamo il giorno e veniamo a bordo."}],prod3h:"Un esempio: la muffa sui tubolari",prod3p:"La varechina su PVC e neoprene corrode lo strato superficiale e sparge la muffa sul gommone, che l'anno dopo ricompare. Il prodotto giusto intrappola la muffa e la porta via con la sola acqua, senza rovinare il materiale."},
  form:{title:"Richiedi un preventivo",name:"Nome",reach:"Email o telefono",boat:"Modello e lunghezza",boatPh:"es. Bavaria 46, 14 m",
   port:"Porto",portPh:"es. Olbia",services:"Servizi che ti interessano",msg:"Messaggio",msgPh:"Raccontaci cosa ti serve e quando.",
@@ -2023,11 +2023,11 @@ it:{
    "I caratteri tipografici sono inclusi nel sito e non vengono scaricati da servizi esterni. La mappa di Google Maps si carica solo dopo il tuo consenso, e in quel caso Google tratta i dati secondo la propria informativa.",
    "Il video di YouTube nella home si carica solo quando premi play: da quel momento YouTube tratta i dati secondo la propria informativa.",
    "Puoi chiedere in qualsiasi momento accesso, rettifica o cancellazione dei tuoi dati scrivendo a {email}, e puoi presentare reclamo al Garante per la protezione dei dati personali."]},
- footer:{blurb:"Pulizia e cura delle barche nel nord della Sardegna, trasferimenti in tutto il Mediterraneo.",pages:"Pagine",contact:"Contatti"}
+ footer:{blurb:"Manodopera artigianale e cura delle imbarcazioni nel nord Sardegna, trasferimenti in tutto il Mediterraneo.",pages:"Pagine",contact:"Contatti"}
 },
 
 en:{
- img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat"},
+ img:{"hero": "North Sardinia coast from above", "c1": "Washing a boat deck in the marina", "c2": "Sailing boat under way", "clean": "Detail cleaning on a boat",c1:"Hand cleaning the hull with a cloth next to a cleat",c2:"Sunset over the sea from a boat's deck",cloth:"Cleaning by hand with a microfibre cloth"},
  ui:{top:"Back to top",preview:"Message preview",quote:"Get a quote",skip:"Skip to content",menu:"Open menu",whatsapp:"Message us on WhatsApp",contact:"Contact"},
  calc:{title:"Get an estimate",sub:"Enter the route distance in miles. Don't know it? Send us the two ports and we'll work it out.",miles:"Route distance (miles)",total:"Service estimate",note:"Service only: fuel, marina fees and the skipper's expenses are extra. The final quote comes after we've inspected the boat.",btn:"Request a quote for this route",msg:"Hi, I'd like a quote for a delivery of about {n} miles."},
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact",about:"About"},
@@ -2060,7 +2060,7 @@ en:{
   areaTitle:"Where we work",areaSub:"North Sardinia. We reach the main ports and marinas along the coast.",
   ports:["Porto Torres","Alghero and Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"Travel to your berth is charged separately and always stated in the quote. For ports outside this list, just ask.",
-  quoteTitle:"How to get a quote",quoteSub:"We work on request, with no booking deadlines. Timing depends on the boat and its condition.",
+  quoteTitle:"How to get a quote",quoteSub:"We work on request. Timing depends on the boat and its condition, and in summer it's best to get in touch early.",
   steps:[{t:"Fill in the form",d:"Model, length, port and the work you need."},{t:"Send photos",d:"On WhatsApp, so we can see the boat's condition straight away."},{t:"Get your quote",d:"With the work you chose, the right products and travel costs."},{t:"We set a date",d:"We agree on a day and come aboard."}],prod3h:"An example: mould on tender tubes",prod3p:"Bleach on PVC and neoprene corrodes the top layer and spreads the mould across the tender, and it comes back the next year. The right product traps the mould and rinses it away with plain water, without damaging the material."},
  form:{title:"Request a quote",name:"Name",reach:"Email or phone",boat:"Model and length",boatPh:"e.g. Bavaria 46, 14 m",
   port:"Port or marina",portPh:"e.g. Olbia",services:"Services you are interested in",msg:"Message",msgPh:"Tell us what you need and when.",
@@ -2115,11 +2115,11 @@ en:{
    "Fonts are included in the site and are not loaded from external services. The Google Maps map loads only after your consent, and Google then processes data under its own privacy policy.",
    "The YouTube video on the home page loads only when you press play. From then on, YouTube processes data under its own privacy policy.",
    "You can ask for access to, correction or deletion of your data at any time by writing to {email}, and you can lodge a complaint with the Italian data protection authority (Garante)."]},
- footer:{blurb:"Boat cleaning and care in north Sardinia, deliveries across the Mediterranean.",pages:"Pages",contact:"Contact"}
+ footer:{blurb:"Hands-on boat care in north Sardinia, deliveries across the Mediterranean.",pages:"Pages",contact:"Contact"}
 },
 
 fr:{
- img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau"},
+ img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau",c1:"Main nettoyant la coque avec un chiffon, près d'un taquet",c2:"Coucher de soleil sur la mer depuis le pont d'un bateau",cloth:"Nettoyage à la main avec un chiffon microfibre"},
  ui:{top:"Haut de page",preview:"Aperçu du message",quote:"Devis",skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
  calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact",about:"À propos"},
@@ -2152,7 +2152,7 @@ fr:{
   areaTitle:"Où nous intervenons",areaSub:"Nord de la Sardaigne. Nous desservons les principaux ports et marinas de la côte.",
   ports:["Porto Torres","Alghero et Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"Le déplacement est facturé à part et toujours indiqué dans le devis. Pour un port hors de cette liste, demandez.",
-  quoteTitle:"Comment obtenir un devis",quoteSub:"Nous intervenons sur demande, sans date limite de réservation. Les délais dépendent du modèle du bateau et de son état.",
+  quoteTitle:"Comment obtenir un devis",quoteSub:"Nous intervenons sur demande. Les délais dépendent du modèle du bateau et de son état : l'été, mieux vaut nous écrire tôt.",
   steps:[{t:"Remplissez le formulaire",d:"Modèle, longueur, port et travaux souhaités."},{t:"Envoyez des photos",d:"Sur WhatsApp, pour voir tout de suite l'état du bateau."},{t:"Recevez le devis",d:"Avec les travaux choisis, les produits adaptés et le déplacement."},{t:"Nous fixons la date",d:"Nous convenons du jour et montons à bord."}],prod3h:"Un exemple : la moisissure sur les boudins",prod3p:"L'eau de Javel sur le PVC et le néoprène attaque la couche superficielle et répand la moisissure sur toute l'annexe, qui réapparaît l'année suivante. Le bon produit piège la moisissure et l'évacue à l'eau claire, sans abîmer le matériau."},
  form:{title:"Demander un devis",name:"Nom",reach:"E-mail ou téléphone",boat:"Modèle et longueur",boatPh:"ex. Bavaria 46, 14 m",
   port:"Port ou marina",portPh:"ex. Olbia",services:"Services qui vous intéressent",msg:"Message",msgPh:"Dites-nous ce qu'il vous faut et quand.",
@@ -2207,11 +2207,11 @@ fr:{
    "Les polices sont intégrées au site et ne sont pas chargées depuis des services externes. La carte Google Maps ne se charge qu'après votre accord" + NB + "; Google traite alors les données selon sa propre politique.",
    "La vidéo YouTube de la page d'accueil ne se charge que lorsque vous appuyez sur lecture" + NB + ": YouTube traite alors les données selon sa propre politique.",
    "Vous pouvez demander l'accès, la rectification ou la suppression de vos données à tout moment en écrivant à {email}, et déposer une réclamation auprès de l'autorité italienne de protection des données (Garante)."]},
- footer:{blurb:"Nettoyage et entretien de bateaux dans le nord de la Sardaigne, convoyages dans toute la Méditerranée.",pages:"Pages",contact:"Contact"}
+ footer:{blurb:"Entretien artisanal des bateaux dans le nord de la Sardaigne, convoyages dans toute la Méditerranée.",pages:"Pages",contact:"Contact"}
 },
 
 de:{
- img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot"},
+ img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot",c1:"Hand reinigt den Rumpf mit einem Tuch neben einer Klampe",c2:"Sonnenuntergang über dem Meer vom Deck eines Bootes",cloth:"Reinigung von Hand mit einem Mikrofasertuch"},
  ui:{top:"Nach oben",preview:"Vorschau der Nachricht",quote:"Angebot",skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
  calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt",about:"Über uns"},
@@ -2244,7 +2244,7 @@ de:{
   areaTitle:"Wo wir arbeiten",areaSub:"Norden Sardiniens. Wir erreichen die wichtigsten Häfen und Marinas der Küste.",
   ports:["Porto Torres","Alghero und Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"Die Anfahrt wird gesondert berechnet und ist im Angebot immer ausgewiesen. Für Häfen außerhalb dieser Liste fragen Sie einfach an.",
-  quoteTitle:"So erhalten Sie ein Angebot",quoteSub:"Der Service läuft auf Anfrage, ohne Buchungsfrist. Die Dauer hängt vom Modell des Bootes und seinem Zustand ab.",
+  quoteTitle:"So erhalten Sie ein Angebot",quoteSub:"Der Service läuft auf Anfrage. Die Dauer hängt vom Modell des Bootes und seinem Zustand ab, im Sommer melden Sie sich am besten früh.",
   steps:[{t:"Formular ausfüllen",d:"Modell, Länge, Hafen und gewünschte Arbeiten."},{t:"Fotos schicken",d:"Über WhatsApp, damit wir den Zustand des Bootes gleich sehen."},{t:"Angebot erhalten",d:"Mit den gewählten Arbeiten, den passenden Mitteln und der Anfahrt."},{t:"Termin festlegen",d:"Wir vereinbaren einen Tag und kommen an Bord."}],prod3h:"Ein Beispiel: Schimmel auf Schläuchen",prod3p:"Chlorbleiche auf PVC und Neopren greift die obere Schicht an und verteilt den Schimmel über das ganze Beiboot, im nächsten Jahr ist er wieder da. Das richtige Mittel bindet den Schimmel, er lässt sich mit klarem Wasser abspülen, ohne das Material zu schädigen."},
  form:{title:"Angebot anfragen",name:"Name",reach:"E-Mail oder Telefon",boat:"Modell und Länge",boatPh:"z. B. Bavaria 46, 14 m",
   port:"Hafen oder Marina",portPh:"z. B. Olbia",services:"Leistungen, die Sie interessieren",msg:"Nachricht",msgPh:"Sagen Sie uns, was Sie brauchen und wann.",
@@ -2299,11 +2299,11 @@ de:{
    "Die Schriften sind in die Website eingebunden und werden nicht von externen Diensten geladen. Die Karte von Google Maps wird erst nach Ihrer Einwilligung geladen; Google verarbeitet die Daten dann nach der eigenen Datenschutzerklärung.",
    "Das YouTube-Video auf der Startseite wird erst geladen, wenn Sie auf Abspielen drücken. Ab dann verarbeitet YouTube Daten nach seiner eigenen Datenschutzerklärung.",
    "Sie können jederzeit Auskunft, Berichtigung oder Löschung Ihrer Daten per E-Mail an {email} verlangen und Beschwerde bei der italienischen Datenschutzbehörde (Garante) einlegen."]},
- footer:{blurb:"Reinigung und Pflege von Booten im Norden Sardiniens, Überführungen im gesamten Mittelmeer.",pages:"Seiten",contact:"Kontakt"}
+ footer:{blurb:"Handwerkliche Bootspflege im Norden Sardiniens, Überführungen im gesamten Mittelmeer.",pages:"Seiten",contact:"Kontakt"}
 },
 
 es:{
- img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco"},
+ img:{"hero": "Costa del norte de Cerdeña desde el aire", "c1": "Lavado de la cubierta de un barco en el puerto", "c2": "Velero navegando", "clean": "Limpieza de detalles de un barco",c1:"Mano limpiando el casco con un paño junto a una cornamusa",c2:"Atardecer sobre el mar desde la cubierta de un barco",cloth:"Limpieza a mano con un paño de microfibra"},
  ui:{top:"Volver arriba",preview:"Vista previa del mensaje",quote:"Presupuesto",skip:"Ir al contenido",menu:"Abrir el menú",whatsapp:"Escríbenos por WhatsApp",contact:"Contacto"},
  calc:{title:"Calcula una estimación",sub:"Indica la distancia en millas. Si no la conoces, envíanos los dos puertos y la calculamos nosotros.",miles:"Distancia en millas",total:"Estimación del servicio",note:"Solo el servicio: combustible, amarres y gastos del patrón van aparte. El presupuesto definitivo llega tras la revisión.",btn:"Pedir presupuesto para esta ruta",msg:"Hola, quisiera un presupuesto para un traslado de unas {n} millas."},
  nav:{home:"Inicio",clean:"Limpieza",deliv:"Traslados",contact:"Contacto",about:"Quiénes somos"},
@@ -2336,7 +2336,7 @@ es:{
   areaTitle:"Dónde trabajamos",areaSub:"Norte de Cerdeña. Llegamos a los principales puertos deportivos de la costa.",
   ports:["Porto Torres","Alghero y Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"El desplazamiento se paga aparte y siempre se indica en el presupuesto. Para puertos fuera de esta lista, pregúntanos.",
-  quoteTitle:"Cómo pedir presupuesto",quoteSub:"El servicio funciona a petición, sin plazos de reserva. Los tiempos dependen del modelo del barco y de su estado.",
+  quoteTitle:"Cómo pedir presupuesto",quoteSub:"El servicio funciona a petición. Los tiempos dependen del modelo del barco y de su estado: en verano conviene escribirnos con tiempo.",
   steps:[{t:"Rellena el formulario",d:"Modelo, eslora, puerto y trabajos que necesitas."},{t:"Envía fotos",d:"Por WhatsApp, para ver enseguida el estado del barco."},{t:"Recibe el presupuesto",d:"Con los trabajos elegidos, los productos adecuados y el desplazamiento."},{t:"Fijamos la fecha",d:"Acordamos el día y subimos a bordo."}],prod3h:"Un ejemplo: el moho en los flotadores",prod3p:"La lejía sobre PVC y neopreno corroe la capa superficial y esparce el moho por toda la neumática, que al año siguiente vuelve a salir. El producto adecuado atrapa el moho y se va con agua, sin dañar el material."},
  form:{title:"Pedir presupuesto",name:"Nombre",reach:"Email o teléfono",boat:"Modelo y eslora",boatPh:"p. ej. Bavaria 46, 14 m",
   port:"Puerto",portPh:"p. ej. Olbia",services:"Servicios que te interesan",msg:"Mensaje",msgPh:"Cuéntanos qué necesitas y cuándo.",
@@ -2391,7 +2391,7 @@ es:{
    "Las tipografías están incluidas en la web y no se descargan de servicios externos. El mapa de Google Maps se carga solo tras tu consentimiento, y en ese caso Google trata los datos según su propia política.",
    "El vídeo de YouTube de la página de inicio solo se carga cuando pulsas play. A partir de ese momento, YouTube trata los datos según su propia política.",
    "Puedes solicitar acceso, rectificación o supresión de tus datos en cualquier momento escribiendo a {email}, y presentar una reclamación ante la autoridad italiana de protección de datos (Garante)."]},
- footer:{blurb:"Limpieza y cuidado de barcos en el norte de Cerdeña, traslados por todo el Mediterráneo.",pages:"Páginas",contact:"Contacto"}
+ footer:{blurb:"Cuidado artesanal de barcos en el norte de Cerdeña, traslados por todo el Mediterráneo.",pages:"Páginas",contact:"Contacto"}
 }
 };
 

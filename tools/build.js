@@ -160,11 +160,12 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
   const builder = await browser.newContext({ javaScriptEnabled: false });
   const bp = await builder.newPage();
   const ld = JSON.parse(fs.readFileSync(path.join(ROOT, "tools", "schema.json"), "utf8").replaceAll("{{SITE}}", SITE));
+  const OGV = hash(fs.readFileSync(path.join(ROOT, "og-image.jpg"))); // new URL when the share image changes, so social apps refresh it
   const pagesOut = [];
   for (const L of LANGS) for (const P of PAGES) {
     const route = ROUTES[L][P], BASE = depthBase(route);
     await bp.setContent(tpl.replaceAll("{{BASE}}", BASE).replace("{{LANG}}", L).replace("{{JSV}}", jsV[L]), { waitUntil: "domcontentloaded" });
-    const out = await bp.evaluate(({ L, P, BASE, route, D, ROUTES, LANGS, PAGES, SITE, LOCALE, ld }) => {
+    const out = await bp.evaluate(({ L, P, BASE, route, D, ROUTES, LANGS, PAGES, SITE, LOCALE, ld, OGV }) => {
       const doc = document, H = doc.documentElement;
       const relTo = (r) => BASE + r || "./";
       H.lang = L; H.dataset.page = P; H.dataset.base = BASE;
@@ -223,14 +224,14 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       add("meta", { property: "og:title", content: D.title[P] });
       add("meta", { property: "og:description", content: D.desc[P] });
       add("meta", { property: "og:url", content: url });
-      add("meta", { property: "og:image", content: SITE + "og-image.jpg" });
+      add("meta", { property: "og:image", content: SITE + "og-image.jpg?v=" + OGV });
       add("meta", { property: "og:image:width", content: "1200" });
       add("meta", { property: "og:image:height", content: "630" });
       add("meta", { property: "og:locale", content: LOCALE[L] });
       for (const l of LANGS) if (l !== L) add("meta", { property: "og:locale:alternate", content: LOCALE[l] });
       add("meta", { name: "twitter:card", content: "summary_large_image" });
       add("meta", { name: "twitter:title", content: D.title[P] });
-      add("meta", { name: "twitter:image", content: SITE + "og-image.jpg" });
+      add("meta", { name: "twitter:image", content: SITE + "og-image.jpg?v=" + OGV });
       add("meta", { name: "geo.region", content: "IT-SS" });
       add("meta", { name: "geo.placename", content: "Sassari" });
       add("link", { rel: "alternate", type: "text/plain", title: "llms.txt", href: SITE + "llms.txt" });
@@ -243,7 +244,7 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       if (faq.length) graph["@graph"].push({ "@type": "FAQPage", "@id": url + "#faq", inLanguage: L, isPartOf: { "@id": url + "#webpage" }, mainEntity: faq });
       const s = doc.createElement("script"); s.type = "application/ld+json"; s.textContent = JSON.stringify(graph); head.appendChild(s);
       return "<!DOCTYPE html>\n" + H.outerHTML + "\n";
-    }, { L, P, BASE, route, D: dict[L], ROUTES, LANGS, PAGES, SITE, LOCALE, ld });
+    }, { L, P, BASE, route, D: dict[L], ROUTES, LANGS, PAGES, SITE, LOCALE, ld, OGV });
     write(route + "index.html", out);
     pagesOut.push({ L, P, route });
   }

@@ -29,7 +29,7 @@ const NB="\u00a0";
 const T={
 
 fr:{
- img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau"},
+ img:{"hero": "Côte du nord de la Sardaigne vue du ciel", "c1": "Lavage du pont d'un bateau au port", "c2": "Voilier en navigation", "clean": "Nettoyage des détails d'un bateau",c1:"Main nettoyant la coque avec un chiffon, près d'un taquet",c2:"Coucher de soleil sur la mer depuis le pont d'un bateau",cloth:"Nettoyage à la main avec un chiffon microfibre"},
  ui:{top:"Haut de page",preview:"Aperçu du message",quote:"Devis",skip:"Aller au contenu",menu:"Ouvrir le menu",whatsapp:"Écrivez-nous sur WhatsApp",contact:"Contact"},
  calc:{title:"Calculer une estimation",sub:"Indiquez la distance en milles. Si vous ne la connaissez pas, envoyez-nous les deux ports et nous la calculerons.",miles:"Distance en milles",total:"Estimation du service",note:"Service seul" + NB + ": carburant, frais de port et dépenses du skipper sont à part. Le devis définitif suit la visite du bateau.",btn:"Demander un devis pour ce trajet",msg:"Bonjour, je souhaite un devis pour un convoyage d'environ {n} milles."},
  nav:{home:"Accueil",clean:"Nettoyage",deliv:"Convoyages",contact:"Contact",about:"À propos"},
@@ -62,7 +62,7 @@ fr:{
   areaTitle:"Où nous intervenons",areaSub:"Nord de la Sardaigne. Nous desservons les principaux ports et marinas de la côte.",
   ports:["Porto Torres","Alghero et Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"Le déplacement est facturé à part et toujours indiqué dans le devis. Pour un port hors de cette liste, demandez.",
-  quoteTitle:"Comment obtenir un devis",quoteSub:"Nous intervenons sur demande, sans date limite de réservation. Les délais dépendent du modèle du bateau et de son état.",
+  quoteTitle:"Comment obtenir un devis",quoteSub:"Nous intervenons sur demande. Les délais dépendent du modèle du bateau et de son état : l'été, mieux vaut nous écrire tôt.",
   steps:[{t:"Remplissez le formulaire",d:"Modèle, longueur, port et travaux souhaités."},{t:"Envoyez des photos",d:"Sur WhatsApp, pour voir tout de suite l'état du bateau."},{t:"Recevez le devis",d:"Avec les travaux choisis, les produits adaptés et le déplacement."},{t:"Nous fixons la date",d:"Nous convenons du jour et montons à bord."}],prod3h:"Un exemple : la moisissure sur les boudins",prod3p:"L'eau de Javel sur le PVC et le néoprène attaque la couche superficielle et répand la moisissure sur toute l'annexe, qui réapparaît l'année suivante. Le bon produit piège la moisissure et l'évacue à l'eau claire, sans abîmer le matériau."},
  form:{title:"Demander un devis",name:"Nom",reach:"E-mail ou téléphone",boat:"Modèle et longueur",boatPh:"ex. Bavaria 46, 14 m",
   port:"Port ou marina",portPh:"ex. Olbia",services:"Services qui vous intéressent",msg:"Message",msgPh:"Dites-nous ce qu'il vous faut et quand.",
@@ -117,7 +117,7 @@ fr:{
    "Les polices sont intégrées au site et ne sont pas chargées depuis des services externes. La carte Google Maps ne se charge qu'après votre accord" + NB + "; Google traite alors les données selon sa propre politique.",
    "La vidéo YouTube de la page d'accueil ne se charge que lorsque vous appuyez sur lecture" + NB + ": YouTube traite alors les données selon sa propre politique.",
    "Vous pouvez demander l'accès, la rectification ou la suppression de vos données à tout moment en écrivant à {email}, et déposer une réclamation auprès de l'autorité italienne de protection des données (Garante)."]},
- footer:{blurb:"Nettoyage et entretien de bateaux dans le nord de la Sardaigne, convoyages dans toute la Méditerranée.",pages:"Pages",contact:"Contact"}
+ footer:{blurb:"Entretien artisanal des bateaux dans le nord de la Sardaigne, convoyages dans toute la Méditerranée.",pages:"Pages",contact:"Contact"}
 }};
 
 

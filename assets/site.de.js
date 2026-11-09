@@ -29,7 +29,7 @@ const NB="\u00a0";
 const T={
 
 de:{
- img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot"},
+ img:{"hero": "Küste im Norden Sardiniens von oben", "c1": "Deckwäsche eines Bootes im Hafen", "c2": "Segelboot unter Segeln", "clean": "Detailreinigung an einem Boot",c1:"Hand reinigt den Rumpf mit einem Tuch neben einer Klampe",c2:"Sonnenuntergang über dem Meer vom Deck eines Bootes",cloth:"Reinigung von Hand mit einem Mikrofasertuch"},
  ui:{top:"Nach oben",preview:"Vorschau der Nachricht",quote:"Angebot",skip:"Zum Inhalt",menu:"Menü öffnen",whatsapp:"Per WhatsApp schreiben",contact:"Kontakt"},
  calc:{title:"Schätzung berechnen",sub:"Geben Sie die Streckenlänge in Seemeilen ein, gerechnet. Kennen Sie sie nicht, nennen Sie uns die beiden Häfen, und wir rechnen sie aus.",miles:"Strecke in Seemeilen",total:"Geschätzter Preis",note:"Nur die Leistung: Treibstoff, Liegegebühren und Spesen des Skippers kommen hinzu. Das verbindliche Angebot folgt nach der Besichtigung.",btn:"Angebot für diese Route anfragen",msg:"Hallo, ich hätte gern ein Angebot für eine Überführung von etwa {n} Seemeilen."},
  nav:{home:"Start",clean:"Reinigung",deliv:"Überführungen",contact:"Kontakt",about:"Über uns"},
@@ -62,7 +62,7 @@ de:{
   areaTitle:"Wo wir arbeiten",areaSub:"Norden Sardiniens. Wir erreichen die wichtigsten Häfen und Marinas der Küste.",
   ports:["Porto Torres","Alghero und Fertilia","Bosa","Cannigione","Costa Smeralda","Portisco","Olbia","San Teodoro"],
   trasferta:"Die Anfahrt wird gesondert berechnet und ist im Angebot immer ausgewiesen. Für Häfen außerhalb dieser Liste fragen Sie einfach an.",
-  quoteTitle:"So erhalten Sie ein Angebot",quoteSub:"Der Service läuft auf Anfrage, ohne Buchungsfrist. Die Dauer hängt vom Modell des Bootes und seinem Zustand ab.",
+  quoteTitle:"So erhalten Sie ein Angebot",quoteSub:"Der Service läuft auf Anfrage. Die Dauer hängt vom Modell des Bootes und seinem Zustand ab, im Sommer melden Sie sich am besten früh.",
   steps:[{t:"Formular ausfüllen",d:"Modell, Länge, Hafen und gewünschte Arbeiten."},{t:"Fotos schicken",d:"Über WhatsApp, damit wir den Zustand des Bootes gleich sehen."},{t:"Angebot erhalten",d:"Mit den gewählten Arbeiten, den passenden Mitteln und der Anfahrt."},{t:"Termin festlegen",d:"Wir vereinbaren einen Tag und kommen an Bord."}],prod3h:"Ein Beispiel: Schimmel auf Schläuchen",prod3p:"Chlorbleiche auf PVC und Neopren greift die obere Schicht an und verteilt den Schimmel über das ganze Beiboot, im nächsten Jahr ist er wieder da. Das richtige Mittel bindet den Schimmel, er lässt sich mit klarem Wasser abspülen, ohne das Material zu schädigen."},
  form:{title:"Angebot anfragen",name:"Name",reach:"E-Mail oder Telefon",boat:"Modell und Länge",boatPh:"z. B. Bavaria 46, 14 m",
   port:"Hafen oder Marina",portPh:"z. B. Olbia",services:"Leistungen, die Sie interessieren",msg:"Nachricht",msgPh:"Sagen Sie uns, was Sie brauchen und wann.",
@@ -117,7 +117,7 @@ de:{
    "Die Schriften sind in die Website eingebunden und werden nicht von externen Diensten geladen. Die Karte von Google Maps wird erst nach Ihrer Einwilligung geladen; Google verarbeitet die Daten dann nach der eigenen Datenschutzerklärung.",
    "Das YouTube-Video auf der Startseite wird erst geladen, wenn Sie auf Abspielen drücken. Ab dann verarbeitet YouTube Daten nach seiner eigenen Datenschutzerklärung.",
    "Sie können jederzeit Auskunft, Berichtigung oder Löschung Ihrer Daten per E-Mail an {email} verlangen und Beschwerde bei der italienischen Datenschutzbehörde (Garante) einlegen."]},
- footer:{blurb:"Reinigung und Pflege von Booten im Norden Sardiniens, Überführungen im gesamten Mittelmeer.",pages:"Seiten",contact:"Kontakt"}
+ footer:{blurb:"Handwerkliche Bootspflege im Norden Sardiniens, Überführungen im gesamten Mittelmeer.",pages:"Seiten",contact:"Kontakt"}
 }};
 
 
