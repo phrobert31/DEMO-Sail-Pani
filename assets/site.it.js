@@ -97,7 +97,7 @@ it:{
  contact:{eyebrow:"Chi siamo",h1:"Contatti",intro:"Rispondiamo tutti i giorni. Su WhatsApp anche fuori orario.",
   avail:"Disponibile tutto l'anno",
   role:"Fondatore e skipper",
-  bio1:"Sono Andrea, di Sassari. Il mio primo contatto con la nautica è stato all'Asinara, durante il Covid: accompagnavo in mare i ricercatori che studiano i cetacei e gli ambienti marini. Lì è nato il rispetto per il mare e per l'ambiente che protegge.",
+  bio1:"Sono Andrea e vivo a Sassari. Il mio primo contatto con la nautica è stato all'Asinara, durante il Covid: accompagnavo in mare i ricercatori che studiano i cetacei e gli ambienti marini. Lì è nato il rispetto per il mare e per l'ambiente che protegge.",
   bio2:"Poi il charter come marinaio, gli anni da skipper e i trasferimenti tra la Sardegna e il continente. Oggi Sail&Clean è una piccola azienda artigiana: curiamo le barche a mano, insieme ad alcuni collaboratori.",
   lic:"Patente nautica oltre le 12 miglia",licP:"È l'abilitazione richiesta per i trasferimenti in mare aperto.",
   ins:"Servizio assicurato",insP:"L'assicurazione per il servizio è a nostro carico ed è compresa nel prezzo.",

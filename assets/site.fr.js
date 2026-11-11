@@ -98,7 +98,7 @@ fr:{
  contact:{eyebrow:"À propos",h1:"Contact",intro:"Nous répondons tous les jours. Sur WhatsApp, même en dehors des horaires.",
   avail:"Disponible toute l'année",
   role:"Fondateur et skipper",
-  bio1:"Je suis Andrea, de Sassari. Mon premier contact avec la mer, c'était à l'Asinara pendant le Covid : j'accompagnais en mer des chercheurs qui étudient les cétacés et les milieux marins. C'est là qu'est né mon respect pour la mer et pour ce qu'elle protège.",
+  bio1:"Je suis Andrea et je vis à Sassari. Mon premier contact avec la mer, c'était à l'Asinara pendant le Covid : j'accompagnais en mer des chercheurs qui étudient les cétacés et les milieux marins. C'est là qu'est né mon respect pour la mer et pour ce qu'elle protège.",
   bio2:"Puis le charter comme équipier, des années comme skipper et des convoyages entre la Sardaigne et le continent. Aujourd'hui, Sail&Clean est une petite entreprise artisanale : nous prenons soin des bateaux à la main, avec quelques collaborateurs.",
   lic:"Permis au-delà de 12 milles",licP:"C'est le permis italien requis pour les convoyages en haute mer.",
   ins:"Service assuré",insP:"L'assurance du service est à notre charge et comprise dans le prix.",

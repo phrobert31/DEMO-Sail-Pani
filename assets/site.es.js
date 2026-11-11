@@ -98,7 +98,7 @@ es:{
  contact:{eyebrow:"Quiénes somos",h1:"Contacto",intro:"Respondemos todos los días. Por WhatsApp, también fuera de horario.",
   avail:"Disponible todo el año",
   role:"Fundador y patrón",
-  bio1:"Soy Andrea, de Sassari. Mi primer contacto con el mar fue en la Asinara, durante el Covid: acompañaba en el mar a investigadores que estudian los cetáceos y los ambientes marinos. Allí nació mi respeto por el mar y por lo que protege.",
+  bio1:"Soy Andrea y vivo en Sassari. Mi primer contacto con el mar fue en la Asinara, durante el Covid: acompañaba en el mar a investigadores que estudian los cetáceos y los ambientes marinos. Allí nació mi respeto por el mar y por lo que protege.",
   bio2:"Después vinieron el chárter como marinero, los años de patrón y los traslados entre Cerdeña y el continente. Hoy Sail&Clean es una pequeña empresa artesanal: cuidamos los barcos a mano, junto con algunos colaboradores.",
   lic:"Titulación para más de 12 millas",licP:"Es la titulación italiana exigida para los traslados en mar abierto.",
   ins:"Servicio asegurado",insP:"El seguro del servicio corre de nuestra cuenta y está incluido en el precio.",

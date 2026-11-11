@@ -1260,6 +1260,8 @@ b,strong{font-weight:700}
 .hero-who{display:none}
 @media (min-width:1100px){
   .hero-x .hero{position:static}
+  .hero-x .hero>div:first-child{padding-right:calc(clamp(230px,19vw,290px) + 56px)}
+  .hero-x .hero>div:first-child .trust{margin-right:calc(-1 * (clamp(230px,19vw,290px) + 56px))}
   .hero-who{display:block;position:absolute;right:max(40px,calc((100vw - 1180px)/2 + 20px));top:50%;transform:translateY(-48%) rotate(2deg);z-index:1;width:clamp(230px,19vw,290px);border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);border:5px solid #fff;transition:transform .5s var(--ease)}
   .hero-who:hover{transform:translateY(-50%) rotate(0deg)}
   .hero-who img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
@@ -1375,7 +1377,7 @@ b,strong{font-weight:700}
         <div class="about-tx">
           <h3 data-c="owner">Andrea Pani</h3>
           <p class="about-role" data-t="contact.role">Fondatore e skipper</p>
-          <p data-t="contact.bio1">Sono Andrea, di Sassari, e lavoro nei porti del nord della Sardegna. Ho iniziato come marinaio su un catamarano all'Asinara, ed è lì che è nata la passione.</p>
+          <p data-t="contact.bio1">Sono Andrea e vivo a Sassari.</p>
           <ul class="badges">
             <li><span class="bi bi-lic" aria-hidden="true"></span><span><b data-t="contact.lic">Patente nautica oltre le 12 miglia</b><small data-t="contact.licP">È l'abilitazione richiesta per i trasferimenti in mare aperto.</small></span></li>
             <li><span class="bi bi-ins" aria-hidden="true"></span><span><b data-t="contact.ins">Servizio assicurato</b><small data-t="contact.insP">L'assicurazione per il servizio è a nostro carico ed è compresa nel prezzo.</small></span></li>
@@ -1726,7 +1728,7 @@ b,strong{font-weight:700}
         <span class="avail" data-t="contact.avail">Disponibile tutto l'anno</span>
         <h2 data-c="owner">Andrea Pani</h2>
         <p style="color:var(--sea);font-weight:600;margin-top:-6px" data-t="contact.role">Fondatore e skipper</p>
-        <p data-t="contact.bio1">Sono Andrea, di Sassari, e lavoro nei porti del nord della Sardegna. Ho iniziato come marinaio su un catamarano all'Asinara, ed è lì che è nata la passione.</p>
+        <p data-t="contact.bio1">Sono Andrea e vivo a Sassari.</p>
         <p data-t="contact.bio2">Con Sail&amp;Clean mi occupo della pulizia e della cura delle barche e dei trasferimenti via mare, insieme ad alcuni collaboratori.</p>
         <div class="blocks" style="grid-template-columns:1fr;margin-top:26px">
           <div class="blk"><h3 data-t="contact.lic">Patente nautica oltre le 12 miglia</h3><p data-t="contact.licP">È l'abilitazione richiesta per i trasferimenti in mare aperto.</p></div>
@@ -2004,7 +2006,7 @@ it:{
  contact:{eyebrow:"Chi siamo",h1:"Contatti",intro:"Rispondiamo tutti i giorni. Su WhatsApp anche fuori orario.",
   avail:"Disponibile tutto l'anno",
   role:"Fondatore e skipper",
-  bio1:"Sono Andrea, di Sassari. Il mio primo contatto con la nautica è stato all'Asinara, durante il Covid: accompagnavo in mare i ricercatori che studiano i cetacei e gli ambienti marini. Lì è nato il rispetto per il mare e per l'ambiente che protegge.",
+  bio1:"Sono Andrea e vivo a Sassari. Il mio primo contatto con la nautica è stato all'Asinara, durante il Covid: accompagnavo in mare i ricercatori che studiano i cetacei e gli ambienti marini. Lì è nato il rispetto per il mare e per l'ambiente che protegge.",
   bio2:"Poi il charter come marinaio, gli anni da skipper e i trasferimenti tra la Sardegna e il continente. Oggi Sail&Clean è una piccola azienda artigiana: curiamo le barche a mano, insieme ad alcuni collaboratori.",
   lic:"Patente nautica oltre le 12 miglia",licP:"È l'abilitazione richiesta per i trasferimenti in mare aperto.",
   ins:"Servizio assicurato",insP:"L'assicurazione per il servizio è a nostro carico ed è compresa nel prezzo.",
@@ -2096,7 +2098,7 @@ en:{
  contact:{eyebrow:"About us",h1:"Contact",intro:"We answer every day, and on WhatsApp even outside working hours.",
   avail:"Available all year",
   role:"Founder and skipper",
-  bio1:"I'm Andrea, from Sassari. My first time at sea was at Asinara during Covid, taking out researchers who study whales, dolphins and marine habitats. That is where my respect for the sea, and for the life it protects, began.",
+  bio1:"I'm Andrea and I live in Sassari. My first time at sea was at Asinara during Covid, taking out researchers who study whales, dolphins and marine habitats. That is where my respect for the sea, and for the life it protects, began.",
   bio2:"Then came charter work as crew, years as a skipper and deliveries between Sardinia and mainland Italy. Today Sail&Clean is a small craft business: we look after boats by hand, with a few colleagues.",
   lic:"Licence for beyond 12 miles",licP:"This is the Italian boating licence required for open-sea deliveries.",
   ins:"Insured service",insP:"Insurance for the service is on us and included in the price.",
@@ -2188,7 +2190,7 @@ fr:{
  contact:{eyebrow:"À propos",h1:"Contact",intro:"Nous répondons tous les jours. Sur WhatsApp, même en dehors des horaires.",
   avail:"Disponible toute l'année",
   role:"Fondateur et skipper",
-  bio1:"Je suis Andrea, de Sassari. Mon premier contact avec la mer, c'était à l'Asinara pendant le Covid : j'accompagnais en mer des chercheurs qui étudient les cétacés et les milieux marins. C'est là qu'est né mon respect pour la mer et pour ce qu'elle protège.",
+  bio1:"Je suis Andrea et je vis à Sassari. Mon premier contact avec la mer, c'était à l'Asinara pendant le Covid : j'accompagnais en mer des chercheurs qui étudient les cétacés et les milieux marins. C'est là qu'est né mon respect pour la mer et pour ce qu'elle protège.",
   bio2:"Puis le charter comme équipier, des années comme skipper et des convoyages entre la Sardaigne et le continent. Aujourd'hui, Sail&Clean est une petite entreprise artisanale : nous prenons soin des bateaux à la main, avec quelques collaborateurs.",
   lic:"Permis au-delà de 12 milles",licP:"C'est le permis italien requis pour les convoyages en haute mer.",
   ins:"Service assuré",insP:"L'assurance du service est à notre charge et comprise dans le prix.",
@@ -2280,7 +2282,7 @@ de:{
  contact:{eyebrow:"Über uns",h1:"Kontakt",intro:"Wir antworten täglich. Über WhatsApp auch außerhalb der Geschäftszeiten.",
   avail:"Das ganze Jahr verfügbar",
   role:"Gründer und Skipper",
-  bio1:"Ich bin Andrea aus Sassari. Zum ersten Mal auf See war ich während Covid vor der Asinara: Ich habe Forscher begleitet, die Wale, Delfine und Meereslebensräume untersuchen. Dort hat mein Respekt vor dem Meer begonnen.",
+  bio1:"Ich bin Andrea und lebe in Sassari. Zum ersten Mal auf See war ich während Covid vor der Asinara: Ich habe Forscher begleitet, die Wale, Delfine und Meereslebensräume untersuchen. Dort hat mein Respekt vor dem Meer begonnen.",
   bio2:"Dann kamen Charter als Crew, Jahre als Skipper und Überführungen zwischen Sardinien und dem Festland. Heute ist Sail&Clean ein kleiner Handwerksbetrieb: Wir pflegen Boote von Hand, zusammen mit einigen Mitarbeitern.",
   lic:"Bootsführerschein über 12 Seemeilen",licP:"Das ist die in Italien vorgeschriebene Befähigung für Überführungen auf offener See.",
   ins:"Versicherte Leistung",insP:"Die Versicherung für die Leistung übernehmen wir, sie ist im Preis enthalten.",
@@ -2372,7 +2374,7 @@ es:{
  contact:{eyebrow:"Quiénes somos",h1:"Contacto",intro:"Respondemos todos los días. Por WhatsApp, también fuera de horario.",
   avail:"Disponible todo el año",
   role:"Fundador y patrón",
-  bio1:"Soy Andrea, de Sassari. Mi primer contacto con el mar fue en la Asinara, durante el Covid: acompañaba en el mar a investigadores que estudian los cetáceos y los ambientes marinos. Allí nació mi respeto por el mar y por lo que protege.",
+  bio1:"Soy Andrea y vivo en Sassari. Mi primer contacto con el mar fue en la Asinara, durante el Covid: acompañaba en el mar a investigadores que estudian los cetáceos y los ambientes marinos. Allí nació mi respeto por el mar y por lo que protege.",
   bio2:"Después vinieron el chárter como marinero, los años de patrón y los traslados entre Cerdeña y el continente. Hoy Sail&Clean es una pequeña empresa artesanal: cuidamos los barcos a mano, junto con algunos colaboradores.",
   lic:"Titulación para más de 12 millas",licP:"Es la titulación italiana exigida para los traslados en mar abierto.",
   ins:"Servicio asegurado",insP:"El seguro del servicio corre de nuestra cuenta y está incluido en el precio.",

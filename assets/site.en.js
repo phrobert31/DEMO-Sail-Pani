@@ -98,7 +98,7 @@ en:{
  contact:{eyebrow:"About us",h1:"Contact",intro:"We answer every day, and on WhatsApp even outside working hours.",
   avail:"Available all year",
   role:"Founder and skipper",
-  bio1:"I'm Andrea, from Sassari. My first time at sea was at Asinara during Covid, taking out researchers who study whales, dolphins and marine habitats. That is where my respect for the sea, and for the life it protects, began.",
+  bio1:"I'm Andrea and I live in Sassari. My first time at sea was at Asinara during Covid, taking out researchers who study whales, dolphins and marine habitats. That is where my respect for the sea, and for the life it protects, began.",
   bio2:"Then came charter work as crew, years as a skipper and deliveries between Sardinia and mainland Italy. Today Sail&Clean is a small craft business: we look after boats by hand, with a few colleagues.",
   lic:"Licence for beyond 12 miles",licP:"This is the Italian boating licence required for open-sea deliveries.",
   ins:"Insured service",insP:"Insurance for the service is on us and included in the price.",

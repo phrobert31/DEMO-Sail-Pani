@@ -98,7 +98,7 @@ de:{
  contact:{eyebrow:"Über uns",h1:"Kontakt",intro:"Wir antworten täglich. Über WhatsApp auch außerhalb der Geschäftszeiten.",
   avail:"Das ganze Jahr verfügbar",
   role:"Gründer und Skipper",
-  bio1:"Ich bin Andrea aus Sassari. Zum ersten Mal auf See war ich während Covid vor der Asinara: Ich habe Forscher begleitet, die Wale, Delfine und Meereslebensräume untersuchen. Dort hat mein Respekt vor dem Meer begonnen.",
+  bio1:"Ich bin Andrea und lebe in Sassari. Zum ersten Mal auf See war ich während Covid vor der Asinara: Ich habe Forscher begleitet, die Wale, Delfine und Meereslebensräume untersuchen. Dort hat mein Respekt vor dem Meer begonnen.",
   bio2:"Dann kamen Charter als Crew, Jahre als Skipper und Überführungen zwischen Sardinien und dem Festland. Heute ist Sail&Clean ein kleiner Handwerksbetrieb: Wir pflegen Boote von Hand, zusammen mit einigen Mitarbeitern.",
   lic:"Bootsführerschein über 12 Seemeilen",licP:"Das ist die in Italien vorgeschriebene Befähigung für Überführungen auf offener See.",
   ins:"Versicherte Leistung",insP:"Die Versicherung für die Leistung übernehmen wir, sie ist im Preis enthalten.",
