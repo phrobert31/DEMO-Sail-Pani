@@ -37,14 +37,14 @@ fr:{
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"notre passion.",
   lead:"Un savoir-faire artisanal et un soin minutieux des bateaux dans tout le nord de la Sardaigne. Convoyages de bateaux jusqu'à 20 mètres dans toute la Méditerranée.",
   cta1:"Services de nettoyage",cta2:"Convoyages",
-  t1:"longueur maximale, nettoyage",t2:"longueur maximale, convoyage",t3:"par mille, convoyage",
+  t1:"max nettoyage",t2:"max convoyage",t3:"par mille",
   svcTitle:"Services",svcSub:"Nous travaillons pour des propriétaires, des marinas et des chantiers.",
   c1h:"Nettoyage et entretien",c1p:"Un travail artisanal, fait à la main, avec le bon produit pour chaque surface. À flot ou à sec.",
   c1:["Teck : lavage, éclaircissement, huilage et restauration","Gel coat et œuvres mortes : nettoyage et polissage","Inox et accastillage, comme winchs et bloqueurs","Biminis, coussins, boudins et traitement des moisissures","Intérieur : nettoyage courant ou en profondeur à la vapeur"],
-  c1meta:["Jusqu'à 30 m","Nord de la Sardaigne","À flot ou à sec"],c2meta:["Jusqu'à 20 m","7 € par mille","Aussi à l'étranger"],
+  c1meta:["Jusqu'à 30 m","Nord de la Sardaigne","À flot ou à sec"],c2meta:["Jusqu'à 20 m","6 € par mille","Aussi à l'étranger"],
   c1btn:"Voir les services de nettoyage",
   c2h:"Convoyage et skipper",c2p:"Nous amenons votre bateau d'un port à l'autre, au-delà de 12 milles et à l'étranger.",
-  c2:["Tout type de bateau jusqu'à 20 mètres","7 € par mille","Contrôle du bateau sur place avant le départ","Récupération au chantier ou chez le courtier après l'achat","Skipper pour marinas, chantiers et agences"],
+  c2:["Tout type de bateau jusqu'à 20 mètres","6 € par mille","Contrôle du bateau sur place avant le départ","Récupération au chantier ou chez le courtier après l'achat","Skipper pour marinas, chantiers et agences"],
   c2btn:"Comment se passe un convoyage",
   roseCap:"La rose des vents de la Méditerranée.",winds:["Tramontane, du nord", "Grec, du nord-est", "Levant, de l'est", "Sirocco, du sud-est", "Ostro, du sud", "Libeccio, du sud-ouest", "Ponant, de l'ouest", "Mistral, du nord-ouest"],
   whyTitle:"Chaque détail compte.",
@@ -81,13 +81,13 @@ fr:{
   howTitle:"Comment ça marche",
   steps:[{t:"Vous nous écrivez",d:"Port de départ et d'arrivée, dates, modèle et longueur."},{t:"Contrôle à bord",d:"Nous venons voir le bateau sur place" + NB + ": les photos ne suffisent pas."},{t:"Départ",d:"Nous partons dans la bonne fenêtre météo, avec les escales carburant nécessaires."},{t:"Livraison",d:"Le bateau arrive au port convenu."}],
   costTitle:"Coûts et conditions",costSub:"Tout est écrit dans le devis.",
-  costs:[{t:"7 € par mille",d:"C'est le prix du service, calculé sur les milles de la route."},
+  costs:[{t:"6 € par mille",d:"C'est le prix du service, calculé sur les milles de la route."},
    {t:"À la charge du propriétaire",d:"Carburant, frais de port sur la route, voyage, repas et hébergement du skipper."},
    {t:"Assurance",d:"L'assurance du service est à notre charge."},
    {t:"Visite préalable",d:"Le contrôle avant départ est facturé même si le bateau ne part pas" + NB + ": c'est une journée de travail."},
    {t:"Jours d'attente",d:"Si le bateau n'est pas prêt, chaque jour d'attente à terre est facturé à la journée."},
    {t:"Documents",d:"Nous ne gérons ni les documents ni les formalités portuaires" + NB + ": ils restent au propriétaire."}],
-  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille parcouru."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
+  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"6 € par mille parcouru."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
   faqTitle:"Questions fréquentes",
   faq:[{q:"Jusqu'où allez-vous" + NB + "?",a:"Partout, y compris hors d'Italie. Les routes les plus longues se préparent quelques jours à l'avance."},
    {q:"Naviguez-vous seul" + NB + "?",a:"En règle générale oui, le convoyage se fait en solitaire. Si la route ou le bateau l'exigent, nous cherchons un équipier."},
@@ -603,7 +603,7 @@ function wireFaq(){
 }
 
 /* --- delivery route planner + price calculator --- */
-const RATE=7;
+const RATE=6;
 let plan={a:"portoTorres",b:"andora",manual:false,drawn:"",seen:false};
 function wireCalc(){
   const c=$("#calc"); if(!c) return;

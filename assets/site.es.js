@@ -37,14 +37,14 @@ es:{
  home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"nuestra pasión.",
   lead:"Trabajo artesanal y cuidado a fondo de las embarcaciones en todo el norte de Cerdeña. Traslados de barcos de hasta 20 metros por todo el Mediterráneo.",
   cta1:"Servicios de limpieza",cta2:"Traslados",
-  t1:"eslora máxima, limpieza",t2:"eslora máxima, traslado",t3:"por milla, traslado",
+  t1:"máx. limpieza",t2:"máx. traslados",t3:"por milla",
   svcTitle:"Servicios",svcSub:"Trabajamos para armadores particulares, puertos deportivos y astilleros.",
   c1h:"Limpieza y cuidado",c1p:"Trabajo artesanal, hecho a mano, con el producto adecuado para cada superficie. A flote o en seco.",
   c1:["Teca: lavado, blanqueado, aceitado y restauración","Gel coat y costados: limpieza y pulido","Acero inoxidable y herrajes como winches y stoppers","Toldos, cojines, flotadores y eliminación del moho","Interiores: limpieza ordinaria o a fondo con vapor"],
-  c1meta:["Hasta 30 m","Norte de Cerdeña","A flote o en seco"],c2meta:["Hasta 20 m","7 € por milla","También al extranjero"],
+  c1meta:["Hasta 30 m","Norte de Cerdeña","A flote o en seco"],c2meta:["Hasta 20 m","6 € por milla","También al extranjero"],
   c1btn:"Ver los servicios de limpieza",
   c2h:"Traslados y patrón",c2p:"Llevamos tu barco de un puerto a otro, más allá de las 12 millas y al extranjero.",
-  c2:["Cualquier tipo de barco hasta 20 metros","7 € por milla","Revisión del barco en persona antes de salir","Recogida en astillero o bróker tras la compra","Patrón para puertos deportivos, astilleros y agencias"],
+  c2:["Cualquier tipo de barco hasta 20 metros","6 € por milla","Revisión del barco en persona antes de salir","Recogida en astillero o bróker tras la compra","Patrón para puertos deportivos, astilleros y agencias"],
   c2btn:"Cómo funciona un traslado",
   roseCap:"La rosa de los vientos del Mediterráneo.",winds:["Tramontana, del norte", "Gregal, del nordeste", "Levante, del este", "Siroco, del sudeste", "Ostro, del sur", "Lebeche, del sudoeste", "Poniente, del oeste", "Mistral, del noroeste"],
   whyTitle:"Cada detalle cuenta.",
@@ -81,13 +81,13 @@ es:{
   howTitle:"Cómo funciona",
   steps:[{t:"Nos escribes",d:"Puerto de salida y de llegada, fechas, modelo y eslora."},{t:"Revisión a bordo",d:"Vamos a ver el barco en persona: las fotos no bastan."},{t:"Salida",d:"Salimos con la ventana meteorológica adecuada y con las paradas de combustible necesarias."},{t:"Entrega",d:"El barco llega al puerto acordado."}],
   costTitle:"Costes y condiciones",costSub:"Todo queda por escrito en el presupuesto.",
-  costs:[{t:"7 € por milla",d:"Es el precio del servicio, calculado sobre las millas de la ruta."},
+  costs:[{t:"6 € por milla",d:"Es el precio del servicio, calculado sobre las millas de la ruta."},
    {t:"A cargo del armador",d:"Combustible, amarres durante la ruta, viaje, comidas y alojamiento del patrón."},
    {t:"Seguro",d:"El seguro del servicio corre de nuestra cuenta."},
    {t:"Revisión previa",d:"La revisión antes de salir se paga aunque después no se zarpe: es una jornada de trabajo."},
    {t:"Días de espera",d:"Si el barco no está listo, cada día de espera en tierra se cobra por jornada."},
    {t:"Documentación",d:"No nos ocupamos de documentos ni trámites portuarios: quedan a cargo del armador."}],
-  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"7 € por milla recorrida."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
+  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"6 € por milla recorrida."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
   faqTitle:"Preguntas frecuentes",
   faq:[{q:"¿Hasta dónde llegáis?",a:"A cualquier destino, también fuera de Italia. Las rutas más largas se organizan con unos días de antelación."},
    {q:"¿Navegáis solos?",a:"Por norma sí, el traslado es en solitario. Cuando la ruta o el barco lo requieren, buscamos tripulación adicional."},
@@ -606,7 +606,7 @@ function wireFaq(){
 }
 
 /* --- delivery route planner + price calculator --- */
-const RATE=7;
+const RATE=6;
 let plan={a:"portoTorres",b:"andora",manual:false,drawn:"",seen:false};
 function wireCalc(){
   const c=$("#calc"); if(!c) return;

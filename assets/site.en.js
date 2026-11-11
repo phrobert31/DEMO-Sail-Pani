@@ -37,14 +37,14 @@ en:{
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"our passion.",
   lead:"Hands-on craftsmanship and thorough care for boats across north Sardinia. Deliveries of boats up to 20 metres throughout the Mediterranean.",
   cta1:"Cleaning services",cta2:"Deliveries",
-  t1:"maximum length, cleaning",t2:"maximum length, delivery",t3:"per mile, delivery",
+  t1:"max cleaning",t2:"max delivery",t3:"per mile",
   svcTitle:"Services",svcSub:"We work for private owners, marinas and boatyards.",
   c1h:"Cleaning and care",c1p:"Craftsmanship, done by hand, with the right product for every surface. Afloat or ashore.",
   c1:["Teak: washing, brightening, oiling and restoration","Gel coat and topsides: cleaning and polishing","Stainless steel and deck hardware such as winches and clutches","Biminis, cushions, tender tubes and mould removal","Interior: regular cleaning or deep steam cleaning"],
-  c1meta:["Up to 30 m","North Sardinia","Afloat or ashore"],c2meta:["Up to 20 m","€7 per mile","Abroad too"],
+  c1meta:["Up to 30 m","North Sardinia","Afloat or ashore"],c2meta:["Up to 20 m","€6 per mile","Abroad too"],
   c1btn:"See the cleaning services",
   c2h:"Delivery and skippering",c2p:"We take your boat from one port to another, beyond 12 miles and abroad.",
-  c2:["Any type of boat up to 20 metres","€7 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
+  c2:["Any type of boat up to 20 metres","€6 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
   c2btn:"How a delivery works",
   roseCap:"The Mediterranean wind rose.",winds:["Tramontana, from the north", "Grecale, from the north-east", "Levante, from the east", "Scirocco, from the south-east", "Ostro, from the south", "Libeccio, from the south-west", "Ponente, from the west", "Maestrale, from the north-west"],
   whyTitle:"Every detail counts.",
@@ -81,13 +81,13 @@ en:{
   howTitle:"How it works",
   steps:[{t:"Get in touch",d:"Departure and arrival port, dates, model and length."},{t:"Inspection on board",d:"We come to see the boat in person: photos are not enough."},{t:"Departure",d:"We leave in the right weather window, with the fuel stops the route needs."},{t:"Handover",d:"The boat arrives at the agreed port."}],
   costTitle:"Costs and conditions",costSub:"Everything is written into the quote.",
-  costs:[{t:"€7 per mile",d:"This is the price of the service, calculated on the miles of the route."},
+  costs:[{t:"€6 per mile",d:"This is the price of the service, calculated on the miles of the route."},
    {t:"Paid by the owner",d:"Fuel, marina fees along the route, travel, food and accommodation for the skipper."},
    {t:"Insurance",d:"Insurance for the service is on us."},
    {t:"Inspection",d:"The pre-departure check is paid for even if the boat then does not leave: it is a working day."},
    {t:"Waiting days",d:"If the boat is not ready, every day spent waiting ashore is charged as a day rate."},
    {t:"Paperwork",d:"We do not handle documents or port formalities: those stay with the owner."}],
-  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 per mile of the route."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
+  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€6 per mile of the route."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
   faqTitle:"Frequently asked questions",
   faq:[{q:"How far do you go?",a:"Anywhere, including outside Italy. Longer routes are arranged a few days ahead."},
    {q:"Do you sail alone?",a:"Usually, yes: deliveries are single-handed. When the route or the boat calls for it, we bring extra crew."},
@@ -603,7 +603,7 @@ function wireFaq(){
 }
 
 /* --- delivery route planner + price calculator --- */
-const RATE=7;
+const RATE=6;
 let plan={a:"portoTorres",b:"andora",manual:false,drawn:"",seen:false};
 function wireCalc(){
   const c=$("#calc"); if(!c) return;

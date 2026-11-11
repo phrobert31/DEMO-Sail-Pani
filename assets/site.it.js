@@ -36,14 +36,14 @@ it:{
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"la nostra cura.",
   lead:"Manodopera artigianale e profonda cura delle imbarcazioni in tutto il nord Sardegna. Trasferimenti di barche fino a 20 metri in tutto il Mediterraneo.",
   cta1:"Servizi di pulizia",cta2:"Trasferimenti",
-  t1:"lunghezza massima, pulizie",t2:"lunghezza massima, trasferimenti",t3:"al miglio, trasferimenti",
+  t1:"max pulizie",t2:"max trasferimenti",t3:"al miglio",
   svcTitle:"Servizi",svcSub:"Lavoriamo per armatori privati, porti turistici e cantieri.",
   c1h:"Pulizia e cura",c1p:"Lavoro artigiano, fatto a mano, con il prodotto giusto per ogni superficie. In acqua o a secco.",
   c1:["Teak: lavaggio, sbiancatura, oleatura e restauro","Gel coat e murate: pulizia e lucidatura","Acciai e componenti meccaniche, come winch e stopper","Tendalini, cuscineria, tubolari ed eliminazione della muffa","Interni: pulizia ordinaria o profonda a vapore"],
-  c1meta:["Fino a 30 m","Nord della Sardegna","In acqua o a secco"],c2meta:["Fino a 20 m","7 € al miglio","Anche all'estero"],
+  c1meta:["Fino a 30 m","Nord della Sardegna","In acqua o a secco"],c2meta:["Fino a 20 m","6 € al miglio","Anche all'estero"],
   c1btn:"Vedi i servizi di pulizia",
   c2h:"Trasferimenti e skipperaggio",c2p:"Portiamo la tua barca da un porto all'altro, oltre le 12 miglia e all'estero.",
-  c2:["Barche di qualsiasi tipo fino a 20 metri","7 € al miglio","Controllo della barca di persona prima di partire","Ritiro da cantiere o broker dopo l'acquisto","Skipper per porti turistici, cantieri e agenzie"],
+  c2:["Barche di qualsiasi tipo fino a 20 metri","6 € al miglio","Controllo della barca di persona prima di partire","Ritiro da cantiere o broker dopo l'acquisto","Skipper per porti turistici, cantieri e agenzie"],
   c2btn:"Come funziona un trasferimento",
   roseCap:"Rosa dei venti del Mediterraneo.",winds:["Tramontana, da nord", "Grecale, da nord-est", "Levante, da est", "Scirocco, da sud-est", "Ostro, da sud", "Libeccio, da sud-ovest", "Ponente, da ovest", "Maestrale, da nord-ovest"],
   whyTitle:"Ogni dettaglio conta.",
@@ -80,13 +80,13 @@ it:{
   howTitle:"Come funziona",
   steps:[{t:"Ci scrivi",d:"Porto di partenza e di arrivo, date, modello e lunghezza."},{t:"Controllo a bordo",d:"Veniamo a vedere la barca di persona: le foto non bastano."},{t:"Partenza",d:"Si parte con la finestra meteo giusta e con le soste carburante necessarie."},{t:"Consegna",d:"La barca arriva al porto concordato."}],
   costTitle:"Costi e condizioni",costSub:"Tutto viene messo per iscritto nel preventivo.",
-  costs:[{t:"7 € al miglio",d:"È il prezzo del servizio, calcolato sulle miglia della rotta."},
+  costs:[{t:"6 € al miglio",d:"È il prezzo del servizio, calcolato sulle miglia della rotta."},
    {t:"A carico dell'armatore",d:"Carburante, ormeggi lungo la rotta, viaggio, vitto e alloggio dello skipper."},
    {t:"Assicurazione",d:"L'assicurazione per il servizio è a nostro carico."},
    {t:"Sopralluogo",d:"Il controllo prima della partenza si paga anche se poi non si parte: è una giornata di lavoro."},
    {t:"Giorni di attesa",d:"Se la barca non è pronta, ogni giorno passato a terra ad aspettare si paga a giornata."},
    {t:"Documenti",d:"Non ci occupiamo di documenti e pratiche portuali: restano a carico dell'armatore."}],
-  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
+  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"6 € per ogni miglio della rotta."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
   faqTitle:"Domande frequenti",
   faq:[{q:"Fin dove arrivate?",a:"Ovunque, anche fuori dall'Italia. Le rotte più lunghe si organizzano con qualche giorno di anticipo."},
    {q:"Navigate da soli?",a:"Di norma sì, il trasferimento è in solitario. Quando la rotta o la barca lo richiedono, cerchiamo equipaggio aggiuntivo."},
@@ -602,7 +602,7 @@ function wireFaq(){
 }
 
 /* --- delivery route planner + price calculator --- */
-const RATE=7;
+const RATE=6;
 let plan={a:"portoTorres",b:"andora",manual:false,drawn:"",seen:false};
 function wireCalc(){
   const c=$("#calc"); if(!c) return;

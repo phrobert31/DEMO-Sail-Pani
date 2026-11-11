@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sail&amp;Clean">
 <meta property="og:title" content="Sail&amp;Clean, pulizia e trasferimenti barche in Sardegna">
-<meta property="og:description" content="Pulizia di barche fino a 30 metri nel nord della Sardegna e trasferimenti fino a 20 metri in tutto il Mediterraneo, a 7 € al miglio.">
+<meta property="og:description" content="Pulizia di barche fino a 30 metri nel nord della Sardegna e trasferimenti fino a 20 metri in tutto il Mediterraneo, a 6 € al miglio.">
 <meta property="og:url" content="https://www.sailandclean.it/">
 <meta property="og:image" content="https://www.sailandclean.it/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -1000,10 +1000,10 @@ footer nav a{min-height:44px}
 
 /* phone: compact hero numbers, no floating chat button (the bottom bar has WhatsApp) */
 @media (max-width:760px){
-  .hero .trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px;padding-top:20px}
+  .hero .trust{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:12px;margin-top:32px;padding-top:20px}
   .hero .trust div{min-width:0}
   .hero .trust b{font-size:1.75rem;margin-bottom:6px}
-  .hero .trust span{display:block;font-size:.84rem;line-height:1.35}
+  .hero .trust span{display:block;font-size:.8rem;line-height:1.3;white-space:nowrap}
   .wa{display:none!important}
   .totop{bottom:18px}
 }
@@ -1197,7 +1197,7 @@ b,strong{font-weight:700}
 .card{overflow:hidden}
 .calc.plan{position:relative;overflow:hidden}
 .calc.plan::after{right:0;bottom:0;width:120px;height:120px;opacity:.95}
-@media (max-width:760px){.hero-x::before{width:150px}.phead::after{width:120px}.band-ink::after{width:110px}}
+@media (max-width:760px){.hero-x::before{width:104px}.hero-x .hero{padding-bottom:104px}.phead::after{width:120px}.band-ink::after{width:110px}}
 
 /* hero: navy from the left, like the mood board posts */
 .hero-x::after{background:linear-gradient(90deg,rgba(10,38,71,.9) 0%,rgba(10,38,71,.62) 42%,rgba(10,38,71,.12) 78%),linear-gradient(0deg,rgba(10,38,71,.75),rgba(10,38,71,0) 45%)!important}
@@ -1317,9 +1317,9 @@ b,strong{font-weight:700}
         <span><b data-c="owner">Andrea Pani</b><small data-t="contact.role">Fondatore e skipper</small></span>
       </a>
       <div class="trust">
-        <div><b>30 m</b><span data-t="home.t1">lunghezza massima, pulizie</span></div>
-        <div><b>20 m</b><span data-t="home.t2">lunghezza massima, trasferimenti</span></div>
-        <div><b>7 €</b><span data-t="home.t3">al miglio, trasferimenti</span></div>
+        <div><b>30 m</b><span data-t="home.t1">max pulizie</span></div>
+        <div><b>20 m</b><span data-t="home.t2">max trasferimenti</span></div>
+        <div><b>6 €</b><span data-t="home.t3">al miglio</span></div>
       </div>
     </div>
   </div>
@@ -1345,9 +1345,9 @@ b,strong{font-weight:700}
         <article class="card">
           <img class="card-img" id="img-c2" data-ta="img.c2" alt="Tramonto sul mare dal ponte di una barca">
           <h3 data-t="home.c2h">Trasferimenti e skipperaggio</h3>
-          <div class="meta" id="meta-c2"><span>Fino a 20 m</span><span>7 € al miglio</span><span>Anche all'estero</span></div>
+          <div class="meta" id="meta-c2"><span>Fino a 20 m</span><span>6 € al miglio</span><span>Anche all'estero</span></div>
           <p data-t="home.c2p">Portiamo la tua barca da un porto all'altro, oltre le 12 miglia e all'estero.</p>
-          <ul id="home-c2"><li>Barche di qualsiasi tipo fino a 20 metri</li><li>7 € al miglio</li><li>Controllo della barca di persona prima di partire</li><li>Ritiro da cantiere o broker dopo l'acquisto</li><li>Skipper per porti turistici, cantieri e agenzie</li></ul>
+          <ul id="home-c2"><li>Barche di qualsiasi tipo fino a 20 metri</li><li>6 € al miglio</li><li>Controllo della barca di persona prima di partire</li><li>Ritiro da cantiere o broker dopo l'acquisto</li><li>Skipper per porti turistici, cantieri e agenzie</li></ul>
           <a class="btn" href="#trasferimenti" data-t="home.c2btn">Come funziona un trasferimento</a>
         </article>
       </div>
@@ -1362,7 +1362,7 @@ b,strong{font-weight:700}
           <div id="rose-svg"></div>
           <figcaption class="rose-cap"><span data-t="home.roseCap">Rosa dei venti del Mediterraneo.</span> <b id="rose-wind"></b></figcaption>
         </figure>
-        <div class="why" id="home-why"><div><h3>Prodotti ecosostenibili</h3><p>Linea classica oppure nanotecnologia, che costa di più e protegge più a lungo. Scegli tu.</p></div><div><h3>Parli con chi sale a bordo</h3><p>Rispondiamo noi al telefono e siamo noi a lavorare sulla tua barca. Nessun intermediario.</p></div><div><h3>Prezzi chiari</h3><p>Trasferimenti a 7 € al miglio. Pulizie con preventivo in base alla barca e ai servizi che scegli.</p></div></div>
+        <div class="why" id="home-why"><div><h3>Prodotti ecosostenibili</h3><p>Linea classica oppure nanotecnologia, che costa di più e protegge più a lungo. Scegli tu.</p></div><div><h3>Parli con chi sale a bordo</h3><p>Rispondiamo noi al telefono e siamo noi a lavorare sulla tua barca. Nessun intermediario.</p></div><div><h3>Prezzi chiari</h3><p>Trasferimenti a 6 € al miglio. Pulizie con preventivo in base alla barca e ai servizi che scegli.</p></div></div>
       </div>
     </div>
   </section>
@@ -1638,7 +1638,7 @@ b,strong{font-weight:700}
   <section class="band">
     <div class="wrap">
       <div class="price">
-        <b>7 €</b>
+        <b>6 €</b>
         <span class="t" data-t="deliv.priceText">al miglio. Il prezzo si calcola sulle miglia della rotta. Le altre spese sono a carico dell'armatore.</span>
         <a class="btn btn-l" href="#contatti" data-t="deliv.priceBtn">Chiedi un preventivo</a>
       </div>
@@ -1686,7 +1686,7 @@ b,strong{font-weight:700}
   <section class="band">
     <div class="wrap">
       <div class="sec-head"><h2 data-t="deliv.costTitle">Costi e condizioni</h2><p data-t="deliv.costSub">Tutto viene messo per iscritto nel preventivo.</p></div>
-      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Compreso nel prezzo</h3><ul><li><b>Il servizio di trasferimento</b><span>7 € per ogni miglio della rotta.</span></li><li><b>Assicurazione</b><span>A nostro carico.</span></li><li><b>Pianificazione della rotta</b><span>Finestra meteo e soste carburante.</span></li><li><b>Aggiornamenti durante il viaggio</b><span>Sai sempre dov'è la barca.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>A parte, a carico dell'armatore</h3><ul><li><b>Carburante e ormeggi</b><span>Lungo la rotta.</span></li><li><b>Viaggio, vitto e alloggio dello skipper</b><span>Per raggiungere la barca e rientrare.</span></li><li><b>Sopralluogo</b><span>Una giornata di lavoro, anche se poi non si parte.</span></li><li><b>Giorni di attesa</b><span>Se la barca non è pronta, si paga a giornata.</span></li><li><b>Documenti e pratiche</b><span>Restano all'armatore.</span></li></ul></div></div>
+      <div class="cost2" id="deliv-costs"><div class="incl"><h3><span class="k" aria-hidden="true"></span>Compreso nel prezzo</h3><ul><li><b>Il servizio di trasferimento</b><span>6 € per ogni miglio della rotta.</span></li><li><b>Assicurazione</b><span>A nostro carico.</span></li><li><b>Pianificazione della rotta</b><span>Finestra meteo e soste carburante.</span></li><li><b>Aggiornamenti durante il viaggio</b><span>Sai sempre dov'è la barca.</span></li></ul></div><div class="excl"><h3><span class="k" aria-hidden="true"></span>A parte, a carico dell'armatore</h3><ul><li><b>Carburante e ormeggi</b><span>Lungo la rotta.</span></li><li><b>Viaggio, vitto e alloggio dello skipper</b><span>Per raggiungere la barca e rientrare.</span></li><li><b>Sopralluogo</b><span>Una giornata di lavoro, anche se poi non si parte.</span></li><li><b>Giorni di attesa</b><span>Se la barca non è pronta, si paga a giornata.</span></li><li><b>Documenti e pratiche</b><span>Restano all'armatore.</span></li></ul></div></div>
     </div>
   </section>
 
@@ -1943,14 +1943,14 @@ it:{
  home:{eyebrow:"Pulizia e trasferimenti barche · Sardegna",h1a:"La tua barca,",h1b:"la nostra cura.",
   lead:"Manodopera artigianale e profonda cura delle imbarcazioni in tutto il nord Sardegna. Trasferimenti di barche fino a 20 metri in tutto il Mediterraneo.",
   cta1:"Servizi di pulizia",cta2:"Trasferimenti",
-  t1:"lunghezza massima, pulizie",t2:"lunghezza massima, trasferimenti",t3:"al miglio, trasferimenti",
+  t1:"max pulizie",t2:"max trasferimenti",t3:"al miglio",
   svcTitle:"Servizi",svcSub:"Lavoriamo per armatori privati, porti turistici e cantieri.",
   c1h:"Pulizia e cura",c1p:"Lavoro artigiano, fatto a mano, con il prodotto giusto per ogni superficie. In acqua o a secco.",
   c1:["Teak: lavaggio, sbiancatura, oleatura e restauro","Gel coat e murate: pulizia e lucidatura","Acciai e componenti meccaniche, come winch e stopper","Tendalini, cuscineria, tubolari ed eliminazione della muffa","Interni: pulizia ordinaria o profonda a vapore"],
-  c1meta:["Fino a 30 m","Nord della Sardegna","In acqua o a secco"],c2meta:["Fino a 20 m","7 € al miglio","Anche all'estero"],
+  c1meta:["Fino a 30 m","Nord della Sardegna","In acqua o a secco"],c2meta:["Fino a 20 m","6 € al miglio","Anche all'estero"],
   c1btn:"Vedi i servizi di pulizia",
   c2h:"Trasferimenti e skipperaggio",c2p:"Portiamo la tua barca da un porto all'altro, oltre le 12 miglia e all'estero.",
-  c2:["Barche di qualsiasi tipo fino a 20 metri","7 € al miglio","Controllo della barca di persona prima di partire","Ritiro da cantiere o broker dopo l'acquisto","Skipper per porti turistici, cantieri e agenzie"],
+  c2:["Barche di qualsiasi tipo fino a 20 metri","6 € al miglio","Controllo della barca di persona prima di partire","Ritiro da cantiere o broker dopo l'acquisto","Skipper per porti turistici, cantieri e agenzie"],
   c2btn:"Come funziona un trasferimento",
   roseCap:"Rosa dei venti del Mediterraneo.",winds:["Tramontana, da nord", "Grecale, da nord-est", "Levante, da est", "Scirocco, da sud-est", "Ostro, da sud", "Libeccio, da sud-ovest", "Ponente, da ovest", "Maestrale, da nord-ovest"],
   whyTitle:"Ogni dettaglio conta.",
@@ -1987,13 +1987,13 @@ it:{
   howTitle:"Come funziona",
   steps:[{t:"Ci scrivi",d:"Porto di partenza e di arrivo, date, modello e lunghezza."},{t:"Controllo a bordo",d:"Veniamo a vedere la barca di persona: le foto non bastano."},{t:"Partenza",d:"Si parte con la finestra meteo giusta e con le soste carburante necessarie."},{t:"Consegna",d:"La barca arriva al porto concordato."}],
   costTitle:"Costi e condizioni",costSub:"Tutto viene messo per iscritto nel preventivo.",
-  costs:[{t:"7 € al miglio",d:"È il prezzo del servizio, calcolato sulle miglia della rotta."},
+  costs:[{t:"6 € al miglio",d:"È il prezzo del servizio, calcolato sulle miglia della rotta."},
    {t:"A carico dell'armatore",d:"Carburante, ormeggi lungo la rotta, viaggio, vitto e alloggio dello skipper."},
    {t:"Assicurazione",d:"L'assicurazione per il servizio è a nostro carico."},
    {t:"Sopralluogo",d:"Il controllo prima della partenza si paga anche se poi non si parte: è una giornata di lavoro."},
    {t:"Giorni di attesa",d:"Se la barca non è pronta, ogni giorno passato a terra ad aspettare si paga a giornata."},
    {t:"Documenti",d:"Non ci occupiamo di documenti e pratiche portuali: restano a carico dell'armatore."}],
-  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"7 € per ogni miglio della rotta."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
+  costIncl:{t:"Compreso nel prezzo",items:[{b:"Il servizio di trasferimento",s:"6 € per ogni miglio della rotta."},{b:"Assicurazione",s:"A nostro carico."},{b:"Pianificazione della rotta",s:"Finestra meteo e soste carburante."},{b:"Aggiornamenti durante il viaggio",s:"Sai sempre dov'è la barca."}]},costExcl:{t:"A parte, a carico dell'armatore",items:[{b:"Carburante e ormeggi",s:"Lungo la rotta."},{b:"Viaggio, vitto e alloggio dello skipper",s:"Per raggiungere la barca e rientrare."},{b:"Sopralluogo",s:"Una giornata di lavoro, anche se poi non si parte."},{b:"Giorni di attesa",s:"Se la barca non è pronta, si paga a giornata."},{b:"Documenti e pratiche",s:"Restano all'armatore."}]},moreTitle:"Altre domande?",moreText:"Scrivici su WhatsApp: rispondiamo tutti i giorni, anche fuori orario.",
   faqTitle:"Domande frequenti",
   faq:[{q:"Fin dove arrivate?",a:"Ovunque, anche fuori dall'Italia. Le rotte più lunghe si organizzano con qualche giorno di anticipo."},
    {q:"Navigate da soli?",a:"Di norma sì, il trasferimento è in solitario. Quando la rotta o la barca lo richiedono, cerchiamo equipaggio aggiuntivo."},
@@ -2035,14 +2035,14 @@ en:{
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"our passion.",
   lead:"Hands-on craftsmanship and thorough care for boats across north Sardinia. Deliveries of boats up to 20 metres throughout the Mediterranean.",
   cta1:"Cleaning services",cta2:"Deliveries",
-  t1:"maximum length, cleaning",t2:"maximum length, delivery",t3:"per mile, delivery",
+  t1:"max cleaning",t2:"max delivery",t3:"per mile",
   svcTitle:"Services",svcSub:"We work for private owners, marinas and boatyards.",
   c1h:"Cleaning and care",c1p:"Craftsmanship, done by hand, with the right product for every surface. Afloat or ashore.",
   c1:["Teak: washing, brightening, oiling and restoration","Gel coat and topsides: cleaning and polishing","Stainless steel and deck hardware such as winches and clutches","Biminis, cushions, tender tubes and mould removal","Interior: regular cleaning or deep steam cleaning"],
-  c1meta:["Up to 30 m","North Sardinia","Afloat or ashore"],c2meta:["Up to 20 m","€7 per mile","Abroad too"],
+  c1meta:["Up to 30 m","North Sardinia","Afloat or ashore"],c2meta:["Up to 20 m","€6 per mile","Abroad too"],
   c1btn:"See the cleaning services",
   c2h:"Delivery and skippering",c2p:"We take your boat from one port to another, beyond 12 miles and abroad.",
-  c2:["Any type of boat up to 20 metres","€7 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
+  c2:["Any type of boat up to 20 metres","€6 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
   c2btn:"How a delivery works",
   roseCap:"The Mediterranean wind rose.",winds:["Tramontana, from the north", "Grecale, from the north-east", "Levante, from the east", "Scirocco, from the south-east", "Ostro, from the south", "Libeccio, from the south-west", "Ponente, from the west", "Maestrale, from the north-west"],
   whyTitle:"Every detail counts.",
@@ -2079,13 +2079,13 @@ en:{
   howTitle:"How it works",
   steps:[{t:"Get in touch",d:"Departure and arrival port, dates, model and length."},{t:"Inspection on board",d:"We come to see the boat in person: photos are not enough."},{t:"Departure",d:"We leave in the right weather window, with the fuel stops the route needs."},{t:"Handover",d:"The boat arrives at the agreed port."}],
   costTitle:"Costs and conditions",costSub:"Everything is written into the quote.",
-  costs:[{t:"€7 per mile",d:"This is the price of the service, calculated on the miles of the route."},
+  costs:[{t:"€6 per mile",d:"This is the price of the service, calculated on the miles of the route."},
    {t:"Paid by the owner",d:"Fuel, marina fees along the route, travel, food and accommodation for the skipper."},
    {t:"Insurance",d:"Insurance for the service is on us."},
    {t:"Inspection",d:"The pre-departure check is paid for even if the boat then does not leave: it is a working day."},
    {t:"Waiting days",d:"If the boat is not ready, every day spent waiting ashore is charged as a day rate."},
    {t:"Paperwork",d:"We do not handle documents or port formalities: those stay with the owner."}],
-  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€7 per mile of the route."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
+  costIncl:{t:"Included in the price",items:[{b:"The delivery itself",s:"€6 per mile of the route."},{b:"Insurance",s:"On us."},{b:"Passage planning",s:"Weather window and fuel stops."},{b:"Updates along the way",s:"You always know where the boat is."}]},costExcl:{t:"Separate, paid by the owner",items:[{b:"Fuel and marina fees",s:"Along the route."},{b:"Skipper's travel, food and accommodation",s:"To reach the boat and return."},{b:"Inspection",s:"A full working day, charged even if the boat doesn't sail."},{b:"Waiting days",s:"Charged per day if the boat isn't ready."},{b:"Documents and formalities",s:"Remain the owner's responsibility."}]},moreTitle:"More questions?",moreText:"Message us on WhatsApp: we reply every day, even outside working hours.",
   faqTitle:"Frequently asked questions",
   faq:[{q:"How far do you go?",a:"Anywhere, including outside Italy. Longer routes are arranged a few days ahead."},
    {q:"Do you sail alone?",a:"Usually, yes: deliveries are single-handed. When the route or the boat calls for it, we bring extra crew."},
@@ -2127,14 +2127,14 @@ fr:{
  home:{eyebrow:"Nettoyage et convoyage de bateaux · Sardaigne",h1a:"Votre bateau,",h1b:"notre passion.",
   lead:"Un savoir-faire artisanal et un soin minutieux des bateaux dans tout le nord de la Sardaigne. Convoyages de bateaux jusqu'à 20 mètres dans toute la Méditerranée.",
   cta1:"Services de nettoyage",cta2:"Convoyages",
-  t1:"longueur maximale, nettoyage",t2:"longueur maximale, convoyage",t3:"par mille, convoyage",
+  t1:"max nettoyage",t2:"max convoyage",t3:"par mille",
   svcTitle:"Services",svcSub:"Nous travaillons pour des propriétaires, des marinas et des chantiers.",
   c1h:"Nettoyage et entretien",c1p:"Un travail artisanal, fait à la main, avec le bon produit pour chaque surface. À flot ou à sec.",
   c1:["Teck : lavage, éclaircissement, huilage et restauration","Gel coat et œuvres mortes : nettoyage et polissage","Inox et accastillage, comme winchs et bloqueurs","Biminis, coussins, boudins et traitement des moisissures","Intérieur : nettoyage courant ou en profondeur à la vapeur"],
-  c1meta:["Jusqu'à 30 m","Nord de la Sardaigne","À flot ou à sec"],c2meta:["Jusqu'à 20 m","7 € par mille","Aussi à l'étranger"],
+  c1meta:["Jusqu'à 30 m","Nord de la Sardaigne","À flot ou à sec"],c2meta:["Jusqu'à 20 m","6 € par mille","Aussi à l'étranger"],
   c1btn:"Voir les services de nettoyage",
   c2h:"Convoyage et skipper",c2p:"Nous amenons votre bateau d'un port à l'autre, au-delà de 12 milles et à l'étranger.",
-  c2:["Tout type de bateau jusqu'à 20 mètres","7 € par mille","Contrôle du bateau sur place avant le départ","Récupération au chantier ou chez le courtier après l'achat","Skipper pour marinas, chantiers et agences"],
+  c2:["Tout type de bateau jusqu'à 20 mètres","6 € par mille","Contrôle du bateau sur place avant le départ","Récupération au chantier ou chez le courtier après l'achat","Skipper pour marinas, chantiers et agences"],
   c2btn:"Comment se passe un convoyage",
   roseCap:"La rose des vents de la Méditerranée.",winds:["Tramontane, du nord", "Grec, du nord-est", "Levant, de l'est", "Sirocco, du sud-est", "Ostro, du sud", "Libeccio, du sud-ouest", "Ponant, de l'ouest", "Mistral, du nord-ouest"],
   whyTitle:"Chaque détail compte.",
@@ -2171,13 +2171,13 @@ fr:{
   howTitle:"Comment ça marche",
   steps:[{t:"Vous nous écrivez",d:"Port de départ et d'arrivée, dates, modèle et longueur."},{t:"Contrôle à bord",d:"Nous venons voir le bateau sur place" + NB + ": les photos ne suffisent pas."},{t:"Départ",d:"Nous partons dans la bonne fenêtre météo, avec les escales carburant nécessaires."},{t:"Livraison",d:"Le bateau arrive au port convenu."}],
   costTitle:"Coûts et conditions",costSub:"Tout est écrit dans le devis.",
-  costs:[{t:"7 € par mille",d:"C'est le prix du service, calculé sur les milles de la route."},
+  costs:[{t:"6 € par mille",d:"C'est le prix du service, calculé sur les milles de la route."},
    {t:"À la charge du propriétaire",d:"Carburant, frais de port sur la route, voyage, repas et hébergement du skipper."},
    {t:"Assurance",d:"L'assurance du service est à notre charge."},
    {t:"Visite préalable",d:"Le contrôle avant départ est facturé même si le bateau ne part pas" + NB + ": c'est une journée de travail."},
    {t:"Jours d'attente",d:"Si le bateau n'est pas prêt, chaque jour d'attente à terre est facturé à la journée."},
    {t:"Documents",d:"Nous ne gérons ni les documents ni les formalités portuaires" + NB + ": ils restent au propriétaire."}],
-  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"7 € par mille parcouru."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
+  costIncl:{t:"Compris dans le prix",items:[{b:"Le convoyage lui-même",s:"6 € par mille parcouru."},{b:"Assurance",s:"À notre charge."},{b:"Préparation de la route",s:"Fenêtre météo et escales carburant."},{b:"Nouvelles pendant le trajet",s:"Vous savez toujours où est le bateau."}]},costExcl:{t:"À part, à la charge du propriétaire",items:[{b:"Carburant et frais de port",s:"Sur la route."},{b:"Voyage, repas et hébergement du skipper",s:"Pour rejoindre le bateau et rentrer."},{b:"Visite préalable",s:"Une journée de travail, même si le bateau ne part pas."},{b:"Jours d'attente",s:"Si le bateau n'est pas prêt, facturés à la journée."},{b:"Documents et formalités",s:"Restent au propriétaire."}]},moreTitle:"D'autres questions" + NB + "?",moreText:"Écrivez-nous sur WhatsApp" + NB + ": nous répondons tous les jours, même en dehors des horaires.",
   faqTitle:"Questions fréquentes",
   faq:[{q:"Jusqu'où allez-vous" + NB + "?",a:"Partout, y compris hors d'Italie. Les routes les plus longues se préparent quelques jours à l'avance."},
    {q:"Naviguez-vous seul" + NB + "?",a:"En règle générale oui, le convoyage se fait en solitaire. Si la route ou le bateau l'exigent, nous cherchons un équipier."},
@@ -2219,14 +2219,14 @@ de:{
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"unsere Leidenschaft.",
   lead:"Handwerkliche Arbeit und gründliche Pflege für Boote im ganzen Norden Sardiniens. Überführungen von Booten bis 20 Meter im gesamten Mittelmeer.",
   cta1:"Reinigungsleistungen",cta2:"Überführungen",
-  t1:"maximale Länge, Reinigung",t2:"maximale Länge, Überführung",t3:"pro Seemeile, Überführung",
+  t1:"max. Reinigung",t2:"max. Überführung",t3:"pro Seemeile",
   svcTitle:"Leistungen",svcSub:"Wir arbeiten für private Eigner, Marinas und Werften.",
   c1h:"Reinigung und Pflege",c1p:"Handwerk, von Hand gemacht, mit dem richtigen Mittel für jede Oberfläche. Im Wasser oder an Land.",
   c1:["Teak: Reinigung, Aufhellen, Ölen und Restaurierung","Gelcoat und Bordwände: Reinigung und Politur","Edelstahl und Beschläge wie Winschen und Klemmen","Biminis, Polster, Schläuche und Schimmelentfernung","Innenraum: normale Reinigung oder Tiefenreinigung mit Dampf"],
-  c1meta:["Bis 30 m","Norden Sardiniens","Im Wasser oder an Land"],c2meta:["Bis 20 m","7 € pro Seemeile","Auch ins Ausland"],
+  c1meta:["Bis 30 m","Norden Sardiniens","Im Wasser oder an Land"],c2meta:["Bis 20 m","6 € pro Seemeile","Auch ins Ausland"],
   c1btn:"Reinigungsleistungen ansehen",
   c2h:"Überführung und Skipper",c2p:"Wir bringen Ihr Boot von Hafen zu Hafen, auch über 12 Seemeilen hinaus und ins Ausland.",
-  c2:["Jede Bootsart bis 20 Meter","7 € pro Seemeile","Kontrolle des Bootes vor Ort vor der Abfahrt","Abholung von Werft oder Makler nach dem Kauf","Skipper für Marinas, Werften und Agenturen"],
+  c2:["Jede Bootsart bis 20 Meter","6 € pro Seemeile","Kontrolle des Bootes vor Ort vor der Abfahrt","Abholung von Werft oder Makler nach dem Kauf","Skipper für Marinas, Werften und Agenturen"],
   c2btn:"So läuft eine Überführung ab",
   roseCap:"Die Windrose des Mittelmeers.",winds:["Tramontana, aus Norden", "Grecale, aus Nordosten", "Levante, aus Osten", "Schirokko, aus Südosten", "Ostro, aus Süden", "Libeccio, aus Südwesten", "Ponente, aus Westen", "Mistral, aus Nordwesten"],
   whyTitle:"Jedes Detail zählt.",
@@ -2263,13 +2263,13 @@ de:{
   howTitle:"So läuft es ab",
   steps:[{t:"Sie schreiben uns",d:"Abfahrts- und Zielhafen, Termine, Modell und Länge."},{t:"Kontrolle an Bord",d:"Wir sehen uns das Boot persönlich an: Fotos genügen nicht."},{t:"Abfahrt",d:"Wir starten im passenden Wetterfenster, mit den nötigen Tankstopps."},{t:"Übergabe",d:"Das Boot erreicht den vereinbarten Hafen."}],
   costTitle:"Kosten und Bedingungen",costSub:"Alles wird im Angebot schriftlich festgehalten.",
-  costs:[{t:"7 € pro Seemeile",d:"Das ist der Preis der Leistung, berechnet auf die Seemeilen der Route."},
+  costs:[{t:"6 € pro Seemeile",d:"Das ist der Preis der Leistung, berechnet auf die Seemeilen der Route."},
    {t:"Zulasten des Eigners",d:"Treibstoff, Liegegebühren unterwegs, Anreise, Verpflegung und Unterkunft des Skippers."},
    {t:"Versicherung",d:"Die Versicherung für die Leistung übernehmen wir."},
    {t:"Vorabkontrolle",d:"Die Kontrolle vor der Abfahrt wird auch dann berechnet, wenn das Boot nicht ausläuft: Es ist ein Arbeitstag."},
    {t:"Wartetage",d:"Ist das Boot nicht bereit, wird jeder Wartetag an Land als Tagessatz berechnet."},
    {t:"Dokumente",d:"Dokumente und Hafenformalitäten übernehmen wir nicht: Sie bleiben beim Eigner."}],
-  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € pro Seemeile, gerechnet."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
+  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"6 € pro Seemeile der Route."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
   faqTitle:"Häufige Fragen",
   faq:[{q:"Wie weit fahren Sie?",a:"Überallhin, auch außerhalb Italiens. Längere Routen werden einige Tage im Voraus geplant."},
    {q:"Fahren Sie allein?",a:"In der Regel ja, die Überführung erfolgt einhand. Wenn Route oder Boot es erfordern, suchen wir zusätzliche Crew."},
@@ -2311,14 +2311,14 @@ es:{
  home:{eyebrow:"Limpieza y traslado de barcos · Cerdeña",h1a:"Tu barco,",h1b:"nuestra pasión.",
   lead:"Trabajo artesanal y cuidado a fondo de las embarcaciones en todo el norte de Cerdeña. Traslados de barcos de hasta 20 metros por todo el Mediterráneo.",
   cta1:"Servicios de limpieza",cta2:"Traslados",
-  t1:"eslora máxima, limpieza",t2:"eslora máxima, traslado",t3:"por milla, traslado",
+  t1:"máx. limpieza",t2:"máx. traslados",t3:"por milla",
   svcTitle:"Servicios",svcSub:"Trabajamos para armadores particulares, puertos deportivos y astilleros.",
   c1h:"Limpieza y cuidado",c1p:"Trabajo artesanal, hecho a mano, con el producto adecuado para cada superficie. A flote o en seco.",
   c1:["Teca: lavado, blanqueado, aceitado y restauración","Gel coat y costados: limpieza y pulido","Acero inoxidable y herrajes como winches y stoppers","Toldos, cojines, flotadores y eliminación del moho","Interiores: limpieza ordinaria o a fondo con vapor"],
-  c1meta:["Hasta 30 m","Norte de Cerdeña","A flote o en seco"],c2meta:["Hasta 20 m","7 € por milla","También al extranjero"],
+  c1meta:["Hasta 30 m","Norte de Cerdeña","A flote o en seco"],c2meta:["Hasta 20 m","6 € por milla","También al extranjero"],
   c1btn:"Ver los servicios de limpieza",
   c2h:"Traslados y patrón",c2p:"Llevamos tu barco de un puerto a otro, más allá de las 12 millas y al extranjero.",
-  c2:["Cualquier tipo de barco hasta 20 metros","7 € por milla","Revisión del barco en persona antes de salir","Recogida en astillero o bróker tras la compra","Patrón para puertos deportivos, astilleros y agencias"],
+  c2:["Cualquier tipo de barco hasta 20 metros","6 € por milla","Revisión del barco en persona antes de salir","Recogida en astillero o bróker tras la compra","Patrón para puertos deportivos, astilleros y agencias"],
   c2btn:"Cómo funciona un traslado",
   roseCap:"La rosa de los vientos del Mediterráneo.",winds:["Tramontana, del norte", "Gregal, del nordeste", "Levante, del este", "Siroco, del sudeste", "Ostro, del sur", "Lebeche, del sudoeste", "Poniente, del oeste", "Mistral, del noroeste"],
   whyTitle:"Cada detalle cuenta.",
@@ -2355,13 +2355,13 @@ es:{
   howTitle:"Cómo funciona",
   steps:[{t:"Nos escribes",d:"Puerto de salida y de llegada, fechas, modelo y eslora."},{t:"Revisión a bordo",d:"Vamos a ver el barco en persona: las fotos no bastan."},{t:"Salida",d:"Salimos con la ventana meteorológica adecuada y con las paradas de combustible necesarias."},{t:"Entrega",d:"El barco llega al puerto acordado."}],
   costTitle:"Costes y condiciones",costSub:"Todo queda por escrito en el presupuesto.",
-  costs:[{t:"7 € por milla",d:"Es el precio del servicio, calculado sobre las millas de la ruta."},
+  costs:[{t:"6 € por milla",d:"Es el precio del servicio, calculado sobre las millas de la ruta."},
    {t:"A cargo del armador",d:"Combustible, amarres durante la ruta, viaje, comidas y alojamiento del patrón."},
    {t:"Seguro",d:"El seguro del servicio corre de nuestra cuenta."},
    {t:"Revisión previa",d:"La revisión antes de salir se paga aunque después no se zarpe: es una jornada de trabajo."},
    {t:"Días de espera",d:"Si el barco no está listo, cada día de espera en tierra se cobra por jornada."},
    {t:"Documentación",d:"No nos ocupamos de documentos ni trámites portuarios: quedan a cargo del armador."}],
-  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"7 € por milla recorrida."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
+  costIncl:{t:"Incluido en el precio",items:[{b:"El traslado en sí",s:"6 € por milla recorrida."},{b:"Seguro",s:"Corre de nuestra cuenta."},{b:"Planificación de la ruta",s:"Ventana meteorológica y paradas de combustible."},{b:"Novedades durante el viaje",s:"Siempre sabes dónde está el barco."}]},costExcl:{t:"Aparte, a cargo del armador",items:[{b:"Combustible y amarres",s:"Durante la ruta."},{b:"Viaje, comidas y alojamiento del patrón",s:"Para llegar al barco y volver."},{b:"Revisión previa",s:"Una jornada de trabajo, aunque después no se zarpe."},{b:"Días de espera",s:"Si el barco no está listo, se cobra por día."},{b:"Documentos y trámites",s:"Quedan a cargo del armador."}]},moreTitle:"¿Más preguntas?",moreText:"Escríbenos por WhatsApp: respondemos todos los días, también fuera de horario.",
   faqTitle:"Preguntas frecuentes",
   faq:[{q:"¿Hasta dónde llegáis?",a:"A cualquier destino, también fuera de Italia. Las rutas más largas se organizan con unos días de antelación."},
    {q:"¿Navegáis solos?",a:"Por norma sí, el traslado es en solitario. Cuando la ruta o el barco lo requieren, buscamos tripulación adicional."},
@@ -2944,7 +2944,7 @@ function wireFaq(){
 }
 
 /* --- delivery route planner + price calculator --- */
-const RATE=7;
+const RATE=6;
 let plan={a:"portoTorres",b:"andora",manual:false,drawn:"",seen:false};
 function wireCalc(){
   const c=$("#calc"); if(!c) return;

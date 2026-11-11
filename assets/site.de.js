@@ -37,14 +37,14 @@ de:{
  home:{eyebrow:"Bootsreinigung und Überführung · Sardinien",h1a:"Ihr Boot,",h1b:"unsere Leidenschaft.",
   lead:"Handwerkliche Arbeit und gründliche Pflege für Boote im ganzen Norden Sardiniens. Überführungen von Booten bis 20 Meter im gesamten Mittelmeer.",
   cta1:"Reinigungsleistungen",cta2:"Überführungen",
-  t1:"maximale Länge, Reinigung",t2:"maximale Länge, Überführung",t3:"pro Seemeile, Überführung",
+  t1:"max. Reinigung",t2:"max. Überführung",t3:"pro Seemeile",
   svcTitle:"Leistungen",svcSub:"Wir arbeiten für private Eigner, Marinas und Werften.",
   c1h:"Reinigung und Pflege",c1p:"Handwerk, von Hand gemacht, mit dem richtigen Mittel für jede Oberfläche. Im Wasser oder an Land.",
   c1:["Teak: Reinigung, Aufhellen, Ölen und Restaurierung","Gelcoat und Bordwände: Reinigung und Politur","Edelstahl und Beschläge wie Winschen und Klemmen","Biminis, Polster, Schläuche und Schimmelentfernung","Innenraum: normale Reinigung oder Tiefenreinigung mit Dampf"],
-  c1meta:["Bis 30 m","Norden Sardiniens","Im Wasser oder an Land"],c2meta:["Bis 20 m","7 € pro Seemeile","Auch ins Ausland"],
+  c1meta:["Bis 30 m","Norden Sardiniens","Im Wasser oder an Land"],c2meta:["Bis 20 m","6 € pro Seemeile","Auch ins Ausland"],
   c1btn:"Reinigungsleistungen ansehen",
   c2h:"Überführung und Skipper",c2p:"Wir bringen Ihr Boot von Hafen zu Hafen, auch über 12 Seemeilen hinaus und ins Ausland.",
-  c2:["Jede Bootsart bis 20 Meter","7 € pro Seemeile","Kontrolle des Bootes vor Ort vor der Abfahrt","Abholung von Werft oder Makler nach dem Kauf","Skipper für Marinas, Werften und Agenturen"],
+  c2:["Jede Bootsart bis 20 Meter","6 € pro Seemeile","Kontrolle des Bootes vor Ort vor der Abfahrt","Abholung von Werft oder Makler nach dem Kauf","Skipper für Marinas, Werften und Agenturen"],
   c2btn:"So läuft eine Überführung ab",
   roseCap:"Die Windrose des Mittelmeers.",winds:["Tramontana, aus Norden", "Grecale, aus Nordosten", "Levante, aus Osten", "Schirokko, aus Südosten", "Ostro, aus Süden", "Libeccio, aus Südwesten", "Ponente, aus Westen", "Mistral, aus Nordwesten"],
   whyTitle:"Jedes Detail zählt.",
@@ -81,13 +81,13 @@ de:{
   howTitle:"So läuft es ab",
   steps:[{t:"Sie schreiben uns",d:"Abfahrts- und Zielhafen, Termine, Modell und Länge."},{t:"Kontrolle an Bord",d:"Wir sehen uns das Boot persönlich an: Fotos genügen nicht."},{t:"Abfahrt",d:"Wir starten im passenden Wetterfenster, mit den nötigen Tankstopps."},{t:"Übergabe",d:"Das Boot erreicht den vereinbarten Hafen."}],
   costTitle:"Kosten und Bedingungen",costSub:"Alles wird im Angebot schriftlich festgehalten.",
-  costs:[{t:"7 € pro Seemeile",d:"Das ist der Preis der Leistung, berechnet auf die Seemeilen der Route."},
+  costs:[{t:"6 € pro Seemeile",d:"Das ist der Preis der Leistung, berechnet auf die Seemeilen der Route."},
    {t:"Zulasten des Eigners",d:"Treibstoff, Liegegebühren unterwegs, Anreise, Verpflegung und Unterkunft des Skippers."},
    {t:"Versicherung",d:"Die Versicherung für die Leistung übernehmen wir."},
    {t:"Vorabkontrolle",d:"Die Kontrolle vor der Abfahrt wird auch dann berechnet, wenn das Boot nicht ausläuft: Es ist ein Arbeitstag."},
    {t:"Wartetage",d:"Ist das Boot nicht bereit, wird jeder Wartetag an Land als Tagessatz berechnet."},
    {t:"Dokumente",d:"Dokumente und Hafenformalitäten übernehmen wir nicht: Sie bleiben beim Eigner."}],
-  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"7 € pro Seemeile, gerechnet."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
+  costIncl:{t:"Im Preis enthalten",items:[{b:"Die Überführung selbst",s:"6 € pro Seemeile der Route."},{b:"Versicherung",s:"Übernehmen wir."},{b:"Routenplanung",s:"Wetterfenster und Tankstopps."},{b:"Meldungen unterwegs",s:"Sie wissen immer, wo das Boot ist."}]},costExcl:{t:"Gesondert, zulasten des Eigners",items:[{b:"Treibstoff und Liegegebühren",s:"Entlang der Route."},{b:"Anreise, Verpflegung und Unterkunft des Skippers",s:"Zum Boot und zurück."},{b:"Vorabkontrolle",s:"Ein Arbeitstag, auch wenn das Boot dann nicht ausläuft."},{b:"Wartetage",s:"Ist das Boot nicht bereit, pro Tag berechnet."},{b:"Dokumente und Formalitäten",s:"Bleiben beim Eigner."}]},moreTitle:"Noch Fragen?",moreText:"Schreiben Sie uns per WhatsApp: Wir antworten täglich, auch außerhalb der Geschäftszeiten.",
   faqTitle:"Häufige Fragen",
   faq:[{q:"Wie weit fahren Sie?",a:"Überallhin, auch außerhalb Italiens. Längere Routen werden einige Tage im Voraus geplant."},
    {q:"Fahren Sie allein?",a:"In der Regel ja, die Überführung erfolgt einhand. Wenn Route oder Boot es erfordern, suchen wir zusätzliche Crew."},
@@ -603,7 +603,7 @@ function wireFaq(){
 }
 
 /* --- delivery route planner + price calculator --- */
-const RATE=7;
+const RATE=6;
 let plan={a:"portoTorres",b:"andora",manual:false,drawn:"",seen:false};
 function wireCalc(){
   const c=$("#calc"); if(!c) return;
