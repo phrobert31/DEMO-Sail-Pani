@@ -6,7 +6,7 @@
    "@id": "{{SITE}}#business",
    "name": "Sail&Clean",
    "alternateName": "Sail and Clean",
-   "description": "Manodopera artigianale e profonda cura delle imbarcazioni in tutto il nord Sardegna. Trasferimenti di barche fino a 20 metri in tutto il Mediterraneo.",
+   "description": "Manodopera artigianale e profonda cura delle imbarcazioni in tutto il nord Sardegna. Trasferimenti di barche fino a 24 metri in tutto il Mediterraneo.",
    "url": "{{SITE}}",
    "image": "{{SITE}}og-image.jpg",
    "logo": "{{SITE}}logo.png",
@@ -107,7 +107,7 @@
        "@type": "Service",
        "name": "Pulizia e cura della barca",
        "serviceType": "Boat cleaning",
-       "description": "Teak (lavaggio, oleatura e restauro), acciai e componenti meccaniche, gel coat e murate, decapaggio e ceratura, tendalini e cuscineria, tubolari, eliminazione della muffa, interni ordinari o a vapore. Barche fino a 30 metri, in acqua o a secco.",
+       "description": "Teak (lavaggio, oleatura e restauro), acciai e componenti meccaniche, gel coat e murate, decapaggio e ceratura, tendalini e cuscineria, tubolari, eliminazione della muffa, interni ordinari o a vapore. Barche a vela e a motore, in acqua o a secco.",
        "areaServed": "Nord Sardegna"
       }
      },
@@ -117,7 +117,7 @@
        "@type": "Service",
        "name": "Trasferimenti e skipperaggio",
        "serviceType": "Boat delivery",
-       "description": "Trasferimento di barche fino a 20 metri in tutto il Mediterraneo, oltre le 12 miglia e all'estero.",
+       "description": "Trasferimento di barche fino a 24 metri in tutto il Mediterraneo, oltre le 12 miglia e all'estero.",
        "areaServed": "Mar Mediterraneo"
       },
       "priceSpecification": {

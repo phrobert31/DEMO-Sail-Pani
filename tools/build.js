@@ -7,7 +7,7 @@
 
   It writes plain static files to the repository root, ready for GitHub Pages
   or any web host (Aruba):
-      index.html, pulizia/, trasferimenti/, chi-siamo/, contatti/   Italian
+      index.html, pulizia/, trasferimenti/, chi-siamo/, il-nostro-metodo/, contatti/
       en/, fr/, de/, es/ (+ their page folders)            other languages
       assets/ (css, js, fonts, images), sitemap.xml, robots.txt, llms.txt,
       404.html, .htaccess
@@ -29,16 +29,16 @@ const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, "site.config.json"), "utf
 const SITE = (process.env.BASE_URL || CFG.baseUrl).replace(/\/?$/, "/");
 
 const LANGS = ["it", "en", "fr", "de", "es"];
-const PAGES = ["home", "pulizia", "trasferimenti", "chisiamo", "contatti"];
+const PAGES = ["home", "pulizia", "trasferimenti", "chisiamo", "metodo", "contatti"];
 const ROUTES = {
-  it: { home: "", pulizia: "pulizia/", trasferimenti: "trasferimenti/", chisiamo: "chi-siamo/", contatti: "contatti/" },
-  en: { home: "en/", pulizia: "en/cleaning/", trasferimenti: "en/deliveries/", chisiamo: "en/about/", contatti: "en/contact/" },
-  fr: { home: "fr/", pulizia: "fr/nettoyage/", trasferimenti: "fr/convoyage/", chisiamo: "fr/a-propos/", contatti: "fr/contact/" },
-  de: { home: "de/", pulizia: "de/reinigung/", trasferimenti: "de/ueberfuehrung/", chisiamo: "de/ueber-uns/", contatti: "de/kontakt/" },
-  es: { home: "es/", pulizia: "es/limpieza/", trasferimenti: "es/traslados/", chisiamo: "es/quienes-somos/", contatti: "es/contacto/" },
+  it: { home: "", pulizia: "pulizia/", trasferimenti: "trasferimenti/", chisiamo: "chi-siamo/", metodo: "il-nostro-metodo/", contatti: "contatti/" },
+  en: { home: "en/", pulizia: "en/cleaning/", trasferimenti: "en/deliveries/", chisiamo: "en/about/", metodo: "en/our-approach/", contatti: "en/contact/" },
+  fr: { home: "fr/", pulizia: "fr/nettoyage/", trasferimenti: "fr/convoyage/", chisiamo: "fr/a-propos/", metodo: "fr/notre-approche/", contatti: "fr/contact/" },
+  de: { home: "de/", pulizia: "de/reinigung/", trasferimenti: "de/ueberfuehrung/", chisiamo: "de/ueber-uns/", metodo: "de/unser-ansatz/", contatti: "de/kontakt/" },
+  es: { home: "es/", pulizia: "es/limpieza/", trasferimenti: "es/traslados/", chisiamo: "es/quienes-somos/", metodo: "es/nuestro-metodo/", contatti: "es/contacto/" },
 };
 const LOCALE = { it: "it_IT", en: "en_GB", fr: "fr_FR", de: "de_DE", es: "es_ES" };
-const DESC_KEY = { home: "home.lead", pulizia: "clean.intro", trasferimenti: "deliv.intro", chisiamo: "aboutp.intro", contatti: "contact.intro" };
+const DESC_KEY = { home: "home.lead", pulizia: "clean.intro", trasferimenti: "deliv.intro", chisiamo: "aboutp.intro", metodo: "method.intro", contatti: "contact.intro" };
 
 /* Find `const NAME={ it:{...}, en:{...}, ... };` in the script and keep only language L. */
 function keepLang(js, name, L) {
@@ -150,7 +150,7 @@ const rel = (fromRoute, toRoute) => depthBase(fromRoute) + toRoute || "./";
       take("data-wp", "wp", (e) => e.placeholder);
       lists(); woRender(); // eslint-disable-line no-undef
       ["home-c1", "home-c2", "home-why", "clean-groups", "meta-c1", "meta-c2", "clean-ports", "clean-steps", "deliv-steps",
-        "deliv-routes", "deliv-costs", "deliv-faq", "f-chips", "wo-ports", "pv-body"].forEach((id) => { const el = document.getElementById(id); if (el) o.lists[id] = el.innerHTML; });
+        "deliv-routes", "deliv-costs", "deliv-faq", "story-list", "vals-qs", "vals-tags", "method-body", "f-chips", "wo-ports", "pv-body"].forEach((id) => { const el = document.getElementById(id); if (el) o.lists[id] = el.innerHTML; });
       for (const p of PAGES) { page = p; title(); o.title[p] = document.title; o.desc[p] = t(DESC_KEY[p]); } // eslint-disable-line no-undef
       return o;
     }, { PAGES, DESC_KEY });

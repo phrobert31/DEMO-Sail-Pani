@@ -35,23 +35,23 @@ en:{
  nav:{home:"Home",clean:"Cleaning",deliv:"Deliveries",contact:"Contact",about:"About"},
  map:{capHome:"North Sardinia.",capClean:"The ports and marinas we work in regularly.",capRoutes:"A few routes already sailed."},
  home:{eyebrow:"Boat cleaning and delivery · Sardinia",h1a:"Your boat,",h1b:"our passion.",
-  lead:"Hands-on craftsmanship and thorough care for boats across north Sardinia. Deliveries of boats up to 20 metres throughout the Mediterranean.",
+  lead:"Hands-on craftsmanship and thorough care for boats across north Sardinia. Deliveries of boats up to 24 metres throughout the Mediterranean.",
   cta1:"Cleaning services",cta2:"Deliveries",
   t1:"max cleaning",t2:"max delivery",t3:"per mile",
   svcTitle:"Services",svcSub:"We work for private owners, marinas and boatyards.",
   c1h:"Cleaning and care",c1p:"Craftsmanship, done by hand, with the right product for every surface. Afloat or ashore.",
   c1:["Teak: washing, brightening, oiling and restoration","Gel coat and topsides: cleaning and polishing","Stainless steel and deck hardware such as winches and clutches","Biminis, cushions, tender tubes and mould removal","Interior: regular cleaning or deep steam cleaning"],
-  c1meta:["Up to 30 m","North Sardinia","Afloat or ashore"],c2meta:["Up to 20 m","€6 per mile","Abroad too"],
+  c1meta:["North Sardinia","Afloat or ashore"],c2meta:["Up to 24 m","€6 per mile","Abroad too"],
   c1btn:"See the cleaning services",
   c2h:"Delivery and skippering",c2p:"We take your boat from one port to another, beyond 12 miles and abroad.",
-  c2:["Any type of boat up to 20 metres","€6 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
+  c2:["Any type of boat up to 24 metres","€6 per mile","We inspect the boat in person before departure","Collection from a yard or broker after purchase","Skipper for marinas, yards and agencies"],
   c2btn:"How a delivery works",
   roseCap:"The Mediterranean wind rose.",winds:["Tramontana, from the north", "Grecale, from the north-east", "Levante, from the east", "Scirocco, from the south-east", "Ostro, from the south", "Libeccio, from the south-west", "Ponente, from the west", "Maestrale, from the north-west"],
   whyTitle:"Every detail counts.",
   why:[{t:"Done by hand",d:"A few jobs at a time, so every detail gets attention: teak brushed along the grain, well-treated steel, a clean line that runs freely."},{t:"The right product, not the harshest",d:"We choose products for each surface and its condition. No bleach or harsh degreasers that damage gel coat, teak and rubber."},{t:"There when you need us",d:"You talk to the people who come aboard: we answer the phone and we work on your boat, always keeping up with new products and methods."}],
   ctaTitle:"Tell us about the boat",ctaText:"Send us the model, length and port, and we'll reply with a quote."},
  clean:{eyebrow:"Service 01",h1:"Boat cleaning and care",
-  intro:"Craftsmanship on sailing and motor boats up to 30 metres, afloat or ashore. You choose what you need, from the teak to the interior.",
+  intro:"Craftsmanship on sailing and motor boats, afloat or ashore. You choose what you need, from the teak to the interior.",
   whatTitle:"What we do",whatSub:"Every job is tailored: tell us what you need and we'll prepare a quote.",
   list:["Teak: washing with cleaners, brightener, oiling and protection","Teak restoration: sanding, re-caulking seams, re-bonding lifted areas","Cleaning and restoring stainless steel","Servicing and restoring deck hardware such as clutches and winches","Cleaning portholes and hatches","Gel coat cleaning and polishing","Polishing the topsides","Small repairs to gel coat and fibreglass","Acid wash and waxing","Biminis, sprayhoods and cushions","PVC and neoprene tender tubes and rubber","Mould removal","Regular cleaning: vacuuming and tidying","Deep cleaning: vacuuming, steam sanitising, washing with cleaners, machines for cushions"],
   noHull:"We don't clean the keel underwater. Everything else can be done afloat or ashore.",
@@ -72,7 +72,7 @@ en:{
   err:"Please enter at least your name and a message.",hello:"Hello, my name is",subject:"Quote request from the website",
   lBoat:"Boat",lPort:"Port",lServices:"Services",lReach:"Contact"},
  deliv:{eyebrow:"Service 02",h1:"Delivery and skippering",
-  intro:"We take your boat where it needs to go, including beyond 12 miles and outside Italy. Any type of boat up to 20 metres.",
+  intro:"We take your boat where it needs to go, including beyond 12 miles and outside Italy. Any type of boat up to 24 metres.",
   priceText:"per mile. The price is based on the route distance. Other costs are paid by the owner.",
   priceBtn:"Request a quote",
   routesTitle:"Routes already sailed",routesSub:"A few examples of deliveries completed.",
@@ -91,7 +91,7 @@ en:{
   faqTitle:"Frequently asked questions",
   faq:[{q:"How far do you go?",a:"Anywhere, including outside Italy. Longer routes are arranged a few days ahead."},
    {q:"Do you sail alone?",a:"Usually, yes: deliveries are single-handed. When the route or the boat calls for it, we bring extra crew."},
-   {q:"Do you take any boat?",a:"Any type up to 20 metres, as long as it's in good condition. We don't take on boats that aren't seaworthy."},
+   {q:"Do you take any boat?",a:"Any type up to 24 metres, as long as it's in good condition. We don't take on boats that aren't seaworthy."},
    {q:"I have just bought a boat, can you collect it?",a:"Yes. We pick it up from the yard or the broker and bring it to your port."},
    {q:"Do you work with marinas and agencies?",a:"Yes, we also skipper for marinas, boatyards and charter agencies."}],
   faqBtn:"Let's talk"},
@@ -123,7 +123,7 @@ en:{
 
 /* texts added for the about block, video, route planner and availability (merged into T) */
 const TX={
-en:{aboutp:{nav:"About",h1:"About",intro:"A small craft business from north Sardinia: who we are, where we come from and how we work.",ctaTitle:"Want to talk it through?",ctaText:"Message us on WhatsApp or find all our contact details."},about:{title:"Who comes aboard",more:"More about Andrea"},
+en:{method:{nav:"Our approach",h1:"Our approach",intro:"The story, values, products and services of Sail&Clean, told in full.",toc:["Our story","Values","Products","Services"],more:"Read our full approach",story:{title:"Our story",p:["Sail&Clean is a small craft business offering careful, thorough services for looking after boats.","The idea was born during Covid and has its roots at Asinara. The first contact with boating came during a period at sea, supporting researchers studying whales and dolphins and marine habitats. That time shaped a conscious attitude towards the sea and the environment it protects: a more sustainable outlook that reaches into many areas.","The experience continued aboard a charter boat, working as crew, with a first taste of hard work and life on board. Over the years the work grew into the role of skipper: learning to live alongside very different people and, above all, building a strong relationship with clients.","Then came the first professional deliveries, on routes around Sardinia and between Sardinia and mainland Italy, and with them the first real responsibilities.","Through the Lega Navale (the Italian naval league) we met people who live by the sea, people who shaped our maritime culture and enriched us as people and as seafarers. Finally, we gained experience in boatyards, working alongside riggers on sailing boats."]},values:{title:"Values",p:["Sail&Clean is a young, dynamic business, born from bringing together handcraft and boating.","Working with our hands, the gesture itself, is in our view the essence of the job. Handwork, touching things directly, forces you to understand what you are doing and what you are holding: the feel of smooth, clean teak, of an even coat of varnish, of well-treated steel, of a clean line that runs freely, and the sound of a well-oiled mechanism.","The gesture, in repeating an action until it becomes experience: brushing along the grain of the wood, polishing carefully so the result lasts, taking a mechanism apart, putting its parts in order and looking after it.","Being craftsmen, working with small numbers, does not mean giving up on growth. It means being able to nurture precision and dedication."],commTitle:"How we want to show these values",comm:["Client care","Know-how","Always learning","Reliability","Being there"],qTitle:"The questions we always ask ourselves",qs:["How can we help our client best?","How can we be better craftsmen than yesterday?","How can we add value to the boat we are working on?"]},products:{title:"Products",blocks:[{h:"",p:["Our choice of products comes from experience in using them, and depends on the specific surfaces involved and on the condition of the boat.","Cleaning is not only removing a stain, adding shine or simply enjoying the feeling of clean. Cleaning means looking after what we have, for ourselves and our wellbeing, and so for our boat too."]},{h:"Why not the old home remedy",p:["Why choose a product instead of the old home remedy? The right product is a balance between what we want and what the material needs, depending on how worn or degraded it is. New gel coat cannot be treated the same way as older, worn gel coat, and we cannot expect the same results. Old gel coat, for example, cannot take the same aggressive products as new gel coat: instead of cleaning and removing the dirt, we would only end up damaging the gel coat itself.","Many people clean surfaces with bleach or degreasers. Do they work? They certainly satisfy our sense of clean, because we see a spotless surface. But are they really useful? Along with the surface dirt, these products also corrode the surface itself and, over time, leave it more and more worn and brittle."]},{h:"An example: mould on tender tubes",p:["A striking example is using bleach to remove mould. Take mouldy tender tubes: many people mix up a bleach solution or use it neat. It removes the mould, but how? On PVC or neoprene, bleach corrodes the whole top layer, lifts the mould and drags it across the entire tender. The result is a tube that is more corroded, less elastic and ages early, with the mould set to come back the following year.","A specific product for mould, on the other hand, protects the material and removes the mould completely: it contains a substance that traps the mould, which is then carried off the boat simply with water.","Mould on tenders is just one of many examples. Besides the hands-on cleaning work, Sail&Clean wants to spread a more conscious use of the right products for boats, both to protect them and out of greater care for the environment around us."]},{h:"Technology and nanotechnology",p:["For all these reasons we follow new technologies, new methods and developments in our field closely, because the goal is always to offer the best available on the market.","We pay particular attention to nanotechnology, for the value of the products themselves and for how well they adapt to each client's needs. If your boat is a work tool and you need cleaning that is quicker but just as effective, products that create a protective film on the surface save time on daily cleaning and leave more room to rest after work. If you are after top performance because you love speed, we can offer hull sanding with high-end products, also used in international racing and at Olympic level, for which the manufacturer states a 45% gain in efficiency.","These are just some of the examples Sail&Clean offers its clients, aiming at their wellbeing through better care for their boat."]}]},services:{title:"Services",items:[{t:"Cleaning and restoring stainless steel"},{t:"Teak cleaning",sub:["Restoration: sanding, re-caulking the seams, re-bonding areas lifted from the deck","Washing with cleaners, brightener, oiling, protection"]},{t:"Gel coat cleaning and polishing"},{t:"Repairing small damage to gel coat and fibreglass"},{t:"Cleaning biminis and cushions"},{t:"Cleaning PVC and neoprene tender tubes and rubber"},{t:"Acid wash and waxing"},{t:"Mould removal"},{t:"Polishing the topsides"},{t:"Servicing and restoring mechanical parts, such as clutches and winches"},{t:"Cleaning portholes"},{t:"Interior cleaning",sub:["Regular cleaning: vacuuming, tidying the spaces","Deep cleaning: vacuuming, steam sanitising, washing with cleaners, machines for deep-cleaning cushions"]}],cta:"Ask for a quote"}},aboutp:{nav:"About",h1:"About",intro:"A small craft business from north Sardinia: who we are, where we come from and how we work.",ctaTitle:"Want to talk it through?",ctaText:"Message us on WhatsApp or find all our contact details."},about:{title:"Who comes aboard",more:"More about Andrea"},
  video:{title:"Watch the video",sub:"From our YouTube channel",play:"Watch the Sail&Clean video",note:"The video loads from YouTube only when you press play.",frame:"Sail&Clean video on YouTube"},
  plan:{otherPh:"Type the port name",otherHint:"Port not on the list: enter the miles if you know them, otherwise we work them out.",msgNoMiles:"Hi, I'd like a quote for a delivery from {a} to {b}.",
   title:"Plan your route",sub:"Pick the departure and arrival ports and we work out the miles and a price estimate.",from:"From",to:"To",swap:"Swap departure and arrival",
@@ -222,7 +222,7 @@ function mapSVG(kind){
    ======================================================= */
 const LANGS=["it","en","fr","de","es"];
 const LANG_NAMES={it:"Italiano",en:"English",fr:"Français",de:"Deutsch",es:"Español"};
-const PAGES=["home","pulizia","trasferimenti","chisiamo","contatti"];
+const PAGES=["home","pulizia","trasferimenti","chisiamo","metodo","contatti"];
 const $=q=>document.querySelector(q), $$=q=>document.querySelectorAll(q);
 /* Built multi-page site: each page carries its language, page id and path to the site root.
    The single-file source (src/index.html) has none of these and keeps hash routing. */
@@ -290,6 +290,15 @@ function lists(){
   const col=(c,cls,k)=>`<div class="${cls}"><h3><span class="k" aria-hidden="true">${k}</span>${esc(c.t)}</h3><ul>${c.items.map(i=>`<li><b>${esc(i.b)}</b><span>${esc(i.s)}</span></li>`).join("")}</ul></div>`;
   $h("#deliv-costs").innerHTML=col(L.deliv.costIncl,"incl","")+col(L.deliv.costExcl,"excl","");
   $h("#deliv-faq").innerHTML=L.deliv.faq.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("");
+  const Mt=L.method, para=a=>a.map(x=>`<p>${esc(x)}</p>`).join("");
+  $h("#method-body").innerHTML=`<nav class="m-toc" aria-label="${esc(Mt.h1)}">${Mt.toc.map((x,i)=>`<a href="#m-${["story","values","products","services"][i]}"><i>0${i+1}</i>${esc(x)}</a>`).join("")}</nav><div class="m-main">`+
+    `<section id="m-story" class="m-sec"><div class="sec-head"><h2>${esc(Mt.story.title)}</h2></div>${para(Mt.story.p)}</section>`+
+    `<section id="m-values" class="m-sec"><div class="sec-head"><h2>${esc(Mt.values.title)}</h2></div>${para(Mt.values.p)}`+
+      `<h3>${esc(Mt.values.commTitle)}</h3><ul class="vals-tags">${Mt.values.comm.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`+
+      `<div class="vals-q"><h3>${esc(Mt.values.qTitle)}</h3><ol>${Mt.values.qs.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div></section>`+
+    `<section id="m-products" class="m-sec"><div class="sec-head"><h2>${esc(Mt.products.title)}</h2></div>${Mt.products.blocks.map(b=>(b.h?`<h3>${esc(b.h)}</h3>`:"")+para(b.p)).join("")}</section>`+
+    `<section id="m-services" class="m-sec"><div class="sec-head"><h2>${esc(Mt.services.title)}</h2></div><ol class="m-svc">${Mt.services.items.map(it=>`<li><b>${esc(it.t)}</b>${it.sub?`<ul>${it.sub.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}</li>`).join("")}</ol>`+
+      `<a class="btn" href="#pulizia">${esc(Mt.services.cta)}</a></section></div>`;
   $h("#story-list").innerHTML=L.story.items.map(x=>`<li><h3>${esc(x.t)}</h3><p>${esc(x.d)}</p></li>`).join("");
   $h("#vals-qs").innerHTML=L.values.qs.map(q=>`<li>${esc(q)}</li>`).join("");
   $h("#vals-tags").innerHTML=L.values.tags.map(q=>`<li>${esc(q)}</li>`).join("");
@@ -307,7 +316,7 @@ function lists(){
    ======================================================= */
 const WO={
 en:{modeIntro:"The more you tell us, the more accurate the quote. But a short message is fine too: we'll get back to you.",modeLabel:"How would you like to write to us",modeFull:"Detailed form",modeQuick:"Just a message",optional:"optional",msgLbl:"Message",msgPh:"Tell us what you need: boat, port, work, dates…",errMsg:"Write a line or two about what you need.",toSet:"not set",s1:"The boat",s1h:"Boat type and overall length.",typeLabel:"Boat type",t0:"Sail",t1:"Motor",t2:"Catamaran",full:["Sailing boat","Motor boat","Catamaran"],
-  planLabel:"Boat plan: tap the areas to clean",lenLabel:"Length in metres",meters:"metres",both:"cleaning and delivery",cleanOnly:"cleaning only (deliveries up to 20 m)",
+  planLabel:"Boat plan: tap the areas to clean",lenLabel:"Length in metres",meters:"metres",both:"cleaning and delivery",cleanOnly:"cleaning only (deliveries up to 24 m)",
   zones:{gom:"Tender and tubes",ext:"Deck and teak",gel:"Gel coat and topsides",int:"Interior",steel:"Steel and winches"},
   s2:"What needs doing",s2h:"Tap the areas on the plan, or choose here.",s3:"Where is the boat?",s3h:"Port or marina where we do the work.",other:"Other",otherLbl:"Which port?",otherPh:"e.g. Olbia, Portisco, Cannigione…",
   s4:"Who should we reply to?",s4h:"We write back to you with the quote.",model:"Model",modelPh:"e.g. Bavaria 46",note:"Notes for us",notePh:"Dates, access to the boat, things to know…",
@@ -335,7 +344,7 @@ function woSync(){
   $h("#wo-plan").dataset.type=type;
   const mode=woMode(); $h("#wo-log").dataset.mode=mode; $h(".wo").dataset.mode=mode;
   $h("#wo-ln-msg label").textContent=w(mode==="quick"?"msgLbl":"note"); $h("#f-msg").placeholder=w(mode==="quick"?"msgPh":"notePh");
-  const len=+$h("#wo-len").value, p=(len-5)/25*100;
+  const len=+$h("#wo-len").value, p=(len-5)/35*100;
   $h("#wo-len").style.setProperty("--p",p+"%"); $h("#wo-len").setAttribute("aria-valuetext",len+" "+w("meters"));
   $h("#wo-len-out").textContent=len+" m";
   $h("#wo-hull").style.transform=`scale(${(0.62+p/100*0.38).toFixed(3)})`;
@@ -391,7 +400,7 @@ function highlight(){
   });
 }
 function title(){
-  const n=t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
+  const n=page==="metodo"?t("method.nav"):t("nav."+({home:"home",pulizia:"clean",trasferimenti:"deliv",chisiamo:"about",contatti:"contact"}[page]));
   document.title=(page==="home"?"":n+" · ")+"Sail&Clean, "+t("footer.blurb").replace(/\.$/,"");
 }
 
